@@ -20,6 +20,7 @@ bar transparent so it looks better with full width */
 Blur style search and bookmarks bar. Used the search method found here 
 
 Need about:config layout.css.backdrop-filter.enabled = true
+and it could need  gfx.webrender.enabled to true. But if it works with the backdrop leave this one.
 ```
 https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/
 ```  
