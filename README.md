@@ -10,9 +10,12 @@ You can find more in userChrome.css
 ```
 
 ```css
-/* Width of the tabs. Change it to 100% to get full width style tabs. */
+/* Width of the tabs. Change it to 100% to get full 
+width style tabs. But it looks funny, make search 
+bar transparent so it looks better with full width */
 	.tabbrowser-tab[fadein]:not([pinned]) {max-width: 135px !important;}  
 ```  
+![alt text](https://i.imgur.com/8IUIq2g.png)
 
 Blur style search and bookmarks bar. Used the search method found here 
 ```
