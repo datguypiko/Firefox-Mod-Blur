@@ -1,8 +1,11 @@
 /* MIN MAX CLOSE Remove */
 	#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }
 
-/* Use -moz-appearance: -moz-window-titlebar-maximized !important;
-if the -moz-appearance: none; doesnt work. */	
+/* 
+if the -moz-appearance: none; still gives you fullscreen issues 
+change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use 
+-moz-appearance: -moz-window-titlebar-maximized !important; And remove the padding-top 
+*/	
 	:root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
 		-moz-appearance: none !important;
 		padding-top: 8px !important;
