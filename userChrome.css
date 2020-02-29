@@ -3,11 +3,11 @@
 
 /* Use -moz-appearance: -moz-window-titlebar-maximized !important;
 if the -moz-appearance: none; doesnt work. */	
-	:root[tabsintitlebar][sizemode="maximized"] #nav-bar {
+	:root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
 		-moz-appearance: none !important;
 		padding-top: 8px !important;
 	}
-	#nav-bar {
+	#navigator-toolbox {
 		padding-top: 3px !important;
 	}
 	
