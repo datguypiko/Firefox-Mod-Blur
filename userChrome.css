@@ -1,6 +1,12 @@
 /* MIN MAX CLOSE Remove */
 	#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }
 
+/* Makes bookmarks bar content center without using firefox flexible space 
+#PlacesToolbarItems {   
+display: flex !important;   
+justify-content: center !important; }
+*/
+
 /* 
 if the -moz-appearance: none; still gives you fullscreen issues 
 change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use 
