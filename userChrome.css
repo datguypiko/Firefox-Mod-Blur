@@ -115,7 +115,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 /* #toolbar-menubar[autohide]:not([inactive]), */
 /* #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; } */
 
-
+/* Remove or comment out transition if you want synchronization with the autohide bookmarks bar and menubar */
 /* BOOKMARK MENU AUTOHIDE */
 	#PersonalToolbar{
 	  --uc-bm-height: 20px; /* Might need to adjust if the toolbar has other buttons */
