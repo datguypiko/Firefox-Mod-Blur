@@ -1,4 +1,4 @@
-# Firefox-Mod
+# Firefox-Mod by datguypiko
 Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
 # How to use
 1. Go to your profile directory by typing ```about:config``` in your address bar. 
