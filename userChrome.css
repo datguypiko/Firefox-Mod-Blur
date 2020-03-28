@@ -63,7 +63,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 
 /* Scrollbar */
-.	panel-subview-body, #permList, scrollbar { 
+	panel-subview-body, #permList, scrollbar { 
 		scrollbar-width: thin;
 	}
  
@@ -398,6 +398,7 @@ visibility: collapse !important;
   opacity: 0;
   visibility: collapse !important;
   transition: opacity 0.25s, visibility 0.25s ease-in !important;
+  border-radius: 25px !important;
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   opacity: 1;
