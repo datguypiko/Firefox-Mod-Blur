@@ -13,7 +13,7 @@ Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
 
 5. Set the option ``toolkit.legacyUserProfileCustomizations.stylesheets`` to True.
 
-6. Restart Firefox and enjoy the result
+6. Restart Firefox and enjoy the result.
 
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
