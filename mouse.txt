@@ -1,0 +1,8 @@
+/* Mouse  about:config
+mousewheel.min_line_scroll_amount: 25  (Default 5)
+
+general.smoothScroll.mouseWheel.durationMaxMS	250   (Default 400)
+general.smoothScroll.mouseWheel.durationMinMS	200	  (Default 200)
+general.smoothScroll.stopDecelerationWeighting 0.6; (Default 0.4)
+
+*/
