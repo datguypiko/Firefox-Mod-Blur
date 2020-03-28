@@ -1,5 +1,19 @@
 # Firefox-Mod
-Tested 73.0.1 / 74.0 /  Windows 10 / Default Dark Theme
+Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
+# How to use
+1. Go to your profile directory by typing ```about:config``` in your address bar. 
+
+2. In side the directory, open the terminal, run:
+
+  	```git clone https://github.com/datttran/chrome.git```
+
+3. Open a new tab in Mozilla Firefox. Type ```about:config``` in the address bar. Confirm that you will be careful if a warning message appears for you.
+
+4. Enter the following text in the search box: toolkit.legacyUserProfileCustomizations.stylesheets.
+
+5. Set the option ``toolkit.legacyUserProfileCustomizations.stylesheets`` to True.
+
+6. Restart Firefox and enjoy the result
 
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
