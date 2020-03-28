@@ -8,6 +8,10 @@
     html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
       background: #1d2021 !important;
     }
+    #newtab-search-text {
+      border-radius: 25px !important;
+
+    }
   }
   
   
