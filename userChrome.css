@@ -47,10 +47,13 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		background-image: url(image/noise-512x512.png) !important;
 		background-color: #2A2A2AC0 !important;
 		backdrop-filter: blur(32px) !important;
+		
 	}
 
 /* Remove the top tab line - TopBar */
-	.tab-line { display: none !important; }
+	.tab-line { display: none !important; 
+	}
+
 	
 
 
@@ -233,11 +236,12 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 /* Main BAR */
 	#navigator-toolbox {
 		background-color: rgb(50, 50, 52) !important;
-		--tabs-border-color: none !important;
+		--tabs-border-color: transparent !important;
 		--my-tab-min-width: 36px !important;
 		--tabs-navbar-shadow-size: 0px  !important;
-		/*border: 0 !important; */
+		border: 10px !important; 
 	}
+	
 /* Fix the Heigh of a tab because 
 if you change --tab-min-height it doesnt work for fullcreen
  */
@@ -250,6 +254,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 		padding-right: 4px !important;
 		padding-top: 2px !important;
 		padding-bottom: 2px !important;
+		box-shadow: none !important;
 	}
 
 /* Remove the fill when loading on the tab which 
@@ -261,7 +266,7 @@ isnt formated for different border radius */
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
 	.tabbrowser-tab[fadein]:not([pinned]) { 
-	  max-width: 135px !important;
+	  max-width: 100% !important;
 	}  
 	
 /* Remove the line between the tabs / seperators */

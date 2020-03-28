@@ -6,18 +6,47 @@
   
   @-moz-document url(about:blank), url(about:newtab), url(about:home) {
     html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
-      background: #1d2021 !important;
+      background: #323234 !important;
     }
 
     #newtab-search-text {
-      border-radius: 25px !important;
+      border-radius: 30px !important;
+      
 
     }
+    .search-wrapper input {
+      background: #323234 var(--newtab-search-icon) 12px center no-repeat !important;
+      background-size: 24px;
+      border: solid 0px var(--newtab-search-border-color);
 
-
+      box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+      font-size: 15px;
+      -moz-context-properties: fill;
+      fill: var(--newtab-search-icon-color);
+      padding: 1px;
+      padding-inline-end: 48px;
+      padding-inline-start: 60px !important;
+      width: 100%; 
+      border-top: solid 1px #ffffff30 !important;
+    }
 
   }
-  
+  .icon.icon-settings {
+     background-image: none !important; 
+  }
+  body[lwt-newtab-brighttext] {
+    --newtab-search-border-color: #232324 !important;
+    
+  }
+
+  .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus{
+    background: #232324 var(--newtab-search-icon) 12px center no-repeat !important;
+    box-shadow: none !important;
+    border-bottom: solid 1px #ffffff30 !important;
+    border: solid 0px var(--newtab-search-border-color);
+  }
+
+
   
 /* :root */
 
