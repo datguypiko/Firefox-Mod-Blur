@@ -15,7 +15,7 @@ Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
 
 6. Restart Firefox and enjoy the result.
 
-![alt text](https://i.imgur.com/Hi1ocvT.png)
+![](image/type.png)
 
 You can find more in userChrome.css
 ```css
@@ -43,3 +43,7 @@ https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_i
  ![alt text](https://i.imgur.com/OasXFqd.png)
  
  I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
+ 
+ # Update
+ - Adjust UI on about:home
+ ![](image/newteb.png)
