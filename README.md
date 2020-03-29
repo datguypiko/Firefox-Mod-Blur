@@ -46,4 +46,4 @@ https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_i
  
  # Update
  - Adjust UI on about:home
- ![](image/newteb.png)
+ ![](image/newtab.png)
