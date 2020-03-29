@@ -28,6 +28,8 @@
       padding-inline-start: 60px !important;
       width: 100%; 
       border-top: solid 1px #ffffff30 !important;
+      border-left: #ffffff30 !important;
+      border-right: #ffffff30; 
     }
 
   }
@@ -35,18 +37,57 @@
      background-image: none !important; 
   }
   body[lwt-newtab-brighttext] {
-    --newtab-search-border-color: #232324 !important;
+    --newtab-search-border-color: transparent !important;
+    --newtab-border-secondary-color: #323234 !important;
+    --newtab-textbox-focus-color: #ffffff30 !important;
+    --newtab-element-hover-color: transparent !important;
     
   }
-
+  *:focus{
+    outline: none !important;
+  }
   .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus{
     background: #232324 var(--newtab-search-icon) 12px center no-repeat !important;
     box-shadow: none !important;
+    border-top: solid 1px #323234 !important;
     border-bottom: solid 1px #ffffff30 !important;
     border: solid 0px var(--newtab-search-border-color);
+    /* border-style: none !important;  */
   }
 
-
-  
+  .contentSearchSuggestionTable .contentSearchSuggestionRow.selected{
+    color: whitesmoke !important;
+  }
+  .contentSearchSuggestionTable .contentSearchHeader{
+    background-color: #323234 !important;
+    
+  }
+  .contentSearchSuggestionEntry{
+    border-radius: 0px 0px 20px 20px;
+    font-size: 85% !important;
+    padding: 10px 15px !important;
+    background-color: #232324 !important;
+    border-radius: 20px !important;
+    border-top: solid 1px #323234 !important;
+    border-bottom: solid 1px #ffffff30 !important;
+  }
+  .outer-wrapper{
+    color: rgb(255, 255, 255) !important;
+    font-family: monospace;
+  }
+  .contentSearchSuggestionTable{
+    box-shadow: none !important;
+    background-color: #323234 !important;
+  }
+  .contentSearchSuggestionTable, .contentSearchSuggestionsList{
+    border-spacing: 10px !important;
+    background-color: #323234;
+  }
+  .search-wrapper .search-button{
+    border-radius: 0 20px 20px 0 !important;
+  }
+  .contentSearchHeaderRow{
+    border-top: solid 1px orangered !important;
+  }
 /* :root */
 
