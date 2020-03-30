@@ -47,7 +47,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		background-image: url(image/noise-512x512.png) !important;
 		background-color: #2A2A2AC0 !important;
 		backdrop-filter: blur(32px) !important;
-<<<<<<< HEAD
 		
 	}
 
@@ -55,12 +54,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	.tab-line { display: none !important; 
 	}
 
-=======
-	}
-
-/* Remove the top tab line - TopBar */
-	.tab-line { display: none !important; }
->>>>>>> f95958b1b332ae7bdd7d08c42850f874c409324c
 	
 
 
@@ -73,11 +66,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 
 /* Scrollbar */
-<<<<<<< HEAD
 	panel-subview-body, #permList, scrollbar { 
-=======
-.	panel-subview-body, #permList, scrollbar { 
->>>>>>> f95958b1b332ae7bdd7d08c42850f874c409324c
 		scrollbar-width: thin;
 	}
  
@@ -247,20 +236,12 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 /* Main BAR */
 	#navigator-toolbox {
 		background-color: rgb(50, 50, 52) !important;
-<<<<<<< HEAD
 		--tabs-border-color: transparent !important;
 		--my-tab-min-width: 36px !important;
 		--tabs-navbar-shadow-size: 0px  !important;
 		border: 10px !important; 
 	}
 	
-=======
-		--tabs-border-color: none !important;
-		--my-tab-min-width: 36px !important;
-		--tabs-navbar-shadow-size: 0px  !important;
-		/*border: 0 !important; */
-	}
->>>>>>> f95958b1b332ae7bdd7d08c42850f874c409324c
 /* Fix the Heigh of a tab because 
 if you change --tab-min-height it doesnt work for fullcreen
  */
@@ -273,10 +254,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 		padding-right: 4px !important;
 		padding-top: 2px !important;
 		padding-bottom: 2px !important;
-<<<<<<< HEAD
 		box-shadow: none !important;
-=======
->>>>>>> f95958b1b332ae7bdd7d08c42850f874c409324c
 	}
 
 /* Remove the fill when loading on the tab which 
@@ -288,11 +266,7 @@ isnt formated for different border radius */
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
 	.tabbrowser-tab[fadein]:not([pinned]) { 
-<<<<<<< HEAD
 	  max-width: 100% !important;
-=======
-	  max-width: 135px !important;
->>>>>>> f95958b1b332ae7bdd7d08c42850f874c409324c
 	}  
 	
 /* Remove the line between the tabs / seperators */
@@ -429,10 +403,7 @@ visibility: collapse !important;
   opacity: 0;
   visibility: collapse !important;
   transition: opacity 0.25s, visibility 0.25s ease-in !important;
-<<<<<<< HEAD
   border-radius: 25px !important;
-=======
->>>>>>> f95958b1b332ae7bdd7d08c42850f874c409324c
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   opacity: 1;
