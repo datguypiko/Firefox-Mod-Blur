@@ -48,3 +48,6 @@ https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_i
  ![alt text](https://i.imgur.com/OasXFqd.png)
  
  I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
+ # Update
+ - Small change on home page UI
+ ![](image/type)
