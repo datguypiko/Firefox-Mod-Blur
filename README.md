@@ -1,4 +1,4 @@
-# Firefox-Mod by datguypiko
+# Firefox-Mod
 Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
 # How to use
 1. Go to your profile directory by typing ```about:config``` in your address bar. 
@@ -13,9 +13,14 @@ Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
 
 5. Set the option ``toolkit.legacyUserProfileCustomizations.stylesheets`` to True.
 
-6. Restart Firefox and enjoy the result.
+6. Restart Firefox 
 
-![](image/type.png)
+7. Add [OS style buttons](https://addons.mozilla.org/en-US/firefox/user/12528072/) extension
+
+8. Enjoy the result.
+
+
+![alt text](https://i.imgur.com/Hi1ocvT.png)
 
 You can find more in userChrome.css
 ```css
@@ -43,7 +48,3 @@ https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_i
  ![alt text](https://i.imgur.com/OasXFqd.png)
  
  I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
- 
- # Update
- - Adjust UI on about:home
- ![](image/newtab.png)
