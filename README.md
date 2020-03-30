@@ -5,7 +5,9 @@ Tested 73.0.1 / 74.0 /  Windows 10 / Linux Default Dark Theme
 
 2. In side the directory, open the terminal, run:
 
-  	```git clone https://github.com/datttran/chrome.git```
+  	```git clone https://github.com/datguypiko/Firefox-Mod.git```
+	
+	```mv Firefox-Mod chrome ```
 
 3. Open a new tab in Mozilla Firefox. Type ```about:config``` in the address bar. Confirm that you will be careful if a warning message appears for you.
 
