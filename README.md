@@ -1,5 +1,5 @@
 # Firefox-Mod
-Tested 73.0.1 / 74.0 /  Windows 10 / Default Dark Theme
+Tested 73.0.1 / 74.0 / 74.0.1 /  Windows 10 / Default Dark Theme
 
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
