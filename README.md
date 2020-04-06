@@ -1,5 +1,7 @@
 # Firefox-Mod
-Tested 73.0.1 / 74.0 / 74.0.1 /  Windows 10 / Default Dark Theme
+Tested on:
+73.0.1 / 74.0 / 74.0.1 /  Windows 10 / Default Dark Theme
+74.0.1 Linux / Default Dark Theme
 
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
@@ -19,8 +21,8 @@ bar transparent so it looks better with full width */
 
 Blur style search and bookmarks bar. Used the search method found here 
 
-Need about:config layout.css.backdrop-filter.enabled = true
-and it could need  gfx.webrender.enabled to true. But if it works with the backdrop leave this one.
+Need about:config 'layout.css.backdrop-filter.enabled' = true
+and it could require the 'gfx.webrender.enabled' to true. But if it works with the 'backdrop-filter' leave this one.
 ```
 https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/
 ```  
@@ -29,3 +31,8 @@ https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_i
  ![alt text](https://i.imgur.com/OasXFqd.png)
  
  I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
+ 
+ 
+ Linux (blur works too after enabling both options mentioned above).
+ 
+ ![alt text](https://i.imgur.com/0pxPFnW.png)
