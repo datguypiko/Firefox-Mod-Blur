@@ -1,6 +1,7 @@
 # Firefox-Mod
 Tested on:
 73.0.1 / 74.0 / 74.0.1 /  Windows 10 / Default Dark Theme
+
 74.0.1 Linux / Default Dark Theme
 
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
