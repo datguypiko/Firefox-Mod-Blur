@@ -219,6 +219,9 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		padding-bottom: 0px !important;*/
 		
 	}
+	#urlbar-input-container, #searchbar {
+		border-radius: 8px !important;
+	}
 	#urlbar[breakout]{
 		height: var(--urlbar-height) + 1 !important;
 		
