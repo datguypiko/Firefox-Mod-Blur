@@ -1,10 +1,21 @@
 # Firefox-Mod
 
-Released 'userChrome75ver.css' for 75.0.0 stable. Some things still need fixing.
+**If you dont like the changes to URL/SEARCH bar it can be reverted with these about:config tweaks.**
 
+```css
+browser.urlbar.update1; set to False
+browser.urlbar.openViewOnFocus; set to False
+```
+
+**If you like the updated Search bar use the new 75.0 version file. Some things still need fixing.**
 ```html
+'userChrome75ver_NewSearchBar.css'
+dont forget to rename to 'userChrome.css'
+```
+
 Tested on:
- Windows 10 / 73.0.1 / 74.0 / 74.0.1 / Default Dark Theme
+```html
+ Windows 10 / 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / Default Dark Theme
  Linux 74.0.1 / Default Dark Theme
 ```
 
@@ -12,7 +23,7 @@ Dont forget to enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in a
 
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
-You can find more in userChrome.css
+You can find more in 'userChrome.css'
 ```css
 /* Comment this to show min/max/close buttons. I use OS style firefox plugin. */
   #TabsToolbar > .titlebar-buttonbox-container {visibility: collapse !important;}
