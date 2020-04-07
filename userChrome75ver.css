@@ -14,12 +14,10 @@
   justify-content: center !important;
 }*/
 
-
 /* Non active tabs have darker text */
 	.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) {
 		color: #ffffff5e !important;
 	}
-
 
 /* 
 if the -moz-appearance: none; still gives you fullscreen issues 
@@ -45,14 +43,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		
 	}
 	
-/* Drop Down URL with BLUR need layout.css.backdrop-filter.enabled = true 
-	.urlbarView {
-		background-image: url(image/noise-512x512.png) !important;
-		background-color: #2A2A2AC0 !important;
-		-webkit-backdrop-filter: blur(32px) !important;
-		backdrop-filter: blur(32px) !important;
-		-moz-backdrop-filter: blur(32px) !important;
-	}*/ 
+/* Drop Down URL with BLUR need layout.css.backdrop-filter.enabled = true */ 
 	#urlbar-background {
 		display: none !important;
 
@@ -65,8 +56,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		background-color: #2A2A2AC0 !important;
 		-webkit-backdrop-filter: blur(32px) !important;
 		backdrop-filter: blur(32px) !important;
-		/* -webkit-backdrop-filter: blur(32px) !important;*/
-		-moz-backdrop-filter: blur(32px) !important;
 	}
 
 /* Remove the top tab line - TopBar */
@@ -217,8 +206,9 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 	#urlbar[breakout][breakout-extend] {
 		background-image: url(image/noise-512x512.png) !important;
-		background-color: rgba(38, 38, 38, 0.98);
+		background-color: #1E1E1EBF !important;
 		backdrop-filter: blur(32px) !important;
+		-webkit-backdrop-filter: blur(32px) !important;
 	}
 	
 	.urlbarView.megabar .urlbarView-body-inner {
@@ -455,6 +445,3 @@ visibility: collapse !important;
   opacity: 1;
   visibility: visible !important; 
 }
-
-
-
