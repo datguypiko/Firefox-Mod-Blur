@@ -208,10 +208,13 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		/* padding-top: 0px !important;
 		padding-bottom: 0px !important;*/
 	}
+	#urlbar[breakout]{
+		height: var(--urlbar-height) + 1 !important;
+		
+	}
 	#urlbar[breakout][breakout-extend] {
 		background-color: rgba(38, 38, 38, 0.98)  !important;
-		border-left:1px solid #ffffff0A !important;
-		border-right:1px solid #ffffff0A !important;
+		
 	}
 	
 	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
@@ -249,7 +252,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		border: 0 !important;
 		border-bottom: 1px solid #ffffff30 !important;
 		border-radius: 8px 8px 8px 8px !important;
-		background-image: none !important;
 		background-color:#0000004d;
 	}
 
