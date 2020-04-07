@@ -12,6 +12,8 @@ browser.urlbar.openViewOnFocus; set to False (your preference, this disables ope
 'userChrome_NewSearchBar.css'
 dont forget to rename to 'userChrome.css'
 ```
+![alt text](https://i.redd.it/wpubm02rzfr41.png)
+
 
 Tested on:
 ```html
