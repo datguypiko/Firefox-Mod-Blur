@@ -1,3 +1,10 @@
+/* 
+	75.0 With old search bar. 
+	Requires these changes in about:config
+
+	'browser.urlbar.update1' set to False
+	'browser.urlbar.openViewOnFocus' set to False
+*/
 /* MIN MAX CLOSE Remove */
 	#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }
 
