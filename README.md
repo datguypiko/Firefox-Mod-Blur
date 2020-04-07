@@ -1,6 +1,6 @@
 # Firefox-Mod
 
-Fixing the 75.0.0 version.
+Released 'userChrome75ver.css' for 75.0.0 stable. Some things still need fixing.
 
 ```html
 Tested on:
