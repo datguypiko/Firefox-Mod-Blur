@@ -210,6 +210,8 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 	#urlbar[breakout][breakout-extend] {
 		background-color: rgba(38, 38, 38, 0.98)  !important;
+		border-left:1px solid #ffffff0A !important;
+		border-right:1px solid #ffffff0A !important;
 	}
 	
 	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
