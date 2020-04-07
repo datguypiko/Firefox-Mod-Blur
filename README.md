@@ -7,7 +7,7 @@ browser.urlbar.update1; set to False
 browser.urlbar.openViewOnFocus; set to False (your preference, this disables opening on focus, need to type to open search)
 ```
 
-**If you like the updated Search bar use the new 75.0 version file.**
+**New search bar with some changes and fixes. Use the new 75.0 version file.**
 ```html
 'userChrome_NewSearchBar.css'
 dont forget to rename to 'userChrome.css'
