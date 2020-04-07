@@ -203,6 +203,9 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		display: none !important;
 
 	}
+	#urlbar-input-container, #searchbar {
+		border-radius: 8px !important;
+	}
 	#urlbar-container {
 		border-radius: 8px 8px 8px 8px !important;
 		/* padding-top: 0px !important;
