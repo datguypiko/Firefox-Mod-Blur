@@ -4,7 +4,7 @@
 
 ```css
 browser.urlbar.update1; set to False
-browser.urlbar.openViewOnFocus; set to False
+browser.urlbar.openViewOnFocus; set to False (your preference, this disables opening on focus, need to type to open search)
 ```
 
 **If you like the updated Search bar use the new 75.0 version file. Some things still need fixing.**
