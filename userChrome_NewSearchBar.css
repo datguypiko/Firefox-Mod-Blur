@@ -222,6 +222,8 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		background-image: url(image/noise-512x512.png) !important;
 		background-color: #1E1E1EBF;
 		backdrop-filter: blur(32px) !important;
+		border-left:1px solid #ffffff0A !important;
+		border-right:1px solid #ffffff0A !important;
 	}
 	
 	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
