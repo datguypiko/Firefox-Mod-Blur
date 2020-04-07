@@ -3,7 +3,8 @@
 	Requires these changes in about:config
 
 	'browser.urlbar.update1' set to False
-	'browser.urlbar.openViewOnFocus' set to False
+
+	'browser.urlbar.openViewOnFocus' set to False (your preference, this disables opening on focus, need to type to open search)
 */
 /* MIN MAX CLOSE Remove */
 	#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }
