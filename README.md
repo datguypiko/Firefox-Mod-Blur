@@ -1,9 +1,14 @@
 # Firefox-Mod
+
+75.0.0 version broke some stuff. Blur isnt working anymore. URL bar changed. 
+You can use beta version 'testing_userChrome75-77ver.css' for nigtly and for stable 75.0.0 version. 
+
+
+```html
 Tested on:
-
-73.0.1 / 74.0 / 74.0.1 /  Windows 10 / Default Dark Theme
-
-74.0.1 Linux / Default Dark Theme
+ Windows 10 / 73.0.1 / 74.0 / 74.0.1 / Default Dark Theme
+ Linux 74.0.1 / Default Dark Theme
+```
 
 Dont forget to enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config for your custom themes to work.
 
