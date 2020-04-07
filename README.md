@@ -1,8 +1,6 @@
 # Firefox-Mod
 
-75.0.0 version broke some stuff. Blur isnt working anymore. URL bar changed. 
-You can use beta version 'testing_userChrome75-77ver.css' for nigtly and for stable 75.0.0 version. 
-
+Fixing the 75.0.0 version.
 
 ```html
 Tested on:
