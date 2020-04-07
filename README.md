@@ -9,7 +9,7 @@ browser.urlbar.openViewOnFocus; set to False (your preference, this disables ope
 
 **If you like the updated Search bar use the new 75.0 version file. Some things still need fixing.**
 ```html
-'userChrome75ver_NewSearchBar.css'
+'userChrome_NewSearchBar.css'
 dont forget to rename to 'userChrome.css'
 ```
 
