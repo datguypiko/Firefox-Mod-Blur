@@ -197,8 +197,10 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 	
 /* Search Bar #2b2b2bd1 */
-
-
+	#urlbar{
+	  --autocomplete-popup-highlight-background: transparent !important;
+	 /*  --autocomplete-popup-highlight-background: #313131ad;*/
+	}
 	#urlbar-input-container { 	/* Fixing icons right and left padding inside search bar for hovering  */
 		padding-left: 7px;
 		padding-right: 7px;
@@ -209,7 +211,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		--lwt-toolbar-field-focus: transparent !important;
 		--toolbar-field-focus-border-color: #77777773 !important;
 		}
-
 	#urlbar:not(.megabar):not([focused="true"]):-moz-lwtheme, #urlbar:not(.megabar):not([focused="true"]):-moz-lwtheme:hover {
 		border-color: transparent;
 	}
