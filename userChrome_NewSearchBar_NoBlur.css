@@ -199,6 +199,10 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 	
 /* Search Bar #2b2b2bd1 262626ed #1E1E1EBF*/
+	#urlbar{
+	  --autocomplete-popup-highlight-background: transparent !important;
+	 /*  --autocomplete-popup-highlight-background: #313131ad;*/
+	}
 	#urlbar-background {
 		display: none !important;
 
