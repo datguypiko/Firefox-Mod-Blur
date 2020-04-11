@@ -1,18 +1,22 @@
 # Firefox-Mod
 
-**If you dont like the changes to URL/SEARCH bar it can be reverted with these about:config tweaks.**
+**New search bar with some changes and fixes. 75.0+ version**
+```html
+'userChrome.css'
+or 'userChrome_searchbar_noBlur.css' for no blur search bar.
+```
+![alt text](https://i.redd.it/wpubm02rzfr41.png)
+
+
+**If you dont like the changes to URL/SEARCH bar it can be reverted with these about:config tweaks. (this will be disabled soon)**
 
 ```css
 browser.urlbar.update1; set to False
 browser.urlbar.openViewOnFocus; set to False (your preference, this disables opening on focus, need to type to open search)
 ```
-
-**New search bar with some changes and fixes. Use the new 75.0 version file.**
-```html
-'userChrome_NewSearchBar.css'
+and use  'userChrome_old_searchbar.css' for browsers older than 75.0 version.
 dont forget to rename to 'userChrome.css'
-```
-![alt text](https://i.redd.it/wpubm02rzfr41.png)
+
 
 
 Tested on:
