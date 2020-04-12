@@ -45,9 +45,11 @@
         box-shadow: none !important;
 		border-bottom: 1px solid #ffffff26 !important;
 		border-radius: 10px 10px 10px 10px !important;
-		
-
-    }
+	  }
+	  .search-wrapper .logo-and-wordmark {
+		opacity: 0.8 !important;
+	}
+	  
 	.search-wrapper input:focus {
         color: white !important;
     }
