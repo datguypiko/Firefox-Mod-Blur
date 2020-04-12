@@ -67,8 +67,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		background-color: #2A2A2AC0 !important;
 		-webkit-backdrop-filter: blur(32px) !important;
 		backdrop-filter: blur(32px) !important;
-		/* -webkit-backdrop-filter: blur(32px) !important;*/
-		-moz-backdrop-filter: blur(32px) !important;
 	}
 
 /* Remove the top tab line - TopBar */
@@ -86,7 +84,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
  
 /* Icons */
 	#PanelUI-menu-button {
-		list-style-image: url(image/Fx-Browser-icon-oneColor-white.png) !important;}
+			list-style-image: url(image/Fx-Browser-icon-oneColor-white.png) !important;}
 	#PanelUI-button {
 			margin-inline-start: 0 !important;
 			padding-inline-start: 0 !important;
@@ -105,6 +103,10 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	#PlacesToolbarItems .bookmark-item[container] {
 		list-style-image: url(image/folder.svg) !important;
 	}
+	/*#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
+		visibility: collapse !important;
+	}*/
+	
 	#forward-button {
 		list-style-image: url(image/right-arrow.svg) !important;
 	}
@@ -125,12 +127,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		background-color: var(--toolbarbutton-hover-background) !important;
 	}
 
-/* Hide Tab Bar with ALT*/
-/* #titlebar { -moz-appearance: none !important; } */
-/* :root[tabsintitlebar][sizemode="maximized"]{ padding-top: 8px !important; } */
-/* #titlebar:not(:hover) > #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar { visibility: collapse; } */
-/* #toolbar-menubar[autohide]:not([inactive]), */
-/* #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; } */
 
 /* Remove or comment out transition if you want synchronization with the autohide bookmarks bar and tab bar*/
 /* BOOKMARK MENU AUTOHIDE */
@@ -139,7 +135,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	  --uc-bm-padding: 6px; /* Vertical padding to be applied to bookmarks */
 	}
 
-	:root[uidensity="compact"] #PersonalToolbar{ --uc-bm-padding: 1px }
+	:root[uidensity="compact"] #PersonalToolbar{ --uc-bm-padding: 6px }
 	:root[uidensity="touch"] #PersonalToolbar{ --uc-bm-padding: 6px }
 
 	#PersonalToolbar:not([customizing]){
@@ -220,28 +216,6 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	#urlbar-input-container, #searchbar {
 		border-radius:  10px 10px 10px 10px !important;
 	}
-	#urlbar[breakout]{
-		height: var(--urlbar-height) + 1 !important;
-		
-	}
-	#urlbar[breakout][breakout-extend] {
-		background-image: url(image/noise-512x512.png) !important;
-		background-color: #1E1E1EBF;
-		backdrop-filter: blur(32px) !important;
-		
-	}
-	
-	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
-		height: var(--urlbar-height) !important;
-		padding-block: 0px !important;
-		padding-inline: 0px !important;
-		transition: none !important;
-	}
-	#urlbar[breakout][breakout-extend] {
-		top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
-		left: 0 !important;
-		width: 100% !important;
-	}
 	
 	.urlbarView.megabar .urlbarView-body-inner {
 		border-top: 0px !important;
@@ -277,9 +251,34 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		border-inline-end: none !important;
 		border-image: none !important;
 	}
+	#urlbar[breakout]{
+		height: auto!important;
+		
+	}
+	/* Megabar */
+		#urlbar[breakout][breakout-extend][open] {
+		background-image: url(image/noise-512x512.png) !important;
+		background-color: #1E1E1EBF;
+		backdrop-filter: blur(26px) !important;
+		
+	}
+	
+	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
+		height: var(--urlbar-height) !important;
+		padding-block: 0px !important;
+		padding-inline: 0px !important;
+		transition: none !important;
+		
+	}
+	#urlbar[breakout][breakout-extend] {
+		top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+		left: 0 !important;
+		width: 100% !important;
+	}
+	
 /* ========================================================= */
 /* ========================================================= */
-/* rgb(50, 50, 52)
+/* rgb(50, 50, 52) #232324
 ========================================================= */
 /* New tab icon size (16 is default) Important to not change the rest of calc */
 	#tabs-newtab-button .toolbarbutton-icon{
@@ -288,19 +287,18 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 /* Main BAR */
 	#navigator-toolbox {
-		background-color:#232324 !important;
+		background-color:rgb(50, 50, 52) !important;
 		--tabs-border-color: none !important;
 		--my-tab-min-width: 80px !important; /* 36px */
 		--tabs-navbar-shadow-size: 0px  !important;
 		/*border: 0 !important; */
 	}
 
-
 /* Remove the fill when loading on the tab which 
 isnt formated for different border radius */
 	#tabbrowser-tabs {
 		--tab-loading-fill: transparent !important;
-		padding-left: 4px !important; /* fix the left tab being too close to the edge */
+		margin-left: 4px !important; /* fix the left tab being too close to the edge */
 	}
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
@@ -328,13 +326,12 @@ if you change --tab-min-height it doesnt work for fullcreen
 		padding-bottom: 0px !important;
 	}
 /* Seperate tabs and make them smaller */
-	#TabsToolbar .tabbrowser-tab {
+	#TabsToolbar .tabbrowser-tab[fadein] > .tab-stack {
 		padding-right: 4px !important;
 		padding-top: 3px !important;
 		padding-bottom: 3px !important;
 	}
 		
-	
 	
 /* Remove the line between the tabs / seperators */
 	#tabbrowser-tabs .tabbrowser-tab::before, #tabbrowser-tabs .tabbrowser-tab::after {
@@ -344,7 +341,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 /* Selected tabs design */
 	.tabbrowser-tab .tab-background[selected="true"] {
 		border: 0 !important;
-		border-bottom: 1px solid #ffffff30 !important;
+		/*border-bottom: 1px solid #ffffff30 !important;*/
 		border-radius:  10px 10px 10px 10px !important;
 		background-image: none !important;
 		background-color:#0000004d !important;
@@ -354,21 +351,21 @@ if you change --tab-min-height it doesnt work for fullcreen
 /* Normal tabs design on hover */
 	#tabbrowser-tabs .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
 		border: 0 !important;
-		border-top: 1px solid #b9b9b969 !important;
+		/*border-top: 1px solid #b9b9b969 !important;*/
 		border-radius: 10px 10px 10px 10px !important;
 		background-image: none !important;
 		background-color: #404040d9 !important;
-		border-bottom: 1px solid #0009 !important;
+		/*border-bottom: 1px solid #0009 !important;*/
 	}
 
 /* Multiselect tabs design on hover */
 	#tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected="true"] {
 		border: 0 !important;
-		border-top: 1px solid #b9b9b969 !important;
+		/*border-top: 1px solid #b9b9b969 !important;*/
 		border-radius: 10px 10px 10px 10px !important;
 		background-image: none !important;
 		background-color: #404040d9 !important;
-		border-bottom: 1px solid #0009 !important;
+		/*border-bottom: 1px solid #0009 !important;*/
 	}
 	/* Fixing Multiselect */
 	.tab-background[multiselected="true"]:not([selected="true"]) > .tab-background-inner {
@@ -459,23 +456,36 @@ visibility: collapse !important;
   visibility: visible !important; 
 }
 
-.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
-	display: none !important;
-}
-.titlebar-placeholder {
-	border: none !important;
-}
-
-
 /* Oneliner */
+/* General size */
 #nav-bar {
 	margin-right: 60vw !important;
 }
 #titlebar{
-	height: 36px !important;
 	margin-top: -36px !important;
 	margin-left: 40vw !important;
 }
 :root {
     --tab-min-height: 36px !important;
+}
+
+
+/* Oneliner */
+/* Compact size */
+:root[uidensity="compact"] {
+	--tab-min-height: 32px !important;
+}
+:root[uidensity="compact"] #titlebar{
+	margin-top: -32px !important;
+}
+
+:root[uidensity="compact"] #navigator-toolbox {
+		padding-top: 1px !important;
+		padding-bottom: 1px !important;
+	}
+	
+:root[uidensity="compact"] #TabsToolbar .tabbrowser-tab[fadein] > .tab-stack {
+		padding-right: 4px !important;
+		padding-top: 3px !important;
+		padding-bottom: 2px !important;
 }
