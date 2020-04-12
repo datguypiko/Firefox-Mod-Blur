@@ -250,7 +250,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 		padding-bottom: 1px !important;
 	}
 /* Seperate tabs and make them smaller */
-	#TabsToolbar .tabbrowser-tab {
+	#TabsToolbar .tabbrowser-tab[fadein] > .tab-stack {
 		padding-right: 4px !important;
 		padding-top: 2px !important;
 		padding-bottom: 2px !important;
@@ -260,7 +260,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 isnt formated for different border radius */
 	#tabbrowser-tabs {
 		--tab-loading-fill: transparent !important;
-		padding-left: 2px !important; /* fix the left tab being too close to the edge */
+		margin-left: 2px !important; /* fix the left tab being too close to the edge */
 	}
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
