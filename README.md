@@ -7,6 +7,9 @@ or 'userChrome_searchbar_noBlur.css' for no blur search bar.
 ```
 ![alt text](https://i.redd.it/wpubm02rzfr41.png)
 
+**NEW. Added One Line config 'userChrome-ONE-LINER.css'**
+![alt text](https://i.imgur.com/k6Yhsgl.png)
+
 
 **If you dont like the changes to URL/SEARCH bar it can be reverted with these about:config tweaks. (this will be disabled soon)**
 
