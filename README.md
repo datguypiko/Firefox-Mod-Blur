@@ -24,7 +24,7 @@ dont forget to rename to 'userChrome.css'
 
 Tested on:
 ```html
- Windows 10 / 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / Default Dark Theme
+ Windows 10 / 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 Default Dark Theme
  Linux 74.0.1 / Default Dark Theme
 ```
 
