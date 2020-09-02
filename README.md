@@ -11,20 +11,11 @@ or 'userChrome_searchbar_noBlur.css' for no blur search bar.
 ![alt text](https://i.imgur.com/k6Yhsgl.png)
 
 
-**If you dont like the changes to URL/SEARCH bar it can be reverted with these about:config tweaks. (this will be disabled soon)**
-
-```css
-browser.urlbar.update1; set to False
-browser.urlbar.openViewOnFocus; set to False (your preference, this disables opening on focus, need to type to open search)
-```
-and use  'userChrome_old_searchbar.css' for browsers older than 75.0 version.
-dont forget to rename to 'userChrome.css'
-
 
 
 Tested on:
 ```html
- Windows 10 / 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 Default Dark Theme
+ Windows 10 / 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 Default Dark Theme
  Linux 74.0.1 / Default Dark Theme
 ```
 
