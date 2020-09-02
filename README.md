@@ -1,23 +1,16 @@
 # Firefox-Mod
 
-**New search bar with some changes and fixes. 75.0+ version**
-```html
-'userChrome.css'
-or 'userChrome_searchbar_noBlur.css' for no blur search bar.
-```
-![alt text](https://i.redd.it/wpubm02rzfr41.png)
-
-**NEW. Added One Line config 'userChrome-ONE-LINER.css'**
-![alt text](https://i.imgur.com/k6Yhsgl.png)
-
-
-
-
+**Updated for Firefox ver 80.0**
 Tested on:
 ```html
- Windows 10 / 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 Default Dark Theme
- Linux 74.0.1 / Default Dark Theme
+ Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 | Default Dark Theme
+ Linux - 74.0.1 | Default Dark Theme
 ```
+![alt text](https://i.imgur.com/GklKQ6v.png)
+
+**One Line config 'userChrome-ONE-LINER.css'** (dont forget to rename to 'userChrome.css')
+![alt text](https://i.imgur.com/k6Yhsgl.png)
+
 
 Dont forget to enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config for your custom themes to work.
 
