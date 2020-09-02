@@ -124,6 +124,8 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	#PersonalToolbar{
 	  --uc-bm-height: 20px; /* Might need to adjust if the toolbar has other buttons */
 	  --uc-bm-padding: 6px; /* Vertical padding to be applied to bookmarks */
+		padding: 0px 6px !important;
+  	position: absolute;
 	}
 
 	:root[uidensity="compact"] #PersonalToolbar{ --uc-bm-padding: 1px }
