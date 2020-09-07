@@ -15,6 +15,11 @@ Tested on:
 
 Dont forget to enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config for your custom themes to work.
 
+Mac os style buttons addon for firefox 
+```html
+https://addons.mozilla.org/en-US/firefox/user/12528072/
+```
+
 #Blur style search and bookmarks bar.
 
 Need about:config 'layout.css.backdrop-filter.enabled' = true
