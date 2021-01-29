@@ -1,6 +1,7 @@
 
 * {  
     scrollbar-width: thin !important;
+    scrollbar-color: #9b9b9b #373737 !important;
 }
 
 @-moz-document url("about:privatebrowsing"){
