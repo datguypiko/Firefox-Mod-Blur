@@ -1,7 +1,7 @@
 # Firefox-Mod-Blur
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
-**Tested latest: 84.0.1**
+**Last Tested: 85.0**
 Tested on:
 ```html
  Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 | Default Dark Theme
