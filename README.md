@@ -35,7 +35,7 @@ Tested on:
 
 	>`...` `/` `chrome` `/` `userContent.css`
 
-	>`...` `/` `chrome` `/` `/image/`
+	>`...` `/` `chrome` `/` `image` `/`
     
 
 4. For blur style search dropdown and bookmarks bar to work:
@@ -59,10 +59,10 @@ Tested on:
     <ul><pre>
       /* MIN MAX CLOSE Remove */
       #TabsToolbar > .titlebar-buttonbox-container {
-      visibility: collapse !important;
-      }
+      visibility: collapse !important;}
     </pre></ul>  
-    
 </br>
+
 ---
+
 **`Source for backdropfilter:`** `https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`
