@@ -49,7 +49,7 @@ Tested on:
 
 6. Mac os style buttons for firefox:
 
-    [`Mac OS Style https://addons.mozilla.org/en-US/firefox/user/12528072/`](https://addons.mozilla.org/en-US/firefox/user/12528072/)
+    [`Mac OS Style https://addons.mozilla.org/en-US/firefox/user/12528072/`](https://addons.mozilla.org/en-US/firefox/user/12528072/)  (go to customization mode in firefox to move them around.
     
    > or [`Windows Style https://addons.mozilla.org/en-US/firefox/user/13253983/`](https://addons.mozilla.org/en-US/firefox/user/13253983/)
 
