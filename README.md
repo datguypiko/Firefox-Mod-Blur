@@ -1,5 +1,5 @@
 # Firefox-Mod-Blur
-`Firefox ver.` `85.0.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation)
+`Firefox ver.` `85.0.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `Windows 10` `Mac OS` `Linux`
 ![alt text](https://i.imgur.com/Hi1ocvT.png) 
 
 ##### Changed tabs design `'userChrome-imUsingThis.css'` `Folder icons removed in Bookmarks bar`
