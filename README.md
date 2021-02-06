@@ -19,7 +19,8 @@ Mac os style buttons addon for firefox
 ```html
 https://addons.mozilla.org/en-US/firefox/user/12528072/
 ```
-
+I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
+ 
 #Blur style search and bookmarks bar.
 
 Need about:config 'layout.css.backdrop-filter.enabled' = true
@@ -31,15 +32,4 @@ https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_i
  
  ![alt text](https://i.imgur.com/OasXFqd.png)
  
- I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
- 
- 
- Linux (blur works too after enabling both options mentioned above).
- 
- ![alt text](https://i.imgur.com/0pxPFnW.png)
 
-You can find more in 'userChrome.css'
-```css
-/* Comment this to show min/max/close buttons. I use MAC OS style firefox plugin. ( -> https://addons.mozilla.org/en-US/firefox/user/12528072/ */
-  #TabsToolbar > .titlebar-buttonbox-container {visibility: collapse !important;}
-```
