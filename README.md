@@ -1,38 +1,68 @@
 # Firefox-Mod-Blur
+`Firefox ver.` `85.0.0` `/` `Installation guide below`
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
-# userChrome-imUsingThis.css \\ Changed the tabs a bit
+##### Changed tabs design `'userChrome-imUsingThis.css'` `Folder icons removed in Bookmarks bar`
 ![alt text](https://i.imgur.com/6ZKkYxn.png)
 
-**Last Tested: 85.0**
-Tested on:
-```html
- Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 | Default Dark Theme
- Linux - 74.0.1 | Default Dark Theme
-```
+##### One line config `'userChrome-ONE-LINER.css'`
+![alt text](https://i.imgur.com/YwrbCxm.png)
+
+##### Blurred search bar and bookmarks bar
 ![alt text](https://i.imgur.com/GklKQ6v.png)
 
-**One Line config 'userChrome-ONE-LINER.css'** (dont forget to rename to 'userChrome.css')
-![alt text](https://i.imgur.com/k6Yhsgl.png)
+![alt text](https://i.imgur.com/OasXFqd.png)
 
-
-Dont forget to enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config for your custom themes to work.
-
-Mac os style buttons addon for firefox 
+##### Last Tested version: `85.0.0`
 ```html
-https://addons.mozilla.org/en-US/firefox/user/12528072/
+Tested on:
+ 	Default Theme and Default Dark Theme
+	Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
+ 	Linux - 74.0.1 | Default Dark Theme
 ```
-I use Flexible space for spacing https://imgur.com/a/Gd82v0H 
- 
-#Blur style search and bookmarks bar.
 
-Need about:config 'layout.css.backdrop-filter.enabled' = true
-and it could require the 'gfx.webrender.enabled' to true. But if it works with the 'backdrop-filter' leave this one.
-```
-https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/
-```  
- ![alt text](https://i.imgur.com/bU7ahnk.png)
- 
- ![alt text](https://i.imgur.com/OasXFqd.png)
- 
+</br>
 
+## Installation
+
+**`Dont forget to rename the chosen template file to`** *`'userChrome.css'`*
+
+1. Enable *`toolkit.legacyUserProfileCustomizations.stylesheets`* in *`about:config`* for your custom themes to work.
+2. You can find your profile place by going to *`about:support`* and using *`Open folder`* in *`Profile folder`* section.
+3. File Structure (Create *`chrome`* folder inside your main profile folder if it doesnt exist):
+
+	>`...` `/` `chrome` `/` `userChrome.css`
+
+	>`...` `/` `chrome` `/` `userContent.css`
+
+	>`...` `/` `chrome` `/` `/image/`
+    
+
+4. For blur style search dropdown and bookmarks bar to work:
+	
+    Go to *`about:config`* and enable *`layout.css.backdrop-filter.enabled`* (change to *`true`*).
+    > Optional: if it still doesnt show up try enabling *`gfx.webrender.enabled`* (change to *`true`*).
+    
+    > It could even require updated GPU drivers but that's rarely an issue.
+
+5. I use firefox integrated Flexible space for spacing [`https://imgur.com/a/Gd82v0H`](https://imgur.com/a/Gd82v0H).
+
+6. Mac os style buttons for firefox:
+
+    [`Mac OS Style https://addons.mozilla.org/en-US/firefox/user/12528072/`](https://addons.mozilla.org/en-US/firefox/user/12528072/)
+    
+   > or [`Windows Style https://addons.mozilla.org/en-US/firefox/user/13253983/`](https://addons.mozilla.org/en-US/firefox/user/13253983/)
+
+7. Optional. Enable default window min/max buttons:  
+    
+    Open *`userChrome.css`* file with any text edditor and remove or comment out first lines:
+    <ul><pre>
+      /* MIN MAX CLOSE Remove */
+      #TabsToolbar > .titlebar-buttonbox-container {
+      visibility: collapse !important;
+      }
+    </pre></ul>  
+    
+</br>
+---
+**`Source for backdropfilter:`** `https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`
