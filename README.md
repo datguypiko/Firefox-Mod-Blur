@@ -1,6 +1,9 @@
 # Firefox-Mod-Blur
 ![alt text](https://i.imgur.com/Hi1ocvT.png)
 
+# Firefox-Mod-Blur (userChrome-imUsingThis.css) Changed the tabs a bit.
+![alt text](https://i.imgur.com/6ZKkYxn.png)
+
 **Last Tested: 85.0**
 Tested on:
 ```html
