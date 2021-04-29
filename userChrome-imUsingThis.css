@@ -243,12 +243,10 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		border-bottom: 1px solid #ffffff30 !important;
 		border-radius: 10px 10px 10px 10px !important;
 		background-color:#0000004d;
-	
 	}
 
 	#urlbar {
 		box-shadow: none !important;
-		text-align: center !important;
 	}
 	#tracking-protection-icon-container {
 		border-inline-end: none !important;
@@ -256,14 +254,12 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 	#urlbar[breakout]{
 		height: auto!important;
-		
 	}
 	/* Megabar */
 		#urlbar[breakout][breakout-extend][open] {
 		background-image: url(image/noise-512x512.png) !important;
 		background-color: #1E1E1EBF;
 		backdrop-filter: blur(26px) !important;
-		
 	}
 	
 	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
@@ -271,14 +267,16 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		padding-block: 0px !important;
 		padding-inline: 0px !important;
 		transition: none !important;
-		
 	}
 	#urlbar[breakout][breakout-extend] {
 		top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
 		left: 0 !important;
 		width: 100% !important;
 	}
-	
+
+	#urlbar .urlbar-input-box {
+   		text-align: center;
+	}
 /* ========================================================= */
 /* ========================================================= */
 /* rgb(50, 50, 52) #232324
