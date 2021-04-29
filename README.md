@@ -1,5 +1,5 @@
 # Firefox-Mod-Blur
-`Firefox ver.` `85.0.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `Windows 10` `Mac OS` `Linux`
+`Firefox ver.` `88.0.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `Windows 10` `Mac OS` `Linux`
 ![alt text](https://i.imgur.com/Hi1ocvT.png) 
 
 ##### Changed tabs design `'userChrome-imUsingThis.css'` `Folder icons removed in Bookmarks bar`
@@ -13,11 +13,11 @@
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-##### Last Tested version: `85.0.0`
+##### Last Tested version: `88.0.0`
 ```html
 Tested on:
  	Default Theme and Default Dark Theme
-	Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
+	Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0 
  	Linux - 74.0.1 | Default Dark Theme
 ```
 
