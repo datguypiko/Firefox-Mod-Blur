@@ -273,12 +273,16 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 
 	#urlbar {
 		box-shadow: none !important;
-		text-align: center !important;
 	}
 	#tracking-protection-icon-container {
 		border-inline-end: none !important;
 		border-image: none !important;
 	}
+
+	#urlbar .urlbar-input-box {
+	    text-align: center;
+	}
+
 /* ========================================================= */
 /* ========================================================= */
 /* rgb(50, 50, 52)
