@@ -1,7 +1,7 @@
 # Updated for PROTON - Firefox-Mod-Blur
 `Firefox ver. 89.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Windows 10/11` `Mac OS` `Linux`
 
-![alt text](https://i.imgur.com/Hi1ocvT.png) 
+![alt text](https://i.imgur.com/PWlfs0j.png) 
 
 ##### With Windows Buttons on the left (rename file to userChrome.css before using)
 `'userChrome-With_Default_Windows_Buttons-Left-Side.css'`
