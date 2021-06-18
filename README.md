@@ -1,11 +1,14 @@
-# -PROTON- Firefox-Mod-Blur
-`Firefox ver.` `89.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `Windows 10` `Mac OS` `Linux`
+# Updated for PROTON - Firefox-Mod-Blur
+`Firefox ver. 89.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Windows 10/11` `Mac OS` `Linux`
+
 ![alt text](https://i.imgur.com/Hi1ocvT.png) 
 
-##### Changed tabs design `'userChrome-imUsingThis.css'` `Folder icons removed in Bookmarks bar`
-![alt text](https://i.imgur.com/6ZKkYxn.png)
+##### With Windows Buttons on the left (rename file to userChrome.css before using)
+`'userChrome-With_Default_Windows_Buttons-Left-Side.css'`
 
-##### One line config `'userChrome-ONE-LINER.css'`
+![alt text](https://i.imgur.com/Z9MD1ym.png)
+
+##### One line config `'userChrome-ONE-LINER.css'` `For Firefox versions below 89.0.0`
 ![alt text](https://i.imgur.com/YwrbCxm.png)
 
 ##### Blurred search bar and bookmarks bar
