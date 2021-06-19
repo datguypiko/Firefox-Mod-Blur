@@ -476,6 +476,10 @@ if you change --tab-min-height it doesnt work for fullcreen
 	--toolbarbutton-icon-fill-opacity: 0.8 !important;
 }
 
+#back-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon {
+	background-color: var(--toolbarbutton-active-background) !important;
+}
+
 :root:-moz-lwtheme-brighttext menupopup  {
 	--dark-menu-background-color: rgba(34, 34, 36, 0.95) !important;
 }
