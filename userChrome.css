@@ -468,7 +468,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 } 
 
 :root:-moz-lwtheme-brighttext {
-	--arrowpanel-background:  rgba(44, 44, 46, 0.9) !important;
+	--arrowpanel-background:  rgba(34, 34, 36, 0.85) !important;
 	--panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
 	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
 	--button-active-bgcolor: rgba(113, 113, 113, 0.35) !important;
