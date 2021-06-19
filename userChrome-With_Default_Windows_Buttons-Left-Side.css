@@ -4,10 +4,6 @@
 /* ----- Avoids white flash ----- */
 #tabbrowser-tabpanels {background-color: var(--uc-light-bkgnd-color, #232324) !important;}
 
-/* ----- Move left close/min/max buttons -----
-.titlebar-buttonbox-container{ -moz-box-ordinal-group: 0 !important; }
-*/
-
 /* ----- Bookmarks items centering ----- */
 #PlacesToolbarItems {
   display: flex !important;
@@ -84,6 +80,7 @@ menupopup :-moz-any(menu,menuitem) {
   margin-bottom:0px !important;
   padding-top:2px !important;
   padding-bottom:2px !important;
+  
 }
 
 menupopup :-moz-any(menu,menuitem) {
@@ -105,7 +102,7 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
 
 /* ========================= Icons ========================= */
 #PanelUI-menu-button {
-  list-style-image: url(image/Firefox_2019.svg) !important;
+  list-style-image: url(image/firefox.png) !important;
 
 }
 #home-button {
@@ -148,19 +145,9 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#nav-bar #PanelUI-button .toolbarbutton-icon {
+	opacity:  0.8 !important;
+}
 /* ========================= URL Bar ========================= */
 #urlbar-background {
   display: none !important;
@@ -241,7 +228,7 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
   border: 0 !important;
   border-bottom: 1px solid #ffffff30 !important;
   border-radius: 10px 10px 10px 10px !important;
-  background-color: #0000004d;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 #urlbar {
@@ -281,11 +268,9 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
     text-align: center;
 }
 
-
-
-
-
-
+#wrapper-urlbar-container #urlbar{
+	height: var(--urlbar-height) !important;
+}
 
 /* ========================================================= */
 /* ========================================================= */
@@ -321,7 +306,7 @@ toolbar
   border-bottom: 1px solid #ffffff30 !important;
   border-radius: 20px 20px 20px 20px !important;
   background-image: none !important;
-  background-color: #0000004d !important;
+  background-color: rgba(0,0,0,0.35) !important;
 }
 /* Main BAR */
 #navigator-toolbox {
@@ -367,10 +352,6 @@ if you change --tab-min-height it doesnt work for fullcreen
   padding-top: 0px !important;
   padding-bottom: 2px !important;
 }
-/* Seperate tabs and make them smaller */
-#TabsToolbar .tabbrowser-tab[fadein] > .tab-stack {
-  
-}
 
 /* Remove the line between the tabs / seperators */
 #tabbrowser-tabs .tabbrowser-tab::before,
@@ -384,7 +365,7 @@ if you change --tab-min-height it doesnt work for fullcreen
   /*border-bottom: 1px solid #ffffff30 !important;*/
   border-radius: 10px 10px 10px 10px !important;
   background-image: none !important;
-  background-color: #0000004d !important;
+  background-color: rgba(0,0,0,0.35) !important;
 }
 
 .tabbrowser-tab .tab-background:not([selected]) {
@@ -434,25 +415,12 @@ if you change --tab-min-height it doesnt work for fullcreen
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   opacity: 1;
   visibility: visible !important;
-  border-radius: 10px 10px 10px 10px !important;
+  border-radius: 20px 20px 20px 20px !important;
 }
 
 #titlebar #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
     margin-block: 2px !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* BOOKMARK MENU AUTOHIDE */
@@ -476,8 +444,8 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 #PlacesToolbarItems > .bookmark-item {
   padding-block: var(--uc-bm-padding) !important;
-  padding-left:6px !important;
-  padding-right:6px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
 }
 
 /* Show when cursor is over the toolbar area */
@@ -494,15 +462,34 @@ if you change --tab-min-height it doesnt work for fullcreen
   backdrop-filter: blur(32px) !important;
 }
 
-/* MIN MAX CLOSE Remove
-#TabsToolbar > .titlebar-buttonbox-container {
-  visibility: collapse !important;
-} */
+
+:root:-moz-lwtheme-brighttext {
+	--arrowpanel-background:  rgba(34, 34, 36, 0.85) !important;
+	--panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
+	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
+	--button-active-bgcolor: rgba(113, 113, 113, 0.35) !important;
+	--button-bgcolor: rgba(117, 117, 117, 0.9) !important;
+	--toolbarbutton-icon-fill-opacity: 0.8 !important;
+}
+
+#back-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon {
+	background-color: var(--toolbarbutton-active-background) !important;
+	
+}
+
+:root:-moz-lwtheme-brighttext menupopup  {
+	--dark-menu-background-color: rgba(34, 34, 36, 0.95) !important;
+}
+
+/* ----- Move left close/min/max buttons ----- */
+
+.titlebar-buttonbox-container { -moz-box-ordinal-group: 0 !important; 
+}
 
 #nav-bar { 
-    padding-right: 5px; 
     padding-left: 105px;
 }
+
 #TabsToolbar .titlebar-buttonbox-container {
     visibility: visible !important;
     position: absolute !important;
@@ -512,6 +499,11 @@ if you change --tab-min-height it doesnt work for fullcreen
 .titlebar-buttonbox-container {
 	display: block;
 }
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-button{
+	border-radius: 4px !important;
+}
+
 .titlebar-button > .toolbarbutton-icon {
 	height: 13x !important;
 	min-height: 13px !important;
@@ -520,14 +512,13 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 
 .titlebar-button {
-	padding-left: 10px !important;
-	padding-right: 10px !important;
+	padding-left: 8px !important;
+	padding-right: 8px !important;
 	margin-left: 4px !important;
-	
 }
 
 :root[sizemode="maximized"] .titlebar-buttonbox-container{
-	     padding-top: 8px !important;
+	padding-top: 8px !important;
 }
 
 
@@ -542,4 +533,3 @@ if you change --tab-min-height it doesnt work for fullcreen
 .titlebar-close {
    -moz-box-ordinal-group:0 !important;
 }
-
