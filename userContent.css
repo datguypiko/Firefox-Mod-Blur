@@ -39,7 +39,7 @@
         background-color: #232324 !important; /*#232324*/
 	}
 	
-	.search-wrapper input {
+	.search-wrapper .search-handoff-button {
         background-color: #0000004d !important;
         color: #ffffff5e !important;
         border: none !important;
@@ -47,7 +47,7 @@
 		border-bottom: 1px solid #ffffff26 !important;
 		border-radius: 10px 10px 10px 10px !important;
 	  }
-	  .search-wrapper .logo-and-wordmark {
+	.search-wrapper .logo-and-wordmark {
 		opacity: 0.8 !important;
 	}
 	  
@@ -62,5 +62,11 @@
         background-color: transparent !important;
         fill: white !important;
     }
-
+	.outer-wrapper.newtab-experience .search-wrapper .search-handoff-button .fake-caret {
+		top: 12px !important;
+	}
+	
+	.outer-wrapper.newtab-experience .search-wrapper .search-inner-wrapper {
+		min-height: 42px !important;
+	}
 }
