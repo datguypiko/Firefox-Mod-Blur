@@ -481,5 +481,5 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 
 :root:-moz-lwtheme-brighttext menupopup  {
-	--dark-menu-background-color: rgba(34, 34, 36, 0.95) !important;
+	--dark-menu-background-color: rgba(34, 34, 36, 0.98) !important;
 }
