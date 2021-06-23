@@ -1,29 +1,32 @@
 # Updated for PROTON - Firefox-Mod-Blur
-`Firefox ver. 89.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Windows 10/11` `Mac OS` `Linux`
+`Firefox ver. 89.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
-![alt text](https://i.imgur.com/PWlfs0j.png) 
+![alt text](https://i.imgur.com/i0xLJR1.png) 
 
-##### With Windows Buttons on the left (rename file to userChrome.css before using)
-`'userChrome-With_Default_Windows_Buttons-Left-Side.css'`
+###### Mac OS style buttons
+![alt text](https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/preview/titlebar.gif)
+
+###### Windows Buttons 'userChrome-With_Windows_Buttons.css'
 
 ![alt text](https://i.imgur.com/Z9MD1ym.png)
 
-##### One line config `'userChrome-ONE-LINER.css'` `For Firefox versions below 89.0.0`
+###### One line config 'userChrome-ONE-LINER.css' For Firefox versions below 89.0.0
 ![alt text](https://i.imgur.com/YwrbCxm.png)
 
-##### Blurred search bar and bookmarks bar
+###### Blurred search bar and bookmarks bar
 ![alt text](https://i.imgur.com/GklKQ6v.png)
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-##### Last Tested version: `89.0.1` (Proton)
+###### Last Tested version: `89.0.1` (Proton)
 ```html
 Tested on:
  	-- Default Theme and Default Dark Theme
 	NEW PROTON 
 		-- Windows 10 - 89.0.1 / 89.0.0
+		-- Windows 11 - 89.0.1 / 89.0.0
 
-	Older Firefox Version:
+	Old Firefox Versions:
 		-- Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
  		-- Linux - 74.0.1 | Default Dark Theme
 ```
@@ -43,6 +46,8 @@ Tested on:
 	>`...` `/` `chrome` `/` `userContent.css`
 
 	>`...` `/` `chrome` `/` `image` `/`
+	
+	>`...` `/` `chrome` `/` `window` `/`
     
 
 4. For blur style search dropdown and bookmarks bar to work:
@@ -54,22 +59,12 @@ Tested on:
 
 5. I use firefox integrated Flexible space for spacing [`https://imgur.com/a/Gd82v0H`](https://imgur.com/a/Gd82v0H).
 
-6. Mac os style buttons for firefox:
-
-    [`Mac OS Style https://addons.mozilla.org/en-US/firefox/user/12528072/`](https://addons.mozilla.org/en-US/firefox/user/12528072/)  (go to customization mode in firefox to move them around.
-    
-   > or [`Windows Style https://addons.mozilla.org/en-US/firefox/user/13253983/`](https://addons.mozilla.org/en-US/firefox/user/13253983/)
-
-7. Optional. Enable default window min/max buttons:  
-    
-    Open *`userChrome.css`* file with any text edditor and remove or comment out first lines:
-    <ul><pre>
-      /* MIN MAX CLOSE Remove */
-      #TabsToolbar > .titlebar-buttonbox-container {
-      visibility: collapse !important;}
-    </pre></ul>  
+###### Optional. Download 'userChrome-With_Windows_Buttons.css' to have windows default buttons.
+   
 </br>
 
 ---
 
-**`Source for backdropfilter:`** `https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`
+**`Source for Backdrop filter:`** [`https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)
+
+**`Source for Windows Control buttons:`** [`https://github.com/aminomancer/uc.css.js/tree/master/resources/window`](https://github.com/aminomancer/uc.css.js/tree/master/resources/window)
