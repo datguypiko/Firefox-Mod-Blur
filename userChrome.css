@@ -36,11 +36,6 @@
 }
 
 
-/* navigation toolbar */
-#titlebar #TabsToolbar {
-  
-}
-
 /* ----- Fix fullscreen issues with navigation bar at the top ----- */
 :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
   -moz-appearance: none !important;
@@ -99,23 +94,15 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
   color: #ffffffa8 !important;
 }
 
-
 /* ========================= Icons ========================= */
 #PanelUI-menu-button {
-  list-style-image: url(image/firefox.png) !important;
-
-}
-#home-button {
-  
+  list-style-image: url(image/firefox.svg) !important;
 }
 #forward-button {
   list-style-image: url(image/right-arrow.svg) !important;
 }
 #back-button {
   list-style-image: url(image/left-arrow.svg) !important;
-}
-#PlacesToolbarItems .bookmark-item[container] {
-  
 }
 #PanelUI-button {
   margin-inline-start: 0 !important;
@@ -144,10 +131,14 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
   background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-
 #nav-bar #PanelUI-button .toolbarbutton-icon {
 	opacity:  0.8 !important;
 }
+
+#back-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon {
+	background-color: var(--toolbarbutton-active-background) !important;	
+}
+
 /* ========================= URL Bar ========================= */
 #urlbar-background {
   display: none !important;
@@ -439,7 +430,7 @@ if you change --tab-min-height it doesnt work for fullcreen
   margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
   transform: rotateX(90deg);
   transform-origin: top;
-  transition: transform 135ms linear 600ms !important;
+  transition: transform 135ms linear 500ms !important;
   z-index: 2;
 }
 #PlacesToolbarItems > .bookmark-item {
@@ -462,24 +453,148 @@ if you change --tab-min-height it doesnt work for fullcreen
   backdrop-filter: blur(32px) !important;
 }
 
-/* MIN MAX CLOSE Remove */
+/* MIN MAX CLOSE Remove
 #TabsToolbar > .titlebar-buttonbox-container {
   visibility: collapse !important;
-} 
+}   */
 
 :root:-moz-lwtheme-brighttext {
-	--arrowpanel-background:  rgba(34, 34, 36, 0.85) !important;
+	--arrowpanel-background:  rgba(34, 34, 36, 1) !important;
 	--panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
 	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
 	--button-active-bgcolor: rgba(113, 113, 113, 0.35) !important;
 	--button-bgcolor: rgba(117, 117, 117, 0.9) !important;
 	--toolbarbutton-icon-fill-opacity: 0.8 !important;
-}
-
-#back-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon {
-	background-color: var(--toolbarbutton-active-background) !important;
+	--arrowpanel-border-color: rgb(55, 55, 55) !important;
 }
 
 :root:-moz-lwtheme-brighttext menupopup  {
-	--dark-menu-background-color: rgba(34, 34, 36, 0.98) !important;
+	--dark-menu-background-color: rgba(34, 34, 36, 1) !important;
+	--dark-menu-border-color: rgb(55, 55, 55) !important;
+	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+}
+
+/* ----- Move left close/min/max buttons ----- */
+#nav-bar {padding-left: 90px;}
+
+#TabsToolbar .titlebar-buttonbox-container, :root[inFullscreen="true"] #window-controls {
+	-moz-box-ordinal-group: 0 !important; 
+	position: absolute !important;
+    top: 12px;
+    left: 0;
+}
+
+:root[inFullscreen="true"] #window-controls {
+	display: -webkit-box;
+}
+
+.titlebar-buttonbox-container {
+	display: block;
+}
+
+:root[sizemode="maximized"] .titlebar-buttonbox-container{
+	padding-top: 8px !important;
+}
+ 
+:root:-moz-window-inactive:not([customizing])
+    :is(.titlebar-buttonbox, #window-controls)
+    > toolbarbutton:not(:hover) {
+	opacity: 0.65 !important;
+    list-style-image: url(window/inactive.svg) !important;
+}
+
+:is(.titlebar-buttonbox, #window-controls) .toolbarbutton-icon {
+	opacity: 1 !important;
+    appearance: none !important;
+}
+
+.titlebar-button > .toolbarbutton-icon,
+#window-controls > toolbarbutton > .toolbarbutton-icon {
+    width: 14px !important;
+	min-width: 14px !important;
+	min-height: 14px !important;
+    height: 14px !important;
+    stroke: none !important;
+}
+
+.titlebar-buttonbox, #window-controls {
+    margin-right: 6x !important;
+    margin-left: 0 !important;
+}
+
+.titlebar-close,
+#close-button {
+    appearance: none !important;
+    padding: 0px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+    -moz-box-ordinal-group: 0 !important;
+}
+
+.titlebar-min,
+#minimize-button {
+    appearance: none !important;
+    padding: 0px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+    -moz-box-ordinal-group:1 !important;
+}
+
+.titlebar-max,
+.titlebar-restore,
+#restore-button {
+    appearance: none !important;
+    padding: 0px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+    -moz-box-ordinal-group: 2 !important;
+}
+
+#TabsToolbar #window-controls > toolbarbutton,
+#TabsToolbar .titlebar-buttonbox .titlebar-button {
+	list-style-image: url(window/inactive.svg) !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-close,
+#TabsToolbar #window-controls:hover #close-button {
+	list-style-image: url(window/close.svg) !important;
+
+}
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover,
+#TabsToolbar #window-controls #close-button:hover {
+    list-style-image: url(window/close-hover.svg) !important;
+}
+
+
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-min,
+#TabsToolbar #window-controls:hover #minimize-button {
+	list-style-image: url(window/minimize.svg) !important;	
+}
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover,
+#TabsToolbar #window-controls #minimize-button:hover {
+    list-style-image: url(window/minimize-hover.svg) !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-max,
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-restore,
+#TabsToolbar #window-controls:hover  #restore-button {
+	list-style-image: url(window/maximize.svg) !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover {
+    list-style-image: url(window/maximize-hover.svg) !important;
+}
+
+:root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover,
+#TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover,
+#TabsToolbar #window-controls #restore-button:hover {
+    list-style-image: url(window/maximize-restore.svg) !important;
 }
