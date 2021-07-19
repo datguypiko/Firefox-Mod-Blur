@@ -1,5 +1,5 @@
 # Updated for PROTON - Firefox-Mod-Blur
-`Firefox ver. 89.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
+`Firefox Latest ver. 90.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
 ![alt text](https://i.imgur.com/i0xLJR1.png) 
 
@@ -18,13 +18,13 @@
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-###### Last Tested version: `89.0.1` (Proton)
+###### Last Tested version: `90.0.1` (Proton)
 ```html
 Tested on:
  	-- Default Theme and Default Dark Theme
 	NEW PROTON 
-		-- Windows 10 - 89.0.1 / 89.0.0
-		-- Windows 11 - 89.0.1 / 89.0.0
+		-- Windows 10 - 90.0.1 / 90.0 / 89.0.1 / 89.0.0
+		-- Windows 11 - 90.0.1 / 90.0 / 89.0.1 / 89.0.0
 
 	Old Firefox Versions:
 		-- Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
