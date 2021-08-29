@@ -1,12 +1,12 @@
 # Updated for PROTON - Firefox-Mod-Blur
-`Firefox Latest ver. 90.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
+`Tested on Firefox ver. 91.0.2` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
 ![alt text](https://i.imgur.com/i0xLJR1.png) 
 
 ###### Mac OS style buttons
 ![alt text](https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/preview/titlebar.gif)
 
-###### Windows Buttons 'userChrome-With_Windows_Buttons.css'
+###### Windows Buttons 'userChrome-With_Default_Windows_Buttons-Left-Side.css'
 
 ![alt text](https://i.imgur.com/Z9MD1ym.png)
 
@@ -18,16 +18,15 @@
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-###### Last Tested version: `90.0.1` (Proton)
+###### Last Tested version: `91.0.2` (Proton)
 ```html
 Tested on:
  	-- Default Theme and Default Dark Theme
 	NEW PROTON 
-		-- Windows 10 - 90.0.1 / 90.0 / 89.0.1 / 89.0.0
-		-- Windows 11 - 90.0.1 / 90.0 / 89.0.1 / 89.0.0
+		-- Windows 10/11 - 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
 
 	Old Firefox Versions:
-		-- Windows 10 - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
+		-- Windows - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
  		-- Linux - 74.0.1 | Default Dark Theme
 ```
 
