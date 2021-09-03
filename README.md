@@ -34,6 +34,7 @@ Tested on:
 
 ## Installation
 
+###### Use *`Dark`* theme for firefox to avoid any color issues. https://i.imgur.com/yFZbyo7.png
 **`Dont forget to rename the chosen template file to`** *`'userChrome.css'`*
 
 1. Enable *`toolkit.legacyUserProfileCustomizations.stylesheets`* in *`about:config`* for your custom themes to work.
