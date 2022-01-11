@@ -1,4 +1,13 @@
-If you update to 96.0 you will lose blur effect and everything will be transparent.
+</br>
+
+:warning:
+> *If you update to :x:**96.0** you will lose blur effect and everything will be transparent. Use at least :heavy_check_mark:**95.0.2** or downgrade to it https://support.mozilla.org/en-US/kb/install-older-version-firefox untill they fix it.* 
+
+:warning:
+
+</br>
+
+
 # Updated for PROTON - Firefox-Mod-Blur
 `Last tested ver. 95.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
