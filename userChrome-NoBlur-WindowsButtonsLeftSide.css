@@ -102,7 +102,7 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
 
 /* ========================= Icons ========================= */
 #PanelUI-menu-button {
-  list-style-image: url(image/firefox.png) !important;
+  list-style-image: url(image/firefox.svg) !important;
 
 }
 #home-button {
@@ -490,25 +490,22 @@ if you change --tab-min-height it doesnt work for fullcreen
     padding-left: 105px;
 }
 
-#TabsToolbar .titlebar-buttonbox-container {
-    visibility: visible !important;
+#navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
+	display: block  !important;
     position: absolute !important;
     top: 5px;
     left: 0;
 }
-.titlebar-buttonbox-container {
-	display: block;
-}
 
 #TabsToolbar .titlebar-buttonbox-container .titlebar-button{
-	border-radius: 4px !important;
+	border-radius:  var(--toolbarbutton-border-radius);
 }
 
 .titlebar-button > .toolbarbutton-icon {
-	height: 13x !important;
-	min-height: 13px !important;
-	width: 13px !important;
-	min-width: 13px !important;
+	height: 14px !important;
+	min-height: 14px !important;
+	width: 14px !important;
+	min-width: 14px !important;
 }
 
 .titlebar-button {
@@ -520,7 +517,6 @@ if you change --tab-min-height it doesnt work for fullcreen
 :root[sizemode="maximized"] .titlebar-buttonbox-container{
 	padding-top: 8px !important;
 }
-
 
 .titlebar-min {
    -moz-box-ordinal-group:2 !important;
