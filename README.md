@@ -1,7 +1,7 @@
 </br>
 
 :warning: 
-> If you want to use 96.0. I made a file without blur effect. Use *userChrome-NoBlurEffect.css*
+> If you want to use 96.0. I made multiple files without blur effect. Use any of selected styles with the tag *'-NoBlur-'* until they fix the issue.
 
 :warning:
 > *If you update to :x:**96.0** you will lose blur effect and everything will be transparent. Use at least :heavy_check_mark:**95.0.2** or downgrade to it https://support.mozilla.org/en-US/kb/install-older-version-firefox untill they fix it.* 
@@ -19,11 +19,11 @@
 ###### Mac OS style buttons (left side by default)
 ![alt text](https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/preview/titlebar.gif)
 
-###### MacOS style Buttons on the right, menu buttons on the left: 'userChrome-NoBlur-MacOsStyleButtonsRightSide.css'
+###### `MacOS Style Buttons:` Right *'userChrome-NoBlur-MacOsStyleButtonsRightSide.css'* ---- Left *'userChrome-NoBlur-MacOsStyleButtonsLeftSide.css'*
 
 ![alt text](https://i.imgur.com/vda7CNM.png)
 
-###### Windows Buttons: 'userChrome-NoBlur-WindowsButtonsLeftSide.css' or right side 'userChrome-NoBlur-WindowsButtonsRightSide.css'
+###### `Windows Style Buttons` Right *'userChrome-NoBlur-WindowsButtonsRightSide.css'* ---- Left *'userChrome-NoBlur-WindowsButtonsLeftSide.css'*
 
 ![alt text](https://i.imgur.com/Z9MD1ym.png)
 
@@ -35,12 +35,12 @@
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-###### Last Tested version: `95.0` (Proton)
+###### Last Tested version: `96.0` (Proton)
 ```html
 Tested on:
  	-- Default Theme and Default Dark Theme
 	NEW PROTON 
-		-- Windows 10/11 - 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
+		-- Windows 10/11 - 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
 
 	Old Firefox Versions:
 		-- Windows - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
