@@ -448,19 +448,12 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 /* ----- Move left close/min/max buttons ----- */
 #nav-bar {padding-right: 90px;}
 
-#TabsToolbar .titlebar-buttonbox-container, :root[inFullscreen="true"] #window-controls {
-	-moz-box-ordinal-group: 0 !important; 
+#navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
+	visibility: visible !important;
+	display: block !important;
 	position: absolute !important;
     top: 13px;
     right: 0;
-}
-
-:root[inFullscreen="true"] #window-controls {
-	display: -webkit-box;
-}
-
-.titlebar-buttonbox-container {
-	display: block;
 }
 
 :root[sizemode="maximized"] .titlebar-buttonbox-container{
@@ -468,34 +461,32 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
  
 :root:-moz-window-inactive:not([customizing])
-    :is(.titlebar-buttonbox, #window-controls)
+    :is(.titlebar-buttonbox)
     > toolbarbutton:not(:hover) {
 	opacity: 0.65 !important;
     list-style-image: url(window/inactive.svg) !important;
 }
 
-:is(.titlebar-buttonbox, #window-controls) .toolbarbutton-icon {
+:is(.titlebar-buttonbox) .toolbarbutton-icon {
 	opacity: 1 !important;
     appearance: none !important;
 }
 
-.titlebar-button > .toolbarbutton-icon,
-#window-controls > toolbarbutton > .toolbarbutton-icon {
-    width: 14px !important;
-	min-width: 14px !important;
-	min-height: 14px !important;
-    height: 14px !important;
+.titlebar-button > .toolbarbutton-icon {
+    width: 15px !important;
+	min-width: 15px !important;
+	min-height: 15px !important;
+    height: 15px !important;
     stroke: none !important;
 }
 
 
-.titlebar-buttonbox, #window-controls {
+.titlebar-buttonbox {
     margin-right: 8px !important;
     margin-left: 8px !important;
 }
 
-.titlebar-close,
-#close-button {
+.titlebar-close {
     appearance: none !important;
     padding: 0px !important;
     padding-left: 6px !important;
@@ -505,8 +496,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
     -moz-box-ordinal-group: 2 !important;
 }
 
-.titlebar-min,
-#minimize-button {
+.titlebar-min {
     appearance: none !important;
     padding: 0px !important;
     padding-left: 6px !important;
@@ -517,8 +507,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
 
 .titlebar-max,
-.titlebar-restore,
-#restore-button {
+.titlebar-restore {
     appearance: none !important;
     padding: 0px !important;
     padding-left: 6px !important;
@@ -529,36 +518,28 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
 
 
-#TabsToolbar #window-controls > toolbarbutton,
 #TabsToolbar .titlebar-buttonbox .titlebar-button {
 	list-style-image: url(window/inactive.svg) !important;
 }
 
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-close,
-#TabsToolbar #window-controls:hover #close-button {
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-close {
 	list-style-image: url(window/close.svg) !important;
-
 }
 
-#TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover,
-#TabsToolbar #window-controls #close-button:hover {
+#TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover {
     list-style-image: url(window/close-hover.svg) !important;
 }
 
-
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-min,
-#TabsToolbar #window-controls:hover #minimize-button {
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-min {
 	list-style-image: url(window/minimize.svg) !important;	
 }
 
-#TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover,
-#TabsToolbar #window-controls #minimize-button:hover {
+#TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover {
     list-style-image: url(window/minimize-hover.svg) !important;
 }
 
 #TabsToolbar .titlebar-buttonbox-container:hover .titlebar-max,
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-restore,
-#TabsToolbar #window-controls:hover  #restore-button {
+#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-restore {
 	list-style-image: url(window/maximize.svg) !important;
 }
 
@@ -567,7 +548,6 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
 
 :root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover,
-#TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover,
-#TabsToolbar #window-controls #restore-button:hover {
+#TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover {
     list-style-image: url(window/maximize-restore.svg) !important;
 }
