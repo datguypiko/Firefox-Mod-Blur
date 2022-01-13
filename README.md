@@ -16,10 +16,10 @@
 
 ![alt text](https://i.imgur.com/i0xLJR1.png) 
 
-###### Mac OS style buttons on the right side: 'userChrome-NoBlur-MacOsStyleButtonsRightSide.css'
+###### Mac OS style buttons (left side by default)
 ![alt text](https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/preview/titlebar.gif)
 
-###### Windows Buttons on the right, menu buttons on the left: 'userChrome-NoBlur-RightSideMinMaxClose.css'
+###### MacOS style Buttons on the right, menu buttons on the left: 'userChrome-NoBlur-MacOsStyleButtonsRightSide.css'
 
 ![alt text](https://i.imgur.com/vda7CNM.png)
 
