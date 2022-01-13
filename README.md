@@ -12,18 +12,22 @@
 
 
 # Updated for PROTON - Firefox-Mod-Blur
-`Last tested ver. 95.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
+`No blur for 96.0 yet` `Last tested ver. 96.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
 ![alt text](https://i.imgur.com/i0xLJR1.png) 
 
 ###### Mac OS style buttons
 ![alt text](https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/preview/titlebar.gif)
 
-###### Windows Buttons 'userChrome-With_Default_Windows_Buttons-Left-Side.css'
+###### Windows Buttons on the right, menu buttons on the left: 'userChrome-NoBlur-RightSideMinMaxClose.css'
+
+![alt text](https://i.imgur.com/vda7CNM.png)
+
+###### Windows Buttons: 'userChrome-With_Default_Windows_Buttons-Left-Side.css'
 
 ![alt text](https://i.imgur.com/Z9MD1ym.png)
 
-###### One line config 'userChrome-ONE-LINER.css' For Firefox versions below 89.0.0
+###### One line config: 'userChrome-ONE-LINER.css' For Firefox versions below 89.0.0
 ![alt text](https://i.imgur.com/YwrbCxm.png)
 
 ###### Blurred search bar and bookmarks bar
