@@ -521,7 +521,7 @@ if you change --tab-min-height it doesnt work for fullcreen
     padding-right: 6px !important;
     margin: 0px !important;
     background-color: transparent !important;
-    -moz-box-ordinal-group: 2 !important;
+    -moz-box-ordinal-group: 0 !important;
 }
 
 .titlebar-min {
@@ -531,7 +531,7 @@ if you change --tab-min-height it doesnt work for fullcreen
     padding-right: 6px !important;
     margin: 0px !important;
     background-color: transparent !important;
-    -moz-box-ordinal-group:0 !important;
+    -moz-box-ordinal-group:1 !important;
 }
 
 .titlebar-max,
@@ -542,7 +542,7 @@ if you change --tab-min-height it doesnt work for fullcreen
     padding-right: 6px !important;
     margin: 0px !important;
     background-color: transparent !important;
-    -moz-box-ordinal-group: 1 !important;
+    -moz-box-ordinal-group: 2 !important;
 }
 
 #TabsToolbar .titlebar-buttonbox .titlebar-button {
@@ -578,3 +578,4 @@ if you change --tab-min-height it doesnt work for fullcreen
 #TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover {
     list-style-image: url(window/maximize-restore.svg) !important;
 }
+
