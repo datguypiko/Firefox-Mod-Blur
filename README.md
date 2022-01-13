@@ -23,7 +23,7 @@
 
 ![alt text](https://i.imgur.com/vda7CNM.png)
 
-###### Windows Buttons: 'userChrome-With_Default_Windows_Buttons-Left-Side.css'
+###### Windows Buttons: 'userChrome-NoBlur-WindowsButtonsLeftSide.css' or right side 'userChrome-NoBlur-WindowsButtonsRightSide.css'
 
 ![alt text](https://i.imgur.com/Z9MD1ym.png)
 
