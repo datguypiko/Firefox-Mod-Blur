@@ -1,3 +1,6 @@
+##### `13/02/2022`
+> ##### Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-Scrollbar-DefaultSize.css" file and rename it to "userContent.css".
+
 </br>
 
 :warning: 
