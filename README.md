@@ -4,10 +4,10 @@
 </br>
 
 :warning: 
-> If you want to use 96.0. I made multiple files without blur effect. Use any of selected styles with the tag *'-NoBlur-'* until they fix the issue.
+> If you want to use version from after 96.0. I made multiple files without blur effect. Use any of selected styles with the tag *'-NoBlur-'* until they fix the issue.
 
 :warning:
-> *If you update to :x:**96.0** you will lose blur effect and everything will be transparent. Use at least :heavy_check_mark:**95.0.2** or downgrade to it https://support.mozilla.org/en-US/kb/install-older-version-firefox untill they fix it.* 
+> *If you update to :x:**96.0 or newer** you will lose blur effect and everything will be transparent. Use at least :heavy_check_mark:**95.0.2** or downgrade to it https://support.mozilla.org/en-US/kb/install-older-version-firefox untill they fix it. Or use the one without blur.* 
 
 :warning:
 
