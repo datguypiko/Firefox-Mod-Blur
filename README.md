@@ -15,7 +15,7 @@
 
 
 # Updated for PROTON - Firefox-Mod-Blur
-`No blur for 99.x yet` `Last tested ver. 99.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
+`No blur for 100.x yet` `Last tested ver. 100.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
 ![alt text](https://i.imgur.com/RngH3GW.png) 
 
@@ -38,12 +38,12 @@
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-###### Last Tested version: `99.0.1` (Proton)
+###### Last Tested version: `100.0` (Proton)
 ```html
 Tested on:
  	-- Default Dark Theme
 	NEW PROTON 
-		-- Windows 10/11 - 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
+		-- Windows 10/11 - 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
 
 	Old Firefox Versions:
 		-- Windows - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
