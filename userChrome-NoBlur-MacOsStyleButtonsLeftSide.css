@@ -453,7 +453,7 @@ if you change --tab-min-height it doesnt work for fullcreen
   visibility: collapse !important;
 }   */
 
-:root:-moz-lwtheme-brighttext {
+:root:-moz-lwtheme {
 	--arrowpanel-background:  rgba(34, 34, 36, 1) !important;
 	--panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
 	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
@@ -463,7 +463,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 	--arrowpanel-border-color: rgb(55, 55, 55) !important;
 }
 
-:root:-moz-lwtheme-brighttext menupopup  {
+:root:-moz-lwtheme  {
 	--dark-menu-background-color: rgba(34, 34, 36, 1) !important;
 	--dark-menu-border-color: rgb(55, 55, 55) !important;
 	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
