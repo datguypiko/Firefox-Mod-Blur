@@ -1,10 +1,14 @@
+##### `14/05/2022`
+> ##### Fixed after an update broken popup menu background color for 100.x versions of firefox.
+
 ##### `13/02/2022`
 > ##### Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-Scrollbar-DefaultSize.css" file and rename it to "userContent.css".
+
 
 </br>
 
 :warning: 
-> If you want to use version from after 96.0. I made multiple files without blur effect. Use any of selected styles with the tag *'-NoBlur-'* until they fix the issue.
+> If you want to use version from after 96.0. I made multiple files without blur effect. Use any of selected styles with the tag *'-NoBlur-'* until they fix the issue. More about the issue why it's disabled for now https://bugzilla.mozilla.org/show_bug.cgi?id=1749625.
 
 :warning:
 > *If you update to :x:**96.0 or newer** you will lose blur effect and everything will be transparent. Use at least :heavy_check_mark:**95.0.2** or downgrade to it https://support.mozilla.org/en-US/kb/install-older-version-firefox untill they fix it. Or use the one without blur.* 
