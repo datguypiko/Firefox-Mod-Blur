@@ -1,3 +1,5 @@
+The Blur effect will come back to firefox soon. Will update all of the presets when it's on stable version.
+
 ##### `14/05/2022`
 > ##### Fixed after an update broken popup menu background color for 100.x versions of firefox.
 
