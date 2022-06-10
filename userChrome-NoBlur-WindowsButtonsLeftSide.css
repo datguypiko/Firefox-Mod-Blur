@@ -44,7 +44,7 @@
 /* ----- Fix fullscreen issues with navigation bar at the top ----- */
 :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
   -moz-appearance: none !important;
-  padding-top: 8px !important;
+  padding-top: 0px !important;
 }
 
 /* Fix the FUllscreen changing padding on other bars. */
@@ -266,6 +266,11 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
 
 #urlbar .urlbar-input-box {
     text-align: center;
+}
+
+#urlbar-container #urlbar {
+	--urlbar-height: 30px !important;
+	--urlbar-min-height: 30px !important;
 }
 
 #wrapper-urlbar-container #urlbar{
@@ -515,7 +520,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 
 :root[sizemode="maximized"] .titlebar-buttonbox-container{
-	padding-top: 8px !important;
+	padding-top: 0px !important;
 }
 
 .titlebar-min {
