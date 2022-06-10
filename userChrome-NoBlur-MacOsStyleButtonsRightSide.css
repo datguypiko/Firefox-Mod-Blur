@@ -32,7 +32,7 @@
 /* Fix fullscreen issues with navigation bar at the top */
 :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
   -moz-appearance: none !important;
-  padding-top: 8px !important;}
+  padding-top: 0px !important;}
 
 /* Fix the FUllscreen changing padding on other bars. */
 :root[tabsintitlebar][sizemode="maximized"] #titlebar {
@@ -227,6 +227,11 @@ menupopup :-moz-any(menu:last-child,menuitem:last-child) {margin-bottom:0px !imp
 
 #urlbar .urlbar-input-box {
     text-align: center;}
+
+#urlbar-container #urlbar {
+	--urlbar-height: 30px !important;
+	--urlbar-min-height: 30px !important;
+}
 
 #wrapper-urlbar-container #urlbar{
 	height: var(--urlbar-height) !important;}
@@ -457,7 +462,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
 
 :root[sizemode="maximized"] .titlebar-buttonbox-container{
-	padding-top: 8px !important;
+	padding-top: 0px !important;
 }
  
 :root:-moz-window-inactive:not([customizing])
