@@ -1,5 +1,3 @@
-The Blur effect will come back to firefox soon. Will update all of the presets when it's on stable version.
-
 ##### `10/06/2022`
 > ##### Fixed padding in fullscreen after recent version changes.
 
@@ -12,11 +10,10 @@ The Blur effect will come back to firefox soon. Will update all of the presets w
 
 </br>
 
-:warning: 
-> If you want to use version from after 96.0. I made multiple files without blur effect. Use any of selected styles with the tag *'-NoBlur-'* until they fix the issue. More about the issue why it's disabled for now https://bugzilla.mozilla.org/show_bug.cgi?id=1749625.
+
 
 :warning:
-> *If you update to :x:**96.0 or newer** you will lose blur effect and everything will be transparent. Use at least :heavy_check_mark:**95.0.2** or downgrade to it https://support.mozilla.org/en-US/kb/install-older-version-firefox untill they fix it. Or use the one without blur.* 
+> The Blur effect is still disabled by firefox. Only works for website content.
 
 :warning:
 
@@ -24,7 +21,7 @@ The Blur effect will come back to firefox soon. Will update all of the presets w
 
 
 # Updated for PROTON - Firefox-Mod-Blur
-`No blur for 100.x yet` `Last tested ver. 100.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
+`No blur for 100.x yet` `Last tested ver. 102.0` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11`
 
 ![alt text](https://i.imgur.com/RngH3GW.png) 
 
@@ -52,7 +49,7 @@ The Blur effect will come back to firefox soon. Will update all of the presets w
 Tested on:
  	-- Default Dark Theme
 	NEW PROTON 
-		-- Windows 10/11 - 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
+		-- Windows 10/11 - 102.0 / 101.0 / 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
 
 	Old Firefox Versions:
 		-- Windows - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
