@@ -21,7 +21,7 @@
 
 ![alt text](https://i.imgur.com/vda7CNM.png)
 
-###### `Windows Style Buttons` Right *'userChrome-NoBlur-WindowsButtonsRightSide.css'* ---- Left *'userChrome-NoBlur-WindowsButtonsLeftSide.css'*
+###### `Default Operating System Buttons` Right *'userChrome-NoBlur-DefaultOSButtonsRightSide.css'* ---- Left *'userChrome-NoBlur-DefaultOSButtonsLeftSide.css'*
 
 ![alt text](https://i.imgur.com/Z9MD1ym.png)
 
