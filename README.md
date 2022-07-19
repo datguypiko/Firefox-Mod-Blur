@@ -1,4 +1,4 @@
-##### `19/07/2022` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur/edit/master/README.md#last-updates)
+##### `19/07/2022` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#last-updates)
 > ##### Added new theme with background wallpaper and blur effect. 
 > ##### Download `userContent-WallpaperEdition.css` rename it to `userContent.css` file, put "wallpaper.jpg" inside `image` folder. If you are using 'png' image file dont forget to rename to "wallpaper.png" in `userContent.css` on line 39. There are some minor graphical glitches that happen sometimes on the blur effect when window is not in fullscreen because of the firefox implementation. 
 
@@ -8,7 +8,7 @@
 
 
 # Updated for PROTON - Firefox-Mod-Blur
-`Last tested ver. 102.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11` `/` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur/edit/master/README.md#last-updates)
+`Last tested ver. 102.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#installation) `/` `Designed for Windows 10/11` `/` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/README.md#last-updates)
 
 ###### :warning: :warning: :warning: The Blur effect is still disabled for UI elements by firefox. Only works for website content. (19/07/2022) :warning: :warning: :warning: 
 
