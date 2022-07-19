@@ -319,8 +319,7 @@ toolbar
   --tabs-border-color: none !important;
   --my-tab-min-width: 100px !important; /* 36px */
   --tabs-navbar-shadow-size: 0px !important;
-  /*border: 0 !important; */
-  
+  border-bottom: 1px solid #252525  !important;
 }
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
