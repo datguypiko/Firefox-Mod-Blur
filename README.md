@@ -74,7 +74,6 @@ Tested on:
 
 5. I use firefox integrated Flexible space for spacing [`https://imgur.com/a/Gd82v0H`](https://imgur.com/a/Gd82v0H).
 
-###### Optional. Download 'userChrome-With_Windows_Buttons.css' to have windows default buttons.
    
 </br>
 
