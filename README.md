@@ -89,4 +89,4 @@ Tested on:
 
 ###### `10/06/2022` Fixed padding in fullscreen after recent version changes.
 ###### `14/05/2022` Fixed after an update broken popup menu background color for 100.x versions of firefox.
-###### `13/02/2022` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-Scrollbar-DefaultSize.css" file and rename it to "userContent.css".
+###### `13/02/2022` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-DefaultSizeScrollbar-Win11.css" file and rename it to "userContent.css".
