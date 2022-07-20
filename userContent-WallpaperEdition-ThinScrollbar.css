@@ -33,7 +33,7 @@
 }
  
   
-  @-moz-document url("about:home"),url("about:blank"),url("about:newtab"){
+  @-moz-document url("about:home"),url("about:newtab"){
     html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
         background-color: #232324 !important; /*#232324*/
 		background: url(image/wallpaper.jpg) !important ; 
@@ -103,4 +103,10 @@
 		min-height: 42px !important;
 	}
 	
+}
+
+@-moz-document url("about:blank"){ 
+	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+			background-color: #232324 !important; /*#232324*/
+		}
 }
