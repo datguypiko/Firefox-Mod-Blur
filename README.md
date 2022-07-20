@@ -1,4 +1,6 @@
-##### `19/07/2022` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur#last-updates)
+##### `20/07/2022` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur#last-updates)
+> ##### Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
+##### `19/07/2022`
 > ##### Added new theme with background wallpaper and blur effect. 
 > ##### Download `userContent-WallpaperEdition.css` rename it to `userContent.css` file, put "wallpaper.jpg" inside `image` folder. If you are using 'png' image file dont forget to rename to "wallpaper.png" in `userContent.css` on line 39. There are some minor graphical glitches that happen sometimes on the blur effect because of the firefox implementation. 
 
