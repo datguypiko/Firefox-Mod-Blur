@@ -557,3 +557,5 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 #TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover {
     list-style-image: url(window/maximize-restore.svg) !important;
 }
+
+#appMenu-popup {margin-inline: -260px !important;}
