@@ -2,7 +2,7 @@
 > ##### Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
 ##### `19/07/2022`
 > ##### Added new theme with background wallpaper and blur effect. 
-> ##### Download `userContent-WallpaperEdition.css` rename it to `userContent.css` file, put "wallpaper.jpg" inside `image` folder. If you are using 'png' image file dont forget to rename to "wallpaper.png" in `userContent.css` on line 39. There are some minor graphical glitches that happen sometimes on the blur effect because of the firefox implementation. 
+> ##### Download `userContent-WallpaperEdition.css` rename it to `userContent.css` file, put "wallpaper.jpg" inside `image` folder. If you are using 'png' image file dont forget to rename to "wallpaper.png" in `userContent.css` on line 39. There are some minor graphical glitches that happen sometimes hovering on the blur effect because of the firefox implementation. 
 
 ![alt text](https://i.imgur.com/CTOqtpN.jpg) 
 
@@ -10,7 +10,7 @@
 
 
 # Updated for PROTON - Firefox-Mod-Blur
-`Last tested ver. 102.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur#installation) `/` `Designed for Windows 10/11` `/` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur#last-updates)
+`Last tested ver. 104.0.1` `/` [`Installation guide below`](https://github.com/datguypiko/Firefox-Mod-Blur#installation) `/` `Designed for Windows 10/11` `/` [`Last Updates`](https://github.com/datguypiko/Firefox-Mod-Blur#last-updates)
 
 ###### :warning: :warning: :warning: The Blur effect is still disabled for UI elements by firefox. Only works for website content. (19/07/2022) :warning: :warning: :warning: 
 
@@ -35,12 +35,12 @@
 
 ![alt text](https://i.imgur.com/OasXFqd.png)
 
-###### Last Tested version: `102.0.1` (Proton)
+###### Last Tested version: `104.0.1` (Proton)
 ```html
 Tested on:
  	-- Default Dark Theme
 	NEW PROTON 
-		-- Windows 10/11 - 102.0.1 / 102.0 / 101.0 / 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
+		-- Windows 10/11 - 104.0.1 / 102.0.1 / 102.0 / 101.0 / 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0
 
 	Old Firefox Versions:
 		-- Windows - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
