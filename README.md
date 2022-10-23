@@ -37,30 +37,36 @@
 
 ## :wrench: Installation
 
-###### <details><summary>Use *`Dark`* theme for firefox to avoid any color issues <sup>[show image]</sup></summary>![image](https://user-images.githubusercontent.com/61329159/197360837-503f8d50-b2c1-4c29-94d7-870adb1c3ab0.png)</details>
-###### <details><summary>*`Windows 11`* works best with default size scrollbar so use: <sup>[read more]</sup></summary><p>Use *'userContent-WallpaperEdition-Windows11DefaultScrollbar.css'* or *'userContent-Windows11DefaultScrollbar.css'*</p></details>
-###### <details><summary>I use firefox integrated Flexible space for spacing <sup>[show image]</sup></summary>![image](https://user-images.githubusercontent.com/61329159/197362629-b5c6e49a-92c4-4d08-aada-f8883e7c471f.png)</details>
+<details><summary>Use <code>Dark</code> theme for firefox to avoid any color issues <sup>[show image]</sup></summary>
 
-1. ##### :exclamation:Rename the chosen template files to `userChrome.css` and `userContent.css`.
-2. ##### Enable `toolkit.legacyUserProfileCustomizations.stylesheets` in `about:config` for your custom themes to work.
-3. ##### You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
-4. ##### File Structure (Create `chrome` folder inside your main profile folder if it doesnt exist):
+![image](https://user-images.githubusercontent.com/61329159/197360837-503f8d50-b2c1-4c29-94d7-870adb1c3ab0.png)</details>
 
-	 ##### :open_file_folder: `...` `/` `chrome` `/` `userChrome.css`
+<details><summary><code>Windows 11</code> works best with default size scrollbar so use: <sup>[read more]</sup></summary><p>Use <code>userContent-WallpaperEdition-Windows11DefaultScrollbar.css</code> or <code>userContent-Windows11DefaultScrollbar.css</code></p></details>
 
-	 ##### :open_file_folder: `...` `/` `chrome` `/` `userContent.css`
+<details><summary>I use firefox integrated Flexible space for spacing <sup>[show image]</sup></summary>
 
-	 ##### :open_file_folder: `...` `/` `chrome` `/` `image` `/`
+![image](https://user-images.githubusercontent.com/61329159/197362629-b5c6e49a-92c4-4d08-aada-f8883e7c471f.png)</details>
+
+1. :exclamation:Rename the chosen template files to `userChrome.css` and `userContent.css`.
+2. Enable `toolkit.legacyUserProfileCustomizations.stylesheets` in `about:config` for your custom themes to work.
+3. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
+4. File Structure (Create `chrome` folder inside your main profile folder if it doesnt exist):
+
+	 :open_file_folder: `...` `/` `chrome` `/` `userChrome.css`
+
+	 :open_file_folder: `...` `/` `chrome` `/` `userContent.css`
+
+	 :open_file_folder: `...` `/` `chrome` `/` `image` `/`
 	
-	 ##### :open_file_folder: `...` `/` `chrome` `/` `window` `/`
+	 :open_file_folder: `...` `/` `chrome` `/` `window` `/`
 	
-5. ##### For blur to work in new tab homepage [Wallpaper edition].
+5. For blur to work in new tab homepage [Wallpaper edition].
 	
-    ###### ***[It's now Enabled by default]*** - Go to `about:config` and enable `layout.css.backdrop-filter.enabled` (change to `true`).	
+    - ***[It's now Enabled by default]*** - Go to `about:config` and enable `layout.css.backdrop-filter.enabled` (change to `true`).	
   
-6. ##### For blur style search dropdown and bookmarks bar to work [Doesnt work for now since firefox changed it].
+6. For blur style search dropdown and bookmarks bar to work [Doesnt work for now since firefox changed it].
 	
-    ###### ***[It's now Enabled by default]*** - Go to `about:config` and enable `layout.css.backdrop-filter.enabled` (change to `true`).
+    - ***[It's now Enabled by default]*** - Go to `about:config` and enable `layout.css.backdrop-filter.enabled` (change to `true`).
 
 </br>
 
@@ -68,11 +74,15 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
 
-###### `20/07/2022` > Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
-###### `19/07/2022` > Added new theme with background wallpaper and blur effect. 
-###### `10/06/2022` > Fixed padding in fullscreen after recent version changes.
-###### `14/05/2022` > Fixed after an update broken popup menu background color for 100.x versions of firefox.
-###### `13/02/2022` > Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
+ `20/07/2022` > Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
+
+ `19/07/2022` > Added new theme with background wallpaper and blur effect. 
+
+ `10/06/2022` > Fixed padding in fullscreen after recent version changes.
+
+ `14/05/2022` > Fixed after an update broken popup menu background color for 100.x versions of firefox.
+
+ `13/02/2022` > Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
 
 </br>
 
@@ -97,7 +107,7 @@ Last Tested on:
 </details>
 <details><summary>Sources <sup>[read more]</sup></summary>
 
-> ###### Source for Backdrop filter: [`https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)
+> Source for Backdrop filter: [`https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)
 
-> ###### Source for Windows Control buttons: [`https://github.com/aminomancer/uc.css.js/tree/master/resources/window`](https://github.com/aminomancer/uc.css.js/tree/master/resources/window)
+> Source for Windows Control buttons: [`https://github.com/aminomancer/uc.css.js/tree/master/resources/window`](https://github.com/aminomancer/uc.css.js/tree/master/resources/window)
 </details>
