@@ -1,0 +1,451 @@
+/* MIN MAX CLOSE Remove */
+#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }
+
+/* Avoids white flash? */
+#tabbrowser-tabpanels{
+  background-color: var(--uc-light-bkgnd-color, #1a1a1b) !important;
+}
+/* Left ?
+.titlebar-buttonbox-container{ -moz-box-ordinal-group: 0 !important; }
+*/
+/*
+#PlacesToolbarItems {
+  display: flex !important;
+  justify-content: center !important;
+}*/
+
+
+/* Non active tabs have darker text */
+	.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) {
+		color: #ffffff5e !important;
+	}
+
+
+/* 
+if the -moz-appearance: none; still gives you fullscreen issues 
+change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use 
+-moz-appearance: -moz-window-titlebar-maximized !important; And remove the padding-top 
+*/	
+	:root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
+		-moz-appearance: none !important;
+		padding-top: 8px !important;
+	}
+	#navigator-toolbox {
+		padding-top: 3px !important;
+	}
+	
+/* Fix the FUllscreen changing padding on other bars. */	
+	:root[tabsintitlebar][sizemode="maximized"] #titlebar {
+		-moz-appearance: none !important;
+	}
+	
+/* Remove the main window top border */
+	#main-window:root[sizemode="normal"][tabsintitlebar]  {
+		border-top: 0px !important;
+		
+	}
+
+	
+	
+/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true */
+	#PersonalToolbar {
+
+		background-image: url(image/noise-512x512.png) !important;
+		background-color: #2A2A2AC0 !important;
+		-webkit-backdrop-filter: blur(32px) !important;
+		backdrop-filter: blur(32px) !important;
+		/* -webkit-backdrop-filter: blur(32px) !important;*/
+		-moz-backdrop-filter: blur(32px) !important;
+	}
+
+/* Remove the top tab line - TopBar */
+	.tab-line { display: none !important; }
+	
+
+
+/* Remove the empty squere - TopBar */
+	#TabsToolbar {
+		padding-inline-start: initial !important;
+	}
+	.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
+		display: none !important;
+	}
+ 
+/* Icons */
+	#PanelUI-menu-button {
+		list-style-image: url(image/Fx-Browser-icon-oneColor-white.png) !important;}
+	#PanelUI-button {
+			margin-inline-start: 0 !important;
+			padding-inline-start: 0 !important;
+			border: none !important;
+			border-inline-start: none !important;
+	}
+	#PanelUI-button #PanelUI-menu-button .toolbarbutton-icon {
+		opacity: 0.7 !important;
+	}
+	#home-button {
+		list-style-image: url(image/fire-2-32.ico) !important;
+	}
+	#home-button .toolbarbutton-icon {
+		opacity: 0.7 !important;
+	}
+	#PlacesToolbarItems .bookmark-item[container] {
+		list-style-image: url(image/folder.svg) !important;
+	}
+	#forward-button {
+		list-style-image: url(image/right-arrow.svg) !important;
+	}
+	#back-button {
+		list-style-image: url(image/left-arrow.svg) !important;
+	}
+	#back-button > .toolbarbutton-icon {
+		border: none !important;
+		border-radius: 0 !important;
+		background: none !important;
+		width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+		height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+		padding: var(--toolbarbutton-inner-padding) !important;
+		border-radius: var(--toolbarbutton-border-radius) !important;
+	}
+	#back-button:not([disabled]):not([open]):hover > .toolbarbutton-icon {
+		box-shadow: none !important;
+		background-color: var(--toolbarbutton-hover-background) !important;
+	}
+
+/* Hide Tab Bar with ALT*/
+/* #titlebar { -moz-appearance: none !important; } */
+/* :root[tabsintitlebar][sizemode="maximized"]{ padding-top: 8px !important; } */
+/* #titlebar:not(:hover) > #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar { visibility: collapse; } */
+/* #toolbar-menubar[autohide]:not([inactive]), */
+/* #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; } */
+
+/* Remove or comment out transition if you want synchronization with the autohide bookmarks bar and tab bar*/
+/* BOOKMARK MENU AUTOHIDE */
+	#PersonalToolbar{
+	  --uc-bm-height: 20px; /* Might need to adjust if the toolbar has other buttons */
+	  --uc-bm-padding: 6px; /* Vertical padding to be applied to bookmarks */
+		padding: 0px 6px !important;
+  	position: absolute;
+	}
+
+	:root[uidensity="compact"] #PersonalToolbar{ --uc-bm-padding: 1px }
+	:root[uidensity="touch"] #PersonalToolbar{ --uc-bm-padding: 6px }
+
+	#PersonalToolbar:not([customizing]){
+	  margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	  transform: rotateX(90deg);
+	  transform-origin: top;
+	  transition: transform 135ms linear 600ms !important;  
+	  z-index: 2;
+	  
+
+	}
+	#PlacesToolbarItems > .bookmark-item{ padding-block: var(--uc-bm-padding) !important; }
+
+		/* SELECT BOOKMARKS TOOLBAR BEHAVIOR
+
+		Show when urlbar is focused
+		#nav-bar:focus-within + #PersonalToolbar{
+		  transition-delay: 100ms !important;
+		  transform: rotateX(0);
+		}*/
+
+	/* Show when cursor is over the toolbar area */
+	#navigator-toolbox:hover > #PersonalToolbar{
+	  transition-delay: 100ms !important;
+	  transform: rotateX(0);
+
+	}
+	
+	#PersonalToolbar {
+		-moz-box-ordinal-group: 3 !important;
+	}
+	#titlebar {
+		-moz-box-ordinal-group: 2 !important;
+		
+	}
+	#nav-bar {
+		-moz-box-ordinal-group: 1 !important;
+		background-color: transparent !important;
+	}
+	
+/* Search Bar */
+/* Search Bar */
+/* Search Bar */
+/* Hide some buttons for hover 
+*/
+	#nav-bar:not([customizing="true"]) > #nav-bar-customization-target > #urlbar-container:not(:hover) > #urlbar:not([focused]) > #urlbar-input-container > #page-action-buttons {
+		opacity: 0;
+	}	
+	#page-action-buttons {
+		transition: opacity 0.15s ease;
+	}
+	#nav-bar:not([customizing="true"]) > #nav-bar-customization-target > #urlbar-container:not(:hover) > #urlbar:not([focused]) > #urlbar-input-container > #identity-box {
+		opacity: 0;
+		/*visibility: collapse;*/
+	}
+	#identity-box {
+		/*transition: visibility 0.30s ease-in-out, opacity 0.30s ease-in-out;*/
+		transition: opacity 0.15s ease;
+	}
+	#nav-bar:not([customizing="true"]) > #nav-bar-customization-target > #urlbar-container:not(:hover) > #urlbar:not([focused]) > #urlbar-input-container > #tracking-protection-icon-container {
+		opacity: 0;
+	}
+	#tracking-protection-icon-container {
+		transition: opacity 0.15s ease;
+	}
+	
+/* Search Bar #2b2b2bd1 262626ed #1E1E1EBF*/
+	#urlbar{
+	  --autocomplete-popup-highlight-background: transparent !important;
+	 /*  --autocomplete-popup-highlight-background: #313131ad;*/
+	}
+	#urlbar-background {
+		display: none !important;
+
+	}
+	#urlbar-input-container, #searchbar {
+		border-radius: 8px !important;
+	}
+	#urlbar-container {
+		border-radius: 8px 8px 8px 8px !important;
+		/* padding-top: 0px !important;
+		padding-bottom: 0px !important;*/
+	}
+	#urlbar[breakout]{
+		height: var(--urlbar-height) + 1 !important;
+		
+	}
+	#urlbar[breakout][breakout-extend] {
+		background-color: rgba(38, 38, 38, 0.98)  !important;
+		
+	}
+	
+	#urlbar[breakout][breakout-extend] > #urlbar-input-container, #urlbar-input-container {
+		height: var(--urlbar-height) !important;
+		padding-block: 0px !important;
+		padding-inline: 0px !important;
+		transition: none !important;
+	}
+	#urlbar[breakout][breakout-extend] {
+		top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+		left: 0 !important;
+		width: 100% !important;
+	}
+	
+	
+	.urlbarView-body-inner {
+		border-top: 0px !important;
+	}
+
+	#urlbar-input-container { 	/* Fixing icons right and left padding inside search bar for hovering  */
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	#navigator-toolbox {
+		
+		--lwt-toolbar-field-border-color:  transparent !important;
+		--lwt-toolbar-field-focus: transparent !important;
+		--toolbar-field-focus-border-color: #77777773 !important;
+		}
+
+	#urlbar:not(.megabar):not([focused="true"]):-moz-lwtheme, #urlbar:not(.megabar):not([focused="true"]):-moz-lwtheme:hover {
+		border-color: transparent;
+	}
+	#urlbar {
+		border: 0 !important;
+		border-bottom: 1px solid #ffffff30 !important;
+		border-radius: 8px 8px 8px 8px !important;
+		background-color:#0000004d;
+	}
+
+	#urlbar {
+		box-shadow: none !important;
+		text-align: center !important;
+	}
+	#tracking-protection-icon-container {
+		border-inline-end: none !important;
+		border-image: none !important;
+	}
+/* ========================================================= */
+/* ========================================================= */
+/* rgb(50, 50, 52)
+========================================================= */
+/* New tab icon size (16 is default) Important to not change the rest of calc */
+	#tabs-newtab-button .toolbarbutton-icon{
+		width: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
+		height: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
+	}
+/* Main BAR */
+	#navigator-toolbox {
+		background-color: rgb(50, 50, 52) !important;
+		--tabs-border-color: none !important;
+		--my-tab-min-width: 80px !important; /* 36px */
+		--tabs-navbar-shadow-size: 0px  !important;
+		/*border: 0 !important; */
+	}
+
+
+
+/* Remove the fill when loading on the tab which 
+isnt formated for different border radius */
+	#tabbrowser-tabs {
+		--tab-loading-fill: transparent !important;
+		margin-left: 4px !important; /* fix the left tab being too close to the edge */
+	}
+
+/* Width of the tabs. Important to have Fadein or it breaks fonctionality */
+	.tabbrowser-tab[fadein]:not([pinned]) { 
+	    max-width: 135px !important; /* 135px */
+		min-width: var(--my-tab-min-width) !important;
+		/*transition:none;
+		transition: min-width 300ms ease-out , max-width 100ms ease-out !important;*/
+	}  
+	/*.tabbrowser-tab[fadein][visuallyselected="true"]:not([pinned]) { 
+	  max-width: 150px !important; 
+	}  */
+	  
+.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) .tab-icon-image {
+		opacity: 0.8 !important;
+
+}	
+
+
+/* Fix the Heigh of a tab because 
+if you change --tab-min-height it doesnt work for fullcreen
+ */
+	#TabsToolbar {
+		padding-top: 0px !important;
+		padding-bottom: 1px !important;
+	}
+/* Seperate tabs and make them smaller */
+	#TabsToolbar .tabbrowser-tab[fadein] > .tab-stack{
+		padding-right: 4px !important;
+		padding-top: 2px !important;
+		padding-bottom: 2px !important;
+	}
+		
+	
+	
+/* Remove the line between the tabs / seperators */
+	#tabbrowser-tabs .tabbrowser-tab::before, #tabbrowser-tabs .tabbrowser-tab::after {
+		border: 0 !important;
+	}
+
+/* Selected tabs design */
+	.tabbrowser-tab .tab-background[selected="true"]:-moz-lwtheme {
+		border: 0 !important;
+		border-bottom: 1px solid #ffffff30 !important;
+		border-radius: 8px 8px 8px 8px !important;
+		background-image: none !important;
+		background-color:#0000004d !important;
+	}
+	
+
+/* Normal tabs design on hover */
+	#tabbrowser-tabs .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+		border: 0 !important;
+		border-top: 1px solid #b9b9b969 !important;
+		border-radius: 8px 8px 8px 8px !important;
+		background-image: none !important;
+		background-color: #404040d9 !important;
+	}
+
+/* Multiselect tabs design on hover */
+	#tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected="true"] {
+		border: 0 !important;
+		border-top: 1px solid #b9b9b969 !important;
+		border-radius: 8px 8px 8px 8px !important;
+		background-image: none !important;
+		background-color: #404040d9 !important;
+	}
+	/* Fixing Multiselect */
+	.tab-background[multiselected="true"]:not([selected="true"]) > .tab-background-inner {
+		background: none !important;
+	}
+
+/* Design of the plus/newtab button */
+toolbar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon {
+    border: 0 !important; 
+	border-radius: 20px 20px 20px 20px !important;
+	background-image: none !important;
+	background-color:#404040d9 !important;
+}
+
+toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon {
+    border: 0 !important;
+    border-bottom: 1px solid #ffffff30 !important;
+	border-radius: 20px 20px 20px 20px !important;
+	background-image: none !important;
+	background-color: #0000004d !important;
+	
+}
+
+/* ==================================================================================================================
+################## TAB BAR HIDE (Tested only on default position) ######################################################
+##################First colapses and shows when hover anywhere on the whole top bar################## 
+##################Second leaves it with exit buttons visible and shows when hover on the whole bar.##################
+##################Same as the second but just shows when hovered on the title/tab bar################## 
+Use the one posted above if you want smooth animations
+display:none !important;
+visibility: collapse !important;
+*/
+
+/* Number #1 */
+ 	
+	/*#navigator-toolbox:not(:hover) > #titlebar { 
+		display:none !important;
+		 
+	  } */
+
+/* Number #2 */
+/* #navigator-toolbox:not(:hover) > #titlebar > #TabsToolbar > .toolbar-items > #TabsToolbar-customization-target > #tabbrowser-tabs { */
+    /* visibility: hidden; */
+/* }    */
+
+/* Number #3 */
+/* #titlebar:not(:hover) > #TabsToolbar > .toolbar-items > #TabsToolbar-customization-target > #tabbrowser-tabs { */
+    /* visibility: hidden; */
+/* } */
+
+/* ========================================================= */
+/* ========================================================= */
+
+/* Show tab close button when cursor is over the tab icon 
+
+.tab-close-button{
+  -moz-box-ordinal-group: 0;
+  display: -moz-box !important;
+  position: relative;
+  margin-right: -18px !important;
+  z-index: -1;
+  visibility: hidden;
+}
+.tabbrowser-tab[pinned] .tab-close-button{ display: none !important; }
+.tab-close-button:hover{ background-color: var(--lwt-accent-color); }
+
+.tabbrowser-tab[selected] .tab-close-button:hover{ background-color: var(--lwt-selected-tab-background-color, var(--toolbar-bgcolor)); }
+
+
+.tab-icon-image:hover ~ .tab-close-button,
+.tab-close-button:hover,
+.tab-icon-image:not([src]) ~ .tab-label-container:hover ~ .tab-close-button{ visibility: visible; z-index: 1 }
+.tab-icon-image:not([src]) ~ .tab-label-container:hover ~ .tab-close-button,
+.tab-icon-image:not([src]) ~  .tab-close-button:hover {margin-right: 0px !important; }
+
+	*/
+
+/* Show Tab close button on hover */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: -moz-box !important;
+  opacity: 0;
+  visibility: collapse !important;
+ transition: opacity 0.25s, visibility 0.25s ease-in !important;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 1;
+  visibility: visible !important; 
+}
+
+
+

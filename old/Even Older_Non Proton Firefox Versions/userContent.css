@@ -1,0 +1,66 @@
+
+* {  
+    scrollbar-width: thin !important;
+    scrollbar-color: #afafaf #2c2c2c !important;
+}
+
+@-moz-document url("about:privatebrowsing"){
+	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+        background-color: #232324 !important; /*#232324*/
+	}
+	#search-handoff-button {
+        background-color: #0000004d !important;
+        border: none !important;
+        box-shadow: none !important;
+		border-bottom: 1px solid #b821ec82 !important;
+		border-radius: 10px 10px 10px 10px !important;
+    }
+	
+	.fake-textbox{ color: #ffffff5e !important;}
+	
+	#search-handoff-button:active > .fake-textbox, 
+	#search-handoff-button:hover > .fake-textbox,
+	#search-handoff-button:focus > .fake-textbox,
+	#search-handoff-button:focus-within > .fake-textbox{
+        color: white !important;
+		opacity: 0.8 !important;
+		
+    }
+	.fake-caret {background: rgb(255, 255, 255) !important;}
+	.logo-and-wordmark .wordmark {
+		fill: #b821ec !important; 
+	
+	}
+}
+ 
+  
+  @-moz-document url("about:home"),url("about:blank"),url("about:newtab"){
+    html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+        background-color: #232324 !important; /*#232324*/
+	}
+	
+	.search-wrapper input {
+        background-color: #0000004d !important;
+        color: #ffffff5e !important;
+        border: none !important;
+        box-shadow: none !important;
+		border-bottom: 1px solid #ffffff26 !important;
+		border-radius: 10px 10px 10px 10px !important;
+	  }
+	  .search-wrapper .logo-and-wordmark {
+		opacity: 0.8 !important;
+	}
+	  
+	.search-wrapper input:focus {
+        color: white !important;
+    }
+	.search-wrapper .search-button {
+        fill: #ffffff5e !important;
+    }
+	.search-wrapper .search-button:focus,
+    .search-wrapper .search-button:hover {
+        background-color: transparent !important;
+        fill: white !important;
+    }
+
+}
