@@ -1,4 +1,4 @@
-#### <p align="center"> <i> 🆕 Working on a new update right now.</i> [Preview](https://github.com/datguypiko/Firefox-Mod-Blur/discussions/28#discussion-4513969) (almost finished 18-11-2022)</p>
+#OLDER VERSION
 
 # <p align="center"> [![firefox](https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png)](https://github.com/datguypiko/Firefox-Mod-Blur#wrench-installation) Updated for Proton - Firefox-Mod-Blur </p> 
 
