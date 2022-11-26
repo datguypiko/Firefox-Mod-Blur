@@ -1,32 +1,29 @@
-## <p align="center"> <a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular :new: </p> 
-
-
+<h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular [Updated:new:]</h2>
 
 <p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-107.0.0-blue?style=flat&logo=firefox&logoColor=white"> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-26/11/2022-bightgreen?style=flat"> <a href="https://www.reddit.com/r/Firefox/"><img alt="Subreddit subscribers" src="https://img.shields.io/reddit/subreddit-subscribers/Firefox?label=r%2FFirefox&logo=reddit&style=flat&logoColor=white"></a> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
-## 🔧 macOS style buttons
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
 
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Updated context menu design
+<p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/uG9BgQH.png"></p>
 
-## 🔧 Updated context menu design
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uG9BgQH.png"></p>
-
-## 🔧 Clean compact search with hidden buttons
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Clean compact search with hidden buttons
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/gu3HnMx.gif"></p>
 
-## 🔧 Show if pinned on hover
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Show if pinned on hover
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Asnafsk.gif"></p>
 
-## 🔧 More compact and responsive homepage
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/lhc2Muh.gif"></p>
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> More compact and responsive homepage
+<p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/lhc2Muh.gif"></p>
 
 </br>
 
-<h1 align="center">Select and add extra styles and functions</h1>
+<h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
 
-<h2>:gear: Min-max-close window buttons style</h2>
+<h3>:gear: Min-max-close window buttons style</h3>
 <i>left_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/pR78PN5.png"></p>
 <i>right_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/032WjXp.png"></p>
 <i>right_os_window_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
@@ -71,16 +68,16 @@
 1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
 2. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
 3. Put `userChrome.css` and `userContent.css` in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
-4. Put any selected extra modification files inside chrome folder.
-5. File Structure :
+4. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` inside your `chrome` folder.
+5. File Structure:
 
-	 :open_file_folder: `...` `/` `chrome` `/` `userChrome.css`
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userChrome.css`
 
-	 :open_file_folder: `...` `/` `chrome` `/` `userContent.css`
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userContent.css`
 
-	 :open_file_folder: `...` `/` `chrome` `/` `image` `/`
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `image` `/`
 	
-	 :open_file_folder: `...` `/` `chrome` `/` `[extra modification file].css`
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
 
 </br>
 
@@ -90,7 +87,7 @@
 2. Install the extra files it asks you to install. And run the program.
 3. At the bottom left corner press `Add Rule` -> `Add Process Rule`, type `firefox` -> `add`.
 4. On the left panel select and open `firefox` section. Change Mica to `Acrylic` for better blur effect. 
-5. Dont forget to download my css file `acrylic_micaforeveryone.css` and  put it inside `Chrome` folder (and base files from Installation guide above).
+5. Dont forget to download my css file `acrylic_micaforeveryone.css` from `EXTRA THEMES` and  put it inside `Chrome` folder (and base files from Installation guide above).
 6. Remove and dont use any other min-max-close window button files.
 7. Expermental:warning: In MicaForEveryone settings `firefox` section enable `Blur Behind` so when the window is not active it will still be blurred. 
 
@@ -98,7 +95,7 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
  
- `26/11/2022` > Reworked theme files and structure and added new things with more options.
+ `26/11/2022` > 2.0 Version. Reworked theme files, structure and added new things with more options.
 
  `20/07/2022` > Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
 
