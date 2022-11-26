@@ -1,0 +1,4 @@
+/* Change bookmarks bar color to be the same as top toolbar */
+:root {
+    --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color) !important;
+}

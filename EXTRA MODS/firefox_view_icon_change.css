@@ -1,0 +1,4 @@
+/* ----- Firefox view icon change ----- */
+#navigator-toolbox #firefox-view-button {
+	list-style-image: url(../image/files.svg) !important;
+}
