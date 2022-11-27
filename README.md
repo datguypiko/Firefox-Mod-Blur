@@ -43,6 +43,10 @@
 <i>privacy_blur_tabs_content.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/8RPR1It.gif"></p>
 <i>privacy_change_email_text.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uuq06p5.png"></p>
 
+<h2>:gear: Restore icons in main menu</h2>
+<i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>
+<p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
+
 <h2>:gear: Other modifications</h2>
 <i>hide_list-all-tabs_button.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
