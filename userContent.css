@@ -15,6 +15,10 @@
   scrollbar-color: #afafaf #2c2c2c !important;
 }
 
+body {
+  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+}
+
 @-moz-document url("about:privatebrowsing") {
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body,
@@ -36,6 +40,7 @@
 	} */
 
   #search-handoff-button {
+    appearance: none !important;
     background-color: hsla(275, 13%, 33%, 0.3) !important;
     border: none !important;
     box-shadow: none !important;
@@ -106,7 +111,6 @@ url("about:newtab") {
     --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
     background-size: cover !important;
   }
-
   /* For background blur */
   /* .outer-wrapper {
     background-color: #1e1e1e88 !important;
@@ -114,6 +118,7 @@ url("about:newtab") {
   } */
 
   .search-wrapper .search-handoff-button {
+    appearance: none !important;
     background-color: var(--firefoxcss-item-bg-color) !important;
     color: rgba(251, 251, 254, 1) !important;
     border: none !important;
@@ -353,6 +358,11 @@ url("about:newtab") {
     .ds-outer-wrapper-breakpoint-override main {
       width: 266px !important;
     }
+  }
+
+   .outer-wrapper .search-wrapper .search-handoff-button {
+    /* background-image: url("image/search-glass.svg") !important; */
+    /* background-size: 16px !important;  */
   }
 }
 
