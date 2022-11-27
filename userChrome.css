@@ -19,6 +19,7 @@
 @import url("thin_scrollbar_windows10.css");
 @import url("ublock-icon-change.css");
 
+
 /* ----- My Custom Colors ----- */
 :root {
   --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
@@ -766,3 +767,19 @@ toolbar
 #urlbar-go-button {
   list-style-image: url("image/right-arrow.svg") !important;
 }
+
+/* Styling Extra search bar that you can add to firefox */
+#search-container #searchbar {
+  outline: 0 !important;
+  border: 0 !important;
+  border-radius: var(--firefoxcss-border-radius) !important;
+  background-color: var(--firefoxcss-url-bar-bg-color) !important;
+  border-bottom: 1px solid var(--firefoxcss-url-border-bottom-color) !important;
+  border-top: 1px solid var(--firefoxcss-url-border-top-color) !important;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35) !important;
+}
+#search-container #searchbar .search-go-button {
+  list-style-image: url("image/right-arrow.svg") !important;
+}
+
+#PopupSearchAutoComplete{ --panel-background: var(--firefoxcss-url-breakout-bar-bg-color) !important; }
