@@ -1,6 +1,6 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular [Updated:new:]</h2>
 
-<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-107.0.0-blue?style=flat&logo=firefox&logoColor=white"> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-26/11/2022-bightgreen?style=flat"> <a href="https://www.reddit.com/r/Firefox/"><img alt="Subreddit subscribers" src="https://img.shields.io/reddit/subreddit-subscribers/Firefox?label=r%2FFirefox&logo=reddit&style=flat&logoColor=white"></a> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-107.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-26/11/2022-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -23,7 +23,7 @@
 
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
 
-<h3>:gear: Min-max-close window buttons style</h3>
+<h2>:gear: Min-max-close window buttons style</h2>
 <i>left_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/pR78PN5.png"></p>
 <i>right_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/032WjXp.png"></p>
 <i>right_os_window_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
@@ -43,15 +43,15 @@
 <i>privacy_blur_tabs_content.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/8RPR1It.gif"></p>
 <i>privacy_change_email_text.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uuq06p5.png"></p>
 
-<h2>:gear: Restore icons in main menu</h2>
-<i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>
-<p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
-
 <h2>:gear: Other modifications</h2>
 <i>hide_list-all-tabs_button.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
 <i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
 <i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p>
+
+<h2>:gear: Restore icons in main menu</h2>
+<i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>
+<p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
 
 <h2>:hammer: Spill style theme</h2>
 
@@ -110,7 +110,7 @@
 
  `14/05/2022` > Fixed after an update broken popup menu background color for 100.x versions of firefox.
 
- `13/02/2022` > Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. </br>Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
+ `13/02/2022` > Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
 
 </br>
 
@@ -132,7 +132,7 @@ Last Tested on:
 </br>
 </br>
 </details>
-<details><summary>Sources <sup>[read more]</sup></summary>
+<details><summary>Sources</summary>
 
 > Source for Backdrop filter: [`https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)
 
