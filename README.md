@@ -46,14 +46,15 @@
 <h2>:gear: Other modifications</h2>
 <i>hide_list-all-tabs_button.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
-<i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/Phm4ms5.jpg"></p>
+<i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
+<i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p>
 
 <h2>:hammer: Spill style theme</h2>
 
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
 
 <h2>:hammer: Acrylic MicaForEveryone</h2>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"><i>acrylic_micaforeveryone.css (remove any other min-max-close window button file!)</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"><i>acrylic_micaforeveryone.css</i></p>
 
 <h2>:wrench: Installation</h2>
 <details><summary>Use <code>Dark</code> theme for firefox to avoid any color issues <sup>[show image]</sup></summary>
