@@ -270,8 +270,13 @@
 
 /* ======================== Tabs ======================================= */
 /* ----- Non active tabs have darker text ----- */
-.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) {
+.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) .tab-label-container 
+.tab-label {
   color: hsla(0, 0%, 100%, 0.65) !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab .tab-label-container 
+.tab-label {
   transition: color 250ms ease !important;
 }
 
