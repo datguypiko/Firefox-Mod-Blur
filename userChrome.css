@@ -783,3 +783,34 @@ toolbar
 }
 
 #PopupSearchAutoComplete{ --panel-background: var(--firefoxcss-url-breakout-bar-bg-color) !important; }
+
+/* speaker on tabs color fixes */
+.tab-icon-overlay:not([crashed])[soundplaying]:hover,
+.tab-icon-overlay:not([crashed])[muted]:hover,
+.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  color: currentColor !important;
+  stroke: hsla(0, 0%, 80%) !important;
+  background-color: hsla(0, 0%, 80%) !important;
+  fill-opacity: 0.95 !important;
+}
+
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  color: currentColor !important;
+  stroke: hsla(0, 0%, 80%)  !important;
+  background-color: hsla(0, 0%, 80%) !important;
+  fill-opacity: 0.95 !important;
+}
+
+#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
+#TabsToolbar .tab-icon-overlay:not([crashed])[muted],
+#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] { 
+  color: hsl(0, 0%, 100%) !important; 
+}
+
+#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
+#TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
+#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
+  color: hsla(0, 0%, 10%) !important; 
+}
