@@ -36,6 +36,7 @@
 /* ----------------------------------------------------------------- */
 #main-window{
   background-color: transparent  !important;
+  appearance: -moz-win-borderless-glass !important;
   appearance: -moz-win-glass !important;
 }
 
