@@ -1,0 +1,54 @@
+TDLR anything other than 100% scaling in windows will probably cause issues with the min-max-close window button positioning. 
+Because of the firefox implementation for transparency there is nothing you can do dynamically to fix it. 
+Firefox creates a second set of icons that you cant interact with, move or remove when setup for transparent window.
+
+Different scaling probably requires different button positioning (resolution could affect it too)
+
+What I did is hide the icons except the close button. The hover effect still works this way.
+
+
+
+If you want to make the hover more centered and 'close' button not jumping on hover try 
+moving them to left, right, top or bottom depending on your situation.
+
+------------------------------------------------------------------------------------
+-----If you dont know how position elements with css write in Issue I will help.----
+------------------------------------------------------------------------------------
+
+Example: 
+
+In acrylic_micaforeveryone.css
+
+/*  Moves all icons. Moves 4 pixels down from the top*/
+#navigator-toolbox .titlebar-button .toolbarbutton-icon {
+  margin-top:4px !important; 
+}
+
+/* minimize button */
+#navigator-toolbox .titlebar-button.titlebar-min .toolbarbutton-icon { 
+ 
+}
+
+/* max and restore button */
+#navigator-toolbox .titlebar-button.titlebar-max .toolbarbutton-icon,
+#navigator-toolbox .titlebar-button.titlebar-restore .toolbarbutton-icon { 
+  
+}
+
+/* close button */
+#navigator-toolbox .titlebar-button.titlebar-close .toolbarbutton-icon { 
+
+}
+
+------------------------------------------------------------------------------------
+---------- If you want to see the buttons you are trying to position on top---------
+------------------------------------------------------------------------------------
+remove the line in file acrylic_micaforeveryone.css
+"list-style-image: none !important;" from:
+
+#navigator-toolbox .titlebar-button:not(.titlebar-close),
+#navigator-toolbox .titlebar-close:not(:hover) {
+	list-style-image: none !important;
+}
+
+Dont forget to add it later. 
