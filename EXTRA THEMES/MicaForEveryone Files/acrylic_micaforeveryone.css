@@ -167,10 +167,9 @@
   border-radius: 0 !important;
 }
 
-#navigator-toolbox:not(:-moz-window-inactive):-moz-lwtheme #navigator-toolbox .titlebar-button:not(.titlebar-close),
-#navigator-toolbox:not(:-moz-window-inactive):-moz-lwtheme #navigator-toolbox .titlebar-close:not(:hover)
-{
-   list-style-image: none !important;
+#navigator-toolbox .titlebar-button:not(.titlebar-close),
+#navigator-toolbox .titlebar-close:not(:hover) {
+	list-style-image: none !important;
 }
 
 #navigator-toolbox #nav-bar { 
