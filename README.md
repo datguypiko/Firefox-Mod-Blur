@@ -63,6 +63,9 @@
 <i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>
 <p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
 
+<h2>:gear: Remove title text from homepage shortcuts</h2>
+<p align="center"><img alt="FirefoxCss" width="859" height="562" src="https://user-images.githubusercontent.com/61329159/204554343-5bf1ae99-2dcb-4f2e-a697-ca7db5af446e.png"><i>remove_homepage_shortcut_title_text.css</i></p>
+
 <h2>:hammer: Spill style theme</h2>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
 
