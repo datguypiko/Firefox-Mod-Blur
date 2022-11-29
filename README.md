@@ -1,8 +1,18 @@
-<h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular [Updated:new:]</h2>
+<h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular [ver2.1]</h2>
 
-<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-107.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-26/11/2022-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-107.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-29/11/2022-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
+
+<h2><img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Wallpaper style themes</h2>
+<p align="center"><i>style_1-wallpaper-edition.css</i>
+<img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="856" height="532" ></p>
+
+<p align="center"><i>style_2-wallpaper-edition.css</i>
+<img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="856" height="532" ></p>
+
+<p align="center"><i>style_3-wallpaper-edition.css</i>
+<img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="856" height="532" ></p>
 
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
@@ -54,7 +64,6 @@
 <p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
 
 <h2>:hammer: Spill style theme</h2>
-
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
 
 <h2>:hammer: Acrylic MicaForEveryone</h2>
@@ -83,6 +92,8 @@
 	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `image` `/`
 	
 	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
+	 
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `wallpaper` `/` (for wallpaper theme)
 
 </br>
 
@@ -99,6 +110,8 @@
 ## :shield: Last Updates 
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
+  
+ `29/11/2022` > 2.1 Version. Added wallpaper style themes with 3 choices. Fixed Tab closing glitch in firefox nightly. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
  
  `26/11/2022` > 2.0 Version. Reworked theme files, structure and added new things with more options.
 
