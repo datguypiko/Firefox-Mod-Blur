@@ -275,7 +275,7 @@
   color: hsla(0, 0%, 100%, 0.65) !important;
 }
 
-#tabbrowser-tabs .tabbrowser-tab .tab-label-container 
+.tabbrowser-tab .tab-label-container 
 .tab-label {
   transition: color 250ms ease !important;
 }
@@ -707,13 +707,24 @@ toolbar
   > #urlbar:not([focused])
   > #urlbar-input-container
   > #identity-box
+#notification-popup-box:not([open]) .notification-anchor-icon {
+  opacity: 0;
+  transition-delay: 500ms;
+}
+#nav-bar:not([customizing="true"]):not(.searchButton)
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #identity-box
   #identity-permission-box:not([open]) {
   opacity: 0;
   transition-delay: 500ms;
 }
 
 #page-action-buttons,
-#identity-permission-box {
+#identity-permission-box,
+#notification-popup-box .notification-anchor-icon {
   transition: opacity 0.2s ease;
 }
 
@@ -765,8 +776,9 @@ toolbar
 #urlbar-input-container #identity-box > .identity-box-button,
 #tracking-protection-icon-container,
 #urlbar-go-button,
-#page-action-buttons .urlbar-page-action {
-  border-radius: var(--firefoxcss-border-radius) !important;
+#page-action-buttons .urlbar-page-action,
+#notification-popup-box {
+  border-radius: 8px !important;
 }
 
 #urlbar-go-button {
