@@ -1,0 +1,3 @@
+Put it inside chrome folder where userChrome and userContent files sit.
+
+Works with default and all wallpaper theme styles.
