@@ -379,7 +379,11 @@ url("about:newtab") {
   main aside.content-container {
     display: none !important;
   }
-
+	
+  #colorways {
+    display: none !important;
+  }
+	
   #tabpickup-tabs-container #synced-tabs-placeholder {
     background-color: var(--firefoxcss-item-bg-color) !important;
     border-radius: 8px !important;
