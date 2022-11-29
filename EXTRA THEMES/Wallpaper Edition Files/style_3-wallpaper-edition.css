@@ -45,7 +45,7 @@ url("about:newtab") {
 
   .outer-wrapper .body-wrapper .top-site-button:hover .tile {
     border-top: 0px !important;
-    background-color: hsla(0, 0%, 11%, 0.45) !important;
+    background-color: hsla(0, 0%, 16%, 0.4) !important;
   }
 
   .outer-wrapper .top-site-outer .top-site-button .title {
