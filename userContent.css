@@ -1,6 +1,9 @@
 /* ----- Included functions ----- */
 @import url("spill-style-part2-file.css");
 @import url("thin_scrollbar_windows10.css");
+@import url("style_1-wallpaper-edition.css");
+@import url("style_2-wallpaper-edition.css");
+@import url("style_3-wallpaper-edition.css");
 
 /* ----- My Custom Colors ----- */
 :root {
@@ -20,9 +23,7 @@ body {
 }
 
 @-moz-document url("about:privatebrowsing") {
-  html:not(#ublock0-epicker),
-  html:not(#ublock0-epicker) body,
-  #newtab-customize-overlay {
+  body {
     background-color: var(--firefoxcss-main-bg-color) !important;
     background-size: auto;
     background-size: cover !important;
@@ -105,9 +106,7 @@ body {
 
 @-moz-document url("about:home"),
 url("about:newtab") {
-  html:not(#ublock0-epicker),
-  html:not(#ublock0-epicker) body,
-  #newtab-customize-overlay {
+   body {
     --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
     background-size: cover !important;
   }
