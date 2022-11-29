@@ -111,7 +111,7 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
   
- `29/11/2022` > 2.1 Version. Added wallpaper style themes with 3 choices. Fixed Tab closing glitch in firefox nightly. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
+ `29/11/2022` > 2.1 Version. Added wallpaper style themes with 3 choices. Fixed Tab closing glitch. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
  
  `26/11/2022` > 2.0 Version. Reworked theme files, structure and added new things with more options.
 
