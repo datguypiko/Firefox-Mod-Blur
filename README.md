@@ -5,14 +5,14 @@
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
 <h2><img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Wallpaper style themes</h2>
-<p align="center"><i>style_1-wallpaper-edition.css</i>
-<img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="856" height="532" ></p>
+<p align="center"><i>style_1-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="85%" height="85%" ></p>
 
-<p align="center"><i>style_2-wallpaper-edition.css</i>
-<img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="856" height="532" ></p>
+<p align="center"><i>style_2-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
 
-<p align="center"><i>style_3-wallpaper-edition.css</i>
-<img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="856" height="532" ></p>
+<p align="center"><i>style_3-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p>
 
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
@@ -64,7 +64,7 @@
 <p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
 
 <h2>:gear: Remove title text from homepage shortcuts</h2>
-<p align="center"><img alt="FirefoxCss" width="859" height="562" src="https://user-images.githubusercontent.com/61329159/204554343-5bf1ae99-2dcb-4f2e-a697-ca7db5af446e.png"><i>remove_homepage_shortcut_title_text.css</i></p>
+<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/204554343-5bf1ae99-2dcb-4f2e-a697-ca7db5af446e.png"><i>remove_homepage_shortcut_title_text.css</i></p>
 
 <h2>:hammer: Spill style theme</h2>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
