@@ -42,7 +42,7 @@
   --firefoxcss-border-radius: 10px;
 }
 
-:root:-moz-lwtheme {
+:root {
   --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
   --panel-separator-zap-gradient: linear-gradient(
     90deg,
@@ -202,8 +202,8 @@
   border-top: 0px !important;
 }
 
-#urlbar:not(.megabar):not([focused="true"]):-moz-lwtheme,
-#urlbar:not(.megabar):not([focused="true"]):-moz-lwtheme:hover {
+#urlbar:not(.megabar):not([focused="true"]),
+#urlbar:not(.megabar):not([focused="true"]):hover {
   border-bottom: transparent;
 }
 
