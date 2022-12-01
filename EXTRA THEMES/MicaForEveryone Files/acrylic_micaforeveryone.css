@@ -40,7 +40,7 @@
   appearance: -moz-win-glass !important;
 }
 
-#navigator-toolbox:-moz-window-inactive:-moz-lwtheme {
+#navigator-toolbox:-moz-window-inactive {
   background-color: var(--firefoxcss-item-bg-color)  !important;   
 }
 
