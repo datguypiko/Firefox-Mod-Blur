@@ -77,10 +77,14 @@
 
 ![image](https://user-images.githubusercontent.com/61329159/197360837-503f8d50-b2c1-4c29-94d7-870adb1c3ab0.png)</details>
 
-
 <details><summary>I use firefox integrated Flexible space for spacing <sup>[show image]</sup></summary>
 
 ![image](https://user-images.githubusercontent.com/61329159/197362629-b5c6e49a-92c4-4d08-aada-f8883e7c471f.png)</details>
+
+<details><summary>If you are using <code>Light Windows 11</code> mode it breaks colors so change in firefox theme to <code>Dark</code></summary>
+
+![zxczxc](https://user-images.githubusercontent.com/61329159/205089188-cf7f0c52-e59d-4ba2-9127-e7dadd85c1a7.png)</details>
+
 
 1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
 2. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
