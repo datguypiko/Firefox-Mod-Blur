@@ -23,7 +23,7 @@ url("about:newtab") {
     border: 1px solid #0000001c !important;
   }
 
-  .outer-wrapper .body-wrapper .tile {
+  #root .outer-wrapper .body-wrapper .tile {
     -webkit-backdrop-filter: blur(24px) !important;
     backdrop-filter: blur(0px) !important;
     border-top: 0px solid hsla(0, 0%, 100%, 0) !important;
@@ -49,7 +49,7 @@ url("about:newtab") {
     fill: rgba(251, 251, 254, 0.8) !important;
   }
 
-  .outer-wrapper .body-wrapper .top-site-button:hover .tile {
+  #root .outer-wrapper .body-wrapper .top-site-button:hover .tile {
     border-top: 0px !important;
     background-color: transparent !important;
   }
