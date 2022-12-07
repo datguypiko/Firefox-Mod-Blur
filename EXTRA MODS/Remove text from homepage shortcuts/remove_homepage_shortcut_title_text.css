@@ -15,4 +15,7 @@ url("about:newtab") {
         border-radius: 10px !important;
         border-bottom: 0 !important;
     }
+     #root .outer-wrapper .top-sites-list .top-site-outer {
+        padding: 20px 20px 4px !important;
+    }
 }
