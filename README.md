@@ -121,9 +121,9 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
   
-  `08/12/2022` > 2.2.1 Version. Fix url bar icon size for firefox v108.0
+  `14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0
   
-  `08/12/2022` > 2.2 Version. 
+  `08/12/2022` `>` `v2.2` 
   
     - Circular homepage shortcuts - extra mod.
     
@@ -137,19 +137,19 @@
     
     - Fix padding for homepage shortcuts in wallpaper theme using no text mod.
   
- `29/11/2022` > 2.1 Version. Added wallpaper style themes with 3 choices. Fixed Tab closing glitch. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
+ `29/11/2022` `>` `v2.1` Added wallpaper style themes with 3 choices. Fixed Tab closing glitch. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
  
- `26/11/2022` > 2.0 Version. Reworked theme files, structure and added new things with more options.
+ `26/11/2022` `>` `v2.0` Reworked theme files, structure and added new things with more options.
 
- `20/07/2022` > Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
+ `20/07/2022` `>` Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
 
- `19/07/2022` > Added new theme with background wallpaper and blur effect. 
+ `19/07/2022` `>` Added new theme with background wallpaper and blur effect. 
 
- `10/06/2022` > Fixed padding in fullscreen after recent version changes.
+ `10/06/2022` `>` Fixed padding in fullscreen after recent version changes.
 
- `14/05/2022` > Fixed after an update broken popup menu background color for 100.x versions of firefox.
+ `14/05/2022` `>` Fixed after an update broken popup menu background color for 100.x versions of firefox.
 
- `13/02/2022` > Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
+ `13/02/2022` `>` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
 
 </br>
 
