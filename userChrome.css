@@ -264,7 +264,7 @@
 
 #urlbar-container #urlbar {
   --urlbar-height: 30px !important;
-  --urlbar-min-height: 30px !important;
+  --urlbar-min-height: 32px !important;
 }
 
 #wrapper-urlbar-container #urlbar {
