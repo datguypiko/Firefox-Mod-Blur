@@ -69,6 +69,9 @@
 <h2>:gear: Circular homepage shortcuts</h2>
 <p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"><i>circular_homepage_shortcuts.css</i></p>
 
+<h2>:gear: Transparent popout bookmarks bar</h2>
+<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"><i>transparent_bookmarks_bar.css</i></p>
+
 <h2>:hammer: Spill style theme</h2>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
 
