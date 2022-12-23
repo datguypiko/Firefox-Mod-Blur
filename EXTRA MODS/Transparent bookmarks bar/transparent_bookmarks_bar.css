@@ -10,3 +10,11 @@
 #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover{
     background-color: #393939 !important;
 }
+
+#personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"]):hover:active{
+    background-color: #555555 !important;
+}
+
+#personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item[open="true"] {
+    background-color: #555555 !important;
+}
