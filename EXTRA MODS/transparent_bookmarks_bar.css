@@ -1,0 +1,12 @@
+/* Change bookmarks bar color to be the same as top toolbar */
+:root {
+    --firefoxcss-bookmarks-bg-color: transparent !important;
+}
+
+#personal-bookmarks toolbarbutton.bookmark-item {
+    background-color: #1a1a1a !important;
+}
+
+#personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover{
+    background-color: #393939 !important;
+}
