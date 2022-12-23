@@ -4,7 +4,7 @@
 }
 
 #personal-bookmarks toolbarbutton.bookmark-item {
-    background-color: #1a1a1a !important;
+    background-color: hsl(0, 0%, 8%) !important;
 }
 
 #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover{
