@@ -1,0 +1,4 @@
+This uses code below for menu to disable any Operating system theme for context menus. Try if other files doesnt work. 
+
+"appearance: none !important;"
+"-moz-appearance: none !important;"
