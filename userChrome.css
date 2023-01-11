@@ -536,7 +536,7 @@ menupopup :-moz-any(menu:first-child, menuitem:first-child) {
 }
 
 menupopup :-moz-any(menu:last-child, menuitem:last-child) {
-  margin-bottom: px !important;
+  margin-bottom: 0px !important;
 }
 
 /* ----- Menu Separator #context-sep-selectall ----- */
