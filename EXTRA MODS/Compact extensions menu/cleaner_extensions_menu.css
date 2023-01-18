@@ -27,8 +27,8 @@
 #unified-extensions-view .unified-extensions-item-icon, 
 #unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action 
 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
-    height: 24px !important;
-    width: 24px !important;
+    height: 20px !important;
+    width: 20px !important;
 }
 
 #unified-extensions-view .unified-extensions-item-icon, 
@@ -40,4 +40,9 @@
 #unified-extensions-view .unified-extensions-item-message {
     padding-inline-start: 0.5em !important;
     width: 21em !important;
+}
+
+#unified-extensions-view .unified-extensions-item-action-button.subviewbutton {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
 }
