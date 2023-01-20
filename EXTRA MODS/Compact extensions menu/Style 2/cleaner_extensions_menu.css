@@ -1,4 +1,8 @@
 /*  Clean and tight extensions menu */
+#unified-extensions-panel #unified-extensions-view {
+  max-width: 228px !important;
+}
+
 #unified-extensions-view .panel-header,
 #unified-extensions-view .panel-header + toolbarseparator,
 #unified-extensions-view .panel-subview-body + toolbarseparator,
@@ -32,12 +36,6 @@
   margin-inline-end: 0px !important;
 }
 
-#unified-extensions-view .panel-subview-body {
-    max-width: 226px !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-}
-
 #unified-extensions-view #overflowed-extensions-list {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -46,6 +44,7 @@
 #unified-extensions-view #unified-extensions-area {
     display: flex !important;
     flex-wrap: wrap !important;
+  
 }
 
 #unified-extensions-view .unified-extensions-list {
