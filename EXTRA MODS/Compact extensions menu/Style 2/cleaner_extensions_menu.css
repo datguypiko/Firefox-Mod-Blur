@@ -43,11 +43,11 @@
 #unified-extensions-view #unified-extensions-area {
     display: flex !important;
     flex-wrap: wrap !important;
-    border-bottom: 1px solid #aeaeae33 !important;
     padding-bottom: 2px !important;
 }
 
 #unified-extensions-view .unified-extensions-list {
     display: flex !important;
     flex-wrap: wrap !important;
+  border-top: 1px solid #aeaeae33 !important;
 }
