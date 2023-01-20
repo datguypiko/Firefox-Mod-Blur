@@ -1,18 +1,8 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-108.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-14/12/2022-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-109.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-14/12/2022-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
-
-<h2><img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Wallpaper style themes</h2>
-<p align="center"><i>style_1-wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="85%" height="85%" ></p>
-
-<p align="center"><i>style_2-wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
-
-<p align="center"><i>style_3-wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p>
 
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
@@ -31,52 +21,66 @@
 
 </br>
 
-<h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
+<h2 align="left"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
 
-<h2>:gear: Min-max-close window buttons style</h2>
+<details><summary>Min-max-close window buttons style :gear:</summary>
 <i>left_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/pR78PN5.png"></p>
 <i>right_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/032WjXp.png"></p>
 <i>right_os_window_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
-<i>default</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M1O9aZp.png"></p>
+<i>default</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M1O9aZp.png"></p></details>
 
-<h2>:gear: Bookmarks bar</h2>
+<details><summary>Bookmarks bar modifications :gear:</summary>
 <i>popout_bookmarks_bar_on_hover.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Hjy8kyU.gif"></p>
 <i>remove_folder_icons_from_bookmarks.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/xxpKEaP.gif"></p>
 <i>bookmarks_bar_same_color_as_toolbar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/a2sjphq.gif"></p>
+<i>transparent_bookmarks_bar.css</i><p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"></p></details>
 
-<h2>:gear: Search bar modifications</h2>
-<i>no_search_engines_in_url_bar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/CpZqhQX.gif"></p>
+<details><summary>Search bar modifications :gear:</summary>
+<i>no_search_engines_in_url_bar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/CpZqhQX.gif"></p></details>
 
-<h2>:gear: Privacy mods</h2>
-<i>privacy_blur_email_in_main_menu.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/gE2PVpr.gif"></p>
-<i>privacy_blur_email_in_sync_menu.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/MJqZ9TW.gif"></p>
-<i>privacy_blur_tabs_content.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/8RPR1It.gif"></p>
-<i>privacy_change_email_text.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uuq06p5.png"></p>
+<details><summary>Privacy mods :gear:</summary>
+<i>privacy_blur_email_in_main_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/gE2PVpr.gif"></p>
+<i>privacy_blur_email_in_sync_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/MJqZ9TW.gif"></p>
+<i>privacy_blur_tabs_content.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/8RPR1It.gif"></p>
+<i>privacy_change_email_text.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/uuq06p5.png"></p></details>
 
-<h2>:gear: Other modifications</h2>
-<i>hide_list-all-tabs_button.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p>
+<details><summary>Extension menu changes :gear:</summary>
+<i>Style 2 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%202/preview.png?raw=true" width="386" height="248"></p>
+<i>Style 1 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%201/preview.gif?raw=true" width="325" height="398"></p></details>
+
+<details><summary>Icon changes :gear:</summary>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
 <i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
-<i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p>
+<i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p></details>
 
-<h2>:gear: Restore icons in main menu</h2>
+<details><summary>Hide List all tabs button :gear:</summary>
+<i>hide_list-all-tabs_button.css [Shows when tabs overflow]</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p></details>
+
+<details><summary>Restore icons in main menu :gear:</summary>
 <i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>
-<p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p>
+<p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p></details>
 
-<h2>:gear: Remove title text from homepage shortcuts</h2>
-<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"><i>remove_homepage_shortcut_title_text.css</i></p>
+<details><summary>Remove title text from homepage shortcuts :gear:</summary>
+<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"><i>remove_homepage_shortcut_title_text.css</i></p></details>
 
-<h2>:gear: Circular homepage shortcuts</h2>
-<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"><i>circular_homepage_shortcuts.css</i></p>
+<details><summary>Circular homepage shortcuts :gear:</summary>
+<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"><i>circular_homepage_shortcuts.css</i></p></details>
 
-<h2>:gear: Transparent popout bookmarks bar</h2>
-<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"><i>transparent_bookmarks_bar.css</i></p>
+<details><summary>Spill style theme :hammer:</summary>
+<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p></details>
 
-<h2>:hammer: Spill style theme</h2>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
+<details><summary>Acrylic MicaForEveryone :hammer:</summary>
+<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"><i>acrylic_micaforeveryone.css</i></p></details>
 
-<h2>:hammer: Acrylic MicaForEveryone</h2>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"><i>acrylic_micaforeveryone.css</i></p>
+<details><summary>Wallpaper style themes :hammer:</summary>
+<p align="center"><i>style_1-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="85%" height="85%" ></p>
+
+<p align="center"><i>style_2-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
+
+<p align="center"><i>style_3-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p></details>
 
 <h2>:wrench: Installation</h2>
 <details><summary>:warning: If you are using <code>Light theme</code> in Operating System it breaks colors so change in firefox theme to <code>Dark</code></summary>
@@ -120,7 +124,9 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
   
-  `14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0
+  `20/01/2023` `>` `v2.3` Added extensions menu modifications for firefox v109.0.0
+  
+  `14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0.0
   
   `08/12/2022` `>` `v2.2` 
   
@@ -157,7 +163,7 @@
 ```html
 Last Tested on:
 	New 2.0 theme for Proton
-		-- Windows 10/11 - 108.0.0 / 107.0.0 / 106.0.1
+		-- Windows 10/11 - 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
 	
 	Older PROTON theme
 		-- Windows 10/11 - 106.0.1 / 105 / 104.0.1 / 102.0.1 / 102.0 / 101.0 / 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0 
