@@ -1,6 +1,6 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-109.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-14/12/2022-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-109.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-20/01/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -23,10 +23,13 @@
 
 <h2 align="left"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
 
-<details><summary>Min-max-close window buttons style :gear:</summary>
-<i>left_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/pR78PN5.png"></p>
-<i>right_mac_os_style_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/032WjXp.png"></p>
-<i>right_os_window_buttons.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
+<details><summary>Min-max-close buttons style :gear:</summary>
+</br>
+<i>Select one min-max-close_buttons.css</i>
+</br></br>
+<i>Left side MacOS style</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/pR78PN5.png"></p>
+<i>Right side MacOS style</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/032WjXp.png"></p>
+<i>Right side default OS style</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
 <i>default</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M1O9aZp.png"></p></details>
 
 <details><summary>Bookmarks bar modifications :gear:</summary>
@@ -45,8 +48,8 @@
 <i>privacy_change_email_text.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/uuq06p5.png"></p></details>
 
 <details><summary>Extension menu changes :gear:</summary>
-<i>Style 2 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%202/preview.png?raw=true" width="386" height="248"></p>
-<i>Style 1 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%201/preview.gif?raw=true" width="325" height="398"></p></details>
+<i>Style 1 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%201/preview.gif?raw=true" width="325" height="398"></p>
+<i>Style 2 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%202/preview.png?raw=true" width="386" height="248"></p></details>
 
 <details><summary>Icon changes :gear:</summary>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
@@ -61,16 +64,20 @@
 <p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p></details>
 
 <details><summary>Remove title text from homepage shortcuts :gear:</summary>
-<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"><i>remove_homepage_shortcut_title_text.css</i></p></details>
+<p align="center"><i>remove_homepage_shortcut_title_text.css</i></p>
+<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"></p></details>
 
 <details><summary>Circular homepage shortcuts :gear:</summary>
-<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"><i>circular_homepage_shortcuts.css</i></p></details>
+<p align="center"><i>circular_homepage_shortcuts.css</i></p>
+<p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"></p></details>
 
 <details><summary>Spill style theme :hammer:</summary>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p></details>
+<p align="center"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"></p></details>
 
 <details><summary>Acrylic MicaForEveryone :hammer:</summary>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"><i>acrylic_micaforeveryone.css</i></p></details>
+<p align="center"><i>acrylic_micaforeveryone.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"></p></details>
 
 <details><summary>Wallpaper style themes :hammer:</summary>
 <p align="center"><i>style_1-wallpaper-edition.css</i></p>
@@ -124,7 +131,7 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
   
-  `20/01/2023` `>` `v2.3` Added extensions menu modifications for firefox v109.0.0
+  `20/01/2023` `>` `v2.3` Added extensions menu modifications for firefox v109.0.0; Merged some code lines and renamed extensions for cleaner code.
   
   `14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0.0
   
@@ -158,7 +165,7 @@
 
 </br>
 
-## :page_facing_up: Other
+<details><summary><h2>:page_facing_up: Other</h2></summary>
 
 ```html
 Last Tested on:
@@ -172,11 +179,9 @@ Last Tested on:
 		-- Windows - 73.0.1 / 74.0 / 74.0.1 / 75.0.0 / 77.0.1 / 80.0 /  84.0.1 / 85.0.0
  		-- Linux - 74.0.1 | Default Dark Theme
 ```
-
-</br>
-</br>
 </details>
-<details><summary>Sources</summary>
+
+<details><summary><h2>:page_facing_up: Sources</h2></summary>
 
 > Source for Backdrop filter: [`https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)
 
