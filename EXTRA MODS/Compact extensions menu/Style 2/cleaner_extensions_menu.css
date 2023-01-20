@@ -46,7 +46,6 @@
 #unified-extensions-view #unified-extensions-area {
     display: flex !important;
     flex-wrap: wrap !important;
-    border-bottom: 1px solid #aeaeae33 !important
 }
 
 #unified-extensions-view .unified-extensions-list {
