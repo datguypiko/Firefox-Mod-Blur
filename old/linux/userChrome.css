@@ -423,6 +423,10 @@ if you change --tab-min-height it doesnt work for fullcreen
   margin-block: 2px !important;
 }
 
+/* Remove right and left side tab overflow border line */
+#scrollbutton-up ~ spacer{ 
+  border-color: transparent !important; 
+}
 /* ----------------------------------------------------------------- */
 /* ------------------ close/min/max buttons ------------------------ */
 /* ----------------------------------------------------------------- */
