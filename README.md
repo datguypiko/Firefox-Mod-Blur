@@ -1,6 +1,6 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-109.0.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-20/01/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-109.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-20/01/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -19,6 +19,15 @@
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> More compact and responsive homepage
 <p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/lhc2Muh.gif"></p>
 
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Wallpaper style themes
+<p align="center"><i>style_1-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="85%" height="85%" ></p>
+
+<p align="center"><i>style_2-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
+
+<p align="center"><i>style_3-wallpaper-edition.css</i></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p>
 </br>
 
 <h2 align="left"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
@@ -78,16 +87,6 @@
 <details><summary>Acrylic MicaForEveryone :hammer:</summary>
 <p align="center"><i>acrylic_micaforeveryone.css</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"></p></details>
-
-<details><summary>Wallpaper style themes :hammer:</summary>
-<p align="center"><i>style_1-wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="85%" height="85%" ></p>
-
-<p align="center"><i>style_2-wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
-
-<p align="center"><i>style_3-wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p></details>
 
 <h2>:wrench: Installation</h2>
 <details><summary>:warning: If you are using <code>Light theme</code> in Operating System it breaks colors so change in firefox theme to <code>Dark</code></summary>
@@ -170,7 +169,7 @@
 ```html
 Last Tested on:
 	New 2.0 theme for Proton
-		-- Windows 10/11 - 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
+		-- Windows 10/11 - 109.0.1 / 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
 	
 	Older PROTON theme
 		-- Windows 10/11 - 106.0.1 / 105 / 104.0.1 / 102.0.1 / 102.0 / 101.0 / 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0 
