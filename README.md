@@ -100,7 +100,7 @@
 
 1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
 2. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
-3. Put `userChrome.css` and `userContent.css` in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
+3. Put `userChrome.css`, `userContent.css`, `image`  in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
 4. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` inside your `chrome` folder.
 5. File Structure:
 
