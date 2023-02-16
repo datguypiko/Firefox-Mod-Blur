@@ -3,7 +3,8 @@
 
 <details><summary>Spill style theme :hammer:</summary>
 <p align="center"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"></p></details>
+<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219372937-bae303d6-3b10-45bd-85f2-555a90f5fe9b.png"></p></details>
 
 <details><summary>Acrylic MicaForEveryone :hammer:</summary>
 <p align="center"><i>acrylic_micaforeveryone.css</i></p>
