@@ -1,6 +1,6 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20ver.-109.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-20/01/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=flat"></a> <a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-informational?style=flat"></a> <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested-v109.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-20/01/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -82,7 +82,8 @@
 
 <details><summary>Spill style theme :hammer:</summary>
 <p align="center"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"></p></details>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373252-a9cc81cb-1307-4899-a019-3c70c1e26b5c.png"></p>
+<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373265-a0cff784-95cc-4000-9567-06c8babf214b.png"></p></details>
 
 <details><summary>Acrylic MicaForEveryone :hammer:</summary>
 <p align="center"><i>acrylic_micaforeveryone.css</i></p>
