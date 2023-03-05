@@ -6,7 +6,9 @@ Download these 4 images from [here](https://github.com/datguypiko/Firefox-Mod-Bl
 
 Open userContent.css file and change these:
 
-1. Add this code around line `123` below "body {...}"
+1. Add this code around line `120` below "body {...}" needs to be inside `@-moz-document url("about:home"), url("about:newtab") {` 
+
+
 
 ```css
 .search-wrapper .logo-and-wordmark .wordmark {
