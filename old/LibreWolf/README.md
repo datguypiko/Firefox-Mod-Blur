@@ -39,7 +39,7 @@ CHANGE TO ---->
     background: url("image/Logo_Private.png") no-repeat center center !important;
     background-size: 172px !important;
 }
-.logo-and-wordmark {margin-bottom: -25px !important;}
+.logo-and-wordmark {margin-bottom: 50px !important;}
 ```
 
 
