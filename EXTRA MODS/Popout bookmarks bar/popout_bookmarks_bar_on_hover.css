@@ -59,3 +59,8 @@
     transition-delay: 100ms !important;
     opacity: 1 !important;
   }
+
+/* Fix the white line above the bookmarks bar when it's empty */
+#personal-toolbar-empty {
+  padding: 2px !important;
+}
