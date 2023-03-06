@@ -1,6 +1,6 @@
 Fixing homepage logos.
 
-Download these 4 images from [here](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/old/LibreWolf) and put it inside `/image/` folder.
+Download logo images images from [here](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/old/LibreWolf) and put it inside `/image/` folder.
 
 </br>
 
