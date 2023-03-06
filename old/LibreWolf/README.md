@@ -19,7 +19,7 @@ Open userContent.css file and change these:
 }
 ```
 
-2. And for private page (you can change -25px value for the distance from the search box)
+2. And for private page
 
 ```css
 CHANGE THIS CODE AROUND LINE 34
