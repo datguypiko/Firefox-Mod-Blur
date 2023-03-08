@@ -192,16 +192,6 @@
   display: none !important;
 }
 
-/* Active selected with arrows/tab */
-#urlbar .urlbarView-row[selected] {
- background-color: hsl(240, 2%, 26%) !important;
- border-radius: var(--toolbarbutton-border-radius) !important;
-}
-
-.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner[selected] {
-  background-color: hsl(240, 2%, 26%) !important;
-}
-
 /* Search Bar */
 #urlbar-input-container,
 #searchbar,
@@ -219,7 +209,7 @@
 }
 
 #urlbar {
-  --autocomplete-popup-highlight-background: transparent !important;
+  --autocomplete-popup-highlight-background: hsl(240, 2%, 26%) !important;
   border: 0 !important;
   border-radius: var(--firefoxcss-border-radius) !important;
   background-color: var(--firefoxcss-url-bar-bg-color) !important;
