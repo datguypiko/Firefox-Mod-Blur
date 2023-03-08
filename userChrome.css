@@ -198,6 +198,10 @@
  border-radius: var(--toolbarbutton-border-radius) !important;
 }
 
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner[selected] {
+  background-color: hsl(240, 2%, 26%) !important;
+}
+
 /* Search Bar */
 #urlbar-input-container,
 #searchbar,
