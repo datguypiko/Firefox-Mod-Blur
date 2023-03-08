@@ -192,6 +192,12 @@
   display: none !important;
 }
 
+/* Active selected with arrows/tab */
+#urlbar .urlbarView-row[selected] {
+ background-color: hsl(240, 2%, 26%) !important;
+ border-radius: var(--toolbarbutton-border-radius) !important;
+}
+
 /* Search Bar */
 #urlbar-input-container,
 #searchbar,
