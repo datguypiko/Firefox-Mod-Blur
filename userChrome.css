@@ -543,11 +543,11 @@ menupopup :-moz-any(menu:last-child, menuitem:last-child) {
 
 /* ----- Menu Separator #context-sep-selectall ----- */
 menuseparator {
-  border-color: var(--panel-separator-color) !important;
+  border-color: var(--arrowpanel-border-color)  !important;
 }
 
-menuseparator #context-sep-navigation {
-  border-color: #0b0b0b66 !important;
+menuseparator#context-sep-navigation {
+  border-color: var(--arrowpanel-border-color) !important;
 }
 
 /* ----- Menu Colors -- border - rgba(82, 82, 94, 0.31) ----- */
