@@ -1,0 +1,45 @@
+/*  Clean and tight extensions menu */
+#unified-extensions-view{
+    --uei-icon-size: 20px; /*  Change icon size */
+}
+
+#unified-extensions-view .panel-header,
+#unified-extensions-view .panel-header + toolbarseparator,
+#unified-extensions-view .panel-subview-body + toolbarseparator,
+#unified-extensions-view #unified-extensions-manage-extensions {
+    display:none !important;
+}
+
+#unified-extensions-view .unified-extensions-item-menu-button.subviewbutton{
+    visibility: hidden !important;
+    transition: 300ms !important;
+    -moz-margin-end: -3.6em !important;
+}
+
+#unified-extensions-view .panel-subview-body {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+#unified-extensions-view:hover 
+.unified-extensions-item-menu-button.subviewbutton{ 
+    visibility: visible !important;
+    transition: 300ms !important;
+    -moz-margin-end: initial !important;
+}
+
+#unified-extensions-view .unified-extensions-item .unified-extensions-item-icon,
+#unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack {
+     margin-inline-end: 2px !important;
+}
+
+#unified-extensions-view .unified-extensions-item-name, 
+#unified-extensions-view .unified-extensions-item-message {
+    padding-inline-start: 0.5em !important;
+    width: 21em !important;
+}
+
+#unified-extensions-view .unified-extensions-item-action-button.subviewbutton {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
