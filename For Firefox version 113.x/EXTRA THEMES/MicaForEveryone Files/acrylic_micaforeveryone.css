@@ -1,0 +1,242 @@
+/*  MicaForEveryone support for firefox - Acrylic Style
+    Only works with min/max/close window buttons on the right side,
+    dont change the location of those buttons. 
+*/
+
+:root {
+  --toolbar-start-end-padding: 2px !important; /* padding of frst and last child ,default - 8px */
+  --firefoxcss-top-bar-border-bottom-size: 1px !important;
+  --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 0%, 0.55) !important;
+  --firefoxcss-tab-active-bg-color:hsla(0, 0%, 0%, 0.4) !important;
+}
+
+/* ----- Move menu buttons to the left side ----- */
+#nav-bar #PanelUI-button {
+  -moz-box-ordinal-group: 0 !important;
+  order: 0 !important;
+ }
+ 
+ #nav-bar #PanelUI-button #PanelUI-menu-button {
+  padding-right: 2px !important;
+  padding-left: 4px !important;
+ }
+ 
+ toolbar:not([customizing]) > #nav-bar-overflow-button {
+  -moz-box-ordinal-group: 1 !important;
+  order: 1 !important;
+ }
+ 
+ toolbar:not([customizing]) > #nav-bar-customization-target {
+  -moz-box-ordinal-group: 2 !important;
+  order: 2 !important;
+ }
+
+/* Fix popup position */
+ #appMenu-popup {margin-inline: -244px !important;} 
+
+/* ----------------------------------------------------------------- */
+/* ---------- Toolbar, menus, buttons, tabs colors ----------------- */
+/* ----------------------------------------------------------------- */
+#main-window{
+  background-color: transparent  !important;
+  appearance: -moz-win-borderless-glass !important;
+  appearance: -moz-win-glass !important;
+}
+
+#navigator-toolbox:-moz-window-inactive {
+  background-color: var(--firefoxcss-item-bg-color)  !important;   
+}
+
+#navigator-toolbox #TabsToolbar {
+  background-image: none !important;   
+  background-color: transparent !important;
+}
+
+#navigator-toolbox #TabsToolbar .titlebar-buttonbox .titlebar-button {
+   color:hsl(240, 2%, 62%) !important
+}
+
+#main-window #navigator-toolbox {
+  background-color: color-mix(in srgb, field 45%, transparent) !important;
+}
+
+#navigator-toolbox toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-icon,
+#navigator-toolbox toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-text,
+#navigator-toolbox toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-badge-stack {
+  background-color: color-mix(in srgb, currentColor 15%, transparent) !important;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+#navigator-toolbox toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon,
+#navigator-toolbox toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-text,
+#navigator-toolbox toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
+  background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+#navigator-toolbox #urlbar:not([breakout][breakout-extend][open]) {
+  background-color:  hsla(0, 0%, 0%, 0.4) !important;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.25) !important;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0,0.35) !important;
+}
+
+#navigator-toolbox #urlbar[breakout][breakout-extend][open] {
+  background-color: var(--firefoxcss-url-breakout-bar-bg-color) !important;
+  border-bottom: 1px solid var(--firefoxcss-url-breakout-border-bottom-color) !important;
+  border-top: 1px solid var(--firefoxcss-url-border-top-color) !important;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+}
+
+#navigator-toolbox .tabbrowser-tab .tab-background:not([selected]) {
+  background-color: color-mix(in srgb, currentColor 15%, transparent) !important;
+}
+
+#navigator-toolbox #tabbrowser-tabs
+  .tabbrowser-tab:hover
+  > .tab-stack
+  > .tab-background:not([selected="true"]) {
+    background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+#navigator-toolbox #tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected="true"] {
+  background-color:  hsla(0, 0%, 0%, 0.4) !important;
+}
+
+#navigator-toolbox toolbar
+  #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active):hover
+  > .toolbarbutton-icon,
+#navigator-toolbox toolbar
+  #new-tab-button:not([disabled="true"]):not([checked]):not([open]):not(:active):hover
+  > .toolbarbutton-icon {
+  background-color: hsla(0, 0%, 0%, 0.3) !important;
+  box-shadow: none !important;
+}
+
+#navigator-toolbox toolbar
+  #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :hover:active)
+  > .toolbarbutton-icon,
+#navigator-toolbox toolbar
+  #new-tab-button:not([disabled="true"]):-moz-any([open], [checked], :hover:active)
+  > .toolbarbutton-icon {
+  background-color: hsla(240, 2%, 15%, 0.5) !important;
+  box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.6) !important;
+}
+
+/* ----------------------------------------------------------------- */
+/* ---------- Default OS style close/min/max window buttons -------- */
+/* ----------------------------------------------------------------- */
+ 
+#navigator-toolbox #TabsToolbar {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+
+#TabsToolbar .titlebar-min {
+  -moz-box-ordinal-group:0 !important;
+  order: 0 !important;
+}
+
+#TabsToolbar .titlebar-max, .titlebar-restore {
+   -moz-box-ordinal-group:1 !important;
+   order: 1 !important;
+}
+
+#TabsToolbar .titlebar-close {
+  -moz-box-ordinal-group:2 !important;
+  order: 2 !important;
+}
+
+#toolbar-menubar .titlebar-button {
+  padding-block: 0px !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-button {
+  margin: 0 !important;
+  padding: 8px 17px !important;
+}
+
+#navigator-toolbox #TabsToolbar .titlebar-buttonbox-container {
+  -moz-box-ordinal-group: 1 !important;
+  order: 1 !important;
+  padding:0 !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
+  height: 12px !important;
+  min-height: 12px !important;
+  width: 12px !important;
+  min-width: 12px !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container .titlebar-button {
+  border-radius: 0 !important;
+}
+
+#navigator-toolbox .titlebar-button:not(.titlebar-close),
+#navigator-toolbox .titlebar-close:not(:hover) {
+	list-style-image: none !important;
+}
+
+#navigator-toolbox #nav-bar { 
+    padding-left: 0px !important;
+    padding-right: 140px !important;
+}
+
+#navigator-toolbox .titlebar-button.titlebar-min .toolbarbutton-icon {
+  padding-top: 2px !important;
+}
+
+#navigator-toolbox .titlebar-buttonbox .titlebar-button.titlebar-min {
+  margin-inline-end: -1px !important;
+}
+
+#navigator-toolbox[inFullscreen] #navigator-toolbox #TabsToolbar .titlebar-buttonbox-container {
+  -moz-box-ordinal-group: 1 !important;
+  order: 1 !important;
+}
+
+:root[sizemode="maximized"] #navigator-toolbox #TabsToolbar .titlebar-button.titlebar-close{
+  padding-right: 19px !important;
+}
+
+#navigator-toolbox:not([inFullscreen]) #TabsToolbar 
+.titlebar-buttonbox-container {
+ visibility: visible !important;
+  display: block  !important;
+  position: absolute !important;
+  top: 1px !important;
+  left: unset !important;
+  right: 0 !important; 
+}
+
+:root[sizemode="maximized"] #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
+  top: 0px !important;
+}
+
+@media only screen and (max-width: 670px) {
+  #main-window #navigator-toolbox:not([inFullscreen])
+    #TabsToolbar
+    .titlebar-buttonbox-container {
+    visibility: visible !important;
+    display: block !important;
+    position: absolute !important;
+  }
+  #navigator-toolbox #nav-bar { 
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-right: 140px !important;
+}
+}
+
+#navigator-toolbox #nav-bar #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
+#navigator-toolbox #nav-bar #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
+#navigator-toolbox #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
+#navigator-toolbox #nav-bar #urlbar-label-box, #navigator-toolbox #nav-bar #urlbar-zoom-button {
+  background-color:  color-mix(in srgb, currentColor 22%, transparent) !important;
+}
+#navigator-toolbox #nav-bar #urlbar-zoom-button:hover {
+     background-color:  color-mix(in srgb, currentColor 30%, transparent) !important;
+}
