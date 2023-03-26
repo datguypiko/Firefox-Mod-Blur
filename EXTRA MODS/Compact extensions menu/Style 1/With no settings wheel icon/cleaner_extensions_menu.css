@@ -1,4 +1,7 @@
 /*  Clean and tight extensions menu */
+#unified-extensions-view{
+    --uei-icon-size: 20px; /*  Change icon size */
+}
 #unified-extensions-view .panel-header,
 #unified-extensions-view .panel-header + toolbarseparator,
 #unified-extensions-view .panel-subview-body + toolbarseparator,
@@ -12,16 +15,9 @@
     padding-bottom: 8px !important;
 }
  
-#unified-extensions-view .unified-extensions-item-icon, 
-#unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action 
-> .toolbarbutton-badge-stack > .toolbarbutton-icon {
-    height: 20px !important;
-    width: 20px !important;
-}
- 
-#unified-extensions-view .unified-extensions-item-icon, 
-#unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action > .toolbarbutton-badge-stack {
-  margin-inline-end: 2px !important;
+#unified-extensions-view .unified-extensions-item .unified-extensions-item-icon,
+#unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack {
+     margin-inline-end: 2px !important;
 }
  
 #unified-extensions-view .unified-extensions-item-name, 
