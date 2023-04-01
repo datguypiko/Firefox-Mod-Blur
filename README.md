@@ -60,7 +60,7 @@
 
 <details><summary>Extension menu changes :gear:</summary>
 <i>Style 1 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%201/preview.gif?raw=true" width="325" height="398"></p>
-<i>Style 2 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%202/preview.png?raw=true" width="386" height="248"></p></details>
+<i>Style 2 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%202/preview.png?raw=true"></p></details>
 
 <details><summary>Icon changes :gear:</summary>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
