@@ -1,8 +1,8 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v111.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-20/01/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v111.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-01/04/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 <p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> <a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a> 
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.3.1-important?style=for-the-badge"></a></p>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.3.2-important?style=for-the-badge"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -129,27 +129,37 @@
 6. Remove and dont use any other min-max-close window button files.
 7. Expermental:warning: In MicaForEveryone settings `firefox` section enable `Blur Behind` so when the window is not active it will still be blurred. 
 
-## :shield: Last Updates 
+<details><summary><h2>:shield: Last Updates</h2></summary>
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
   
-  `20/01/2023` `>` `v2.3` Added extensions menu modifications for firefox v109.0.0; Merged some code lines and renamed extensions for cleaner code.
+`01/04/2023` `>` `v2.3.2` `Firefox v111.x`
+- Fixed "clean extension menu" mod so there is no empty space anymore no matter of how many extensions you have set in a row. If you have less than the number set (default 3) the width will adjust automatically. Now the default file doesnt have the separator line anymore.
+
+`26/03/2023` `>` `v2.3.1` `Firefox v111.x`
+- Fixed and Reworked extension menu to use grid instead of flexbox, no width change required anymore. Now change "--firefoxcss-number-of-extensions-in-a-row" value to wanted extensions icon count in a row.
+
+`25/03/2023` `>` `v2.3` `Firefox v111.x`
+- When moving with tab or arrows in search now shows hover background color correctly.
+- Fix separator color in context menu for v111.x
+
+`20/01/2023` `>` `v2.3` Added extensions menu modifications for firefox v109.0.0; Merged some code lines and renamed extensions for cleaner code.
   
-  `14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0.0
+`14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0.0
   
-  `08/12/2022` `>` `v2.2` 
+`08/12/2022` `>` `v2.2` 
   
-    - Circular homepage shortcuts - extra mod.
+   - Circular homepage shortcuts - extra mod.
     
-    - Give more width to active tab - extra mod.
+   - Give more width to active tab - extra mod.
     
-    - Autohide tab and bookmarks bars - extra mod.
+   - Autohide tab and bookmarks bars - extra mod.
     
-    - Search bar no border - extra mod.
+   - Search bar no border - extra mod.
     
-    - Search bar transparent background - extra mod.
+   - Search bar transparent background - extra mod.
     
-    - Fix padding for homepage shortcuts in wallpaper theme using no text mod.
+   - Fix padding for homepage shortcuts in wallpaper theme using no text mod.
   
  `29/11/2022` `>` `v2.1` Added wallpaper style themes with 3 choices. Fixed Tab closing glitch. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
  
@@ -164,8 +174,8 @@
  `14/05/2022` `>` Fixed after an update broken popup menu background color for 100.x versions of firefox.
 
  `13/02/2022` `>` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
-
-</br>
+	
+</details>
 
 <details><summary><h2>:page_facing_up: Other</h2></summary>
 
