@@ -1,4 +1,5 @@
-/* Source: https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
 
 /* Adds icons to main menu items which were removed in Proton */
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before,
@@ -24,7 +25,7 @@
 #appMenu-quit-button2{ list-style-image: url("chrome://devtools/skin/images/search-clear.svg") }
 /* Use account-button icon for signed in sync item */
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before{
-  display: -moz-box;
+  display: flex;
   content: "";
   width: 16px;
   height: 16px;
@@ -33,11 +34,11 @@
 /* Add somewhat hacky separator to zoom controls so it looks consistent */
 #appMenu-protonMainView > .panel-subview-body::after{
   content: "";
-  display: -moz-box;
+  display: flex;
   border-bottom: 1px solid var(--panel-separator-color);
   margin: var(--panel-separator-margin);
 }
 
 #appMenu-find-button2 ~ *{
-  -moz-box-ordinal-group: 2;
+  order: 2;
 }
