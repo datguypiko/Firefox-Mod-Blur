@@ -39,6 +39,16 @@
     width: 21em !important;
 }
 
+/* Apply width in the Firefox extension manager on Linux */
+@media (-moz-platform: linux) {
+
+    #unified-extensions-view .unified-extensions-item-name,
+    #unified-extensions-view .unified-extensions-item-message {
+        padding-inline-start: 0.5em !important;
+        width: 22em !important;
+    }
+}
+
 #unified-extensions-view .unified-extensions-item-action-button.subviewbutton {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
