@@ -195,6 +195,14 @@
   display: none !important;
 }
 
+#urlbar-container {
+   --urlbar-container-height: 38.00px !important;
+}
+
+#urlbar {
+  --urlbar-toolbar-height: 38px !important;
+}
+
 /* Search Bar */
 #urlbar-input-container,
 #searchbar,
@@ -434,10 +442,11 @@ if you change --tab-min-height it doesnt work for fullcreen
 
 #TabsToolbar .titlebar-buttonbox-container {
   order:1 !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
   padding-right: 3px !important;
   padding-left: 3px !important;
+
 }
 
 #nav-bar {
@@ -466,11 +475,11 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 
 .titlebar-buttonbox-container .titlebar-button {
-  padding: 8px !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  margin-left: 2px !important;
-  margin-right: 2px !important;
+  padding: 10px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 :root[sizemode="maximized"] .titlebar-buttonbox-container {
