@@ -5,6 +5,11 @@
 	padding-left: 90px !important;
 	  padding-right: initial !important;
   }
+
+:root {
+  --toolbar-start-end-padding: 3px !important;
+  /* padding of frst and last child ,default - 8px */
+}
   
   #navigator-toolbox:not([inFullscreen])
 	#TabsToolbar
