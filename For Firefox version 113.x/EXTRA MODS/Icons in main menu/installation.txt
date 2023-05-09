@@ -1,3 +1,0 @@
-Move selected file to chrome folder where userChrome and userContent sits.
-
-Source for this mod: https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css

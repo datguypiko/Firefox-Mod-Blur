@@ -1,3 +1,0 @@
-Move file to chrome folder where userChrome and userContent files sit.
-
-Don't use popout_bookmarks_bar_on_hover.css with this file.
