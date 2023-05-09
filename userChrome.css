@@ -69,6 +69,10 @@
   background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
+#navigator-toolbox #nav-bar {
+    background-color: transparent !important;
+}
+
 /* Remove line on the right side of the Firefox view button */
 :root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden])
   :is(#firefox-view-button, #wrapper-firefox-view-button)
@@ -103,20 +107,19 @@
 
 /* Order of Toolbars (0-top, 1-second from top, 2-last) */
 #navigator-toolbox #nav-bar {
-  -moz-box-ordinal-group: 0 !important;
-  background-color: transparent !important;
-}
-
-#navigator-toolbox #toolbar-menubar {
-  -moz-box-ordinal-group: 1 !important;
+  order:0 !important;
 }
 
 #titlebar {
-  -moz-box-ordinal-group: 2 !important;
+  order:1 !important;
 }
 
 #PersonalToolbar {
-  -moz-box-ordinal-group: 3 !important;
+  order:2 !important;
+}
+
+#navigator-toolbox #toolbar-menubar {
+  order:0 !important;
 }
 
 /* ----- Fix fullscreen issues with navigation bar at the top ----- */
@@ -400,7 +403,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 
 /* Show Tab close button on hover */
 .tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: -moz-box !important;
+  display: flex !important;
   opacity: 0;
   visibility: collapse !important;
   transition: opacity 0.25s, visibility 0.25s ease-in !important;
@@ -430,7 +433,7 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 
 #TabsToolbar .titlebar-buttonbox-container {
-  -moz-box-ordinal-group: 0 !important;
+  order:1 !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
   padding-right: 3px !important;
@@ -438,17 +441,17 @@ if you change --tab-min-height it doesnt work for fullcreen
 }
 
 #nav-bar {
-  padding-left: 118px;
+  padding-right: 100px;
 }
 
 #navigator-toolbox:not([inFullscreen])
   #TabsToolbar
   .titlebar-buttonbox-container {
   visibility: visible !important;
-  display: block !important;
+  display: flex !important;
   position: absolute !important;
   top: 1px;
-  left: 0;
+  right: 0;
 }
 
 #TabsToolbar .titlebar-buttonbox-container .titlebar-button {
@@ -464,8 +467,8 @@ if you change --tab-min-height it doesnt work for fullcreen
 
 .titlebar-buttonbox-container .titlebar-button {
   padding: 8px !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
   margin-left: 2px !important;
   margin-right: 2px !important;
 }
@@ -474,17 +477,22 @@ if you change --tab-min-height it doesnt work for fullcreen
   padding-top: 0px !important;
 }
 
+#navigator-toolbox[inFullscreen] #nav-bar {
+   padding-right: initial !important;
+}
+
+
 .titlebar-buttonbox-container .titlebar-min {
-  -moz-box-ordinal-group: 2 !important;
+  order: 0 !important;
 }
 
 .titlebar-buttonbox-container .titlebar-max,
 .titlebar-restore {
-  -moz-box-ordinal-group: 1 !important;
+  order: 1 !important;
 }
 
 .titlebar-buttonbox-container .titlebar-close {
-  -moz-box-ordinal-group: 0 !important;
+  order: 2 !important;
 }
 
 @media only screen and (max-width: 670px) {
@@ -492,13 +500,17 @@ if you change --tab-min-height it doesnt work for fullcreen
     #TabsToolbar
     .titlebar-buttonbox-container {
     visibility: visible !important;
-    display: block !important;
-    position: relative !important;
+    display: flex !important;
+    position: relative !important; 
+    order: 1 !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
   }
 
   #navigator-toolbox:not([inFullscreen]) #nav-bar {
-    padding-left: initial !important;
+    padding-right: initial !important;
   }
+ 
 }
 
 /* ----------------------------------------------------------------- */
