@@ -1,8 +1,8 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v111.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-01/04/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v113.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-09/05/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 <p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> <a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a> 
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.3.2-important?style=for-the-badge"></a></p>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.4-important?style=for-the-badge"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -40,8 +40,9 @@
 </br></br>
 <i>Left side MacOS style</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/pR78PN5.png"></p>
 <i>Right side MacOS style</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/032WjXp.png"></p>
-<i>Right side default OS style</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
-<i>default</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M1O9aZp.png"></p></details>
+<i>Right side OS</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/uTcbB4p.png"></p>
+<i>Left side OS</i><p align="center"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/45180997-9195-48bd-a135-9de65c4a27ac"></p>
+<i>Theme default</i><p align="center"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/cddf0baf-0f9e-4467-a47f-77036361999f"></p></details>
 
 <details><summary>Bookmarks bar modifications :gear:</summary>
 <i>popout_bookmarks_bar_on_hover.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Hjy8kyU.gif"></p>
@@ -133,6 +134,17 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
   
+`09/05/2023` `>` `v2.4` `Firefox v113.x`
+- Fixed positioning of elements after some "-moz" attributes no longer used by firefox from v113.x.
+- When moving with tab or arrows in search now shows hover background color correctly.
+- Changed default min-max-close window control buttons to be on the right side. Lowered padding between buttons. Fixed order in v113.x.
+- Fixed Window control buttons increasing height of tab bar when firefox window made smaller. Was only the problem with default buttons.
+- Added an option for window controls mods to have menu bottons on the right or on the left side.
+- Fix separator color in context menu.
+- "Cleaner extension menu" mod fixes. It automatically adjusts the width if number of extensions below the number of icons set in a row which default is 3.
+- Top toolbar more compact with height lowered by 4 pixels.
+- Other minor changes.
+	
 `01/04/2023` `>` `v2.3.2` `Firefox v111.x`
 - Fixed "clean extension menu" mod so there is no empty space anymore no matter of how many extensions you have set in a row. If you have less than the number set (default 3) the width will adjust automatically. Now the default file doesnt have the separator line anymore.
 
@@ -196,6 +208,8 @@ Last Tested on:
 <details><summary><h2>:page_facing_up: Sources</h2></summary>
 
 > Source for Backdrop filter: [`https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/`](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)
+	
+> <i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>	
 
 </details>
 
