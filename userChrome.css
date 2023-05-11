@@ -533,17 +533,17 @@ menupopup :-moz-any(menu, menuitem) {
   padding-bottom: 4px !important;
 }
 
-menupopup
-  > :-moz-any(menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"]) {
-  background-color: color-mix(in srgb, currentColor 9%, transparent) !important;
-}
-
-#context-navigation
-  > .menuitem-iconic[_moz-menuactive="true"]
-  > .menu-iconic-left
-  > .menu-iconic-icon {
-  border-radius: var(--toolbarbutton-border-radius) !important;
-  background-color: var(--button-hover-bgcolor) !important;
+@media (-moz-platform: windows-win10),
+       (-moz-platform: windows-win8),
+       (-moz-platform: windows-win7){
+  #context-navigation > .menuitem-iconic[_moz-menuactive="true"] > .menu-iconic-left > .menu-iconic-icon {
+    border-radius: var(--toolbarbutton-border-radius) !important;
+    background-color: var(--button-hover-bgcolor) !important;
+  }
+  
+  menupopup > :-moz-any(menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"]) {
+    background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
+  }
 }
 
 menugroup > #context-back {
@@ -565,6 +565,7 @@ menupopup :-moz-any(menu:last-child, menuitem:last-child) {
 /* ----- Menu Separator #context-sep-selectall ----- */
 menuseparator {
   border-color: var(--arrowpanel-border-color)  !important;
+  /*! order-top: 1px solid ThreeDShadow; */
 }
 
 menuseparator#context-sep-navigation {
@@ -858,3 +859,58 @@ toolbar
 #TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
   color: hsla(0, 0%, 10%) !important; 
 }
+
+/* -----------------------------------------------------------------------
+/* ------------------------ LINUX Support --------------------------------
+/* -----------------------------------------------------------------------
+ @media (-moz-gtk-csd-available)
+ @media (-moz-gtk-csd-reversed-placement),*/
+@media (-moz-platform: linux){
+  #context-navigation > .menuitem-iconic[_moz-menuactive="true"]{
+    border-radius: var(--toolbarbutton-border-radius) !important;
+    background-color: var(--button-hover-bgcolor) !important;
+    }
+   #context-navigation > .menuitem-iconic[_moz-menuactive="true"][disabled]{
+     background-color: transparent !important;
+  }
+  #context-navigation > .menuitem-iconic {
+    appearance: none !important;
+  }
+  
+/*   menupopup > :-moz-any(menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"]) {
+    background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
+    } */
+  
+  menu:where([_moz-menuactive="true"]):not([disabled]), menuitem:where([_moz-menuactive="true"]):not([disabled]) {
+    background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
+    
+  }
+/*    menupopup :-moz-any(menu, menuitem) {
+    appearance: none !important;
+  } */
+  
+  menupopup {
+    appearance: none !important;
+  }
+  
+  #context-navigation:not([hidden]) {
+    padding: 2px 2px !important;}
+  
+  menuseparator {
+    appearance: none !important;
+    border-top: 1px solid var(--arrowpanel-border-color) !important;
+    border-bottom: none !important;
+    margin: 1px 1em;}
+  
+  menuseparator#context-sep-navigation {
+    margin-top: 0 !important;
+    margin-inline: 0 !important;}
+  
+/*   menupopup .menu-text, menupopup .menu-iconic-left, menupopup .menu-iconic-text {
+    font-size: 0.9em;} */
+  
+/*   Smaller tab text and height. Broken on fedora? */
+  #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+    height: 2.4em !important;
+    font-size: 0.9em;} 
+} 
