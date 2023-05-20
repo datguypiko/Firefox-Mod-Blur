@@ -446,7 +446,10 @@ if you change --tab-min-height it doesnt work for fullcreen
   padding-bottom: 3px !important;
   padding-right: 3px !important;
   padding-left: 3px !important;
+}
 
+#nav-bar-customization-target > :is(toolbarbutton, toolbaritem):first-child {
+  padding-inline-start: 2px !important;
 }
 
 #nav-bar {
