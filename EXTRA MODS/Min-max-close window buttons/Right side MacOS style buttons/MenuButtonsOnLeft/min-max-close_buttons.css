@@ -34,7 +34,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 /* ----------------------------------------------------------------- */
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */
-#nav-bar {
+#navigator-toolbox #nav-bar {
   padding-right: 90px !important;
 }
 
