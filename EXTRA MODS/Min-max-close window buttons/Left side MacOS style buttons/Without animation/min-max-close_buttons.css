@@ -1,9 +1,9 @@
 /* ----------------------------------------------------------------- */
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */
-#nav-bar {
+#navigator-toolbox #nav-bar {
 	padding-left: 90px !important;
-	  padding-right: initial !important;
+	padding-right: initial !important;
   }
 
 :root {
