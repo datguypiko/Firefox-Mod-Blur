@@ -11,7 +11,7 @@
   /* ----------------------------------------------------------------- */
   /* ---------- Default OS style close/min/max window buttons -------- */
   /* ----------------------------------------------------------------- */
- #nav-bar { 
+#navigator-toolbox #nav-bar { 
     padding-left: 100px !important;
     padding-right: initial !important;
 } 
