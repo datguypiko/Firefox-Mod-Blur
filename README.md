@@ -1,8 +1,8 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v113.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-09/05/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v113.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-22/05/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 <p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> <a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a> 
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.4-important?style=for-the-badge"></a></p>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.4.1-important?style=for-the-badge"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -133,8 +133,14 @@
 <details><summary><h2>:shield: Last Updates</h2></summary>
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
-  
-`09/05/2023` `>` `v2.4` `Firefox v113.x`
+ 
+`22/05/2023` `-` `v2.4.1` `Firefox v113.x`
+- Linux tested on Fedora GNOME and Mint Cinnamon.
+- Fixes on linux for context menus.
+- Fixes on linux for control buttons. Still need to manually change distance depending on how many buttons there are `--firefoxcss-control-buttons-margin` on line `44` in userChrome.css
+- Linux fixes for [Min-max-close window buttons](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/EXTRA%20MODS/Min-max-close%20window%20buttons)  extra mods. Still need to manually change distance  depending on how many buttons there are `--firefoxcss-control-buttons-margin` on line `44` in userChrome.css.	
+	
+`09/05/2023` `-` `v2.4` `Firefox v113.x`
 - Fixed positioning of elements after some "-moz" attributes no longer used by firefox from v113.x.
 - When moving with tab or arrows in search now shows hover background color correctly.
 - Changed default min-max-close window control buttons to be on the right side. Lowered padding between buttons. Fixed order in v113.x.
@@ -145,21 +151,21 @@
 - Top toolbar more compact with height lowered by 4 pixels.
 - Other minor changes.
 	
-`01/04/2023` `>` `v2.3.2` `Firefox v111.x`
+`01/04/2023` `-` `v2.3.2` `Firefox v111.x`
 - Fixed "clean extension menu" mod so there is no empty space anymore no matter of how many extensions you have set in a row. If you have less than the number set (default 3) the width will adjust automatically. Now the default file doesnt have the separator line anymore.
 
-`26/03/2023` `>` `v2.3.1` `Firefox v111.x`
+`26/03/2023` `-` `v2.3.1` `Firefox v111.x`
 - Fixed and Reworked extension menu to use grid instead of flexbox, no width change required anymore. Now change "--firefoxcss-number-of-extensions-in-a-row" value to wanted extensions icon count in a row.
 
-`25/03/2023` `>` `v2.3` `Firefox v111.x`
+`25/03/2023` `-` `v2.3` `Firefox v111.x`
 - When moving with tab or arrows in search now shows hover background color correctly.
 - Fix separator color in context menu for v111.x
 
-`20/01/2023` `>` `v2.3` Added extensions menu modifications for firefox v109.0.0; Merged some code lines and renamed extensions for cleaner code.
+`20/01/2023` `-` `v2.3` Added extensions menu modifications for firefox v109.0.0; Merged some code lines and renamed extensions for cleaner code.
   
-`14/12/2022` `>` `v2.2.1` Fix url bar icon size for firefox v108.0.0
+`14/12/2022` `-` `v2.2.1` Fix url bar icon size for firefox v108.0.0
   
-`08/12/2022` `>` `v2.2` 
+`08/12/2022` `-` `v2.2` 
   
    - Circular homepage shortcuts - extra mod.
     
@@ -173,19 +179,19 @@
     
    - Fix padding for homepage shortcuts in wallpaper theme using no text mod.
   
- `29/11/2022` `>` `v2.1` Added wallpaper style themes with 3 choices. Fixed Tab closing glitch. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
+ `29/11/2022` `-` `v2.1` Added wallpaper style themes with 3 choices. Fixed Tab closing glitch. Fixeed spilled theme wallpaper file wrong destination folder. Fixed micaForEveryone support for Firefox Nightly after new update. Changed colors of sound/audio button in tabs. Other few minor fixes.
  
- `26/11/2022` `>` `v2.0` Reworked theme files, structure and added new things with more options.
+ `26/11/2022` `-` `v2.0` Reworked theme files, structure and added new things with more options.
 
- `20/07/2022` `>` Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
+ `20/07/2022` `-` Changed wallpaper on a blank loading screen to a solid dark color for the "userContent-WallpaperEdition".
 
- `19/07/2022` `>` Added new theme with background wallpaper and blur effect. 
+ `19/07/2022` `-` Added new theme with background wallpaper and blur effect. 
 
- `10/06/2022` `>` Fixed padding in fullscreen after recent version changes.
+ `10/06/2022` `-` Fixed padding in fullscreen after recent version changes.
 
- `14/05/2022` `>` Fixed after an update broken popup menu background color for 100.x versions of firefox.
+ `14/05/2022` `-` Fixed after an update broken popup menu background color for 100.x versions of firefox.
 
- `13/02/2022` `>` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
+ `13/02/2022` `-` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
 	
 </details>
 
@@ -194,7 +200,9 @@
 ```html
 Last Tested on:
 	New 2.0 theme for Proton
-		-- Windows 10/11 - 111.0.1 / 110.0.0 / 109.0.1 / 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
+		-- Windows 10/11 - 113.0.1 / 112.x / 111.0.1 / 110.0.0 / 109.0.1 / 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
+		-- Fedora GNOME - 113.0
+		-- Mint Cinnamon - 113.0
 	
 	Older PROTON theme
 		-- Windows 10/11 - 106.0.1 / 105 / 104.0.1 / 102.0.1 / 102.0 / 101.0 / 100.0 / 99.0.1/ 98.0 / 97.0.1 / 96.0.3 / 96.0 / 95.0 / 94.0.1 / 93.0 / 91.0.2 / 90.0.1 / 90.0 / 89.0.1 / 89.0.0 
