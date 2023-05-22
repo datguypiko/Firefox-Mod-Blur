@@ -466,7 +466,7 @@ if you change --tab-min-height it doesnt work for fullcreen
   }
 
   #nav-bar {
-    padding-right: 100px;
+    padding-right: var(--firefoxcss-control-buttons-margin);
   }
 
   #navigator-toolbox:not([inFullscreen])
