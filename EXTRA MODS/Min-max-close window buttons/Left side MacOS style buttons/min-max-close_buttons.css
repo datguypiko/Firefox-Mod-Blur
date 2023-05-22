@@ -2,7 +2,7 @@
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */
 #navigator-toolbox #nav-bar {
-  padding-left: 90px !important;
+  padding-left: var(--firefoxcss-control-buttons-margin) !important;
   padding-right: initial !important;
 }
 
