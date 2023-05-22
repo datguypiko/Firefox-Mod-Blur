@@ -35,7 +35,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */
 #navigator-toolbox #nav-bar {
-  padding-right: 90px !important;
+  padding-right: var(--firefoxcss-control-buttons-margin) !important;
 }
 
 #navigator-toolbox:not([inFullscreen])
