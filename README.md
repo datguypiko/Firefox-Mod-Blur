@@ -68,6 +68,10 @@
 <i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
 <i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p></details>
 
+<details><summary>Longer active tab :gear:</summary>
+<i>give_more_width_to_active_tab.css </i><p align="left"><img alt="FirefoxCss" src="https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/EXTRA%20MODS/Bigger%20active%20tab/preview.gif"></p></details>
+
+
 <details><summary>Hide List all tabs button :gear:</summary>
 <i>hide_list-all-tabs_button.css [Shows when tabs overflow]</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p></details>
 
