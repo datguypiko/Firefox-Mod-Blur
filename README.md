@@ -1,8 +1,8 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular - Tested only on Windows</h2>
 
-<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v113.0.1-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-22/05/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
+<p align="center"><a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v114.0-blue?style=flat&logo=firefox&logoColor=white"></a> <a href="#shield-last-updates"><img alt="Installation Guide" src="https://img.shields.io/badge/Updated-06/06/2023-bightgreen?style=flat"> <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat"> <a href="https://www.reddit.com/r/FirefoxCSS/"><img alt="FirefoxCSS reddit" src="https://img.shields.io/reddit/subreddit-subscribers/FirefoxCSS?label=r%2FFirefoxCSS&logo=reddit&style=social"></a></p>
 <p align="center"><a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> <a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a> 
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.4.1-important?style=for-the-badge"></a></p>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.4.2-important?style=for-the-badge"></a></p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
@@ -138,6 +138,9 @@
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/datguypiko/Firefox-Mod-Blur"> <a href="https://github.com/datguypiko/Firefox-Mod-Blur/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/datguypiko/Firefox-Mod-Blur?color=yellow&logo=github&logoColor=white"> </a>
  
+`06/60/2023` `-` `v2.4.2` `Firefox v114.0`
+- New update changed extension menu. Fix icon positioning for style 2 "cleaner_extensions_menu.css" extra mod.	
+	
 `22/05/2023` `-` `v2.4.1` `Firefox v113.x`
 - Linux tested on Fedora GNOME and Mint Cinnamon.
 - Fixes on linux for context menus.
@@ -204,7 +207,7 @@
 ```html
 Last Tested on:
 	New 2.0 theme for Proton
-		-- Windows 10/11 - 113.0.1 / 112.x / 111.0.1 / 110.0.0 / 109.0.1 / 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
+		-- Windows 10/11 - 114.0 / 113.0.1 / 112.x / 111.0.1 / 110.0.0 / 109.0.1 / 109.0.0 / 108.0.0 / 107.0.0 / 106.0.1
 		-- Fedora GNOME - 113.0
 		-- Mint Cinnamon - 113.0
 	
