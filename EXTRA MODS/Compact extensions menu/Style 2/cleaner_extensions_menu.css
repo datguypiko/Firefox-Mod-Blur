@@ -5,7 +5,7 @@
 
 #unified-extensions-view{
     --uei-icon-size: 22px; /*  Change icon size */
-    --firefoxcss-number-of-extensions-in-a-row: 4; /*  Increase to the number of icons you want in one row */
+    --firefoxcss-number-of-extensions-in-a-row: 3; /*  Increase to the number of icons you want in one row */
 }
 
 #unified-extensions-view .panel-header,
@@ -52,6 +52,6 @@
 #wrapper-edit-controls:is([place="palette"], 
 [place="panel"]) > #edit-controls, #wrapper-zoom-controls:is([place="palette"], 
 [place="panel"]) > #zoom-controls, :is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
-  margin: 2px !important;
+  margin: 0px !important;
 }
 
