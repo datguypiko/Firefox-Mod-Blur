@@ -71,6 +71,8 @@
 <details><summary>Longer active tab :gear:</summary>
 <i>give_more_width_to_active_tab.css </i><p align="left"><img alt="FirefoxCss" src="https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/EXTRA%20MODS/Bigger%20active%20tab/preview.gif"></p></details>
 
+<details><summary>Colored sound playing tab :gear:</summary>
+<i>colored_soundplaying_tab.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/8963e4fb-491f-440f-84c1-ec1629da4074"></p></details>
 
 <details><summary>Hide List all tabs button :gear:</summary>
 <i>hide_list-all-tabs_button.css [Shows when tabs overflow]</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p></details>
