@@ -1,0 +1,11 @@
+/* Set background color for the Tab that has audio playing. Thanks to github@TaouMou for the idea */
+
+:root {
+    /* Change to any color you want */
+     --firefoxcss-colored-sound-tab: #5960c482 !important; 
+}
+
+#tabbrowser-tabs .tabbrowser-tab:is([soundplaying]) .tab-background:not([selected]) {
+    background-color: var(--firefoxcss-colored-sound-tab) !important;
+    transition: background-color 500ms ease !important;
+}
