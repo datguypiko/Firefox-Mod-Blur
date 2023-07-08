@@ -2,6 +2,19 @@
 #unified-extensions-view{
     --uei-icon-size: 20px; /*  Change icon size */
 }
+
+#unified-extensions-panel #unified-extensions-view {
+    width: 100% !important;
+}
+
+:is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
+    margin: 2px 4px !important;
+}
+
+.unified-extensions-item-menu-button.subviewbutton {
+    padding: 2px !important;
+}
+
 #unified-extensions-view .panel-header,
 #unified-extensions-view .panel-header + toolbarseparator,
 #unified-extensions-view .panel-subview-body + toolbarseparator,
@@ -11,8 +24,8 @@
 }
  
 #unified-extensions-view .panel-subview-body {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
 }
  
 #unified-extensions-view .unified-extensions-item .unified-extensions-item-icon,
