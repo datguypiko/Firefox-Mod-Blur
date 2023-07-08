@@ -1,6 +1,6 @@
 /*  Clean and tight extensions menu */
 #unified-extensions-panel #unified-extensions-view {
-    max-width: 230px !important;
+    width: 100% !important;
 }
 
 #unified-extensions-view{
