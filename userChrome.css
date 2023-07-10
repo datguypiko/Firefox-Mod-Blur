@@ -30,7 +30,7 @@
   --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
   /* ^ Main lighter color, toolbar ^ */
   --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
-  --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 28%);
+  --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 30%);
   --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
   --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 13%);
   --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
@@ -293,6 +293,11 @@
 
 .tabbrowser-tab .tab-label-container .tab-label {
   transition: color 250ms ease !important;
+}
+
+/* Pinned tabs padding  */
+:root:not([uidensity="compact"]) .tab-content[pinned] {
+  padding: 0 8px !important;
 }
 
 /* ----- New tab icon size (16-default). Not change the rest of calc --- */
@@ -1034,4 +1039,24 @@ toolbar
       padding-right: initial !important;
     }
   }
+}
+
+/* Status URL change (bottom left when hovering a link)  */
+#statuspanel-label {
+  background-color: var(--firefoxcss-main-bg-color) !important;
+  border-radius: 4px !important;
+  border-color: transparent !important;
+  color: currentColor !important;
+  margin: 0 0 3px 3px !important;
+  padding: 4px !important;
+}
+
+/* CTRL+F Search Bar color change  */
+.browserContainer > findbar {
+  background-image: none !important;
+  background-color:var(--firefoxcss-main-bg-color) !important;
+}
+
+.browserContainer > findbar .findbar-textbox {
+   background-color:var(--firefoxcss-item-bg-color) !important;
 }
