@@ -435,7 +435,8 @@ if you change --tab-min-height it doesnt work for fullcreen
   opacity: 1;
   visibility: visible !important;
   border-radius: 100% !important;
-  transition: opacity 0.25s ease, visibility 0.25s ease, background-color 0.15s ease !important;
+  transition: opacity 0.25s ease, visibility 0.25s ease,
+    background-color 0.15s ease !important;
 }
 
 #titlebar #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
@@ -760,7 +761,8 @@ toolbar
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
   > #urlbar-input-container
-  > :is(#page-action-buttons) {
+  > #page-action-buttons
+  .urlbar-page-action {
   opacity: 0;
   transition-delay: 500ms;
 }
@@ -783,7 +785,7 @@ toolbar
   > #urlbar:not([focused])
   > #urlbar-input-container
   > #identity-box
-  #identity-permission-box:not([open]) {
+  > #identity-permission-box:not([open]) {
   opacity: 0;
   transition-delay: 500ms;
 }
@@ -794,22 +796,117 @@ toolbar
   transition: opacity 0.2s ease;
 }
 
-#urlbar #identity-icon {
-  visibility: hidden !important;
-  transition: 300ms !important;
+#urlbar #identity-icon-box {
   opacity: 0 !important;
-  -moz-margin-end: -1.4em !important;
+  margin-inline-start: calc(-8px - 2 * var(--urlbar-icon-padding));
+  transition: margin-inline-start 100ms linear, opacity 200ms linear;
+  /*    transition-delay: 200ms !important; */
 }
 
-#identity-box:hover #identity-icon {
-  visibility: visible !important;
-  transition: 300ms !important;
+#urlbar #identity-permission-box {
+  opacity: 0 !important;
+  margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
+  transition: margin-inline-start 100ms linear, opacity 200ms linear;
+  /*    transition-delay: 200ms !important; */
+}
+
+#identity-box:hover #identity-icon-box,
+#identity-box:hover #identity-permission-box,
+#identity-box #identity-permission-box[open="true"] {
   opacity: 1 !important;
-  -moz-margin-end: initial !important;
+  margin-inline-start: initial !important;
+  /*   transition: all 100ms ease-in-out !important; */
 }
 
-/* Search button show on hover in URL bar. 
- /* #urlbar-container:not(:hover) #urlbar:not(.searchButton):not([focused])
+#identity-box {
+  padding-inline-end: 4px;
+}
+
+#urlbar-input-container .urlbar-input-box {
+  padding-inline-start: 4px !important;
+}
+
+#identity-box:hover ~ .urlbar-input-box > #urlbar-input {
+  mask-image: linear-gradient(to right, transparent, black 3ch) !important;
+}
+
+#blocked-permissions-container {
+  display: none !important;
+}
+
+#page-action-buttons {
+  padding-inline-start: 16px;
+}
+
+.urlbar-page-action {
+  margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
+  opacity: 0;
+  transition: margin-inline-end 100ms linear, opacity 200ms linear;
+}
+
+#page-action-buttons:hover > .urlbar-page-action,
+.urlbar-page-action[open],
+.urlbar-page-action[open] ~ .urlbar-page-action {
+  opacity: 1;
+  margin-inline-end: 0px !important;
+}
+
+/* Create visual dots on both sides */
+/* left side identity-box dots modification */
+#identity-box::after {
+  content: "•••";
+  position: absolute;
+  top: 0.8em;
+  font-size: 0.7em;
+  opacity: 0.2;
+  transform: rotate(90deg);
+  left: 4px;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  transition-delay: 50ms;
+}
+
+#identity-box[pageproxystate="invalid"]::after {
+  /*   content: ""; */
+  opacity: 0;
+  transition: opacity 0ms ease;
+}
+
+#identity-box:hover::after {
+  opacity: 0 !important;
+  transition: opacity 50ms ease;
+  pointer-events: none;
+}
+
+/* right side page action button dots modification */
+#page-action-buttons::after {
+  content: "•••";
+  position: absolute;
+  top: 0.8em;
+  font-size: 0.7em;
+  opacity: 0.2;
+  transform: rotate(90deg);
+  right: 1px;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  transition-delay: 50ms;
+}
+
+#urlbar-input-container[pageproxystate="invalid"]
+  > #page-action-buttons::after {
+  /*     content: ""; */
+  opacity: 0;
+  transition: opacity 0ms ease;
+}
+
+#page-action-buttons:hover::after {
+  opacity: 0 !important;
+  transition: opacity 50ms ease;
+  pointer-events: none;
+}
+
+/* Search button show on hover in URL bar. */
+/* #urlbar-container:not(:hover) #urlbar:not(.searchButton):not([focused])
 > #urlbar-input-container > 
 #identity-box[pageproxystate="invalid"] #identity-icon {
   opacity: 0 !important; 
@@ -1054,9 +1151,9 @@ toolbar
 /* CTRL+F Search Bar color change  */
 .browserContainer > findbar {
   background-image: none !important;
-  background-color:var(--firefoxcss-main-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 .browserContainer > findbar .findbar-textbox {
-   background-color:var(--firefoxcss-item-bg-color) !important;
+  background-color: var(--firefoxcss-item-bg-color) !important;
 }
