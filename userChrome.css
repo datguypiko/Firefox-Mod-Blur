@@ -1,4 +1,17 @@
-/* ----- Included functions ----- */
+/* ______ _           __             __  __           _   ____  _     _    _ _____  
+  |  ____(_)         / _|           |  \/  |         | | |  _ \| |   | |  | |  __ \ 
+  | |__   _ _ __ ___| |_ _____  __  | \  / | ___   __| | | |_) | |   | |  | | |__) |
+  |  __| | | '__/ _ \  _/ _ \ \/ /  | |\/| |/ _ \ / _` | |  _ <| |   | |  | |  _  / 
+  | |    | | | |  __/ || (_) >  <   | |  | | (_) | (_| | | |_) | |___| |__| | | \ \ 
+  |_|    |_|_|  \___|_| \___/_/\_\  |_|  |_|\___/ \__,_| |____/|______\____/|_|  \_\
+  
+                                                                                    
+  Github:         github.com/datguypiko/Firefox-Mod-Blur     */
+
+/*===============================================================
+===================== E X T R A   M O D S =======================
+===============================================================*/
+
 @import url("privacy_change_email_text.css");
 @import url("privacy_blur_email_in_main_menu.css");
 @import url("privacy_blur_email_in_sync_menu.css");
@@ -23,16 +36,27 @@
 @import url("cleaner_extensions_menu.css");
 @import url("colored_soundplaying_tab.css");
 
-/* ----- My Custom Colors ----- */
+/*=====================================================================
+=================== G L O B A L  V A R I A B L E S ====================
+=====================================================================*/
+
 :root {
+  /* ================= Custom Color Variables ====================== */
+  /* Main dark color, url bar, active tab etc. */
   --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
-  /* ^ Main dark color, url bar, active tab etc. ^ */
+
+  /* Main lighter color, toolbar background */
   --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
-  /* ^ Main lighter color, toolbar ^ */
+
+  /* Tab colors */
   --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
   --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 30%);
   --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
+
+  /* Bookmarks bar colors */
   --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 13%);
+
+  /* Search Bar and breakout (when in focus) colors */
   --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
   --firefoxcss-url-border-bottom-color: hsla(0, 0%, 100%, 0.2);
   --firefoxcss-url-border-top-color: hsla(0, 0%, 0%, 0.15);
@@ -40,19 +64,9 @@
   --firefoxcss-url-breakout-border-bottom-color: hsla(0, 0%, 70%, 0.05);
   --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 6%, 0.75);
   --firefoxcss-other-color: hsla(0, 0%, 60%, 0.35);
-  --firefoxcss-top-bar-border-bottom-size: 1px;
-  --firefoxcss-border-radius: 10px;
-  --firefoxcss-control-buttons-margin: 90px;
-}
 
-:root {
+  /* ============== Firefox Global colors change ==================== */
   --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
-  --panel-separator-zap-gradient: linear-gradient(
-    90deg,
-    rgba(11, 11, 11, 1) 0%,
-    rgb(204, 143, 78) 39%,
-    rgb(37, 27, 36) 100%
-  ) !important;
   --button-hover-bgcolor: hsla(0, 0%, 60%, 0.35) !important;
   --button-active-bgcolor: hsla(0, 0%, 45%, 0.35) !important;
   --button-bgcolor: hsla(0, 0%, 45%, 0.9) !important;
@@ -60,19 +74,111 @@
   --dark-menu-background-color: #222121 !important;
   --dark-menu-border-color: rgb(55, 55, 55) !important;
   --dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+  --panel-separator-zap-gradient: linear-gradient(
+    90deg,
+    rgba(11, 11, 11, 1) 0%,
+    rgb(204, 143, 78) 39%,
+    rgb(37, 27, 36) 100%
+  ) !important;
+
+  /* ================ Set other global variables ==================== */
+  --firefoxcss-top-bar-border-bottom-size: 1px;
+  --firefoxcss-border-radius: 10px;
+  --firefoxcss-control-buttons-margin: 90px;
 }
 
-/* Sidebar Menu bg color */
+/*=====================================================================
+====================== T O O L B A R   O R D E R ======================
+=======================================================================
+Order of Toolbars
+  * 0 - top
+  * 1 - second from top
+  * 2 - bottom */
+
+/* SEARCH BAR TOOLBAR */
+#navigator-toolbox #nav-bar {
+  order: 0 !important;
+}
+
+/* TABS TOOLBAR */
+#titlebar {
+  order: 1 !important;
+}
+
+/* BOOKMARKS TOOLBAR*/
+#PersonalToolbar {
+  order: 2 !important;
+}
+
+/* Extra titlebar menu (above or below tabs, opens with alt) */
+#titlebar #toolbar-menubar {
+  order: 0 !important;
+}
+
+/*=====================================================================
+========================= S E T   C O L O R S =========================
+=====================================================================*/
+
+/* Sidebar background color change */
 #browser #sidebar-box {
   --sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
-#bookmarksPanel {
+/* Bookmarks bar background color */
+#PersonalToolbar {
+  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
+}
+
+/* Set search bar toolbar to transparent */
+#navigator-toolbox #nav-bar {
+  background-color: transparent !important;
+}
+
+/* Whole Main Toolbar */
+#navigator-toolbox {
+  background-color: var(--firefoxcss-item-bg-color) !important;
+}
+
+/* Avoids bright flash */
+#tabbrowser-tabpanels {
+  background-color: var(
+    --uc-light-bkgnd-color,
+    var(--firefoxcss-main-bg-color)
+  ) !important;
+}
+
+/* CTRL+F Search Bar color changes  */
+.browserContainer > findbar {
+  background-image: none !important;
   background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
-#navigator-toolbox #nav-bar {
-  background-color: transparent !important;
+.browserContainer > findbar .findbar-textbox {
+  background-color: var(--firefoxcss-item-bg-color) !important;
+}
+
+/*=====================================================================
+========================= H I D E   E L E M E N T S ===================
+=====================================================================*/
+
+/* Remove empty space from tabs bar */
+#TabsToolbar .titlebar-spacer[type="pre-tabs"],
+#TabsToolbar .titlebar-spacer[type="post-tabs"],
+#TabsToolbar .titlebar-spacer,
+/* Remove Search bar background color */
+#urlbar-background,
+/* Remove Line above search engine selection in search bar */
+#urlbar .search-one-offs .search-panel-one-offs-header-label,
+/* Remove lefover window buttons from extra menu bar (when pressing alt)*/
+#titlebar #toolbar-menubar .titlebar-buttonbox-container,
+/* Private browser icons remove and change main menu to purple */
+#private-browsing-indicator-with-label,
+.private-browsing-indicator,
+/* Hide tracking protection icon from Search Bar */
+#tracking-protection-icon-container,
+/* Hide permission icons, see it when pressing permission button */
+#blocked-permissions-container {
+  display: none !important;
 }
 
 /* Remove line on the right side of the Firefox view button */
@@ -88,43 +194,11 @@
     var(--firefoxcss-top-bar-border-bottom-color) !important;
 }
 
-/* Avoids bright flash */
-#tabbrowser-tabpanels {
-  background-color: var(
-    --uc-light-bkgnd-color,
-    var(--firefoxcss-main-bg-color)
-  ) !important;
-}
+/*=====================================================================
+======================= H E I G H T   F I X E S =======================
+=====================================================================*/
 
-/* Other */
-#TabsToolbar {
-  padding-inline-start: initial !important;
-}
-
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"],
-.titlebar-spacer {
-  display: none !important;
-}
-
-/* Order of Toolbars (0-top, 1-second from top, 2-last) */
-#navigator-toolbox #nav-bar {
-  order: 0 !important;
-}
-
-#titlebar {
-  order: 1 !important;
-}
-
-#PersonalToolbar {
-  order: 2 !important;
-}
-
-#navigator-toolbox #toolbar-menubar {
-  order: 0 !important;
-}
-
-/* ----- Fix fullscreen issues with navigation bar at the top ----- */
+/* Fix fullscreen issues with navigation bar at the top */
 :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
   -moz-appearance: none !important;
   appearance: none !important;
@@ -137,13 +211,7 @@
   appearance: none !important;
 }
 
-#navigator-toolbox {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-}
-
-/* ========================= Proton Height fixes ========================= */
-/* ----- Tabs Bar height ----- */
+/* Tabs Bar height */
 :root {
   --tab-min-height: 28px !important;
 }
@@ -152,7 +220,7 @@
   --tab-min-height: 28px !important;
 }
 
-/* ----- Menu Bar height ----- */
+/* Menu Bar height */
 #toolbar-menubar {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -162,7 +230,30 @@
   max-height: 22px !important;
 }
 
-/* ========================= Icons ======================================= */
+#navigator-toolbox {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* Search Bar height */
+#urlbar-container {
+  --urlbar-container-height: 38px !important;
+}
+
+#urlbar-container #urlbar {
+  --urlbar-toolbar-height: 38px !important;
+  --urlbar-height: 30px !important;
+  --urlbar-min-height: 32px !important;
+}
+
+#wrapper-urlbar-container #urlbar {
+  height: var(--urlbar-height) !important;
+}
+
+/*=====================================================================
+=============================== I C O N S =============================
+=====================================================================*/
+
 #PanelUI-menu-button {
   list-style-image: url(image/firefox.svg) !important;
 }
@@ -175,44 +266,18 @@
   list-style-image: url(image/left-arrow.svg) !important;
 }
 
-#PanelUI-button {
-  margin-inline-start: 0 !important;
-  padding-inline-start: 0 !important;
-  border: none !important;
-  border-inline-start: none !important;
-}
+/*=====================================================================
+============================ S E A R C H   B A R ======================
+=====================================================================*/
 
-#back-button > .toolbarbutton-icon {
-  border: none !important;
-  border-radius: 0 !important;
-  background: none !important;
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  padding: var(--toolbarbutton-inner-padding) !important;
-  border-radius: var(--toolbarbutton-border-radius) !important;
-}
-
-/* ========================= URL Bar ========================= */
-#urlbar-background {
-  display: none !important;
-}
-
-#urlbar-container {
-  --urlbar-container-height: 38px !important;
-}
-
-#urlbar {
-  --urlbar-toolbar-height: 38px !important;
-}
-
-/* Search Bar */
 #urlbar-input-container,
 #searchbar,
-#urlbar-container {
+#urlbar-container,
+#urlbar {
   border-radius: var(--firefoxcss-border-radius) !important;
 }
 
-.urlbarView-body-inner {
+#urlbar .urlbarView-body-inner {
   border-top: 0px !important;
 }
 
@@ -221,10 +286,13 @@
   border-bottom: transparent;
 }
 
+#urlbar .urlbar-input-box {
+  text-align: center;
+}
+
 #urlbar {
   --autocomplete-popup-highlight-background: hsl(240, 2%, 26%) !important;
   border: 0 !important;
-  border-radius: var(--firefoxcss-border-radius) !important;
   background-color: var(--firefoxcss-url-bar-bg-color) !important;
   border-bottom: 1px solid var(--firefoxcss-url-border-bottom-color) !important;
   border-top: 1px solid var(--firefoxcss-url-border-top-color) !important;
@@ -233,11 +301,6 @@
 
 .urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
   border-top: none !important;
-}
-
-/* Line above search engine selection in search bar */
-#urlbar .search-one-offs .search-panel-one-offs-header-label {
-  display: none !important;
 }
 
 /* Megabar */
@@ -270,21 +333,31 @@
   width: 100% !important;
 }
 
-#urlbar .urlbar-input-box {
-  text-align: center;
+/* Styling Extra search bar that you can add to firefox */
+#search-container #searchbar {
+  outline: 0 !important;
+  border: 0 !important;
+  border-radius: var(--firefoxcss-border-radius) !important;
+  background-color: var(--firefoxcss-url-bar-bg-color) !important;
+  border-bottom: 1px solid var(--firefoxcss-url-border-bottom-color) !important;
+  border-top: 1px solid var(--firefoxcss-url-border-top-color) !important;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35) !important;
 }
 
-#urlbar-container #urlbar {
-  --urlbar-height: 30px !important;
-  --urlbar-min-height: 32px !important;
+#search-container #searchbar .search-go-button,
+#urlbar-go-button {
+  list-style-image: url("image/right-arrow.svg") !important;
 }
 
-#wrapper-urlbar-container #urlbar {
-  height: var(--urlbar-height) !important;
+#PopupSearchAutoComplete {
+  --panel-background: var(--firefoxcss-url-breakout-bar-bg-color) !important;
 }
 
-/* ======================== Tabs ======================================= */
-/* ----- Non active tabs have darker text ----- */
+/*=====================================================================
+============================= T A B S =================================
+=====================================================================*/
+
+/* Non active tabs have darker text */
 .tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover)
   .tab-label-container
   .tab-label {
@@ -330,7 +403,6 @@ toolbar
 
 /* Main BAR */
 #navigator-toolbox {
-  background-color: var(--firefoxcss-item-bg-color) !important;
   --tabs-border-color: none !important;
   --my-tab-min-width: 100px !important;
   --tabs-navbar-shadow-size: 0px !important;
@@ -350,7 +422,6 @@ toolbar
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
 .tabbrowser-tab[fadein]:not([pinned]) {
   max-width: 135px !important;
-  /* 135px */
   min-width: var(--my-tab-min-width) !important;
 }
 
@@ -360,8 +431,9 @@ toolbar
   transition: opacity 250ms ease !important;
 }
 
-/* Fix the Heigh of a tab because 
-if you change --tab-min-height it doesnt work for fullcreen
+/* 
+ * Fix the height of the tab because if you
+ * change --tab-min-height it doesnt work for fullcreen
  */
 #TabsToolbar {
   padding-top: 0px !important;
@@ -448,9 +520,41 @@ if you change --tab-min-height it doesnt work for fullcreen
   border-color: transparent !important;
 }
 
-/* ----------------------------------------------------------------- */
-/* ------------------ close/min/max buttons ------------------------ */
-/* ----------------------------------------------------------------- */
+/* Speaker on tabs color fixes */
+.tab-icon-overlay:not([crashed])[soundplaying]:hover,
+.tab-icon-overlay:not([crashed])[muted]:hover,
+.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  color: currentColor !important;
+  stroke: hsla(0, 0%, 80%) !important;
+  background-color: hsla(0, 0%, 80%) !important;
+  fill-opacity: 0.95 !important;
+}
+
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
+.tabbrowser-tab[selected]
+  .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  color: currentColor !important;
+  stroke: hsla(0, 0%, 80%) !important;
+  background-color: hsla(0, 0%, 80%) !important;
+  fill-opacity: 0.95 !important;
+}
+
+#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
+#TabsToolbar .tab-icon-overlay:not([crashed])[muted],
+#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] {
+  color: hsl(0, 0%, 100%) !important;
+}
+
+#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
+#TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
+#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  color: hsla(0, 0%, 10%) !important;
+}
+
+/*=====================================================================
+============ W I N D O W   C O N T R O L   B U T T O N S ==============
+=====================================================================*/
 
 @media (-moz-platform: windows-win10),
   (-moz-platform: windows-win8),
@@ -486,10 +590,6 @@ if you change --tab-min-height it doesnt work for fullcreen
     right: 0;
   }
 
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-button {
-    border-radius: var(--toolbarbutton-border-radius);
-  }
-
   .titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
     height: 12px !important;
     min-height: 12px !important;
@@ -498,6 +598,7 @@ if you change --tab-min-height it doesnt work for fullcreen
   }
 
   .titlebar-buttonbox-container .titlebar-button {
+    border-radius: var(--toolbarbutton-border-radius);
     padding: 10px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
@@ -544,10 +645,10 @@ if you change --tab-min-height it doesnt work for fullcreen
   }
 }
 
-/* ----------------------------------------------------------------- */
-/* ----------------------------------------------------------------- */
-/* ----- Menu Items height/padding --panel-item-active-bgcolor ----- */
-/* ----------------------------------------------------------------- */
+/*=====================================================================
+====================== C O N T E X T   M E N U ========================
+=====================================================================*/
+
 menupopup :-moz-any(menu, menuitem) {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -636,22 +737,42 @@ menupopup
   margin-top: 5px !important;
 }
 
-/* ----------------------------------- */
-/* ----- Bookmarks bar set color------ */
-/* ----------------------------------- */
-#PersonalToolbar {
-  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
-}
+/*=====================================================================
+===================== B O O K M A R K S   B A R =======================
+=====================================================================*/
 
+/* Set bookmarks bar items padding */
 #PlacesToolbarItems > .bookmark-item {
   padding-block: 6px !important;
   padding-left: 6px !important;
   padding-right: 6px !important;
 }
 
-/* ----------------------------------- */
-/* ----- Toolbar buttons ------------- */
-/* ----------------------------------- */
+/*=====================================================================
+=========================== B U T T O N S =============================
+=====================================================================*/
+
+/* Go Back button */
+#back-button > .toolbarbutton-icon {
+  border-radius: var(--toolbarbutton-border-radius) !important;
+}
+
+#back-button > .toolbarbutton-icon {
+  border: none !important;
+  background: none !important;
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  padding: var(--toolbarbutton-inner-padding) !important;
+}
+
+/* Main Menu Button */
+#PanelUI-button {
+  margin-inline-start: 0 !important;
+  padding-inline-start: 0 !important;
+  border: none !important;
+  border-inline-start: none !important;
+}
+
 toolbar
   .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
   > .toolbarbutton-icon,
@@ -730,17 +851,6 @@ toolbar
   margin-inline-start: 2px !important;
 }
 
-/* Remove lefover window buttons from extra menu bar (Shows up when window inactive) */
-#titlebar #toolbar-menubar .titlebar-buttonbox-container {
-  display: none !important;
-}
-
-/* Private browser icons remove and change main menu to purple */
-#private-browsing-indicator-with-label,
-.private-browsing-indicator {
-  display: none !important;
-}
-
 :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
   list-style-image: url("image/firefox.svg") !important;
   fill: hsl(277, 70%, 64%) !important;
@@ -753,9 +863,10 @@ toolbar
   filter: drop-shadow(0px 0px 1px #000000d5) !important;
 }
 
-/* ------------------------------------------------------------------------------ */
-/* ----------------------- Auto hide  Buttons inside URL bar -------------------- */
-/* ------------------------------------------------------------------------------ */
+/*=====================================================================
+============== U R L   A U T O   H I D E   B U T T O N S ==============
+=====================================================================*/
+
 #nav-bar:not([customizing="true"]):not(.searchButton)
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
@@ -790,24 +901,17 @@ toolbar
   transition-delay: 500ms;
 }
 
-#page-action-buttons,
+#page-action-buttons .urlbar-page-action,
 #identity-permission-box,
 #notification-popup-box .notification-anchor-icon {
   transition: opacity 0.2s ease;
 }
 
-#urlbar #identity-icon-box {
-  opacity: 0 !important;
-  margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
-  transition: margin-inline-start 100ms linear, opacity 200ms linear;
-  /*    transition-delay: 200ms !important; */
-}
-
+#urlbar #identity-icon-box,
 #urlbar #identity-permission-box {
   opacity: 0 !important;
   margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
   transition: margin-inline-start 100ms linear, opacity 200ms linear;
-  /*    transition-delay: 200ms !important; */
 }
 
 #identity-box:hover #identity-icon-box,
@@ -815,9 +919,7 @@ toolbar
 #identity-box #identity-permission-box[open="true"] {
   opacity: 1 !important;
   margin-inline-start: initial !important;
-  /*   transition: all 100ms ease-in-out !important; */
 }
-
 
 #urlbar-input-container .urlbar-input-box {
   padding-inline-start: 2px !important;
@@ -827,15 +929,11 @@ toolbar
   mask-image: linear-gradient(to right, transparent, black 3ch) !important;
 }
 
-#blocked-permissions-container {
-  display: none !important;
-}
-
 #page-action-buttons {
   padding-inline-start: 8px;
 }
 
-.urlbar-page-action {
+#page-action-buttons .urlbar-page-action {
   margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
   opacity: 0;
   transition: margin-inline-end 100ms linear, opacity 200ms linear;
@@ -850,75 +948,73 @@ toolbar
 
 /* Create visual dots on both sides */
 /* left side identity-box dots modification */
-#identity-box::after {
-  content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg fill="%23FFFFFF" width="11px" height="11px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 16c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 27c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 5c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25z"></path></svg>');
-  position: relative;
-/*   content: "•••"; */
-  opacity: 0.2;
-/*   transform: rotate(90deg); */
-  left: 2px;
-  pointer-events: none;
-  transition: opacity 100ms ease;
-  align-self: center;
-}
-
-
-#identity-box[pageproxystate="invalid"]::after {
-  /*   content: ""; */
-  opacity: 0;
-  transition: opacity 0ms ease;
-}
-
-#identity-box:hover::after {
-  opacity: 0.7 !important;
-  transition: opacity 50ms ease;
-  pointer-events: none;
-}
-
-/* right side page action button dots modification */
+#identity-box::after,
 #page-action-buttons::before {
   position: relative;
-  content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg fill="%23FFFFFF" width="11px" height="11px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 16c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 27c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 5c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25z"></path></svg>');
-/*   content: "•••"; */
+  content: "•••";
   opacity: 0.2;
-/*   transform: rotate(-90deg); */
-  right: 2px;
   pointer-events: none;
   transition: opacity 100ms ease;
   align-self: center;
+  font-size: 0.7em;
 }
 
-#urlbar-input-container[pageproxystate="invalid"]
-  > #page-action-buttons::before {
-  /*     content: ""; */
-  opacity: 0;
-  transition: opacity 0ms ease;
+#identity-box::after {
+  transform: rotate(90deg);
+  left: 4px;
 }
 
+#page-action-buttons::before {
+  transform: rotate(-90deg);
+  right: 4px;
+}
+
+#identity-box:hover::after,
 #page-action-buttons:hover::before {
-  opacity: 0.7 !important;
+  opacity: 0.2 !important;
   transition: opacity 50ms ease;
   pointer-events: none;
+}
+
+#identity-box[pageproxystate="invalid"]::after,
+#urlbar-input-container[pageproxystate="invalid"]
+  > #page-action-buttons::before {
+  opacity: 0 !important;
+  transition: opacity 50ms ease;
+}
+
+/* Linux changes for visual dots */
+@media (-moz-platform: linux) {
+  #identity-box::after,
+  #page-action-buttons::before {
+    content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg fill="%23FFFFFF" width="11px" height="11px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 16c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 27c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 5c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25z"></path></svg>');
+    transform: none;
+    font-size: unset;
+  }
+
+  #page-action-buttons::before {
+    right: 2px;
+  }
+
+  #identity-box::after {
+    left: 2px;
+  }
 }
 
 /* Search button show on hover in URL bar. */
 /* #urlbar-container:not(:hover) #urlbar:not(.searchButton):not([focused])
-> #urlbar-input-container > 
-#identity-box[pageproxystate="invalid"] #identity-icon {
-  opacity: 0 !important; 
-}
-
-#urlbar-container #urlbar:not(.searchButton)
-> #urlbar-input-container > 
-#identity-box[pageproxystate="invalid"] #identity-icon {
-  opacity: 1 !important; 
-  visibility: visible !important;
-  transition: opacity 0.2s ease;
-} */
-
-#tracking-protection-icon-container {
-  display: none !important;
-}
+  > #urlbar-input-container > 
+  #identity-box[pageproxystate="invalid"] #identity-icon {
+    opacity: 0 !important; 
+  }
+  
+  #urlbar-container #urlbar:not(.searchButton)
+  > #urlbar-input-container > 
+  #identity-box[pageproxystate="invalid"] #identity-icon {
+    opacity: 1 !important; 
+    visibility: visible !important;
+    transition: opacity 0.2s ease;
+  } */
 
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
@@ -940,66 +1036,12 @@ toolbar
   border-radius: 8px !important;
 }
 
-#urlbar-go-button {
-  list-style-image: url("image/right-arrow.svg") !important;
-}
+/*=====================================================================
+==================== L I N U X   S U P P O R T ========================
+=======================================================================
+@media (-moz-gtk-csd-available)
+@media (-moz-gtk-csd-reversed-placement) */
 
-/* Styling Extra search bar that you can add to firefox */
-#search-container #searchbar {
-  outline: 0 !important;
-  border: 0 !important;
-  border-radius: var(--firefoxcss-border-radius) !important;
-  background-color: var(--firefoxcss-url-bar-bg-color) !important;
-  border-bottom: 1px solid var(--firefoxcss-url-border-bottom-color) !important;
-  border-top: 1px solid var(--firefoxcss-url-border-top-color) !important;
-  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35) !important;
-}
-
-#search-container #searchbar .search-go-button {
-  list-style-image: url("image/right-arrow.svg") !important;
-}
-
-#PopupSearchAutoComplete {
-  --panel-background: var(--firefoxcss-url-breakout-bar-bg-color) !important;
-}
-
-/* speaker on tabs color fixes */
-.tab-icon-overlay:not([crashed])[soundplaying]:hover,
-.tab-icon-overlay:not([crashed])[muted]:hover,
-.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: currentColor !important;
-  stroke: hsla(0, 0%, 80%) !important;
-  background-color: hsla(0, 0%, 80%) !important;
-  fill-opacity: 0.95 !important;
-}
-
-.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
-.tabbrowser-tab[selected]
-  .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: currentColor !important;
-  stroke: hsla(0, 0%, 80%) !important;
-  background-color: hsla(0, 0%, 80%) !important;
-  fill-opacity: 0.95 !important;
-}
-
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
-#TabsToolbar .tab-icon-overlay:not([crashed])[muted],
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] {
-  color: hsl(0, 0%, 100%) !important;
-}
-
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: hsla(0, 0%, 10%) !important;
-}
-
-/* -----------------------------------------------------------------------
-/* ------------------------ LINUX Support --------------------------------
-/* -----------------------------------------------------------------------
- @media (-moz-gtk-csd-available)
- @media (-moz-gtk-csd-reversed-placement),*/
 @media (-moz-platform: linux) {
   #context-navigation > .menuitem-iconic[_moz-menuactive="true"] {
     border-radius: var(--toolbarbutton-border-radius) !important;
@@ -1010,13 +1052,15 @@ toolbar
     background-color: transparent !important;
   }
 
-  #context-navigation > .menuitem-iconic {
+  #context-navigation > .menuitem-iconic,
+  menupopup,
+  menuseparator {
     appearance: none !important;
   }
 
   /*   menupopup > :-moz-any(menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"]) {
-    background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
-    } */
+      background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
+      } */
 
   menu:where([_moz-menuactive="true"]):not([disabled]),
   menuitem:where([_moz-menuactive="true"]):not([disabled]) {
@@ -1028,19 +1072,14 @@ toolbar
   }
 
   /*    menupopup :-moz-any(menu, menuitem) {
-    appearance: none !important;
-  } */
-
-  menupopup {
-    appearance: none !important;
-  }
+      appearance: none !important;
+    } */
 
   #context-navigation:not([hidden]) {
     padding: 2px 2px !important;
   }
 
   menuseparator {
-    appearance: none !important;
     border-top: 1px solid var(--arrowpanel-border-color) !important;
     border-bottom: none !important;
     margin: 1px 1em;
@@ -1052,7 +1091,7 @@ toolbar
   }
 
   /*   menupopup .menu-text, menupopup .menu-iconic-left, menupopup .menu-iconic-text {
-    font-size: 0.9em;} */
+      font-size: 0.9em;} */
 
   /*   Smaller tab text and height. Broken on fedora? */
   #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
@@ -1134,6 +1173,10 @@ toolbar
   }
 }
 
+/*=====================================================================
+============================= O T H E R ===============================
+=====================================================================*/
+
 /* Status URL change (bottom left when hovering a link)  */
 #statuspanel-label {
   background-color: var(--firefoxcss-main-bg-color) !important;
@@ -1142,14 +1185,4 @@ toolbar
   color: currentColor !important;
   margin: 0 0 3px 3px !important;
   padding: 4px !important;
-}
-
-/* CTRL+F Search Bar color change  */
-.browserContainer > findbar {
-  background-image: none !important;
-  background-color: var(--firefoxcss-main-bg-color) !important;
-}
-
-.browserContainer > findbar .findbar-textbox {
-  background-color: var(--firefoxcss-item-bg-color) !important;
 }
