@@ -1,8 +1,4 @@
 /* ----- Move menu buttons to the left side ----- */
-:root {
-  --toolbar-start-end-padding: 2px !important;
-  /* padding of frst and last child ,default - 8px */
-}
 
 #nav-bar #PanelUI-button #PanelUI-menu-button {
   padding-right: 2px !important;
@@ -12,8 +8,9 @@
 /* ----------------------------------------------------------------- */
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */
+
 #navigator-toolbox #nav-bar {
-  padding-right: var(--firefoxcss-control-buttons-margin) !important;
+  padding-right: calc(var(--firefoxcss-control-buttons-margin) - 10px) !important;
 }
 
 #navigator-toolbox:not([inFullscreen])
