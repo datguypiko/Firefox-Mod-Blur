@@ -946,6 +946,15 @@ toolbar
   margin-inline-end: 0px !important;
 }
 
+#identity-box.chromeUI #identity-icon-box{
+  opacity: 1 !important;
+  margin-inline-start:initial;
+}
+#identity-box.chromeUI::after,
+#identity-box.chromeUI:hover::after{
+  opacity: 0 !important;
+}
+
 /* Create visual dots on both sides */
 /* left side identity-box dots modification */
 #identity-box::after,
