@@ -1,65 +1,65 @@
 /* ----- Move menu buttons to the left side ----- */
-:root {
-   --toolbar-start-end-padding: 2px !important; /* padding of frst and last child ,default - 8px */
-}
-   
-   #nav-bar #PanelUI-button #PanelUI-menu-button {
-    padding-right: 4px !important;
-    padding-left: 2px !important;
-   }
   
-  /* ----------------------------------------------------------------- */
-  /* ---------- Default OS style close/min/max window buttons -------- */
-  /* ----------------------------------------------------------------- */
+  #nav-bar #PanelUI-button #PanelUI-menu-button {
+   padding-right: 4px !important;
+   padding-left: 2px !important;
+  }
+ 
+ /* ----------------------------------------------------------------- */
+ /* ---------- Default OS style close/min/max window buttons -------- */
+ /* ----------------------------------------------------------------- */
 #navigator-toolbox #nav-bar { 
-    padding-left: var(--firefoxcss-control-buttons-margin) !important;
-    padding-right: initial !important;
+   padding-left: var(--firefoxcss-control-buttons-margin) !important;
+   padding-right: initial !important;
 } 
 
 #navigator-toolbox:not([inFullscreen]) #TabsToolbar 
 .titlebar-buttonbox-container {
- visibility: visible !important;
-  position: absolute !important;
-  top: 1px !important;
-  left: 0 !important;
-  right: unset !important; 
+visibility: visible !important;
+ position: absolute !important;
+ top: 1px !important;
+ left: 0 !important;
+ right: unset !important; 
 }
 
- 
 #TabsToolbar .titlebar-min {
-   -moz-box-ordinal-group:2 !important;
-   order: 2 !important;
+  -moz-box-ordinal-group:2 !important;
+  order: 2 !important;
 }
 
 #TabsToolbar .titlebar-max, .titlebar-restore {
-    -moz-box-ordinal-group:1 !important;
-    order: 1 !important;
+   -moz-box-ordinal-group:1 !important;
+   order: 1 !important;
 }
 
 #TabsToolbar .titlebar-close {
-   -moz-box-ordinal-group:0 !important;
-    order: 0 !important;
+  -moz-box-ordinal-group:0 !important;
+   order: 0 !important;
 }
 
 #navigator-toolbox[inFullscreen] #TabsToolbar .titlebar-buttonbox-container {
-   -moz-box-ordinal-group: 0 !important;
-     order: -1 !important;
- }
-
-#navigator-toolbox[inFullscreen] #nav-bar {
-   padding-left: initial !important;
+  -moz-box-ordinal-group: 0 !important;
+    order: -1 !important;
 }
 
- @media only screen and (max-width: 670px) {
-   #main-window #navigator-toolbox:not([inFullscreen])
-     #TabsToolbar
-     .titlebar-buttonbox-container {
-     visibility: visible !important;
-     display: flex !important;
-     position: relative !important;
-     order: -1 !important;
+#navigator-toolbox[inFullscreen] #nav-bar {
+  padding-left: initial !important;
+}
+
+@media only screen and (max-width: 670px) {
+  #main-window #navigator-toolbox:not([inFullscreen])
+    #TabsToolbar
+    .titlebar-buttonbox-container {
+    visibility: visible !important;
+    display: flex !important;
+    position: relative !important;
+    order: -1 !important;
+  }
+  #main-window #navigator-toolbox:not([inFullscreen]) #nav-bar {
+   padding-left: initial !important;
    }
-   #main-window #navigator-toolbox:not([inFullscreen]) #nav-bar {
-    padding-left: initial !important;
-    }
- }
+}
+
+#navigator-toolbox #nav-bar {
+    padding-left: calc(var(--firefoxcss-control-buttons-margin) + 10px) !important;
+}
