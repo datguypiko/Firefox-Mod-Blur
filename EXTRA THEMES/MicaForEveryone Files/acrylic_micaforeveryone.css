@@ -18,7 +18,7 @@
   :root {
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 0%, 0.3) !important;
     --firefoxcss-tab-active-bg-color: hsla(0, 0%, 0%, 0.4) !important;
-    --firefoxcss-navigator-toolbox-inactive: var(--firefoxcss-item-bg-color) !important;
+    --firefoxcss-navigator-toolbox-inactive:  hsla(0, 0%, 0%, 0.7) !important;
     --firefoxcss-navigator-toolbox-bg-color: color-mix(in srgb, field 60%, transparent);
 
     --firefoxcss-button-bg-color-hover: color-mix(in srgb, currentColor 15%, transparent);
@@ -52,7 +52,7 @@
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 0%, 0.05) !important;
     --firefoxcss-tab-active-bg-color: hsla(0, 0%, 0%, 0.4) !important;
     --firefoxcss-navigator-toolbox-inactive: hsla(0, 0%, 100%, 0.5) !important;
-    --firefoxcss-navigator-toolbox-bg-color: color-mix(in srgb, field 70%, transparent);
+    --firefoxcss-navigator-toolbox-bg-color: color-mix(in srgb, field 50%, transparent);
 
     --firefoxcss-button-bg-color-hover: color-mix(in srgb, currentColor 15%, transparent);
     --firefoxcss-button-bg-color-active: color-mix(in srgb, currentColor 20%, transparent);
@@ -117,10 +117,6 @@ toolbar:not([customizing])>#nav-bar-customization-target {
 #navigator-toolbox #TabsToolbar {
   background-image: none !important;
   background-color: transparent !important;
-}
-
-#navigator-toolbox #TabsToolbar .titlebar-buttonbox .titlebar-button {
-  color: hsl(240, 73.3%, 52.9%) !important;
 }
 
 #main-window #navigator-toolbox {
