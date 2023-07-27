@@ -1,0 +1,9 @@
+/* Change main menu icon to firefox logo */
+
+#navigator-toolbox #PanelUI-menu-button {
+    list-style-image: url(image/firefox.svg) !important;
+}
+
+:root[privatebrowsingmode="temporary"] #navigator-toolbox #PanelUI-menu-button {
+    list-style-image: url(image/firefox.svg) !important;
+}
