@@ -9,6 +9,10 @@
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
 
+## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Light and Dark theme support
+<p align="center"> <img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/08099fbc-8b04-4f04-9f57-9b73911fd0c0"> </p>
+
+
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Updated context menu design
 <p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/uG9BgQH.png"></p>
 
