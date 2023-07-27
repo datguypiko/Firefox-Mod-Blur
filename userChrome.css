@@ -7,8 +7,7 @@
   
                                                                                     
   Github:         github.com/datguypiko/Firefox-Mod-Blur     */
-/* :root:not(:-moz-lwtheme), */
-/* :root[lwt-default-theme-in-dark-mode="true"], */
+
 /*===============================================================
 ===================== E X T R A   M O D S =======================
 ===============================================================*/
@@ -1331,3 +1330,6 @@ toolbar
   margin: 0 0 3px 3px !important;
   padding: 4px !important;
 }
+
+/* :root:not(:-moz-lwtheme), */
+/* :root[lwt-default-theme-in-dark-mode="true"], */
