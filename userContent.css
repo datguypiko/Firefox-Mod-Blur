@@ -7,17 +7,132 @@
 @import url("remove_homepage_shortcut_title_text.css");
 @import url("circular_homepage_shortcuts.css");
 
-/* ----- My Custom Colors ----- */
-:root {
-  --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
-  --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
-  --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
-  --firefoxcss-text-color: hsl(0, 0%, 100%);
-  --firefoxcss-other-color: hsl(290, 21%, 20%);
+/*=====================================================================
+================= D A R K   T H E M E   C O L O R S ===================
+=====================================================================*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+    --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
+    --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
+    --firefoxcss-text-color: hsl(0, 0%, 100%);
+    --firefoxcss-other-color: hsl(290, 21%, 20%);
+
+    /* ----- Private Page Colors ----- */
+    --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.3);
+    --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.3);
+    --firefoxcss-private-search-fill: hsl(275, 13%, 53%);
+
+    --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.3);
+    --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.3);
+    --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
+
+    --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
+    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
+    --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
+
+    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095);
+
+    /* ----- Normal Page Colors ----- */
+    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095);
+
+    --firefoxcss-search-color: rgba(251, 251, 254, 1);
+    --firefoxcss-search-border-top-color: #ffffff26;
+    --firefoxcss-search-text-fill: #ffffff5e;
+    --firefoxcss-search-bar-text-color: rgba(251, 251, 254, 1);
+    --firefoxcss-search-bar-fill-icon-hover: rgba(251, 251, 254, 0.8);
+
+    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    --firefoxcss-shortcut-item-top-border: #ffffff26;
+    --firefoxcss-shortcut-item-top-border-hover: #97979791;
+
+    --firefoxcss-customize-menu: #1e1e1e8c;
+    --firefoxcss-customize-menu-bg-image: url("image/noise-512x512.png");
+    --firefoxcss-customize-menu-dropdown: #1e1e1e80;
+    --firefoxcss-input-focus: white;
+    /*  no changes */
+    --firefoxcss-shortcut-item-active: hsla(0, 0%, 10%, 0.7);
+    --firefoxcss-shortcut-item-context-menu: #13131380;
+    --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 70%, 0.145);
+    --firefoxcss-shortcut-item-context-menu-separator: #ffffff29;
+    --firefoxcss-extra-search-bar-when-scroll: #1e1e1e8c;
+    --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
+    --firefoxcss-settings-wheel-color: hsla(240, 20%, 90%, 0.6);
+    --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 90%, 0.9);
+
+  }
+
+  * {
+    scrollbar-color: #afafaf #2c2c2c !important;
+  }
 }
 
-* {
-  scrollbar-color: #afafaf #2c2c2c !important;
+/*=====================================================================
+================= L I G H T   T H E M E   C O L O R S =================
+=====================================================================*/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --firefoxcss-main-bg-color: hsl(240, 15%, 95%);
+    --firefoxcss-item-bg-color: hsl(240, 20%, 98%);
+    --firefoxcss-item-hover-bg-color: hsl(240, 5%, 95%);
+    --firefoxcss-text-color: hsl(0, 0%, 0%);
+    --firefoxcss-other-color: hsl(290, 21%, 20%);
+
+    /* ----- Private Page Colors ----- */
+    --firefoxcss-private-search-bg-color: hsla(276, 20%, 88%, 0.55);
+    --firefoxcss-private-search-top-border: hsla(0, 0%, 100%, 0.45);
+    --firefoxcss-private-search-fill: hsl(275, 20%, 65%);
+
+    --firefoxcss-private-search-hover: hsla(276, 20%, 84%, 0.50);
+    --firefoxcss-private-search-border-hover: hsla(0, 0%, 100%, 0.55);
+    --firefoxcss-private-search-hover-fill: hsl(275, 20%, 55%);
+
+    --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
+    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
+    --firefoxcss-private-search-caret: hsl(276, 20%, 40%);
+
+    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015),
+      0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
+      0 6px 6px hsl(0deg 0% 0% / 0.015), 0 12px 12px hsl(0deg 0% 0% / 0.035);
+
+    /* ----- Normal Page Colors ----- */
+    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015),
+      0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
+      0 8px 8px hsl(0deg 0% 0% / 0.015), 0 16px 16px hsl(0deg 0% 0% / 0.035);
+
+    --firefoxcss-search-color: rgb(87, 87, 87, 1);
+    --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.9);
+    --firefoxcss-search-text-fill: rgba(10, 10, 10, 0.25);
+    --firefoxcss-search-bar-text-color: rgba(10, 10, 10, 0.65);
+    --firefoxcss-search-bar-fill-icon-hover: rgba(0, 0, 0, 0.5);
+
+    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.025),
+      0 2px 2px hsl(0deg 0% 0% / 0.025), 0 4px 4px hsl(0deg 0% 0% / 0.025),
+      0 8px 8px hsl(0deg 0% 0% / 0.025), 0 16px 16px hsl(0deg 0% 0% / 0.025);
+    --firefoxcss-shortcut-item-top-border: hsla(0, 0%, 100%, 0.9);
+    --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.6);
+
+    --firefoxcss-customize-menu: hsla(240, 10%, 90%, 0.25);
+    --firefoxcss-customize-menu-bg-image: none;
+    --firefoxcss-customize-menu-dropdown: #fdfdfd80;
+    --firefoxcss-input-focus: black;  /*  no changes */
+    --firefoxcss-shortcut-item-active: hsla(240, 15%, 85%, 0.4);
+    --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.4);
+    --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.5);
+    --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 50%, 0.2);
+    --firefoxcss-extra-search-bar-when-scroll: hsla(0, 0%, 10%, 0.3);
+    --firefoxcss-context-menu-three-dots: hsla(240, 10%, 50%, 0.6);
+    --firefoxcss-settings-wheel-color: hsla(240, 20%, 10%, 0.6);
+    --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 10%, 0.9);
+  }
 }
 
 body {
@@ -31,11 +146,6 @@ body {
     background-size: cover !important;
   }
 
-  #about-private-browsing-logo.logo {
-    background-image: url("image/about-logo-private-changed.png") !important;
-    opacity: 0.9 !important;
-  }
-
   /* html.private {
 		background-color: #1e1e1e80 !important;
 		background-image: url(image/.jpg) !important ;
@@ -44,15 +154,13 @@ body {
 
   #search-handoff-button {
     appearance: none !important;
-    background-color: hsla(275, 13%, 33%, 0.3) !important;
+    background-color: var(--firefoxcss-private-search-bg-color) !important;
     border: none !important;
     box-shadow: none !important;
-    border-top: 1px solid hsla(275, 13%, 40%, 0.3) !important;
+    border-top: 1px solid var(--firefoxcss-private-search-top-border) !important;
     border-radius: 10px 10px 10px 10px !important;
-    fill: hsl(275, 13%, 53%) !important;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095) !important;
+    fill: var(--firefoxcss-private-search-fill) !important;
+    box-shadow: var(--firefoxcss-private-search-box-shadow) !important;
     transition: background-color 100ms ease-in, border-color 100ms ease-in,
       fill 100ms ease-in !important;
     backdrop-filter: blur(24px) !important;
@@ -61,25 +169,25 @@ body {
   #search-handoff-button:hover,
   #search-handoff-button:focus,
   #search-handoff-button:active {
-    background-color: hsla(275, 13%, 43%, 0.3) !important;
-    border-top: 1px solid hsla(275, 13%, 50%, 0.3) !important;
-    fill: hsl(275, 13%, 63%) !important;
+    background-color: var(--firefoxcss-private-search-hover) !important;
+    border-top: 1px solid var(--firefoxcss-private-search-border-hover) !important;
+    fill: var(--firefoxcss-private-search-hover-fill) !important;
   }
 
   #search-handoff-button .fake-textbox {
-    color: hsl(275, 13%, 53%) !important;
+    color: var(--firefoxcss-private-search-text) !important;
     opacity: 0.8 !important;
     transition: color 100ms ease-in, opacity 100ms ease-in !important;
   }
 
-  #search-handoff-button:active > .fake-textbox,
-  #search-handoff-button:hover > .fake-textbox,
-  #search-handoff-button:focus > .fake-textbox {
-    color: hsl(275, 13%, 63%) !important;
+  #search-handoff-button:active>.fake-textbox,
+  #search-handoff-button:hover>.fake-textbox,
+  #search-handoff-button:focus>.fake-textbox {
+    color: var(--firefoxcss-private-search-text-hover) !important;
   }
 
   #search-handoff-button .fake-caret {
-    background: hsl(290, 21%, 80%) !important;
+    background: var(--firefoxcss-private-search-caret) !important;
   }
 
   .logo-and-wordmark .wordmark {
@@ -108,10 +216,12 @@ body {
 
 @-moz-document url("about:home"),
 url("about:newtab") {
-   body {
+
+  body {
     --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
     background-size: cover !important;
   }
+
   /* For background blur */
   /* .outer-wrapper {
     background-color: #1e1e1e88 !important;
@@ -121,27 +231,31 @@ url("about:newtab") {
   .search-wrapper .search-handoff-button {
     appearance: none !important;
     background-color: var(--firefoxcss-item-bg-color) !important;
-    color: rgba(251, 251, 254, 1) !important;
+    color: var(--firefoxcss-search-color) !important;
     border: none !important;
     box-shadow: none !important;
-    border-top: 1px solid #ffffff26 !important;
+    border-top: 1px solid var(--firefoxcss-search-border-top-color) !important;
     border-radius: 10px !important;
     backdrop-filter: blur(24px) !important;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095) !important;
-    fill: #ffffff5e !important;
+    box-shadow: var(--firefoxcss-search-box-shadow) !important;
+    fill: var(--firefoxcss-search-text-fill) !important;
     transition: background-color 250ms ease, border-color 250ms ease,
       fill 250ms ease !important;
     padding-inline-start: 48px !important;
   }
 
+  .icon.icon-settings.personalize-button {
+    color: var(--firefoxcss-settings-wheel-color) !important;
+  }
+
+  .icon.icon-settings.personalize-button:hover {
+    color: var(--firefoxcss-settings-wheel-color-hover) !important;
+  }
+
   .body-wrapper .tile {
     background-color: var(--firefoxcss-item-bg-color) !important;
-    border-top: 1px solid #ffffff26 !important;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075) !important;
+    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border) !important;
+    box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
     transition: background-color 250ms ease, border-color 250ms ease !important;
     border-radius: 10px !important;
   }
@@ -149,17 +263,17 @@ url("about:newtab") {
   .body-wrapper .top-site-button:hover .tile {
     /* background-color: rgba(230, 230, 230, 0.15) !important; */
     background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-top: 1px solid #97979791 !important;
+    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
   }
 
   #root .customize-menu {
-    background-image: url("image/noise-512x512.png") !important;
-    background-color: #1e1e1e8c !important;
+    background-image: var(--firefoxcss-customize-menu-bg-image) !important;
+    background-color: var(--firefoxcss-customize-menu) !important;
     backdrop-filter: blur(24px) !important;
   }
 
   .home-section .section .selector {
-    background-color: #1e1e1e80 !important;
+    background-color: var(--firefoxcss-customize-menu-dropdown) !important;
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:hover:not(.active),
@@ -168,7 +282,7 @@ url("about:newtab") {
   }
 
   .search-wrapper input:focus {
-    color: white !important;
+    color: var(--firefoxcss-input-focus) !important;
   }
 
   .top-site-outer .top-site-button .title {
@@ -184,6 +298,11 @@ url("about:newtab") {
     fill: #f79743 !important;
     background-color: transparent !important;
     border: 0 !important;
+  }
+
+  .top-site-outer .context-menu-button {
+    fill: var(--firefoxcss-context-menu-three-dots) !important;
+    inset-inline-end: 2px !important;
   }
 
   .card-outer .context-menu-button.icon:is(:active, :focus) {
@@ -207,21 +326,21 @@ url("about:newtab") {
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
-    background-color: hsla(0, 0%, 10%, 0.7) !important;
+    background-color: var(--firefoxcss-shortcut-item-active) !important;
   }
 
   .top-site-outer .context-menu,
   .card-outer .context-menu {
-    background-image: url("image/noise-512x512.png") !important;
-    background-color: #13131380 !important;
+    background-image: var(--firefoxcss-customize-menu-bg-image) !important;
+    background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
     backdrop-filter: blur(32px) !important;
-    border: 1px solid hsla(0, 0%, 70%, 0.145);
+    border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border);
     border-radius: 8px !important;
   }
 
-  .top-site-outer .context-menu > ul > li.separator,
-  .card-outer .context-menu > ul > li.separator {
-    border-bottom: 1px solid #ffffff29 !important;
+  .top-site-outer .context-menu>ul>li.separator,
+  .card-outer .context-menu>ul>li.separator {
+    border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
   }
 
   .search-wrapper .search-handoff-button input {
@@ -303,33 +422,30 @@ url("about:newtab") {
     top: 0 !important;
   }
 
-  .outer-wrapper.fixed-search
-    .search-wrapper
-    .search-inner-wrapper
-    button.search-handoff-button {
+  .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper button.search-handoff-button {
     backdrop-filter: blur(22px) !important;
-    background-color: #1e1e1e8c !important;
+    background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
     box-shadow: none !important;
     border: none !important;
     margin: 0px 50px !important;
   }
 
   .search-wrapper .search-handoff-button .fake-textbox {
-    opacity: 0.4 !important;
-    color: rgba(251, 251, 254, 1) !important;
+    opacity: 0.5 !important;
+    color: var(--firefoxcss-search-bar-text-color) !important;
     transition: opacity 0.4s !important;
   }
 
-  .search-wrapper .search-handoff-button:active > .fake-textbox,
-  .search-wrapper .search-handoff-button:hover > .fake-textbox,
-  .search-wrapper .search-handoff-button:focus > .fake-textbox {
+  .search-wrapper .search-handoff-button:active>.fake-textbox,
+  .search-wrapper .search-handoff-button:hover>.fake-textbox,
+  .search-wrapper .search-handoff-button:focus>.fake-textbox {
     opacity: 0.8 !important;
   }
 
   .search-inner-wrapper:hover .search-handoff-button {
     background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-top: 1px solid #97979791 !important;
-    fill: rgba(251, 251, 254, 0.8) !important;
+    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
+    fill: var(--firefoxcss-search-bar-fill-icon-hover) !important;
   }
 
   .collapsible-section .card-outer {
@@ -361,30 +477,30 @@ url("about:newtab") {
     }
   }
 
-   .outer-wrapper .search-wrapper .search-handoff-button {
-    /* background-image: url("image/search-glass.svg") !important; */
-    /* background-size: 16px !important;  */
-  }
+  /*.outer-wrapper .search-wrapper .search-handoff-button {
+     background-image: url("image/search-glass.svg") !important;
+     background-size: 16px !important;  
+  }*/
 }
 
 @-moz-document url("about:firefoxview") {
   body {
-    --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
+    background-color: var(--firefoxcss-main-bg-color) !important;
     max-width: 80rem !important;
   }
 
-  body > main {
+  body>main {
     grid-template-columns: 1fr !important;
   }
 
   main aside.content-container {
     display: none !important;
   }
-	
+
   #colorways {
     display: none !important;
   }
-	
+
   #tabpickup-tabs-container #synced-tabs-placeholder {
     background-color: var(--firefoxcss-item-bg-color) !important;
     border-radius: 8px !important;
@@ -397,6 +513,7 @@ url("about:newtab") {
 }
 
 @-moz-document url("about:blank") {
+
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body,
   #newtab-customize-overlay {
