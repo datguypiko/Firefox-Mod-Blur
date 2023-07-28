@@ -1,6 +1,6 @@
 Add at the end of userChrome.css file
 
-#tabbrowser-tabs .tabbrowser-tab:is([pinned]) .tab-background {
+#tabbrowser-tabs .tabbrowser-tab:is([pinned]) .tab-background:not([selected]) {
   background-color: transparent !important;
   box-shadow: none !important;
 }
