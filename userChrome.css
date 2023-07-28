@@ -460,7 +460,7 @@ menugroup > #context-back {
 #urlbar[breakout][breakout-extend][open] {
   background-color: var(--firefoxcss-url-breakout-bar-bg-color) !important;
   border-bottom: 1px solid var(--firefoxcss-url-breakout-border-bottom-color) !important;
-  border-top: 1px solid var(--firefoxcss-url-border-top-color) !important;
+  border-top: var(--firefoxcss-url-border-top-color) !important;
   box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
 }
 
