@@ -3,6 +3,18 @@
   --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.5) !important;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --newtab-wordmark-color: #fbfbfe !important;
+    --firefoxcss-search-bar-text-color: #fbfbfe !important;
+    --firefoxcss-context-menu-three-dots: #fbfbfe !important;
+  }
+
+  .top-site-outer .title {
+  color: #fbfbfe !important;
+  }
+}
+
 /* Wallapaper edition. Change wallpaper.jpg to wallpaper.png if used different file extension */
 @-moz-document url("about:home"),
 url("about:newtab") {
