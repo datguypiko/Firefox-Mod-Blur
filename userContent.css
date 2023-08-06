@@ -266,6 +266,13 @@ url("about:newtab") {
     border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
   }
 
+  .body-wrapper .top-site-button:focus-visible .tile {
+    /* background-color: rgba(230, 230, 230, 0.15) !important; */
+    background-color: var(--firefoxcss-item-hover-bg-color) !important;
+    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
+    outline: 1px solid #e3b686a3 !important;
+  }
+
   #root .customize-menu {
     background-image: var(--firefoxcss-customize-menu-bg-image) !important;
     background-color: var(--firefoxcss-customize-menu) !important;
