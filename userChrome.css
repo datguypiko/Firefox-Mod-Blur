@@ -808,6 +808,7 @@ menupopup :-moz-any(menu:last-child, menuitem:last-child) {
 menuseparator {
   border-color: var(--arrowpanel-border-color) !important;
   /* border-top: 1px solid ThreeDShadow; */
+  padding-block: 2px !important;
 }
 
 menuseparator#context-sep-navigation {
@@ -843,6 +844,10 @@ menupopup#contentAreaContextMenu {
 menupopup
   menuitem:is(#context-openlinkintab, #context-undo, #context-viewimage) {
   margin-top: 5px !important;
+}
+
+#context-sep-navigation {
+  padding-block: 0px !important;
 }
 
 /*=====================================================================
