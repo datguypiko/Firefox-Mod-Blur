@@ -1048,6 +1048,12 @@ toolbar
   transition: margin-inline-start 100ms linear, opacity 200ms linear;
 }
 
+#urlbar #identity-box.notSecureText #identity-icon-box {
+  margin-inline-start: initial !important;
+  opacity: 1 !important;
+  color: #e36f6f !important;
+}
+
 #identity-box:hover #identity-icon-box,
 #identity-box:hover #identity-permission-box,
 #identity-box #identity-permission-box[open="true"] {
