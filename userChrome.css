@@ -121,6 +121,7 @@
     ) !important;
     --panel-separator-color: var(--arrowpanel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
+    --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
   }
 }
 
@@ -201,6 +202,7 @@
     --arrowpanel-border-color: hsla(0, 0%, 50%, 0.25) !important;
     --panel-separator-color: var(--arrowpanel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
+    --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
   }
 }
 
