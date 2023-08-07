@@ -72,8 +72,8 @@
 <i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
 <i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p></details>
 
-<details><summary>Longer active tab :gear:</summary>
-<i>give_more_width_to_active_tab.css </i><p align="left"><img alt="FirefoxCss" src="https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/master/EXTRA%20MODS/Bigger%20active%20tab/preview.gif"></p></details>
+<details><summary>Active tab has static width :gear:</summary>
+<i>selected_tabs_static_width.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/4dc26c78-6714-43f8-bfb5-17a0dab3b920"></p></details>
 
 <details><summary>Colored sound playing tab :gear:</summary>
 <i>colored_soundplaying_tab.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/8963e4fb-491f-440f-84c1-ec1629da4074"></p></details>
