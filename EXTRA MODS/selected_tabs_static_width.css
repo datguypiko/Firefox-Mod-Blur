@@ -1,0 +1,5 @@
+/*  Tabs on selection have static width */
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[selected][fadein]:not([pinned]) {
+    max-width: var(--firefoxcss-tab-max-width) !important;
+    min-width: var(--firefoxcss-tab-min-width) !important;
+}
