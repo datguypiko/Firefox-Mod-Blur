@@ -37,6 +37,8 @@
 @import url("colored_soundplaying_tab.css");
 @import url("menu_icon_change_to_firefox.css");
 @import url("pinned_tabs_no_bg_color.css");
+@import url("transparent_tabs_bg_color.css");
+@import url("reversed_tabs_bg_color.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
@@ -52,7 +54,7 @@
 
     /* Tab colors */
     --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
-    --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 30%);
+    --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 32%);
     --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.65);
 
