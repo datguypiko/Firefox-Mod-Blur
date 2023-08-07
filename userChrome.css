@@ -56,7 +56,7 @@
     --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.65);
 
-    --firefoxcss-normal-tabs-box-shadow: rgba(0, 0, 0, 0.4);
+    --firefoxcss-normal-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
     --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1);
 
     /* Tab playing audio speaker icon colors */
