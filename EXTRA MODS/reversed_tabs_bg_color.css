@@ -1,0 +1,55 @@
+/* Non-active tabs have dark background color, active ligther */
+/*=====================================================================
+================= D A R K   T H E M E   C O L O R S ===================
+=====================================================================*/
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Tab colors */
+      --firefoxcss-tab-bg-color: hsl(240, 2%, 13%) !important;
+      --firefoxcss-tab-active-bg-color: hsl(240, 2%, 32%) !important;
+
+      --firefoxcss-normal-tabs-box-shadow: none !important;
+      --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.25) !important;
+    }
+    /* Selected tabs design */
+     #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[selected] {
+        box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4) !important;
+      }
+    
+    /* Normal tabs design on hover */
+     #TabsToolbar #tabbrowser-tabs
+      .tabbrowser-tab:hover
+      > .tab-stack
+      > .tab-background:not([selected="true"]) {
+      background-color: hsl(240, 2%, 28%) !important;
+      box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4) !important;
+    }
+  }
+  
+/*=====================================================================
+================= L I G H T   T H E M E   C O L O R S =================
+=====================================================================*/
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      /* Tab colors hsl(240, 15%, 90%) */
+      --firefoxcss-tab-bg-color: hsl(240, 8%, 90%) !important;
+      --firefoxcss-tab-hover-bg-color: hsl(240, 4%, 20%) !important;
+      --firefoxcss-tab-multiselect-outline: none !important;
+    }
+    
+     #TabsToolbar .tabbrowser-tab:is([selected], [multiselected]),
+     #TabsToolbar .tabbrowser-tab:hover{
+      color: white !important;
+    }
+    #TabsToolbar .tabbrowser-tab:is([selected], [multiselected]) .tab-icon-image,
+    #TabsToolbar .tabbrowser-tab:hover .tab-icon-image{
+      fill: white !important;
+    }
+    
+     /* Selected tabs design */
+     #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[selected] {
+        background-color: hsl(240, 4%, 14%) !important;
+      }
+  }

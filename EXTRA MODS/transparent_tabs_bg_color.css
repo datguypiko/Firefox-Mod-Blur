@@ -1,0 +1,26 @@
+/* Non-active tabs have transparent background color */
+/*=====================================================================
+================= D A R K   T H E M E   C O L O R S ===================
+=====================================================================*/
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Tab colors */
+      --firefoxcss-tab-bg-color: transparent !important;
+      --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 15%) !important;
+  
+      --firefoxcss-normal-tabs-box-shadow: none !important;
+    }
+  }
+  
+/*=====================================================================
+================= L I G H T   T H E M E   C O L O R S =================
+=====================================================================*/
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      /* Tab colors hsl(240, 15%, 90%) */
+      --firefoxcss-tab-bg-color: transparent !important;
+      --firefoxcss-tab-active-bg-color: hsl(240, 6%, 90%) !important;
+    }
+  }
