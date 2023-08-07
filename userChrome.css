@@ -28,7 +28,7 @@
 @import url("remove_folder_icons_from_bookmarks.css");
 @import url("icons_in_main_menu.css");
 @import url("ublock-icon-change.css");
-@import url("give_more_width_to_active_tab.css");
+@import url("selected_tabs_static_width.css");
 @import url("autohide_tab_and_bookmarks_bars.css");
 @import url("url_bar_no_border.css");
 @import url("search_bar_transparent_background.css");
@@ -547,6 +547,12 @@ menugroup > #context-back {
   .tab-icon-image {
   opacity: 0.8 !important;
   transition: opacity 250ms ease !important;
+}
+
+/* Selected tabs width increase */
+#tabbrowser-tabs .tabbrowser-tab[selected][fadein]:not([pinned]) {
+    min-width: 135px !important;
+    max-width: 170px !important;
 }
 
 /* 
