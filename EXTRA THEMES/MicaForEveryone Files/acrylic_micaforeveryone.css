@@ -32,9 +32,9 @@
     --firefoxcss-searchbox-border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
     --firefoxcss-searchbox-border-top: 1px solid hsla(0, 0%, 0%, 0.15);
     --firefoxcss-tab-bg-color: color-mix(in srgb, currentColor 5%, transparent) !important;
-    --firefoxcss-tab-bg-color-hover: color-mix(in srgb, currentColor 10%, transparent);
-    --firefoxcss-tab-bg-color-multiselect: hsla(0, 0%, 0%, 0.4);
-    --firefoxcss-tab-bg-color-selected: hsla(0, 0%, 100%, 0.12);
+    --firefoxcss-tab-bg-color-hover: hsla(0, 0%, 0%, 0.25);
+    --firefoxcss-tab-bg-color-multiselect: hsla(0, 0%, 0%, 0.5);
+    --firefoxcss-tab-bg-color-selected: hsla(0, 0%, 0%, 0.3);
     --firefoxcss-newtab-button-color: hsla(0, 0%, 0%, 0.3);
     --firefoxcss-newtab-button-active-color: hsla(240, 2%, 15%, 0.5);
     --firefoxcss-newtab-button-active-shadow-box: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
