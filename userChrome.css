@@ -192,7 +192,7 @@
     --firefoxcss-private-browsing-drop-shadow: none;
     --firefoxcss-statuspanel-bg-color: hsl(240, 20%, 98%);
 
-    --firefoxcss-contextmenu-hover-text: dark;
+    --firefoxcss-contextmenu-hover-text: black;
     /* ============== Firefox Global colors change ==================== */
     --arrowpanel-background: hsl(240, 15%, 98%) !important;
     --button-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
