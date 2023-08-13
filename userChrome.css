@@ -1245,11 +1245,11 @@ toolbar
     padding: 2px 2px !important;
   }
 
-  menuseparator {
+/*   menuseparator {
     border-top: 1px solid var(--arrowpanel-border-color) !important;
     border-bottom: none !important;
     margin: 1px 1em;
-  }
+  } */
 
   menuseparator#context-sep-navigation {
     margin-top: 0 !important;
