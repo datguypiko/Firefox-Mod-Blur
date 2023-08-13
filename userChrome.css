@@ -105,7 +105,7 @@
       0px 0px 1px #000000d5
     );
     --firefoxcss-statuspanel-bg-color: var(--firefoxcss-main-bg-color);
-
+    --firefoxcss-contextmenu-hover-text: white;
     /* ============== Firefox Global colors change ==================== */
     --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
     --button-hover-bgcolor: hsla(0, 0%, 60%, 0.35) !important;
@@ -192,10 +192,7 @@
     --firefoxcss-private-browsing-drop-shadow: none;
     --firefoxcss-statuspanel-bg-color: hsl(240, 20%, 98%);
 
-    --firefoxcss-tab-bg-color: hsl(240, 8%, 96%);
-    --firefoxcss-tab-hover-bg-color: hsl(240, 8%, 90%);
-    --firefoxcss-tab-active-bg-color: hsl(240, 6%, 86%);
-
+    --firefoxcss-contextmenu-hover-text: dark;
     /* ============== Firefox Global colors change ==================== */
     --arrowpanel-background: hsl(240, 15%, 98%) !important;
     --button-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
@@ -1222,6 +1219,7 @@ toolbar
   #context-navigation > .menuitem-iconic[_moz-menuactive="true"][disabled] {
     background-color: transparent !important;
   }
+  
 
   #context-navigation > .menuitem-iconic,
   menupopup,
@@ -1233,13 +1231,10 @@ toolbar
       background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
       } */
 
-  menu:where([_moz-menuactive="true"]):not([disabled]),
-  menuitem:where([_moz-menuactive="true"]):not([disabled]) {
-    background-color: color-mix(
-      in srgb,
-      currentColor 9%,
-      transparent
-    ) !important;
+   menu:where([_moz-menuactive="true"]):not([disabled]),
+    menuitem:where([_moz-menuactive="true"]):not([disabled]) {
+    background-color: var(--button-hover-bgcolor) !important;
+    color: var(--firefoxcss-contextmenu-hover-text) !important;
   }
 
   /*    menupopup :-moz-any(menu, menuitem) {
