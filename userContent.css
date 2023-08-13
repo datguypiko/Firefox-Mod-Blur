@@ -66,7 +66,7 @@
     --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
     --firefoxcss-settings-wheel-color: hsla(240, 20%, 90%, 0.6);
     --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 90%, 0.9);
-
+    --firefoxcss-shortcut-search-icon-color: #7ae3f463;
   }
 
   * {
@@ -132,6 +132,7 @@
     --firefoxcss-context-menu-three-dots: hsla(240, 10%, 50%, 0.6);
     --firefoxcss-settings-wheel-color: hsla(240, 20%, 10%, 0.6);
     --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 10%, 0.9);
+    --firefoxcss-shortcut-search-icon-color: #2896a870;
   }
 }
 
@@ -286,6 +287,10 @@ url("about:newtab") {
   .top-sites-list:not(.dnd-active) .top-site-outer:hover:not(.active),
   .top-site-outer .top-site-icon {
     background-color: transparent !important;
+  }
+  .top-site-outer .search-topsite {
+    backdrop-filter: blur(8px) !important;
+    background-color: var(--firefoxcss-shortcut-search-icon-color) !important;
   }
 
   .search-wrapper input:focus {
