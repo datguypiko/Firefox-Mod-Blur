@@ -214,8 +214,8 @@
   --firefoxcss-top-bar-border-bottom-size: 1px;
   --firefoxcss-border-radius: 10px;
   --firefoxcss-control-buttons-margin: 95px;
-  --firefoxcss-tab-min-width: 100px;
-  --firefoxcss-tab-max-width: 145px;
+  --firefoxcss-tab-min-width: 110px;
+  --firefoxcss-tab-max-width: 150px;
 }
 
 /*=====================================================================
@@ -535,21 +535,26 @@ menugroup > #context-back {
 }
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
-.tabbrowser-tab[fadein]:not([pinned]) {
+/* not([style^="max-width"] :not([overflow])*/
+#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]){
   max-width: var(--firefoxcss-tab-max-width) !important;
   min-width: var(--firefoxcss-tab-min-width) !important;
+}
+
+/* Selected tabs width increase */
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[selected][fadein]:not([pinned]){
+  max-width: 180px !important;
+}
+
+/* Selected tabs width when overflowing */
+#tabbrowser-tabs[overflow] .tabbrowser-tab[selected][fadein]:not([pinned]){
+  min-width: 150px !important;
 }
 
 .tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover)
   .tab-icon-image {
   opacity: 0.8 !important;
   transition: opacity 250ms ease !important;
-}
-
-/* Selected tabs width increase */
-#tabbrowser-tabs .tabbrowser-tab[selected][fadein]:not([pinned]) {
-    min-width: 135px !important;
-    max-width: 170px !important;
 }
 
 /* 
