@@ -1,5 +1,14 @@
 /*  Tabs on selection have static width */
-#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[selected][fadein]:not([pinned]) {
-    max-width: var(--firefoxcss-tab-max-width) !important;
+:root {
+  --firefoxcss-tab-min-width: 110px !important;
+  --firefoxcss-tab-max-width: 180px !important;
+}
+
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]){
+   max-width: var(--firefoxcss-tab-max-width) !important;
     min-width: var(--firefoxcss-tab-min-width) !important;
+}
+
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[selected][fadein]:not([pinned]) {
+   max-width: var(--firefoxcss-tab-max-width) !important;
 }
