@@ -718,9 +718,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 ============ W I N D O W   C O N T R O L   B U T T O N S ==============
 =====================================================================*/
 
-@media (-moz-platform: windows-win10),
-  (-moz-platform: windows-win8),
-  (-moz-platform: windows-win7) {
+@media (-moz-platform: windows) {
   /* ----- Close/min/max fix ----- */
   #toolbar-menubar .titlebar-button {
     padding-block: 0px !important;
@@ -818,9 +816,7 @@ menupopup :-moz-any(menu, menuitem) {
   padding-bottom: 4px !important;
 }
 
-@media (-moz-platform: windows-win10),
-  (-moz-platform: windows-win8),
-  (-moz-platform: windows-win7) {
+@media (-moz-platform: windows) {
   #context-navigation
     > .menuitem-iconic[_moz-menuactive="true"]
     > .menu-iconic-left
