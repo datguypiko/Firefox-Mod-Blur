@@ -39,6 +39,7 @@
 @import url("pinned_tabs_no_bg_color.css");
 @import url("reversed_tabs_bg_color.css");
 @import url("transparent_tabs_bg_color.css");
+@import url("tabs_separator.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
@@ -106,6 +107,9 @@
     );
     --firefoxcss-statuspanel-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-contextmenu-hover-text: white;
+    --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 100%, 0.25);
+    --firefoxcss-customize-view-flex-space: #d0ba9e;
+    --firefoxcss-customize-view-overflow-menu: hsl(240, 2%, 10%);
     /* ============== Firefox Global colors change ==================== */
     --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
     --button-hover-bgcolor: hsla(0, 0%, 60%, 0.35) !important;
@@ -191,8 +195,10 @@
     --firefoxcss-private-browsing-menu-color: hsl(277, 80%, 55%);
     --firefoxcss-private-browsing-drop-shadow: none;
     --firefoxcss-statuspanel-bg-color: hsl(240, 20%, 98%);
-
     --firefoxcss-contextmenu-hover-text: black;
+    --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 0%, 0.2);
+    --firefoxcss-customize-view-flex-space: hsl(34, 50%, 70%);
+    --firefoxcss-customize-view-overflow-menu: hsl(240, 10%, 100%);
     /* ============== Firefox Global colors change ==================== */
     --arrowpanel-background: hsl(240, 15%, 98%) !important;
     --button-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
@@ -330,18 +336,18 @@ Order of Toolbars
 ======================= H E I G H T   F I X E S =======================
 =====================================================================*/
 
-/* Fix fullscreen issues with navigation bar at the top */
+/* Fix fullscreen issues with navigation bar at the top
 :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
   -moz-appearance: none !important;
   appearance: none !important;
   padding-top: 0px !important;
-}
+}*/
 
-/* Fix the Fullscreen changing padding on other bars. */
+/* Fix the Fullscreen changing padding on other bars.
 :root[tabsintitlebar][sizemode="maximized"] #titlebar {
   -moz-appearance: none !important;
   appearance: none !important;
-}
+}*/
 
 /* Tabs Bar height */
 :root {
@@ -393,62 +399,62 @@ Order of Toolbars
 /* Set icon colors with context-fill without forcing them in svg files
 about:config -> svg.context-properties.content.enabled -> true*/
 @media (prefers-color-scheme: dark) {
-    #PanelUI-menu-button {
-      list-style-image: url(image/menu.svg) !important;
-    }
-    :root[privatebrowsingmode="temporary"] #PanelUI-menu-button { 
-      list-style-image: url(image/menu-private.svg) !important;
-    }
-    
-    #find-button {
-      list-style-image: url(image/search.svg) !important;
-    }
-    
-    #privatebrowsing-button {
-      list-style-image: url(image/private.svg) !important;
-    }
-    
-    #forward-button,
-    menugroup > #context-forward,
-    #search-container #searchbar .search-go-button,
-    #urlbar-go-button {
-      list-style-image: url(image/right-arrow.svg) !important;
-    }
-    
-    #back-button,
-    menugroup > #context-back {
-      list-style-image: url(image/left-arrow.svg) !important;
-    }
+  #PanelUI-menu-button {
+    list-style-image: url(image/menu.svg) !important;
+  }
+  :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
+    list-style-image: url(image/menu-private.svg) !important;
+  }
+
+  #find-button {
+    list-style-image: url(image/search.svg) !important;
+  }
+
+  #privatebrowsing-button {
+    list-style-image: url(image/private.svg) !important;
+  }
+
+  #forward-button,
+  menugroup > #context-forward,
+  #search-container #searchbar .search-go-button,
+  #urlbar-go-button {
+    list-style-image: url(image/right-arrow.svg) !important;
+  }
+
+  #back-button,
+  menugroup > #context-back {
+    list-style-image: url(image/left-arrow.svg) !important;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    #PanelUI-menu-button {
-      list-style-image: url(image/menu-light.svg) !important;
-    }
+  #PanelUI-menu-button {
+    list-style-image: url(image/menu-light.svg) !important;
+  }
 
-    :root[privatebrowsingmode="temporary"] #PanelUI-menu-button { 
-      list-style-image: url(image/menu-private-light.svg) !important;
-    }
-    
-    #find-button {
-      list-style-image: url(image/search-light.svg) !important;
-    }
-    
-    #privatebrowsing-button {
-      list-style-image: url(image/private-light.svg) !important;
-    }
-    
-    #forward-button,
-    menugroup > #context-forward,
-    #search-container #searchbar .search-go-button,
-    #urlbar-go-button {
-      list-style-image: url(image/right-arrow-light.svg) !important;
-    }
-    
-    #back-button,
-    menugroup > #context-back {
-      list-style-image: url(image/left-arrow-light.svg) !important;
-    }
+  :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
+    list-style-image: url(image/menu-private-light.svg) !important;
+  }
+
+  #find-button {
+    list-style-image: url(image/search-light.svg) !important;
+  }
+
+  #privatebrowsing-button {
+    list-style-image: url(image/private-light.svg) !important;
+  }
+
+  #forward-button,
+  menugroup > #context-forward,
+  #search-container #searchbar .search-go-button,
+  #urlbar-go-button {
+    list-style-image: url(image/right-arrow-light.svg) !important;
+  }
+
+  #back-button,
+  menugroup > #context-back {
+    list-style-image: url(image/left-arrow-light.svg) !important;
+  }
 }
 
 /*=====================================================================
@@ -559,7 +565,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
   --tabs-navbar-shadow-size: 0px !important;
 }
 
-#TabsToolbar #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+#TabsToolbar
+  #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
   margin-inline-start: 0px !important;
@@ -572,18 +579,19 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
 /* not([style^="max-width"] :not([overflow])*/
-#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]){
+#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]) {
   max-width: var(--firefoxcss-tab-max-width) !important;
   min-width: var(--firefoxcss-tab-min-width) !important;
 }
 
 /* Selected tabs width increase */
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[selected][fadein]:not([pinned]){
-  max-width: 180px !important;
+#tabbrowser-tabs:not([overflow])
+  .tabbrowser-tab[selected][fadein]:not([pinned]) {
+  max-width: 175px !important;
 }
 
 /* Selected tabs width when overflowing */
-#tabbrowser-tabs[overflow] .tabbrowser-tab[selected][fadein]:not([pinned]){
+#tabbrowser-tabs[overflow] .tabbrowser-tab[selected][fadein]:not([pinned]) {
   min-width: 150px !important;
 }
 
@@ -1256,7 +1264,6 @@ toolbar
   #context-navigation > .menuitem-iconic[_moz-menuactive="true"][disabled] {
     background-color: transparent !important;
   }
-  
 
   #context-navigation > .menuitem-iconic,
   menupopup,
@@ -1268,8 +1275,8 @@ toolbar
       background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
       } */
 
-   menu:where([_moz-menuactive="true"]):not([disabled]),
-    menuitem:where([_moz-menuactive="true"]):not([disabled]) {
+  menu:where([_moz-menuactive="true"]):not([disabled]),
+  menuitem:where([_moz-menuactive="true"]):not([disabled]) {
     background-color: var(--button-hover-bgcolor) !important;
     color: var(--firefoxcss-contextmenu-hover-text) !important;
   }
@@ -1282,7 +1289,7 @@ toolbar
     padding: 2px 2px !important;
   }
 
-/*   menuseparator {
+  /*   menuseparator {
     border-top: 1px solid var(--arrowpanel-border-color) !important;
     border-bottom: none !important;
     margin: 1px 1em;
@@ -1373,6 +1380,52 @@ toolbar
     #navigator-toolbox:not([inFullscreen]) #nav-bar {
       padding-right: initial !important;
     }
+  }
+}
+
+/*=====================================================================
+=============== C U S T O M I Z A T I O N   M E N U ===================
+=====================================================================*/
+/* Customize toolbar background color */
+#customization-container:-moz-lwtheme {
+  background-image: none !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
+}
+
+#PersonalToolbar[customizing]
+  toolbarpaletteitem[place="toolbar"]
+  > toolbarspring,
+#nav-bar[customizing] toolbarpaletteitem[place="toolbar"] > toolbarspring,
+#customization-container toolbarpaletteitem[place="palette"] > toolbarspring {
+  outline: 1px solid var(--firefoxcss-customize-view-flex-space) !important;
+  outline-offset: -3px !important;
+  border-radius: 6px !important;
+}
+
+@media not (-moz-platform: macos) {
+  #customization-panelWrapper > .panel-arrowcontent {
+    border-radius: 10px !important;
+    background-color: var(--firefoxcss-customize-view-overflow-menu) !important;
+  }
+}
+
+#PersonalToolbar[customizing] {
+  outline: 1px dashed var(--firefoxcss-customize-view-dashed-outline) !important;
+}
+
+.browserContainer > findbar .findbar-textbox {
+  background-color: var(--firefoxcss-item-bg-color) !important;
+}
+
+#customization-container #customization-footer {
+  border-top: none !important;
+}
+
+@media (-moz-platform: macos),
+  (-moz-platform: windows),
+  not (prefers-contrast) {
+  #customization-container #customization-footer .customizationmode-button {
+    border-radius: 4px !important;
   }
 }
 
