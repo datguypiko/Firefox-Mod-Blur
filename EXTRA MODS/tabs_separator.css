@@ -1,0 +1,22 @@
+/* Tab Separators  */
+.tabbrowser-tab:not([pinned])::before {
+  content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB2aWV3Qm94PSIwIDAgMzEuOTU1IDMxLjk1NSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTI3LjI1LDQuNjU1QzIwLjk5Ni0xLjU3MSwxMC44OC0xLjU0Niw0LjY1Niw0LjcwNkMtMS41NzEsMTAuOTYtMS41NDgsMjEuMDc2LDQuNzA1LDI3LjMNCgkJYzYuMjU2LDYuMjI2LDE2LjM3NCw2LjIwMywyMi41OTctMC4wNTFDMzMuNTI2LDIwLjk5NSwzMy41MDUsMTAuODc4LDI3LjI1LDQuNjU1eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTMuMjg4LDIzLjg5NmwtMS43NjgsNS4yMDdjMi41NjcsMC44MjksNS4zMzEsMC44ODYsNy45MjYsMC4xN2wtMC42NjUtNS40MTYNCgkJQzE3LjAxLDI0LjQ4NywxNS4wNjcsMjQuNSwxMy4yODgsMjMuODk2eiBNOC4xMiwxMy4xMjJsLTUuNjQ1LTAuODU5Yy0wLjc0MSwyLjY2Ni0wLjY2Niw1LjUxNCwwLjIyNSw4LjE0M2w1LjQ5MS0xLjM3NQ0KCQlDNy40NTIsMTcuMTM4LDcuNDI2LDE1LjAyOSw4LjEyLDEzLjEyMnogTTI4Ljc2MywxMS4zMzNsLTQuOTY1LDEuNjc1YzAuNzk4LDIuMTA2LDAuNzE2LDQuNDY4LTAuMjQ3LDYuNTIybDUuMzUxLDAuNjcyDQoJCUMyOS44MjcsMTcuMzE5LDI5Ljc4LDE0LjE5MywyOC43NjMsMTEuMzMzeiBNMTEuMzk0LDIuODgzbDEuMDE4LDUuNTI4YzIuMDI3LTAuOTU0LDQuMzU2LTEuMDUsNi40NDItMC4yODhsMS41ODMtNS4xMzcNCgkJQzE3LjUyMywxLjk0LDE0LjMyOCwxLjkwNiwxMS4zOTQsMi44ODN6Ii8+DQoJPGNpcmNsZSBzdHlsZT0iZmlsbDojRkZGRkZGOyIgY3g9IjE1Ljk3OSIgY3k9IjE1Ljk3NyIgcj0iNi4xMTciLz4NCjwvZz4NCjwvc3ZnPg==");
+  width: 4px !important;
+  height: 4px !important;
+  display: flex;
+  align-self: center;
+  margin-right: 5px;
+  margin-left: 1px;
+  opacity: 0.3;
+}
+
+/* Removing Separator for first tab when no pinned tabs available   */
+#tabbrowser-tabs:not([haspinnedtabs]):not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))::before {
+  content: "" !important;
+  margin-right: unset;
+  margin-left: unset;
+  width: unset !important;
+  height: unset !important;
+}
