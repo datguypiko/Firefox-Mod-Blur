@@ -386,33 +386,69 @@ Order of Toolbars
 =============================== I C O N S =============================
 =====================================================================*/
 
-#PanelUI-menu-button {
-  list-style-image: url(image/menu.svg) !important;
-  /* fill: white !important; */
-}
-
 /* #stop-reload-button .toolbarbutton-animatable-image{
-  animation-duration: 0s !important;
+  animation-duration: 0s !important; #b263e3; #a230e8
 } */
 
-#find-button {
-  list-style-image: url(image/search.svg) !important;
+/* Set icon colors with context-fill without forcing them in svg files
+about:config -> svg.context-properties.content.enabled -> true*/
+@media (prefers-color-scheme: dark) {
+    #PanelUI-menu-button {
+      list-style-image: url(image/menu.svg) !important;
+    }
+    :root[privatebrowsingmode="temporary"] #PanelUI-menu-button { 
+      list-style-image: url(image/menu-private.svg) !important;
+    }
+    
+    #find-button {
+      list-style-image: url(image/search.svg) !important;
+    }
+    
+    #privatebrowsing-button {
+      list-style-image: url(image/private.svg) !important;
+    }
+    
+    #forward-button,
+    menugroup > #context-forward,
+    #search-container #searchbar .search-go-button,
+    #urlbar-go-button {
+      list-style-image: url(image/right-arrow.svg) !important;
+    }
+    
+    #back-button,
+    menugroup > #context-back {
+      list-style-image: url(image/left-arrow.svg) !important;
+    }
 }
 
-#privatebrowsing-button {
-  list-style-image: url(image/private.svg) !important;
-}
+@media (prefers-color-scheme: light) {
+    #PanelUI-menu-button {
+      list-style-image: url(image/menu-light.svg) !important;
+    }
 
-#forward-button,
-menugroup > #context-forward,
-#search-container #searchbar .search-go-button,
-#urlbar-go-button {
-  list-style-image: url(image/right-arrow.svg) !important;
-}
-
-#back-button,
-menugroup > #context-back {
-  list-style-image: url(image/left-arrow.svg) !important;
+    :root[privatebrowsingmode="temporary"] #PanelUI-menu-button { 
+      list-style-image: url(image/menu-private-light.svg) !important;
+    }
+    
+    #find-button {
+      list-style-image: url(image/search-light.svg) !important;
+    }
+    
+    #privatebrowsing-button {
+      list-style-image: url(image/private-light.svg) !important;
+    }
+    
+    #forward-button,
+    menugroup > #context-forward,
+    #search-container #searchbar .search-go-button,
+    #urlbar-go-button {
+      list-style-image: url(image/right-arrow-light.svg) !important;
+    }
+    
+    #back-button,
+    menugroup > #context-back {
+      list-style-image: url(image/left-arrow-light.svg) !important;
+    }
 }
 
 /*=====================================================================
