@@ -1,3 +1,11 @@
+ ### DEPRECATED WITH FIREFOX v117 and up ⚠️⚠️⚠️⚠️⚠️
+ To continue using MicaForEveryone you can use Firefox v115 ESR - Extended Support Release 
+ version which will be supported and have security updates for few years.
+ https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr
+
+<br>
+ 
+
 Read main readme file or follow below:
 
     1.Download the portable or installation file from https://github.com/MicaForEveryone/MicaForEveryone
