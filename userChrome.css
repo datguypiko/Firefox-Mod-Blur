@@ -1387,7 +1387,7 @@ toolbar
 =============== C U S T O M I Z A T I O N   M E N U ===================
 =====================================================================*/
 /* Customize toolbar background color */
-#customization-container:-moz-lwtheme {
+#customization-container {
   background-image: none !important;
   background-color: var(--firefoxcss-main-bg-color) !important;
 }
