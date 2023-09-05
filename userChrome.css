@@ -1443,3 +1443,9 @@ toolbar
   margin: 0 0 3px 3px !important;
   padding: 4px !important;
 }
+
+/* Make forward and back buttons smaller  */
+#back-button .toolbarbutton-icon,
+#forward-button .toolbarbutton-icon{
+  padding: 8.5px !important;
+}
