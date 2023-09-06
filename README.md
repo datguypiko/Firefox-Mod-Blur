@@ -131,10 +131,11 @@ There are two settings to change in firefox (pictures below).
 
 
 1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
-2. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
-3. Put `userChrome.css`, `userContent.css`, `image`  in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
-4. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` inside your `chrome` folder.
-5. File Structure:
+2. Download latest or your preferred firefox version [.zip file](https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest). 
+3. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
+4. Put `userChrome.css`, `userContent.css`, `image`  in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
+5. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` inside your `chrome` folder.
+6. File Structure:
 
 	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userChrome.css`
 
@@ -144,7 +145,7 @@ There are two settings to change in firefox (pictures below).
 	
 	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
 	 
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `wallpaper` `/` (for wallpaper theme)
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `wallpaper` `/` `(for wallpaper theme)`
 
 </br>
 
