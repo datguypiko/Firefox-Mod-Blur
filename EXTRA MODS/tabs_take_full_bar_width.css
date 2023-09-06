@@ -1,0 +1,4 @@
+/* Make tabs take full width of the bar */
+#titlebar #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]){
+    max-width: 100vw !important;
+}
