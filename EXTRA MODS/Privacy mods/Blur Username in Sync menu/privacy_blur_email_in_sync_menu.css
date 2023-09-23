@@ -1,0 +1,9 @@
+/* ----- Blur the email address in firefox account sync menu ----- */
+#customizationui-widget-panel #fxa-manage-account-button  #fxa-menu-header-description {
+	filter: blur(4px) !important;
+	transition: filter 350ms ease-out !important;
+	transition-delay: 250ms !important;
+}
+#customizationui-widget-panel #fxa-manage-account-button:hover #fxa-menu-header-description {
+	filter: blur(0px) !important;
+}

@@ -1,0 +1,6 @@
+/* Thin scrollbar for windows 10. Not tested on mac or linux. */
+/* Windows 11 already has nice thin scrollbar by default. */
+* {
+    scrollbar-width: thin !important;
+  }
+  

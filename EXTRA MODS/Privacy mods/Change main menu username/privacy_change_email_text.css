@@ -1,0 +1,8 @@
+/* ----- Replace email address in hamburger menu */
+/* ----- to any text you want */
+#appMenu-fxa-label2 #appMenu-header-description {display: none !important;}
+
+#appMenu-popup #appMenu-fxa-label2::before {
+	content: 'Firefox account' !important; /* Write any text you want */
+}
+
