@@ -1,0 +1,11 @@
+/* Only show dots in search bar when hovered */
+#urlbar #identity-box::after,
+#urlbar #page-action-buttons::before {
+   opacity: 0;
+}
+
+#urlbar:hover #identity-box::after,
+#urlbar:hover #page-action-buttons::before {
+  opacity: 0.2;
+ transition: opacity 100ms ease;
+}
