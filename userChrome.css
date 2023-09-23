@@ -42,6 +42,7 @@
 @import url("tabs_separator.css");
 @import url("searchbox_text_align_left.css");
 @import url("tabs_take_full_bar_width.css");
+@import url("show_searchbar_dots_only_on_hover.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
@@ -1167,11 +1168,15 @@ toolbar
 #page-action-buttons::before {
   position: relative;
   content: "•••";
-  opacity: 0.2;
   pointer-events: none;
   transition: opacity 100ms ease;
   align-self: center;
   font-size: 0.7em;
+}
+
+#identity-box::after,
+#page-action-buttons::before {
+  opacity: 0.2;
 }
 
 #identity-box::after {
