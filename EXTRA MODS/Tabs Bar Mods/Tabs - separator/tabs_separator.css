@@ -1,0 +1,52 @@
+
+
+@media (prefers-color-scheme: dark) {
+ /* Tab Separators  */
+.tabbrowser-tab:not([pinned])::before {
+  content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB2aWV3Qm94PSIwIDAgMzEuOTU1IDMxLjk1NSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTI3LjI1LDQuNjU1QzIwLjk5Ni0xLjU3MSwxMC44OC0xLjU0Niw0LjY1Niw0LjcwNkMtMS41NzEsMTAuOTYtMS41NDgsMjEuMDc2LDQuNzA1LDI3LjMNCgkJYzYuMjU2LDYuMjI2LDE2LjM3NCw2LjIwMywyMi41OTctMC4wNTFDMzMuNTI2LDIwLjk5NSwzMy41MDUsMTAuODc4LDI3LjI1LDQuNjU1eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTMuMjg4LDIzLjg5NmwtMS43NjgsNS4yMDdjMi41NjcsMC44MjksNS4zMzEsMC44ODYsNy45MjYsMC4xN2wtMC42NjUtNS40MTYNCgkJQzE3LjAxLDI0LjQ4NywxNS4wNjcsMjQuNSwxMy4yODgsMjMuODk2eiBNOC4xMiwxMy4xMjJsLTUuNjQ1LTAuODU5Yy0wLjc0MSwyLjY2Ni0wLjY2Niw1LjUxNCwwLjIyNSw4LjE0M2w1LjQ5MS0xLjM3NQ0KCQlDNy40NTIsMTcuMTM4LDcuNDI2LDE1LjAyOSw4LjEyLDEzLjEyMnogTTI4Ljc2MywxMS4zMzNsLTQuOTY1LDEuNjc1YzAuNzk4LDIuMTA2LDAuNzE2LDQuNDY4LTAuMjQ3LDYuNTIybDUuMzUxLDAuNjcyDQoJCUMyOS44MjcsMTcuMzE5LDI5Ljc4LDE0LjE5MywyOC43NjMsMTEuMzMzeiBNMTEuMzk0LDIuODgzbDEuMDE4LDUuNTI4YzIuMDI3LTAuOTU0LDQuMzU2LTEuMDUsNi40NDItMC4yODhsMS41ODMtNS4xMzcNCgkJQzE3LjUyMywxLjk0LDE0LjMyOCwxLjkwNiwxMS4zOTQsMi44ODN6Ii8+DQoJPGNpcmNsZSBzdHlsZT0iZmlsbDojRkZGRkZGOyIgY3g9IjE1Ljk3OSIgY3k9IjE1Ljk3NyIgcj0iNi4xMTciLz4NCjwvZz4NCjwvc3ZnPg==");
+  width: 4px !important;
+  height: 4px !important;
+  display: flex;
+  align-self: center;
+  margin-right: 5px;
+  margin-left: 1px;
+  opacity: 0.3;
+}
+
+/* Removing Separator for first tab when no pinned tabs available   */
+#tabbrowser-tabs:not([haspinnedtabs]):not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))::before {
+  content: "" !important;
+  margin-right: unset;
+  margin-left: unset;
+  width: unset !important;
+  height: unset !important;
+}
+}
+
+@media (prefers-color-scheme: light) {
+ /* Tab Separators  */
+.tabbrowser-tab:not([pinned])::before {
+  content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPHN2ZyBoZWlnaHQ9IjgwMHB4IiB3aWR0aD0iODAwcHgiIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgDQoJIHZpZXdCb3g9IjAgMCAzMS45NTUgMzEuOTU1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMwMDAwMDA7IiBkPSJNMjcuMjUsNC42NTVDMjAuOTk2LTEuNTcxLDEwLjg4LTEuNTQ2LDQuNjU2LDQuNzA2Qy0xLjU3MSwxMC45Ni0xLjU0OCwyMS4wNzYsNC43MDUsMjcuMw0KCQljNi4yNTYsNi4yMjYsMTYuMzc0LDYuMjAzLDIyLjU5Ny0wLjA1MUMzMy41MjYsMjAuOTk1LDMzLjUwNSwxMC44NzgsMjcuMjUsNC42NTV6Ii8+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAwMDAwMDsiIGQ9Ik0xMy4yODgsMjMuODk2bC0xLjc2OCw1LjIwN2MyLjU2NywwLjgyOSw1LjMzMSwwLjg4Niw3LjkyNiwwLjE3bC0wLjY2NS01LjQxNg0KCQlDMTcuMDEsMjQuNDg3LDE1LjA2NywyNC41LDEzLjI4OCwyMy44OTZ6IE04LjEyLDEzLjEyMmwtNS42NDUtMC44NTljLTAuNzQxLDIuNjY2LTAuNjY2LDUuNTE0LDAuMjI1LDguMTQzbDUuNDkxLTEuMzc1DQoJCUM3LjQ1MiwxNy4xMzgsNy40MjYsMTUuMDI5LDguMTIsMTMuMTIyeiBNMjguNzYzLDExLjMzM2wtNC45NjUsMS42NzVjMC43OTgsMi4xMDYsMC43MTYsNC40NjgtMC4yNDcsNi41MjJsNS4zNTEsMC42NzINCgkJQzI5LjgyNywxNy4zMTksMjkuNzgsMTQuMTkzLDI4Ljc2MywxMS4zMzN6IE0xMS4zOTQsMi44ODNsMS4wMTgsNS41MjhjMi4wMjctMC45NTQsNC4zNTYtMS4wNSw2LjQ0Mi0wLjI4OGwxLjU4My01LjEzNw0KCQlDMTcuNTIzLDEuOTQsMTQuMzI4LDEuOTA2LDExLjM5NCwyLjg4M3oiLz4NCgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMwMDAwMDA7IiBjeD0iMTUuOTc5IiBjeT0iMTUuOTc3IiByPSI2LjExNyIvPg0KPC9nPg0KPC9zdmc+);
+  width: 4px !important;
+  height: 4px !important;
+  display: flex;
+  align-self: center;
+  margin-right: 5px;
+  margin-left: 1px;
+  opacity: 0.3;
+}
+
+/* Removing Separator for first tab when no pinned tabs available   */
+#tabbrowser-tabs:not([haspinnedtabs]):not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))::before {
+  content: "" !important;
+  margin-right: unset;
+  margin-left: unset;
+  width: unset !important;
+  height: unset !important;
+}
+  
+}

@@ -1,0 +1,21 @@
+/*  Remove text from homepage/newtab website shortcuts. */
+/*  Check if pinned by using context menu.              */
+@-moz-document url("about:home"),
+url("about:newtab") {
+    .outer-wrapper .top-site-outer {
+        vertical-align: middle !important;
+      }
+    .outer-wrapper  .top-site-inner .title{
+        display: none !important;
+    }
+
+    .outer-wrapper .top-site-outer .top-site-inner .tile{
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        border-radius: 10px !important;
+        border-bottom: 0 !important;
+    }
+     #root .outer-wrapper .top-sites-list .top-site-outer {
+        padding: 20px 20px 4px !important;
+    }
+}

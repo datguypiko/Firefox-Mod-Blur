@@ -1,0 +1,16 @@
+/* No background color for url bar */
+#nav-bar #urlbar {
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  
+  #nav-bar #urlbar[breakout][breakout-extend][open] {
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+    background-color: var(--firefoxcss-url-breakout-bar-bg-color) !important;
+  }

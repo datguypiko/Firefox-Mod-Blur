@@ -1,0 +1,66 @@
+/* Show bookmarks bar on hover */
+#PersonalToolbar {
+    --uc-bm-height: 24px;
+    /* Might need to adjust if the toolbar has other buttons */
+    --uc-bm-padding: 6px;
+    /* Vertical padding to be applied to bookmarks */
+    padding: 1px 6px !important;
+    position: relative !important;
+  }
+  
+  :root[uidensity="touch"] #PersonalToolbar {
+    --uc-bm-padding: 6px;
+  }
+  
+  #PersonalToolbar:not([customizing]) {
+    margin-bottom: calc(
+      2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)
+    ) !important;
+    transform: rotateX(90deg) !important;
+    transform-origin: top !important;
+    transition: transform 50ms linear 500ms !important;
+    z-index: 2 !important;
+  }
+  
+  #PlacesToolbarItems > .bookmark-item {
+    padding-block: var(--uc-bm-padding) !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+  
+  #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
+    transition: opacity 100ms linear 450ms !important;
+    opacity: 0 !important;
+  }
+  
+  /* Show when cursor is over the toolbar area */
+  #navigator-toolbox:hover > #PersonalToolbar {
+    transition-delay: 100ms !important;
+    transform: rotateX(0) !important;
+  }
+  
+  #navigator-toolbox:hover
+    #PlacesToolbarItems
+    > .bookmark-item
+    .toolbarbutton-icon {
+    transition-delay: 100ms !important;
+    opacity: 1 !important;
+  }
+  
+  #PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+    transition: opacity 100ms linear 450ms !important;
+    opacity: 0 !important;
+  }
+  
+  #navigator-toolbox:hover
+    #PlacesToolbarItems
+    > .bookmark-item
+    .toolbarbutton-text {
+    transition-delay: 100ms !important;
+    opacity: 1 !important;
+  }
+
+/* Fix the white line above the bookmarks bar when it's empty */
+#personal-toolbar-empty {
+  padding: 2px !important;
+}

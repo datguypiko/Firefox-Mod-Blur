@@ -1,5 +1,0 @@
-/*  Pinned tabs dont have background color */
-#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([pinned]) .tab-background:not([selected]) {
-    background-color: transparent !important;
-    box-shadow: none !important;
-}

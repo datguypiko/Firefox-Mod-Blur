@@ -1,0 +1,5 @@
+/* ----- Remove folder icons from bookmarks bar ----- */
+
+#PlacesToolbar .bookmark-item:not([label=""]) > .toolbarbutton-icon {
+    display:none !important;
+}
