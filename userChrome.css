@@ -1162,6 +1162,10 @@ toolbar
   opacity: 0 !important;
 }
 
+#page-action-buttons:not(:hover) #translations-button[translationsactive="true"]:not([open]) {
+  visibility:collapse !important;
+} 
+
 /* Create visual dots on both sides */
 /* left side identity-box dots modification */
 #identity-box::after,
