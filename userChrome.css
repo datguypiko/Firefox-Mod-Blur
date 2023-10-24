@@ -547,7 +547,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 =====================================================================*/
 
 /* Non active tabs have darker text */
-.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover)
+.tabbrowser-tab:not([selected]):not([multiselected]):not(:hover)
   .tab-label-container
   .tab-label {
   color: var(--firefoxcss-non-active-tabs) !important;
@@ -598,7 +598,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   min-width: 150px !important;
 }
 
-.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover)
+.tabbrowser-tab:not([selected]):not([multiselected]):not(:hover)
   .tab-icon-image {
   opacity: 0.8 !important;
   transition: opacity 250ms ease !important;
@@ -633,7 +633,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 #tabbrowser-tabs
   .tabbrowser-tab:hover
   > .tab-stack
-  > .tab-background:not([selected="true"]) {
+  > .tab-background:not([selected]) {
   border: 0 !important;
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
@@ -652,7 +652,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 }
 
 /* Multiselect tabs */
-#tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected="true"] {
+#tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected] {
   border: 0 !important;
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
