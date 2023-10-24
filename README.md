@@ -102,6 +102,8 @@
 <p align="center"><i>acrylic_micaforeveryone.css</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"></p></details>
 
+###### and [more](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/EXTRA%20MODS)..
+
 <h2>:wrench: Installation</h2>
 <details><summary>How to Toggle between <code>Light</code> and <code>Dark</code> theme :warning:</summary>
 	
