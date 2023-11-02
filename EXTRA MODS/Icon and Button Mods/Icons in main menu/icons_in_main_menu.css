@@ -23,6 +23,20 @@ See the above repository for updates as well as full license text. */
 #appMenu-more-button2{ list-style-image: url("chrome://global/skin/icons/developer.svg") }
 #appMenu-help-button2{ list-style-image: url("chrome://global/skin/icons/info.svg") }
 #appMenu-quit-button2{ list-style-image: url("chrome://devtools/skin/images/search-clear.svg") }
+/* Use Firefox Translations icon for translate */
+:root {
+  --translate-button-image: url(image/translation-bw.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --translate-button-image: url(image/translation-wb.svg);
+  }
+}
+
+#appMenu-translate-button{
+  list-style-image: var(--translate-button-image)
+}
 /* Use account-button icon for signed in sync item */
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before{
   display: flex;
