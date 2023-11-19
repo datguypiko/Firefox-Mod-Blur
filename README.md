@@ -155,8 +155,7 @@ There are two settings to change in firefox (pictures below).
 
  ##### ❗❗❗ DEPRECATED WITH FIREFOX v117 and up ❗❗❗
  
- >  ##### To continue using MicaForEveryone you can use Firefox v115 ESR - Extended Support Release version which will be supported and have security updates for at least a year. You can install ESR version to separate folder so you can continue using both versions. I haven't tested that version so there could be some minor issues. https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr.
-I recommend using my older version files. Maybe something like v115.x - v117.x should work fine.
+ >  ##### To continue using MicaForEveryone you can use Firefox v115 ESR - Extended Support Release version which will be supported and have security updates for at least a year. You can install ESR version to separate folder so you are able continue using both versions. I haven't tested that version so there could be some minor issues. https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr. I recommend using my older version files. [Maybe something like v115.x - v117.x should work fine.](https://github.com/datguypiko/Firefox-Mod-Blur/releases).
  
 1. Download the portable or installation file from [github.com/MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone/releases).
 2. Install the extra files it asks you to install. And run the program.
