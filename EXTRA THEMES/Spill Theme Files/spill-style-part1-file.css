@@ -6,7 +6,7 @@
 }
 
 /* Main BAR */
-#navigator-toolbox-background #navigator-toolbox {
+#main-window #navigator-toolbox {
     border-bottom: none !important;
 }
   
