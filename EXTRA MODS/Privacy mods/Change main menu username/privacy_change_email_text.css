@@ -6,3 +6,9 @@
 	content: 'Firefox account' !important; /* Write any text you want */
 }
 
+/* Fix when icons in main menu */
+#appMenu-fxa-status2[fxastatus] > toolbarbutton::before{ background-image: none !important;}
+
+#appMenu-fxa-status2[fxastatus] > toolbarbutton::before{
+  width: initial !important;
+}
