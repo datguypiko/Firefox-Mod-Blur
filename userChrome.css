@@ -748,7 +748,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   }
 
   #nav-bar {
-    padding-right: var(--firefoxcss-control-buttons-margin);
+    padding-right: var(--firefoxcss-control-buttons-margin) !important;
   }
 
   #navigator-toolbox:not([inFullscreen])
