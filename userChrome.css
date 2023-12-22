@@ -878,7 +878,7 @@ menuseparator#context-sep-navigation {
 
 #context-navigation:not([hidden]) {
   background-color: var(--firefoxcss-context-menu-top-color) !important;
-  padding: 1px 4px 1px !important;
+  padding: 1px 0px 1px !important;
   border-top-left-radius: 8px !important;
   border-top-right-radius: 8px !important;
   margin-left: 0px !important;
@@ -901,6 +901,30 @@ menupopup
 
 #context-sep-navigation {
   padding-block: 0px !important;
+}
+
+#context-navigation > .menuitem-iconic[_moz-menuactive] {
+  &:not([disabled]) {
+    background-color: transparent !important;
+    
+  }
+
+  &[disabled] {
+    background-color: transparent !important;
+  }
+}
+
+#context-navigation > .menuitem-iconic {
+  & > .menu-iconic-left {
+    & > .menu-iconic-icon {
+       width: 42px !important;
+       height: 32px !important;
+    }
+  }
+}
+
+#context-navigation #context-forward[disabled="true"] .menu-iconic-left .menu-iconic-icon{
+  opacity: 0.5 !important;
 }
 
 /*=====================================================================
