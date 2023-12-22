@@ -828,6 +828,15 @@ menupopup :-moz-any(menu, menuitem) {
   padding-bottom: 4px !important;
 }
 
+#context-navigation > .menuitem-iconic {
+  & > .menu-iconic-left {
+    & > .menu-iconic-icon {
+       width: 16px !important;
+       height: 16px !important;
+    }
+  }
+}
+
 @media (-moz-platform: windows) {
   #context-navigation
     > .menuitem-iconic[_moz-menuactive="true"]
@@ -848,6 +857,24 @@ menupopup :-moz-any(menu, menuitem) {
       transparent
     ) !important;
   }
+  #context-navigation > .menuitem-iconic[_moz-menuactive] {
+    &:not([disabled]) {
+      background-color: transparent !important;
+      
+    }
+    &[disabled] {
+      background-color: transparent !important;
+    }
+  }
+  
+  #context-navigation > .menuitem-iconic {
+    & > .menu-iconic-left {
+      & > .menu-iconic-icon {
+         width: 42px !important;
+         height: 32px !important;
+      }
+    }
+  } 
 }
 
 menupopup :-moz-any(menu:first-child, menuitem:first-child) {
@@ -904,24 +931,8 @@ menupopup
   padding-block: 0px !important;
 }
 
-#context-navigation > .menuitem-iconic[_moz-menuactive] {
-  &:not([disabled]) {
-    background-color: transparent !important;
-    
-  }
-
-  &[disabled] {
-    background-color: transparent !important;
-  }
-}
-
-#context-navigation > .menuitem-iconic {
-  & > .menu-iconic-left {
-    & > .menu-iconic-icon {
-       width: 42px !important;
-       height: 32px !important;
-    }
-  }
+#context-navigation #context-back[disabled="true"] .menu-iconic-left .menu-iconic-icon{
+  opacity: 0.5 !important;
 }
 
 #context-navigation #context-forward[disabled="true"] .menu-iconic-left .menu-iconic-icon{
