@@ -132,6 +132,7 @@
     --panel-separator-color: var(--arrowpanel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
     --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
+    --urlbarView-highlight-background: hsl(240, 2%, 20%) !important;
   }
 }
 
