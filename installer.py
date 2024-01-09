@@ -151,18 +151,24 @@ class Menu:
         else:
             choices = ['Install', 'Quit']
 
-        sel = inquirer.list_input('What do you want to do?', choices=choices, carousel=True)
+        keep = True
+        while keep:
+            sel = inquirer.list_input('What do you want to do?', choices=choices, carousel=True)
 
-        if sel == 'Install':
-            self.install()
-        elif sel == 'Manage Mods':
-            self.mods()
-        elif sel == 'Manage Themes':
-            self.themes()
-        elif sel == 'Update':
-            self.update()
-        elif sel == 'Uninstall':
-            self.uninstall()
+            if sel == 'Install':
+                self.install()
+                keep = False
+            elif sel == 'Manage Mods':
+                self.mods()
+            elif sel == 'Manage Themes':
+                self.themes()
+            elif sel == 'Update':
+                self.update()
+            elif sel == 'Uninstall':
+                self.uninstall()
+                keep = False
+            else:
+                keep = False
 
     def install(self):
         # create chrome/ in profile directory
