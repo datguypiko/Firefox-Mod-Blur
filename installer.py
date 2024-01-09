@@ -52,9 +52,14 @@ class Menu:
     def _single_choice_validation(self, _, selection):
         if len(selection) <= 1:
             return True
-        raise inquirer.errors.ValidationError('', reason='You can only choose 1 style!')
+        raise inquirer.errors.ValidationError('', reason='You can only choose 1 of them!')
 
     def _handle_selection(self, section, choices, single_choice, mod_dir):
+        readme_path = path.join(mod_dir, 'README.md')
+        if path.exists(readme_path) and mod_dir.split('/')[-1] != 'EXTRA THEMES':
+            with open(readme_path) as f:
+                color_print(f.read(), YELLOW)
+
         default = None
         config = self.config.get_config()
         if section in config:
@@ -62,17 +67,13 @@ class Menu:
         else:
             config[section] = {}
 
-        validate = True
-        # Only one style can be selected for these mods
-        if single_choice:
-            validate = self._single_choice_validation
-            color_print('Select only 1 style', YELLOW)
+        validate = self._single_choice_validation if single_choice else True 
 
         sel = inquirer.checkbox('[Space]: toggle a selection [Enter]: submit selections',
             choices=choices, default=default, validate=validate, carousel=True)
 
-        to_install = [mod for mod in sel if mod not in config[section]]
         to_uninstall = [mod for mod in config[section] if mod not in sel]
+        to_install = [mod for mod in sel if mod not in config[section]]
 
         for mod in to_uninstall:
             sub_mod_dir = path.join(mod_dir, mod)
@@ -80,16 +81,9 @@ class Menu:
             readme_path = path.join(sub_mod_dir, 'README.md')
             extra_path = path.join(sub_mod_dir, '.extra')
 
-            # print README if this mod requires manual operation
-            if all_css == []:
-                color_print(f"Notes of '{mod}':", YELLOW)
-                with open(readme_path) as f:
-                    color_print(f.read(), YELLOW)
             # uninstall all .css files
-            else:
-                for name in all_css:
-                    os.remove(path.join(self.chrome_dir, name))
-                color_print(f"[-] '{mod}' was successfully uninstalled!", GREEN)
+            for name in all_css:
+                os.remove(path.join(self.chrome_dir, name))
             # uninstall extra files
             if path.exists(extra_path):
                 with open(extra_path) as f:
@@ -101,6 +95,14 @@ class Menu:
                         else:
                             os.remove(extra_file_path)
 
+            color_print(f"[-] '{mod}' was successfully uninstalled!", GREEN)
+
+            # show README if this mod requires manual operation, e.g., Centered bookmarks bar items
+            if all_css == [] and not path.exists(extra_path) and path.exists(readme_path):
+                color_print(f"Notes of '{mod}':", YELLOW)
+                with open(readme_path) as f:
+                    color_print(f.read().rstrip(), YELLOW)
+
             del config[section][mod]
 
         for mod in to_install:
@@ -110,15 +112,8 @@ class Menu:
             extra_path = path.join(sub_mod_dir, '.extra')
 
             # install all .css files
-            if all_css != []:
-                for name in all_css:
-                    shutil.copy(path.join(sub_mod_dir, name), self.chrome_dir)
-                color_print(f"[+] '{mod}' was successfully installed!", GREEN)
-            # print README
-            if path.exists(readme_path):
-                color_print(f"Notes of '{mod}':", YELLOW)
-                with open(readme_path) as f:
-                    color_print(f.read(), YELLOW)
+            for name in all_css:
+                shutil.copy(path.join(sub_mod_dir, name), self.chrome_dir)
             # install extra files
             if path.exists(extra_path):
                 with open(extra_path) as f:
@@ -130,6 +125,14 @@ class Menu:
                             shutil.copytree(extra_file_path, path.join(self.chrome_dir, name))
                         else:
                             shutil.copy(extra_file_path, self.chrome_dir)
+
+            color_print(f"[+] '{mod}' was successfully installed!", GREEN)
+
+            # show README
+            if path.exists(readme_path):
+                color_print(f"Notes of '{mod}':", YELLOW)
+                with open(readme_path) as f:
+                    color_print(f.read().rstrip(), YELLOW)
 
             config[section][mod] = 'y'
 
