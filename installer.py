@@ -122,7 +122,7 @@ class Menu:
                 return
              
             mod_dir = path.join(mod_base_dir, mod)
-            sub_mods = [dir[0][len(mod_dir) + 1:] for dir in os.walk(mod_dir)]
+            sub_mods = sorted([dir[0][len(mod_dir) + 1:] for dir in os.walk(mod_dir)])
             sub_mods = sub_mods[1:]  # remove mod directory
 
             default = None
