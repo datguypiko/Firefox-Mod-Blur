@@ -15,11 +15,6 @@ YELLOW = '\033[33m'
 def color_print(msg, color=''):
     print(f'{color}{msg}\033[39m')
 
-def single_choice_validation(_, selection):
-    if len(selection) <= 1:
-        return True
-    raise inquirer.errors.ValidationError('', reason='You can only choose 1 style!')
-
 def find_css_under_dir(dir):
     for entry in os.listdir(dir):
         if '.css' in entry:
@@ -50,6 +45,17 @@ class Menu:
         self.chrome_dir = path.join(self.profile_dir, 'chrome')
         self.conf_path = path.join(self.chrome_dir, CONF_NAME)
         self.config = Config(self.conf_path)
+
+        self.single_choice_mods = [
+            'Auto hide Mods',
+            'Compact extensions menu',
+            'Min-max-close control buttons',
+        ]
+
+    def _single_choice_validation(self, _, selection):
+        if len(selection) <= 1:
+            return True
+        raise inquirer.errors.ValidationError('', reason='You can only choose 1 style!')
 
     def main(self):
         print('Firefox Mod Blur Installer starts...')
@@ -128,8 +134,8 @@ class Menu:
 
             validate = True
             # Only one style can be selected for these mods
-            if mod in ['Auto hide Mods', 'Compact extensions menu', 'Min-max-close control buttons']:
-                validate = single_choice_validation
+            if mod in self.single_choice_mods:
+                validate = self._single_choice_validation
                 color_print('Select only 1 style', YELLOW)
 
             sel = inquirer.checkbox('[Space]: toggle a selection [Enter]: submit selections',
