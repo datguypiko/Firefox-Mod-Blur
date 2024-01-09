@@ -128,7 +128,7 @@ class Menu:
 
             validate = True
             # Only one style can be selected for these mods
-            if mod in ['Compact extensions menu', 'Min-max-close control buttons']:
+            if mod in ['Auto hide Mods', 'Compact extensions menu', 'Min-max-close control buttons']:
                 validate = single_choice_validation
                 color_print('Select only 1 style', YELLOW)
 
@@ -140,26 +140,32 @@ class Menu:
 
             for sub_mod in mods_to_install:
                 sub_mod_dir = path.join(mod_dir, sub_mod)
-                css = find_css_under_dir(sub_mod_dir)
-                if css is None:
-                    color_print(f"For '{sub_mod}':", YELLOW)
-                    with open(path.join(sub_mod_dir, 'readme.md')) as f:
-                        color_print(f.read(), YELLOW)
-                else:
-                    shutil.copy(path.join(sub_mod_dir, css), self.chrome_dir)
+                css_name = find_css_under_dir(sub_mod_dir)
+                readme_path = path.join(sub_mod_dir, 'README.md')
+
+                if css_name is not None:
+                    shutil.copy(path.join(sub_mod_dir, css_name), self.chrome_dir)
                     color_print(f"[+] '{sub_mod}' was successfully installed!", GREEN)
+
+                if path.exists(readme_path):
+                    color_print(f"Notes of '{sub_mod}':", YELLOW)
+                    with open(readme_path) as f:
+                        color_print(f.read(), YELLOW)
+
                 config[mod][sub_mod] = 'y'
 
             for sub_mod in mods_to_uninstall:
                 sub_mod_dir = path.join(mod_dir, sub_mod)
-                css = find_css_under_dir(sub_mod_dir)
-                if css is None:
-                    color_print(f"For '{sub_mod}':", YELLOW)
-                    with open(path.join(sub_mod_dir, 'readme.md')) as f:
+                css_name = find_css_under_dir(sub_mod_dir)
+
+                if css_name is None:
+                    color_print(f"Notes of '{sub_mod}':", YELLOW)
+                    with open(path.join(sub_mod_dir, 'README.md')) as f:
                         color_print(f.read(), YELLOW)
                 else:
-                    os.remove(path.join(self.chrome_dir, css))
+                    os.remove(path.join(self.chrome_dir, css_name))
                     color_print(f"[-] '{sub_mod}' was successfully uninstalled!", GREEN)
+
                 del config[mod][sub_mod]
 
             print()

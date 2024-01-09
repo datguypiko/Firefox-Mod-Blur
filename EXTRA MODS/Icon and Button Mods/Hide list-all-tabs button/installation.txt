@@ -1,3 +1,0 @@
-Move file to chrome folder where userChrome and userContent sits.
-
-- Only shows the button when tabs overflow.

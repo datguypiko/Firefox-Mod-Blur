@@ -1,1 +1,0 @@
-Move "pinned_tabs_no_bg_color.css" file to chrome folder where userChrome.css and userContent.css files sit.
