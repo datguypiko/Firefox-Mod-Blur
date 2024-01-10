@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-import configparser
 import inquirer
+import json
 import os
 from os import path
 import shutil
 import sys
 import time
 
-CONF_NAME = '.firefox-mod-blur.conf'
+CONF_NAME = '.firefox-mod-blur.jsonc'
 RED = '\033[31m'
 GREEN = '\033[32m'
 YELLOW = '\033[33m'
@@ -21,19 +21,31 @@ def all_css_under_dir(dir):
 class Config:
     def __init__(self, conf_path):
         self.conf_path = conf_path
-        self.config = configparser.ConfigParser()
-        self.config.optionxform = str
-        self.config.read(conf_path)
+        self.config = json.loads('{}')
 
-    def get_config(self):
-        return self.config
+        if not path.exists(conf_path):
+            return
+
+        with open(conf_path) as f:
+            lines = f.readlines()
+        json_str = ''.join(lines[1:])
+        self.config = json.loads(json_str)
+
+    def __getitem__(self, key):
+        return self.config[key]
+    def __setitem__(self, key, val):
+        self.config[key] = val
+    def __delitem__(self, key):
+        del self.config[key]
+    def __contains__(self, key):
+        return key in self.config
 
     def write(self):
         with open(self.conf_path, 'w') as f:
-            f.write('; This file is maintained by Firefox Mod Blur Installer. ')
+            f.write('// This file is maintained by Firefox Mod Blur Installer. ')
             f.write('You should not modified it by yourself!\n')
         with open(self.conf_path, 'a') as f:
-            self.config.write(f)
+            json.dump(self.config, f)
 
 class Menu:
     def __init__(self, base_dir, profile_dir):
@@ -43,7 +55,7 @@ class Menu:
         self.conf_path = path.join(self.chrome_dir, CONF_NAME)
         self.config = Config(self.conf_path)
 
-        self.single_choice_mods = [
+        self.single_choice_categories = [
             'Auto hide Mods',
             'Compact extensions menu',
             'Min-max-close control buttons',
@@ -54,92 +66,90 @@ class Menu:
             return True
         raise inquirer.errors.ValidationError('', reason='You can only choose 1 of them!')
 
-    def _handle_selection(self, section, choices, single_choice, mod_dir):
+    def _install_mod(self, category_dir, category, mod):
+        mod_dir = path.join(category_dir, mod)
+        all_css = all_css_under_dir(mod_dir)
         readme_path = path.join(mod_dir, 'README.md')
-        if path.exists(readme_path) and mod_dir.split('/')[-1] != 'EXTRA THEMES':
+        extra_path = path.join(mod_dir, '.extra')
+
+        # install all .css files
+        for name in all_css:
+            shutil.copy(path.join(mod_dir, name), self.chrome_dir)
+        # install extra files
+        extra_files = []
+        if path.exists(extra_path):
+            with open(extra_path) as f:
+                extra_files = [line.rstrip() for line in f]
+        for rel_file_path in extra_files:
+            extra_file_path = path.join(mod_dir, rel_file_path)
+            name = rel_file_path.split('/')[-1]
+
+            if path.isdir(extra_file_path):
+                shutil.copytree(extra_file_path, path.join(self.chrome_dir, name))
+            else:
+                shutil.copy(extra_file_path, self.chrome_dir)
+
+        color_print(f"[+] '{mod}' was successfully installed!", GREEN)
+
+        # show README
+        if path.exists(readme_path):
+            color_print(f"Notes of '{mod}':", YELLOW)
+            with open(readme_path) as f:
+                color_print(f.read().rstrip(), YELLOW)
+
+        self.config[category][mod] = all_css + extra_files
+
+    def _uninstall_mod(self, category_dir, category, mod):
+        mod_dir = path.join(category_dir, mod)
+        readme_path = path.join(mod_dir, 'README.md')
+
+        for rel_path in self.config[category][mod]:
+            file_name = rel_path.split('/')[-1]
+            file_path = path.join(self.chrome_dir, file_name)
+
+            if path.isdir(file_path):
+                shutil.rmtree(file_path)
+            else:
+                os.remove(file_path)
+
+        color_print(f"[-] '{mod}' was successfully uninstalled!", GREEN)
+
+        # show README if this mod requires manual operation, e.g., Centered bookmarks bar items
+        if self.config[category][mod] == [] and path.exists(readme_path):
+            color_print(f"Notes of '{mod}':", YELLOW)
+            with open(readme_path) as f:
+                color_print(f.read().rstrip(), YELLOW)
+
+        del self.config[category][mod]
+
+    def _handle_selection(self, category_dir, category, choices, single_choice=False):
+        readme_path = path.join(category_dir, 'README.md')
+        if path.exists(readme_path) and category_dir.split('/')[-1] != 'EXTRA THEMES':
             with open(readme_path) as f:
                 color_print(f.read(), YELLOW)
 
         default = None
-        config = self.config.get_config()
-        if section in config:
-            default = list(config[section].keys())
+        if category in self.config:
+            default = list(self.config[category].keys())
         else:
-            config[section] = {}
+            self.config[category] = {}
 
         validate = self._single_choice_validation if single_choice else True 
 
         sel = inquirer.checkbox('[Space]: toggle a selection [Enter]: submit selections',
             choices=choices, default=default, validate=validate, carousel=True)
 
-        to_uninstall = [mod for mod in config[section] if mod not in sel]
-        to_install = [mod for mod in sel if mod not in config[section]]
+        to_uninstall = [mod for mod in self.config[category].keys() if mod not in sel]
+        to_install = [mod for mod in sel if mod not in self.config[category].keys()]
 
         for mod in to_uninstall:
-            sub_mod_dir = path.join(mod_dir, mod)
-            all_css = all_css_under_dir(sub_mod_dir)
-            readme_path = path.join(sub_mod_dir, 'README.md')
-            extra_path = path.join(sub_mod_dir, '.extra')
-
-            # uninstall all .css files
-            for name in all_css:
-                os.remove(path.join(self.chrome_dir, name))
-            # uninstall extra files
-            if path.exists(extra_path):
-                with open(extra_path) as f:
-                    for line in f:
-                        name = line.rstrip().split('/')[-1]
-                        extra_file_path = path.join(self.chrome_dir, name)
-                        if path.isdir(extra_file_path):
-                            shutil.rmtree(extra_file_path)
-                        else:
-                            os.remove(extra_file_path)
-
-            color_print(f"[-] '{mod}' was successfully uninstalled!", GREEN)
-
-            # show README if this mod requires manual operation, e.g., Centered bookmarks bar items
-            if all_css == [] and not path.exists(extra_path) and path.exists(readme_path):
-                color_print(f"Notes of '{mod}':", YELLOW)
-                with open(readme_path) as f:
-                    color_print(f.read().rstrip(), YELLOW)
-
-            del config[section][mod]
-
+            self._uninstall_mod(category_dir, category, mod)
         for mod in to_install:
-            sub_mod_dir = path.join(mod_dir, mod)
-            all_css = all_css_under_dir(sub_mod_dir)
-            readme_path = path.join(sub_mod_dir, 'README.md')
-            extra_path = path.join(sub_mod_dir, '.extra')
-
-            # install all .css files
-            for name in all_css:
-                shutil.copy(path.join(sub_mod_dir, name), self.chrome_dir)
-            # install extra files
-            if path.exists(extra_path):
-                with open(extra_path) as f:
-                    for line in f:
-                        name = line.rstrip().split('/')[-1]
-                        extra_file_path = path.join(sub_mod_dir, line.rstrip())
-
-                        if path.isdir(extra_file_path):
-                            shutil.copytree(extra_file_path, path.join(self.chrome_dir, name))
-                        else:
-                            shutil.copy(extra_file_path, self.chrome_dir)
-
-            color_print(f"[+] '{mod}' was successfully installed!", GREEN)
-
-            # show README
-            if path.exists(readme_path):
-                color_print(f"Notes of '{mod}':", YELLOW)
-                with open(readme_path) as f:
-                    color_print(f.read().rstrip(), YELLOW)
-
-            config[section][mod] = 'y'
-
+            self._install_mod(category_dir, category, mod)
         print()
 
-        if len(config[section]) == 0:
-            del config[section]
+        if len(self.config[category]) == 0:
+            del self.config[category]
         self.config.write()
 
     def main(self):
@@ -203,20 +213,20 @@ class Menu:
 
     def mods(self):
         mod_base_dir = path.join(self.base_dir, 'EXTRA MODS')
-        mods = [entry for entry in os.listdir(mod_base_dir) if path.isdir(path.join(mod_base_dir, entry))]
-        mods.append('Quit')
+        categories = [entry for entry in os.listdir(mod_base_dir) if path.isdir(path.join(mod_base_dir, entry))]
+        categories.append('Quit')
 
         while True:
-            mod = inquirer.list_input('Select Extra Mods', choices=mods, carousel=True)
+            category = inquirer.list_input('Select Extra Mods', choices=categories, carousel=True)
 
-            if mod == 'Quit':
+            if category == 'Quit':
                 return
              
-            mod_dir = path.join(mod_base_dir, mod)
-            sub_mods = sorted([dir[0][len(mod_dir) + 1:] for dir in os.walk(mod_dir)])
-            sub_mods = sub_mods[1:]  # remove mod directory
+            category_dir = path.join(mod_base_dir, category)
+            mods = sorted([dir[0][len(category_dir) + 1:] for dir in os.walk(category_dir)])
+            mods = mods[1:]  # ignore category directory
 
-            self._handle_selection(mod, sub_mods, mod in self.single_choice_mods, mod_dir)
+            self._handle_selection(category_dir, category, mods, category in self.single_choice_categories)
 
     def themes(self):
         theme_base_dir = path.join(self.base_dir, 'EXTRA THEMES')
@@ -227,7 +237,7 @@ class Menu:
             if dir[1] == [] and dir[0].split('/')[-1] not in excluded_dirs
         ])
 
-        self._handle_selection('theme', themes, True, theme_base_dir)
+        self._handle_selection(theme_base_dir, 'theme', themes, True)
 
     def update(self):
         # TODO
