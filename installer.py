@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import inquirer
+from inquirer.errors import ValidationError
 import json
 import os
 from os import path
@@ -64,7 +65,7 @@ class Menu:
     def _single_choice_validation(self, _, selection):
         if len(selection) <= 1:
             return True
-        raise inquirer.errors.ValidationError('', reason='You can only choose 1 of them!')
+        raise ValidationError('', reason='You can only choose 1 of them!')
 
     def _install_mod(self, category_dir, category, mod):
         mod_dir = path.join(category_dir, mod)
