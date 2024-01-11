@@ -1485,3 +1485,14 @@ toolbar
 #forward-button .toolbarbutton-icon{
   padding: 8.5px !important;
 }
+
+/* Contrainer extension code */
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([usercontextid],[pinned]) .tab-background:not([selected]) {
+  background: var(--identity-tab-color) !important;
+  opacity: 0.3 !important;
+}
+
+/* Contrainer extension code */
+#tabbrowser-tabs .tab-context-line {
+  display:none !important;
+}
