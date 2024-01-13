@@ -350,6 +350,7 @@ class Menu:
 
 
     def uninstall(self):
+        color_print("The directory 'chrome/' will be removed, including your own files.", YELLOW)
         confirm_to_uninstall = inquirer.confirm('Are you sure you want to uninstalled Firefox Mod Blur?', default=False)
         if not confirm_to_uninstall:
             return
