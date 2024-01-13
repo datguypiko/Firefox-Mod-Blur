@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import filecmp
 import inquirer
 from inquirer.errors import ValidationError
 import json
@@ -16,8 +17,26 @@ YELLOW = '\033[33m'
 def color_print(msg, color=''):
     print(f'{color}{msg}\033[39m')
 
-def all_css_under_dir(dir):
-    return [entry for entry in os.listdir(dir) if '.css' in entry]
+def copy_file_or_dir(src, dst):
+    name = src.split('/')[-1]
+    if path.isdir(src):
+        shutil.copytree(src, path.join(dst, name))
+    else:
+        shutil.copy(src, dst)
+
+def remove_file_or_dir(p):
+    if path.isdir(p):
+        shutil.rmtree(p)
+    else:
+        os.remove(p)
+
+def backup(dir, file_name):
+    file_path = path.join(dir, file_name)
+    ts = int(time.time())
+    backup_name = f'{file_name}.{ts}.bak'
+    backup_path = path.join(dir, backup_name)
+    os.rename(file_path, backup_path)
+    return backup_name
 
 class Config:
     def __init__(self, conf_path):
@@ -40,6 +59,9 @@ class Config:
         del self.config[key]
     def __contains__(self, key):
         return key in self.config
+
+    def keys(self):
+        return self.config.keys()
 
     def write(self):
         with open(self.conf_path, 'w') as f:
@@ -67,61 +89,78 @@ class Menu:
             return True
         raise ValidationError('', reason='You can only choose 1 of them!')
 
-    def _install_mod(self, category_dir, category, mod):
-        mod_dir = path.join(category_dir, mod)
-        all_css = all_css_under_dir(mod_dir)
-        readme_path = path.join(mod_dir, 'README.md')
-        extra_path = path.join(mod_dir, '.extra')
+    def _get_files_to_be_installed(self, dir):
+        all_css = [entry for entry in os.listdir(dir) if '.css' in entry]
 
-        # install all .css files
-        for name in all_css:
-            shutil.copy(path.join(mod_dir, name), self.chrome_dir)
-        # install extra files
         extra_files = []
+        extra_path = path.join(dir, '.extra')
         if path.exists(extra_path):
             with open(extra_path) as f:
                 extra_files = [line.rstrip() for line in f]
-        for rel_file_path in extra_files:
-            extra_file_path = path.join(mod_dir, rel_file_path)
-            name = rel_file_path.split('/')[-1]
 
-            if path.isdir(extra_file_path):
-                shutil.copytree(extra_file_path, path.join(self.chrome_dir, name))
-            else:
-                shutil.copy(extra_file_path, self.chrome_dir)
+        return all_css + extra_files
 
-        color_print(f"[+] '{mod}' was successfully installed!", GREEN)
+    def _install_files(self, mod_dir, files):
+        for rel_path in files:
+            # Contents listed in .extra are relative paths of extra files or directories with respect to `mod_dir`.
+            # A path prefixed with '-' indicates that it will not get updated. This is useful for wallpaper/.
+            if rel_path[0] == '-':
+                rel_path = rel_path[1:]
+            copy_file_or_dir(path.join(mod_dir, rel_path), self.chrome_dir)
 
-        # show README
-        if path.exists(readme_path):
-            color_print(f"Notes of '{mod}':", YELLOW)
-            with open(readme_path) as f:
-                color_print(f.read().rstrip(), YELLOW)
+    def _compare_and_update(self, mod_dir, old_files, new_files):
+        to_add = [p for p in new_files if p not in old_files]
+        to_remove = [p for p in old_files if p not in new_files]
+        to_check = [(p, p.split('/')[-1]) for p in new_files if p in old_files]  # (src_rel_path, dst_rel_path)
 
-        self.config[category][mod] = all_css + extra_files
+        for rel_path in to_add:
+            if rel_path[0] == '-':
+                rel_path = rel_path[1:]
+            file_path = path.join(mod_dir, rel_path)
+            copy_file_or_dir(file_path, self.chrome_dir)
 
-    def _uninstall_mod(self, category_dir, category, mod):
-        mod_dir = path.join(category_dir, mod)
-        readme_path = path.join(mod_dir, 'README.md')
-
-        for rel_path in self.config[category][mod]:
+        for rel_path in to_remove:
             file_name = rel_path.split('/')[-1]
             file_path = path.join(self.chrome_dir, file_name)
 
-            if path.isdir(file_path):
-                shutil.rmtree(file_path)
-            else:
-                os.remove(file_path)
+            if rel_path[0] == '-':
+                backup_name = backup(self.chrome_dir, file_name)
+                color_print(f"From now on, '{file_name}' will get updated, so the original '{file_name}' was backuped as '{backup_name}'.", YELLOW)
+                return
 
-        color_print(f"[-] '{mod}' was successfully uninstalled!", GREEN)
+            remove_file_or_dir(file_path)
 
-        # show README if this mod requires manual operation, e.g., Centered bookmarks bar items
-        if self.config[category][mod] == [] and path.exists(readme_path):
-            color_print(f"Notes of '{mod}':", YELLOW)
-            with open(readme_path) as f:
-                color_print(f.read().rstrip(), YELLOW)
+        has_modified = False
 
-        del self.config[category][mod]
+        while len(to_check) > 0:
+            src_rel_path, dst_rel_path = to_check.pop()
+            if src_rel_path[0] == '-':
+                continue
+
+            src_file_path = path.join(mod_dir, src_rel_path)
+            dst_file_path = path.join(self.chrome_dir, dst_rel_path)
+
+            if path.isdir(src_file_path):
+                dcmp = filecmp.dircmp(src_file_path, dst_file_path)
+
+                for file_name in dcmp.right_only:
+                    file_path = path.join(dst_file_path, file_name)
+                    remove_file_or_dir(file_path)
+                for file_name in dcmp.left_only:
+                    file_path = path.join(src_file_path, file_name)
+                    copy_file_or_dir(file_path, dst_file_path)
+                for file_name in dcmp.common:
+                    new_src_rel_path = path.join(src_rel_path, file_name)
+                    new_dst_rel_path = path.join(dst_rel_path, file_name)
+                    to_check.append((new_src_rel_path, new_dst_rel_path))
+
+                if dcmp.right_only != [] or dcmp.left_only != []:
+                    has_modified = True
+            elif not filecmp.cmp(src_file_path, dst_file_path):
+                shutil.copy(src_file_path, dst_file_path)
+                has_modified = True
+
+        return to_add != [] or to_remove != [] or has_modified
 
     def _handle_selection(self, category_dir, category, choices, single_choice=False):
         readme_path = path.join(category_dir, 'README.md')
@@ -144,9 +183,43 @@ class Menu:
         to_install = [mod for mod in sel if mod not in self.config[category].keys()]
 
         for mod in to_uninstall:
-            self._uninstall_mod(category_dir, category, mod)
+            mod_dir = path.join(category_dir, mod)
+            readme_path = path.join(mod_dir, 'README.md')
+
+            for rel_path in self.config[category][mod]:
+                file_name = rel_path.split('/')[-1]
+                file_path = path.join(self.chrome_dir, file_name)
+                if rel_path[0] == '-':
+                    backup_name = backup(self.chrome_dir, file_path)
+                    color_print(f"'{file_name}' was backuped as '{backup_name}'", YELLOW)
+                    continue
+                remove_file_or_dir(file_path)
+            color_print(f"[-] '{mod}' was successfully uninstalled!", GREEN)
+
+            # show README if this mod requires manual operation, e.g., Centered bookmarks bar items
+            if self.config[category][mod] == [] and path.exists(readme_path):
+                color_print(f"Notes of '{mod}':", YELLOW)
+                with open(readme_path) as f:
+                    color_print(f.read().rstrip(), YELLOW)
+
+            del self.config[category][mod]
+
         for mod in to_install:
-            self._install_mod(category_dir, category, mod)
+            mod_dir = path.join(category_dir, mod)
+            readme_path = path.join(mod_dir, 'README.md')
+
+            files = self._get_files_to_be_installed(mod_dir)
+            self._install_files(mod_dir, files)
+            color_print(f"[+] '{mod}' was successfully installed!", GREEN)
+
+            # show README
+            if path.exists(readme_path):
+                color_print(f"Notes of '{mod}':", YELLOW)
+                with open(readme_path) as f:
+                    color_print(f.read().rstrip(), YELLOW)
+
+            self.config[category][mod] = files
+
         print()
 
         if len(self.config[category]) == 0:
@@ -184,19 +257,15 @@ class Menu:
     def install(self):
         # create chrome/ in profile directory
         if path.exists(self.chrome_dir):
-            ts = int(time.time())
-            chrome_backup_path = path.join(self.profile_dir, f'chrome.{ts}.bak')
-
-            os.rename(self.chrome_dir, chrome_backup_path)
-            color_print(f"'{self.chrome_dir}' already exists, and it was renamed to '{chrome_backup_path}'", YELLOW)
+            backup_name = backup(self.profile_dir, 'chrome')
+            color_print(f"'{self.chrome_dir}' already exists, and it was renamed to '{backup_name}'", YELLOW)
 
         os.mkdir(self.chrome_dir)
 
         # copy essential files
-        shutil.copy(path.join(self.base_dir, 'userChrome.css'), self.chrome_dir)
-        shutil.copy(path.join(self.base_dir, 'userContent.css'), self.chrome_dir)
-        shutil.copytree(path.join(self.base_dir, 'image'), path.join(self.chrome_dir, 'image'))
-
+        files = self._get_files_to_be_installed(self.base_dir)
+        self._install_files(self.base_dir, files)
+        self.config['essential'] = files
         color_print(f"Successfully installed to '{self.chrome_dir}'!", GREEN)
         print()
 
@@ -241,8 +310,44 @@ class Menu:
         self._handle_selection(theme_base_dir, 'theme', themes, True)
 
     def update(self):
-        # TODO
-        pass
+        has_updated = False
+
+        # update essential files
+        old_files = self.config['essential']
+        new_files = self._get_files_to_be_installed(self.base_dir)
+        updated = self._compare_and_update(self.base_dir, old_files, new_files)
+        if updated:
+            has_updated = True
+            color_print('[^] essential files were successfully updated!', GREEN)
+        else:
+            print('[=] there was no update for essential files.')
+
+        # update mods/themes
+        categories = list(self.config.keys())  # prevent modifying the dictionary during iteration
+        for category in categories:
+            if category == 'essential':
+                continue
+
+            mods = list(self.config[category].keys())
+            old_files_of_each_mod = list(self.config[category].values())
+
+            for mod, old_files in zip(mods, old_files_of_each_mod):
+                category_dir = 'EXTRA THEMES' if category == 'theme' \
+                    else path.join(self.base_dir, 'EXTRA MODS', category)
+                mod_dir = path.join(category_dir, mod)
+                new_files = self._get_files_to_be_installed(mod_dir)
+                updated = self._compare_and_update(mod_dir, old_files, new_files)
+                if updated:
+                    has_updated = True
+                    color_print(f'[^] {mod} was successfully updated!', GREEN)
+                else:
+                    print(f'[=] there is no update for {mod}.')
+
+        print()
+        if not has_updated:
+            color_print('Note: you have to pull the repository by yourself!', YELLOW)
+        print()
+
 
     def uninstall(self):
         confirm_to_uninstall = inquirer.confirm('Are you sure you want to uninstalled Firefox Mod Blur?', default=False)
