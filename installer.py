@@ -18,7 +18,7 @@ def color_print(msg, color=''):
     print(f'{color}{msg}\033[39m')
 
 def copy_file_or_dir(src, dst):
-    name = src.split('/')[-1]
+    name = path.basename(src)
     if path.isdir(src):
         shutil.copytree(src, path.join(dst, name))
     else:
@@ -111,7 +111,7 @@ class Menu:
     def _compare_and_update(self, mod_dir, old_files, new_files):
         to_add = [p for p in new_files if p not in old_files]
         to_remove = [p for p in old_files if p not in new_files]
-        to_check = [(p, p.split('/')[-1]) for p in new_files if p in old_files]  # (src_rel_path, dst_rel_path)
+        to_check = [(p, path.basename(p)) for p in new_files if p in old_files]  # (src_rel_path, dst_rel_path)
 
         for rel_path in to_add:
             if rel_path[0] == '-':
@@ -120,7 +120,7 @@ class Menu:
             copy_file_or_dir(file_path, self.chrome_dir)
 
         for rel_path in to_remove:
-            file_name = rel_path.split('/')[-1]
+            file_name = path.basename(rel_path)
             file_path = path.join(self.chrome_dir, file_name)
 
             if rel_path[0] == '-':
@@ -164,7 +164,7 @@ class Menu:
 
     def _handle_selection(self, category_dir, category, choices, single_choice=False):
         readme_path = path.join(category_dir, 'README.md')
-        if path.exists(readme_path) and category_dir.split('/')[-1] != 'EXTRA THEMES':
+        if path.exists(readme_path) and path.basename(category_dir) != 'EXTRA THEMES':
             with open(readme_path) as f:
                 color_print(f.read(), YELLOW)
 
@@ -187,7 +187,7 @@ class Menu:
             readme_path = path.join(mod_dir, 'README.md')
 
             for rel_path in self.config[category][mod]:
-                file_name = rel_path.split('/')[-1]
+                file_name = path.basename(rel_path)
                 file_path = path.join(self.chrome_dir, file_name)
                 if rel_path[0] == '-':
                     backup_name = backup(self.chrome_dir, file_path)
@@ -304,7 +304,7 @@ class Menu:
         themes = sorted([
             dir[0][len(theme_base_dir) + 1:]
             for dir in os.walk(theme_base_dir)
-            if dir[1] == [] and dir[0].split('/')[-1] not in excluded_dirs
+            if dir[1] == [] and path.basename(dir[0]) not in excluded_dirs
         ])
 
         self._handle_selection(theme_base_dir, 'theme', themes, True)
