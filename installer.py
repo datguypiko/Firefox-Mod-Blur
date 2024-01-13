@@ -13,9 +13,11 @@ CONF_NAME = '.firefox-mod-blur.jsonc'
 RED = '\033[31m'
 GREEN = '\033[32m'
 YELLOW = '\033[33m'
+BLUE = '\033[34m'
+RESET = '\033[39m'
 
 def color_print(msg, color=''):
-    print(f'{color}{msg}\033[39m')
+    print(f'{color}{msg}{RESET}')
 
 def copy_file_or_dir(src_path, dst_dir):
     name = path.basename(src_path)
@@ -237,7 +239,7 @@ class Menu:
         print()
 
         if path.exists(self._conf_path):
-            choices = ['Manage Mods', 'Manage Themes', 'Update', 'Uninstall', 'Quit']
+            choices = ['Manage Mods', 'Manage Themes', 'Update', 'List', 'Uninstall', 'Quit']
         else:
             choices = ['Install', 'Quit']
 
@@ -254,6 +256,8 @@ class Menu:
                 self.themes()
             elif sel == 'Update':
                 self.update()
+            elif sel == 'List':
+                self.list()
             elif sel == 'Uninstall':
                 self.uninstall()
                 keep = False
@@ -350,6 +354,27 @@ class Menu:
         print()
         if not has_updated:
             color_print('Note: you have to pull the repository by yourself!', YELLOW)
+        print()
+
+    def list(self):
+        if len(self._config.keys()) == 1:
+            print('Installed Mods: None')
+        else:
+            print('Installed Mods:')
+            for category in self._config.keys():
+                if category == 'essential' or category == 'theme':
+                    continue
+                color_print(f'* {category}', BLUE)
+                for mod in self._config[category].keys():
+                    bullet = f'{RED}>{RESET}'
+                    print(f'  {bullet} {mod}')
+        print()
+
+        print('Installed Theme: ', end='')
+        if 'theme' in self._config.keys():
+            color_print(list(self._config['theme'].keys())[0], GREEN)
+        else:
+            print('None')
         print()
 
     def uninstall(self):
