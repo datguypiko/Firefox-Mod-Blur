@@ -357,11 +357,12 @@ class Menu:
         print()
 
     def list(self):
-        if len(self._config.keys()) == 1:
+        mod_categories = [c for c in self._config.keys() if c != 'essential' and c != 'theme']
+        if mod_categories == []:
             print('Installed Mods: None')
         else:
             print('Installed Mods:')
-            for category in self._config.keys():
+            for category in mod_categories:
                 if category == 'essential' or category == 'theme':
                     continue
                 color_print(f'* {category}', BLUE)
