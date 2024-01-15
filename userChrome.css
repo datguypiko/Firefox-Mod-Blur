@@ -900,10 +900,6 @@ menupopup#contentAreaContextMenu {
   --panel-padding: 0 0 5px !important;
 }
 
-.menupopup-arrowscrollbox {
-  overflow: hidden !important;
-}
-
 menupopup
   menuitem:is(#context-openlinkintab, #context-undo, #context-viewimage) {
   margin-top: 5px !important;
