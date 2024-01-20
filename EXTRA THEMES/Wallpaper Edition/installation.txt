@@ -11,6 +11,5 @@ File structure:
 chrome -> userChrome.css
 chrome -> userContent.css
 chrome -> [your selected theme file].css
-chrome -> /image/
-chrome -> /wallpaper/
+chrome -> /ASSETS/
 
