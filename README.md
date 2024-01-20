@@ -1,7 +1,7 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular</h2>
 
 <p align="center">
-<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v121.0-blue?style=flat&logo=firefox&logoColor=white"></a>
+<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v121.0.1-blue?style=flat&logo=firefox&logoColor=white"></a>
 <a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-22/12/2023-blueviolet?style=flat"></a>
 <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat">
 	
@@ -366,6 +366,12 @@ Only need to replace the cleaner_extensions_menu.css file if you are using the e
 
  `13/02/2022` `-` Added new optional file for default size scrollbar. The color stays dark. Works best with new Windows 11 scrollbar. Use "userContent-Windows11_DefaultSizeScrollbar.css" file and rename it to "userContent.css".
 	
+</details>
+
+<details><summary><h2>:page_facing_up: Other</h2></summary>
+	
+> Old version files backup: https://github.com/datguypiko/Firefox-old-files-backup
+
 </details>
 
 <details><summary><h2>:page_facing_up: Sources</h2></summary>
