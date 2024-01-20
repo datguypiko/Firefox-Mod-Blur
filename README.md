@@ -1,5 +1,7 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular</h2>
 
+ <h6 align="center"> :wrench: Version 3.0 - Working on functionality overhaul. Responsive oneliner, toggling extra mods through about:config and other adjustments. </h2>
+
 <p align="center">
 <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v121.0.1-blue?style=flat&logo=firefox&logoColor=white"></a>
 <a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-22/12/2023-blueviolet?style=flat"></a>
