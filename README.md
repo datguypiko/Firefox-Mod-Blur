@@ -149,11 +149,9 @@ There are two settings to change in firefox (pictures below).
 
 	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userContent.css`
 
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `image` `/`
+	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `ASSETS` `/`
 	
 	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
-	 
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `wallpaper` `/` `(for wallpaper theme)`
 
 </br>
 
