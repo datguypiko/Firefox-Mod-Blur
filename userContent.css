@@ -1,9 +1,7 @@
 /* ----- Included functions ----- */
 @import url("spill-style-part2-file.css");
 @import url("thin_scrollbar_windows10.css");
-@import url("style_1-wallpaper-edition.css");
-@import url("style_2-wallpaper-edition.css");
-@import url("style_3-wallpaper-edition.css");
+@import url("wallpaper-edition.css");
 @import url("remove_homepage_shortcut_title_text.css");
 @import url("circular_homepage_shortcuts.css");
 
@@ -54,7 +52,7 @@
     --firefoxcss-shortcut-item-top-border-hover: #97979791;
 
     --firefoxcss-customize-menu: #1e1e1e8c;
-    --firefoxcss-customize-menu-bg-image: url("image/noise-512x512.png");
+    --firefoxcss-customize-menu-bg-image: url("ASSETS/other/noise-512x512.png");
     --firefoxcss-customize-menu-dropdown: #1e1e1e80;
     --firefoxcss-input-focus: white;
     /*  no changes */
@@ -149,7 +147,7 @@ body {
 
   /* html.private {
 		background-color: #1e1e1e80 !important;
-		background-image: url(image/.jpg) !important ;
+		background-image: url(ASSETS/icons/.jpg) !important ;
 		background-size: cover  !important;
 	} */
 
@@ -490,7 +488,7 @@ url("about:newtab") {
   }
 
   /*.outer-wrapper .search-wrapper .search-handoff-button {
-     background-image: url("image/search-glass.svg") !important;
+     background-image: url("ASSETS/icons/search-glass.svg") !important;
      background-size: 16px !important;  
   }*/
 }

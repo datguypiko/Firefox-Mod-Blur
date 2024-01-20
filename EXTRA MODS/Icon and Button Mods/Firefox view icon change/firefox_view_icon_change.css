@@ -1,12 +1,12 @@
 /* ----- Firefox view icon change ----- */
 @media (prefers-color-scheme: dark) {
 	#navigator-toolbox #firefox-view-button {
-		list-style-image: url(image/files.svg) !important;
+		list-style-image: url(ASSETS/icons/files.svg) !important;
 	}
 }
 
 @media (prefers-color-scheme: light) {
 	#navigator-toolbox #firefox-view-button {
-		list-style-image: url(image/files-light.svg) !important;
+		list-style-image: url(ASSETS/icons/files-light.svg) !important;
 	}
 }

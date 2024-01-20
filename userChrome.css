@@ -404,60 +404,60 @@ Order of Toolbars
 about:config -> svg.context-properties.content.enabled -> true*/
 @media (prefers-color-scheme: dark) {
   #PanelUI-menu-button {
-    list-style-image: url(image/menu.svg) !important;
+    list-style-image: url(ASSETS/icons/menu.svg) !important;
   }
   :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
-    list-style-image: url(image/menu-private.svg) !important;
+    list-style-image: url(ASSETS/icons/menu-private.svg) !important;
   }
 
   #find-button {
-    list-style-image: url(image/search.svg) !important;
+    list-style-image: url(ASSETS/icons/search.svg) !important;
   }
 
   #privatebrowsing-button {
-    list-style-image: url(image/private.svg) !important;
+    list-style-image: url(ASSETS/icons/private.svg) !important;
   }
 
   #forward-button,
   menugroup > #context-forward,
   #search-container #searchbar .search-go-button,
   #urlbar-go-button {
-    list-style-image: url(image/right-arrow.svg) !important;
+    list-style-image: url(ASSETS/icons/right-arrow.svg) !important;
   }
 
   #back-button,
   menugroup > #context-back {
-    list-style-image: url(image/left-arrow.svg) !important;
+    list-style-image: url(ASSETS/icons/left-arrow.svg) !important;
   }
 }
 
 @media (prefers-color-scheme: light) {
   #PanelUI-menu-button {
-    list-style-image: url(image/menu-light.svg) !important;
+    list-style-image: url(ASSETS/icons/menu-light.svg) !important;
   }
 
   :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
-    list-style-image: url(image/menu-private-light.svg) !important;
+    list-style-image: url(ASSETS/icons/menu-private-light.svg) !important;
   }
 
   #find-button {
-    list-style-image: url(image/search-light.svg) !important;
+    list-style-image: url(ASSETS/icons/search-light.svg) !important;
   }
 
   #privatebrowsing-button {
-    list-style-image: url(image/private-light.svg) !important;
+    list-style-image: url(ASSETS/icons/private-light.svg) !important;
   }
 
   #forward-button,
   menugroup > #context-forward,
   #search-container #searchbar .search-go-button,
   #urlbar-go-button {
-    list-style-image: url(image/right-arrow-light.svg) !important;
+    list-style-image: url(ASSETS/icons/right-arrow-light.svg) !important;
   }
 
   #back-button,
   menugroup > #context-back {
-    list-style-image: url(image/left-arrow-light.svg) !important;
+    list-style-image: url(ASSETS/icons/left-arrow-light.svg) !important;
   }
 }
 
@@ -1482,13 +1482,25 @@ toolbar
   padding: 8.5px !important;
 }
 
-/* Contrainer extension code */
+/* Container extension code */
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([usercontextid],[pinned]) .tab-background:not([selected]) {
   background: var(--identity-tab-color) !important;
   opacity: 0.3 !important;
 }
 
-/* Contrainer extension code */
+/* Container extension code */
 #tabbrowser-tabs .tab-context-line {
   display:none !important;
 }
+
+/* #appcontent
+  > #tabbrowser-tabbox
+  > #tabbrowser-tabpanels
+  > .deck-selected
+  > .browserContainer
+  > .browserStack
+  > browser {
+  border-radius: 12px !important;
+  margin: 8px !important;
+  z-index: 3;
+} */

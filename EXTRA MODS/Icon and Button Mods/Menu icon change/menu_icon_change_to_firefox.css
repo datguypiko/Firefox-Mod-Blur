@@ -1,24 +1,24 @@
 /* Change main menu icon to firefox logo */
 @media (prefers-color-scheme: dark) {
   #navigator-toolbox #PanelUI-menu-button {
-    list-style-image: url(image/firefox.svg) !important;
+    list-style-image: url(ASSETS/icons/firefox.svg) !important;
   }
 
   :root[privatebrowsingmode="temporary"]
     #navigator-toolbox
     #PanelUI-menu-button {
-    list-style-image: url(image/firefox-private.svg) !important;
+    list-style-image: url(ASSETS/icons/firefox-private.svg) !important;
   }
 }
 
 @media (prefers-color-scheme: light) {
   #navigator-toolbox #PanelUI-menu-button {
-    list-style-image: url(image/firefox-light.svg) !important;
+    list-style-image: url(ASSETS/icons/firefox-light.svg) !important;
   }
 
   :root[privatebrowsingmode="temporary"]
     #navigator-toolbox
     #PanelUI-menu-button {
-    list-style-image: url(image/firefox-private-light.svg) !important;
+    list-style-image: url(ASSETS/icons/firefox-private-light.svg) !important;
   }
 }
