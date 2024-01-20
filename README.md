@@ -157,6 +157,14 @@ There are two settings to change in firefox (pictures below).
 
 </br>
 
+<h2>:wrench: Easy Installation Script by Alan-Kuan </h2>
+
+Download https://github.com/Alan-Kuan/Firefox-Mod-Blur
+
+Installation Instructions https://github.com/Alan-Kuan/Firefox-Mod-Blur#page_with_curl-installer-script
+
+</br>
+
 <h2>:wrench: MicaForEveryone Installation</h2>
 
  ##### ❗❗❗ DEPRECATED WITH FIREFOX v117 and up ❗❗❗
