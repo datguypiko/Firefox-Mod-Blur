@@ -21,6 +21,10 @@
     transition: transform 50ms linear 500ms !important;
     z-index: 2 !important;
   }
+
+    :root[BookmarksToolbarOverlapsBrowser] #PersonalToolbar:not([customizing]) {
+      margin-bottom: calc(-1 * var(--bookmarks-toolbar-overlapping-browser-height)) !important;
+    }
   
   #PlacesToolbarItems > .bookmark-item {
     padding-block: var(--uc-bm-padding) !important;
