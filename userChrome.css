@@ -1483,7 +1483,7 @@ toolbar
 }
 
 /* Container extension code */
-#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([usercontextid],[pinned]) .tab-background:not([selected]) {
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[usercontextid] .tab-background:not([selected]) {
   background: var(--identity-tab-color) !important;
   opacity: 0.3 !important;
 }
