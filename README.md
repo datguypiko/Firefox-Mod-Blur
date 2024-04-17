@@ -12,8 +12,7 @@
 </p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
-
-<h6 align="center"> :wrench: Version 3.0 - Working on functionality overhaul. Responsive oneliner, toggling extra mods through about:config and other adjustments.(some time in the future, when I have time to finish it)   </h2>
+<h6 align="center"> :wrench: Version 3.0 - Working on functionality overhaul. Responsive oneliner, toggling extra mods through about:config and other adjustments.(some time in the future, when I have time to finish it)   </h6>
 
 ## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
@@ -113,47 +112,42 @@
 ###### and [more](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/EXTRA%20MODS)..
 
 <h2>:wrench: Installation</h2>
-<details><summary>How to Toggle between <code>Light</code> and <code>Dark</code> theme :warning:</summary>
-	
-	
-</br>
 
-There are two settings to change in firefox (pictures below).
-
-</br>
-
-- Setting both to auto makes it adapt to your operating system theme.
-- Setting Theme to <code>Light</code> or <code>Dark</code> will force it no matter of Operating System colors.
-- Best to leave Website Appearance settings set to auto and just Change to preferred Theme.
-
-</br>
-
-1. Website appearance (changes new tab and websites colors)
-![image](https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/a5f6726e-6bc0-4237-a770-b60ffb144c95)
-
-2. Theme (changes toolbar and browser text colors, also sets text colors to new tab page).
-![image](https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/76ddf071-7a20-46fa-a029-fc28f96862a9)
-</details>
-
-<details><summary>I use firefox integrated Flexible space for spacing <sup>[show image]</sup></summary>
-
-![image](https://user-images.githubusercontent.com/61329159/197362629-b5c6e49a-92c4-4d08-aada-f8883e7c471f.png)</details>
+> [!IMPORTANT]
+> ##### 1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
+> ##### 2. Download latest or your preferred firefox version [.zip file](https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest). 
+> ##### 3. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
+> ##### 4. Put `userChrome.css`, `userContent.css`, `ASSETS`  in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
+> ##### 5. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` to inside of your `chrome` folder.
+> ##### 6. File Structure:
+>
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userChrome.css`
+>
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userContent.css`
+>
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `ASSETS` `/`
+>	
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
 
 
-1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
-2. Download latest or your preferred firefox version [.zip file](https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest). 
-3. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
-4. Put `userChrome.css`, `userContent.css`, `image`  in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
-5. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` inside your `chrome` folder.
-6. File Structure:
+> [!TIP]
+> <details><summary>How to Toggle between <code>Light</code> and <code>Dark</code> theme:</summary>
+> </br> There are two settings to change in firefox (pictures below). </br>
+>
+> - Setting both to auto makes it adapt to your operating system theme.
+> - Setting Theme(2) to <code>Light</code> or <code>Dark</code> will force it no matter of Operating System colors.
+> - Best to leave Website Appearance(1) settings set to auto and just Change to preferred Theme(2). </br>
+>
+> 1. Website appearance (changes new tab and websites colors)
+> ![image](https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/a5f6726e-6bc0-4237-a770-b60ffb144c95)
+> 2. Theme (changes toolbar and browser text colors, also sets text colors to new tab page).
+> ![image](https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/76ddf071-7a20-46fa-a029-fc28f96862a9)
+> </details>
+> <details><summary>I use firefox integrated Flexible space for spacing:</summary>
+>
+> ![image](https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/8598344a-dbf6-456e-bdd3-b5abe5a8abcd)
+> </details>
 
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userChrome.css`
-
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userContent.css`
-
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `ASSETS` `/`
-	
-	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
 
 </br>
 
@@ -167,9 +161,9 @@ Installation Instructions https://github.com/Alan-Kuan/Firefox-Mod-Blur#page_wit
 
 <h2>:wrench: MicaForEveryone Installation</h2>
 
- ##### ❗❗❗ DEPRECATED WITH FIREFOX v117 and up ❗❗❗
- 
- >  ##### To continue using MicaForEveryone you can use Firefox v115 ESR - Extended Support Release version which will be supported and have security updates for at least a year. You can install ESR version to separate folder so you are able continue using both versions. I haven't tested that version so there could be some minor issues. https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr. I recommend using my older version files. [Maybe something like v115.x - v117.x should work fine.](https://github.com/datguypiko/Firefox-Mod-Blur/releases).
+> [!Warning]
+> ##### DEPRECATED WITH FIREFOX v117 and up
+> ##### To continue using MicaForEveryone you can use Firefox v115 ESR - Extended Support Release version which will be supported and have security updates for at least a year. You can install ESR version to separate folder so you are able continue using both versions. I haven't tested that version so there could be some minor issues. https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr. I recommend using my older version files. [Maybe something like v115.x - v117.x should work fine.](https://github.com/datguypiko/Firefox-Mod-Blur/releases).
  
 1. Download the portable or installation file from [github.com/MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone/releases).
 2. Install the extra files it asks you to install. And run the program.
