@@ -80,7 +80,7 @@
   :root {
     --firefoxcss-main-bg-color: hsl(240, 15%, 95%);
     --firefoxcss-item-bg-color: hsl(240, 20%, 98%);
-    --firefoxcss-item-hover-bg-color: hsl(240, 5%, 95%);
+    --firefoxcss-item-hover-bg-color:  color-mix(in srgb, currentColor 10%, transparent);
     --firefoxcss-text-color: hsl(0, 0%, 0%);
     --firefoxcss-other-color: hsl(290, 21%, 20%);
 
