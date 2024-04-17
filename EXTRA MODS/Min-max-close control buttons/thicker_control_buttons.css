@@ -1,0 +1,16 @@
+/* Thicker min/max/close control buttons taken from firefox */
+.titlebar-buttonbox-container .titlebar-button.titlebar-min {
+  list-style-image: url(chrome://browser/skin/window-controls/minimize-themes.svg) !important;
+}
+
+.titlebar-buttonbox-container .titlebar-button.titlebar-max {
+  list-style-image: url(chrome://browser/skin/window-controls/maximize-themes.svg) !important;
+}
+
+.titlebar-buttonbox-container .titlebar-button.titlebar-restore {
+  list-style-image: url(chrome://browser/skin/window-controls/restore-themes.svg) !important;
+}
+
+.titlebar-buttonbox-container .titlebar-button.titlebar-close {
+  list-style-image: url(chrome://browser/skin/window-controls/close-themes.svg) !important;
+}
