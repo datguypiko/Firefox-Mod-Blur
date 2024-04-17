@@ -1,4 +1,4 @@
-/* Thicker min/max/close control buttons taken from firefox */
+/* Thicker min/max/close MS Windows control buttons taken from firefox */
 .titlebar-buttonbox-container .titlebar-button.titlebar-min {
   list-style-image: url(chrome://browser/skin/window-controls/minimize-themes.svg) !important;
 }
