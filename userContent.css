@@ -304,7 +304,7 @@ url("about:newtab") {
     opacity: 1 !important;
   }
 
-  .top-site-outer .context-menu-button.icon:is(:active, :focus) {
+  .top-site-outer .context-menu-button.icon:is(:active, :focus, :hover) {
     fill: #f79743 !important;
     background-color: transparent !important;
     border: 0 !important;
@@ -312,7 +312,8 @@ url("about:newtab") {
 
   .top-site-outer .context-menu-button {
     fill: var(--firefoxcss-context-menu-three-dots) !important;
-    inset-inline-end: 2px !important;
+    inset-inline-end: 18px !important;
+    top: -2px !important;
   }
 
   .card-outer .context-menu-button.icon:is(:active, :focus) {
