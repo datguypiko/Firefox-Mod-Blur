@@ -65,6 +65,12 @@
     --firefoxcss-settings-wheel-color: hsla(240, 20%, 90%, 0.6);
     --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 90%, 0.9);
     --firefoxcss-shortcut-search-icon-color: #7ae3f463;
+	  
+    /* ----- Firefox View color changes ----- */
+    --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
+    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+    --firefoxcss-firefoxview-sticky-color: hsla(240, 2%, 13%, 0.75) !important;
+    --firefoxcss-firefoxview-search-color: hsla(240, 2%, 35%, 0.5) !important;
   }
 
   * {
@@ -131,6 +137,12 @@
     --firefoxcss-settings-wheel-color: hsla(240, 20%, 10%, 0.6);
     --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 10%, 0.9);
     --firefoxcss-shortcut-search-icon-color: #2896a870;
+	  
+    /* ----- Firefox View color changes ----- */
+    --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
+    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+    --firefoxcss-firefoxview-sticky-color: hsla(240, 15%, 95%, 0.5) !important;
+    --firefoxcss-firefoxview-search-color: hsla(240, 8%, 100%, 0.95) !important;  
   }
 }
 
@@ -494,32 +506,37 @@ url("about:newtab") {
   }*/
 }
 
-@-moz-document url("about:firefoxview") {
-  body {
-    background-color: var(--firefoxcss-main-bg-color) !important;
-    max-width: 80rem !important;
+@-moz-document url-prefix(about:firefoxview) {
+
+  .search-container {
+    border: none !important;
+  }
+  
+  .search-container input {
+    background-color: var(--firefoxcss-firefoxview-search-color) !important;
+  }
+  
+  div.sticky-container.bottom-fade {
+    background: none !important;
+    background-color: var(--firefoxcss-firefoxview-sticky-color) !important;
+    backdrop-filter: blur(7px) !important;
+    flex-direction: row !important;
+    padding-block: 30px 20px !important;
+  }
+ 
+  @media (max-width: 52rem) {
+  div.sticky-container.bottom-fade {
+    flex-direction: column !important;
+    }
   }
 
-  body>main {
-    grid-template-columns: 1fr !important;
-  }
+}
 
-  main aside.content-container {
-    display: none !important;
-  }
-
-  #colorways {
-    display: none !important;
-  }
-
-  #tabpickup-tabs-container #synced-tabs-placeholder {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-    border-radius: 8px !important;
-  }
-
-  #collapsible-tabs-container .closed-tabs-list .closed-tab-li:hover {
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-radius: 4px !important;
+@-moz-document url-prefix("about:") {
+  :root {
+     --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
+     --in-content-table-background: var(--firefoxcss-item-bg-color) !important; 
+     --in-content-page-background: var(--firefoxcss-main-bg-color) !important; 
   }
 }
 
