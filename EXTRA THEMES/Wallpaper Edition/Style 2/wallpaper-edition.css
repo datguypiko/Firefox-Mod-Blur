@@ -1,6 +1,6 @@
 :root {
-  --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.6) !important;
-  --firefoxcss-item-hover-bg-color: hsla(0, 0%, 16%, 0.6) !important;
+  --firefoxcss-wallpaper-item-bg-color: hsla(0, 0%, 12%, 0.6);
+  --firefoxcss-wallpaper-item-hover-bg-color: hsla(0, 0%, 16%, 0.5);
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,9 +24,9 @@ url("about:newtab") {
   }
 
   .outer-wrapper .search-wrapper .search-handoff-button {
-    -webkit-backdrop-filter: blur(24px) !important;
     backdrop-filter: blur(24px) !important;
     border-top: 1px solid hsla(0, 0%, 70%, 0.135) !important;
+    background-color: var(--firefoxcss-wallpaper-item-bg-color) !important;
     /* color: #ffffff5e !important; */
     /* box-shadow: none !important; */
     fill: hsla(0, 0%, 100%, 0.6) !important;
@@ -37,12 +37,10 @@ url("about:newtab") {
   }
 
   #root .outer-wrapper .body-wrapper .tile {
-    -webkit-backdrop-filter: blur(24px) !important;
     backdrop-filter: blur(0px) !important;
     border-top: 0px solid hsla(0, 0%, 100%, 0) !important;
     border-bottom: 0px solid hsla(0, 0%, 100%, 0) !important;
-
-    background-color: hsla(0, 0%, 18.4%, 0) !important;
+    background-color: transparent !important;
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
     border: 0px !important;
@@ -57,7 +55,7 @@ url("about:newtab") {
   }
 
   .outer-wrapper .search-inner-wrapper:hover .search-handoff-button {
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
+    background-color: var(--firefoxcss-wallpaper-item-hover-bg-color) !important;
     border-top: 1px solid hsla(0, 0%, 48%, 0.3) !important;
     fill: rgba(251, 251, 254, 0.8) !important;
   }
@@ -75,7 +73,7 @@ url("about:newtab") {
 
   .outer-wrapper .top-site-outer .top-site-inner {
     backdrop-filter: blur(24px) !important;
-    background-color: hsla(0, 0%, 12%, 0.6) !important;
+    background-color: var(--firefoxcss-wallpaper-item-bg-color) !important;
     border-radius: 10px !important;
     border: 1px solid #ffffff17 !important;
     box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
@@ -84,9 +82,22 @@ url("about:newtab") {
       1px 1px 2px hsl(0deg 0% 0% / 0.5) !important;
     transition: background-color 250ms ease;
   }
+  
+  .outer-wrapper .top-sites-list .top-site-outer {
+    padding-inline: 10px !important;
+  }
+  .outer-wrapper .top-site-outer .top-site-inner > a {
+    padding: 8px 16px 2px !important;
+  }
+  
+   .outer-wrapper .top-site-outer .context-menu-button {
+    inset-inline-end: 10px !important;
+    top: 2px !important;
+  }
+  
 
   .outer-wrapper .body-wrapper .top-site-inner:hover {
-    background-color: hsla(0, 0%, 15%, 0.5) !important;
+    background-color: var(--firefoxcss-wallpaper-item-hover-bg-color) !important;
   }
 
   .outer-wrapper .search-wrapper .search-handoff-button .fake-textbox {
