@@ -1506,12 +1506,13 @@ toolbar
      background-color: var(--firefoxcss-url-clipboard-button) !important;
     padding: 4px 8px !important;
   }
-
+}
 .urlbarView-button {
   .urlbarView-row:is([row-selectable]:hover, [selected]) > &:not(:hover, [open]) {
     background-color: transparent !important;
     opacity: 0.8 !important;
   }
+}  
 
 /* #appcontent
   > #tabbrowser-tabbox
