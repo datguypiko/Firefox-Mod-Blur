@@ -1125,6 +1125,22 @@ toolbar
   transition-delay: 500ms;
 }
 
+#nav-bar:not([customizing="true"]):not(.searchButton)
+  > #nav-bar-customization-target
+  > #urlbar-container
+  > #urlbar
+  > #urlbar-input-container
+  > #identity-box
+  > #identity-icon-box:not([open])
+  > #identity-icon-label {
+  opacity: 0;
+  visibility: collapse;
+}
+
+#identity-icon-label {
+  transition:  opacity 0.3s ease;
+}
+
 #page-action-buttons .urlbar-page-action,
 #identity-permission-box,
 #notification-popup-box .notification-anchor-icon {
@@ -1145,13 +1161,15 @@ toolbar
 }
 
 #urlbar #identity-box.extensionPage #identity-icon-box {
+  /* padding-inline: var(--urlbar-icon-padding) !important; */
   margin-inline-start: initial !important;
   opacity: 1 !important;
 }
 
 #identity-box:hover #identity-icon-box,
 #identity-box:hover #identity-permission-box,
-#identity-box #identity-permission-box[open="true"] {
+#identity-box #identity-permission-box[open="true"],
+#identity-box #identity-icon-box[open="true"]{
   opacity: 1 !important;
   margin-inline-start: initial !important;
 }
