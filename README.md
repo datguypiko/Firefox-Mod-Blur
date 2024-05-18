@@ -119,13 +119,13 @@
 > ##### 3. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
 > ##### 4. Put `userChrome.css`, `userContent.css`, `ASSETS`  in chrome folder (create `chrome` folder inside your main profile folder if it doesnt exist).
 > ##### 5. Put any selected extra `.css` modification files (not folders) from `EXTRA MODS` to inside of your `chrome` folder.
-> ##### 6. File Structure:
+> ##### 6. File Structure (required files/folders marked with *):
 >
->	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userChrome.css`
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userChrome.css *`
 >
->	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userContent.css`
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `userContent.css *`
 >
->	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `ASSETS` `/`
+>	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `ASSETS *` `/`
 >	
 >	 :open_file_folder: `...` `/` `your profile` `/` `chrome` `/` `[extra modification file].css`
 
