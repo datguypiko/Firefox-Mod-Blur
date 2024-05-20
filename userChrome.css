@@ -330,13 +330,6 @@ Order of Toolbars
   display: none !important;
 }
 
-/* Remove line on the right side of the Firefox view button */
-:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden])
-  :is(#firefox-view-button, #wrapper-firefox-view-button)
-  + #tabbrowser-tabs {
-  border-inline-start: 0 !important;
-}
-
 /* Remove line between website content and top bar */
 #navigator-toolbox {
   border-bottom: var(--firefoxcss-top-bar-border-bottom-size) solid
@@ -1081,11 +1074,18 @@ toolbar
   box-shadow: none !important;
 }
 
-:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden])
-  :is(#firefox-view-button, #wrapper-firefox-view-button)
-  + #tabbrowser-tabs {
-  padding-inline-start: 0px !important;
-  margin-inline-start: 2px !important;
+/* Remove line on the right side of the Firefox view button and fix margins */
+:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs,
+:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(
+  toolbarbutton:not(#firefox-view-button),
+  toolbarpaletteitem:not(#wrapper-firefox-view-button)
+) + #tabbrowser-tabs {
+  border-inline-start: 0 !important;
+  margin-inline-start: 0px !important;
+}
+
+#firefox-view-button {
+  padding-right: 0px !important;
 }
 
 :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
