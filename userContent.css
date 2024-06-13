@@ -500,6 +500,11 @@ url("about:newtab") {
     }
   }
 
+  /* Remove static color from close button wrapper in customization menu */
+  .customize-menu .close-button-wrapper {
+    background-color: transparent !important;
+  }
+
   /*.outer-wrapper .search-wrapper .search-handoff-button {
      background-image: url("ASSETS/icons/search-glass.svg") !important;
      background-size: 16px !important;  
