@@ -326,6 +326,7 @@ url("about:newtab") {
     fill: var(--firefoxcss-context-menu-three-dots) !important;
     inset-inline-end: 18px !important;
     top: -2px !important;
+    background-color: transparent !important;  
   }
 
   .card-outer .context-menu-button.icon:is(:active, :focus) {
