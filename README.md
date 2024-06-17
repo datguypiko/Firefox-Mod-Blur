@@ -42,7 +42,7 @@
 <p align="center"><i>style_3-wallpaper-edition.css</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p>
 
-<p align="center"><i>style_3-wallpaper-edition.css</i></p>
+<p align="center"><i>style_4-wallpaper-edition.css</i></p>
 <p align="center"><img alt="FirefoxCss" src="./EXTRA THEMES/Wallpaper Edition/Style 4/Preview-style4-blurBG.png" width="85%" height="85%" ></p>
 
 </br>
