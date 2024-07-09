@@ -233,6 +233,14 @@
   --firefoxcss-control-buttons-margin: 95px;
   --firefoxcss-tab-min-width: 110px;
   --firefoxcss-tab-max-width: 150px;
+  
+  --firefoxcss-searchbar-height: 32px;
+  --firefoxcss-searchbar-container-height: 38px;
+  --firefoxcss-searchbars-top-margin: 1px;
+  --urlbar-icon-border-radius: 10px !important;
+  --tab-block-margin: 2px !important; /* Default: 4px */
+  --tab-min-height: 28px !important; /* Default: 36px */
+
 }
 
 /*=====================================================================
@@ -314,8 +322,6 @@ Order of Toolbars
 #TabsToolbar .titlebar-spacer[type="pre-tabs"],
 #TabsToolbar .titlebar-spacer[type="post-tabs"],
 #TabsToolbar .titlebar-spacer,
-/* Remove Search bar background color */
-#urlbar-background,
 /* Remove Line above search engine selection in search bar */
 #urlbar .search-one-offs .search-panel-one-offs-header-label,
 /* Remove lefover window buttons from extra menu bar (when pressing alt)*/
@@ -356,15 +362,6 @@ Order of Toolbars
   appearance: none !important;
 }*/
 
-/* Tabs Bar height */
-:root {
-  --tab-min-height: 28px !important;
-}
-
-:root #tabbrowser-tabs {
-  --tab-min-height: 28px !important;
-}
-
 /* Menu Bar height */
 #toolbar-menubar {
   margin-top: 0px !important;
@@ -373,26 +370,6 @@ Order of Toolbars
   padding-bottom: 0px !important;
   line-height: 22px !important;
   max-height: 22px !important;
-}
-
-#navigator-toolbox {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-}
-
-/* Search Bar height */
-#urlbar-container {
-  --urlbar-container-height: 38px !important;
-}
-
-#urlbar-container #urlbar {
-  --urlbar-toolbar-height: 38px !important;
-  --urlbar-height: 30px !important;
-  --urlbar-min-height: 32px !important;
-}
-
-#wrapper-urlbar-container #urlbar {
-  height: var(--urlbar-height) !important;
 }
 
 /*=====================================================================
@@ -468,34 +445,21 @@ about:config -> svg.context-properties.content.enabled -> true*/
 ============================ S E A R C H   B A R ======================
 =====================================================================*/
 
-/* Some elements border radius */
+/* Search bar border radius  */
 #urlbar-input-container,
 #searchbar,
-#urlbar-container,
+#urlbar-background,
 #urlbar {
   border-radius: var(--firefoxcss-border-radius) !important;
 }
 
-/* Remove line in search bar below text separating search results */
-#urlbar .urlbarView-body-inner {
-  border-top: 0px !important;
-}
 
-/* Dont remember what this is for */
-#urlbar:not(.megabar):not([focused="true"]),
-#urlbar:not(.megabar):not([focused="true"]):hover {
-  border-bottom: transparent;
-}
-
-/* Aligns text in the middle of search bar */
+/* Align text center  */
 #urlbar .urlbar-input-box {
   text-align: center;
 }
 
-#urlbar {
-  --autocomplete-popup-highlight-background: var(
-    --firefoxcss-url-autocomplete-highlight
-  ) !important;
+#urlbar-background {
   border: 0 !important;
   background-color: var(--firefoxcss-url-bar-bg-color) !important;
   border-bottom: var(--firefoxcss-url-border-bottom-color) !important;
@@ -503,42 +467,95 @@ about:config -> svg.context-properties.content.enabled -> true*/
   box-shadow: var(--firefoxcss-url-box-shadow-color) !important;
 }
 
-/* Removes separator line at the bottom of search bar separating search buttons and menus */
-.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
+#urlbar {
+  /*   border: var(--firefoxcss-url-border-bottom-color) !important; */
+  --autocomplete-popup-highlight-background: var(
+    --firefoxcss-url-autocomplete-highlight
+  ) !important;
+}
+
+/* Focus outline */
+#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+#searchbar:focus-within {
+  outline: none !important;
+}
+
+/* When searchbar focused text opacity changed */
+#urlbar[focused] .urlbar-input::placeholder {
+  opacity: 0.5 !important;
+}
+
+/* Remove border line between searche results and input  */
+/* Remove line over search engines in popout search  */
+#urlbar .urlbarView-body-inner,
+#urlbar .urlbarView:not([noresults]) > .search-one-offs:not([hidden])  {
   border-top: none !important;
 }
 
-/* Megabar - Popout search bar on focus */
-#urlbar[breakout] {
-  height: auto !important;
-}
 
-#urlbar[breakout][breakout-extend][open] {
-  background-color: var(--firefoxcss-url-breakout-bar-bg-color) !important;
-  border-bottom: 1px solid var(--firefoxcss-url-breakout-border-bottom-color) !important;
+#urlbar[breakout][breakout-extend][open] #urlbar-background {
+  border-bottom: var(--firefoxcss-url-breakout-border-bottom-color) !important;
   border-top: var(--firefoxcss-url-border-top-color) !important;
   box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
 }
 
-#urlbar[breakout][breakout-extend] > #urlbar-input-container,
-#urlbar-input-container {
-  height: var(--urlbar-height) !important;
-  padding-block: 0px !important;
-  padding-inline: 0px !important;
-  transition: none !important;
+#urlbar[breakout][breakout-extend][breakout-extend-animate]
+  > #urlbar-background {
+  animation: none !important;
+}
+
+/* Tabs Bar height */
+:root {
+  --urlbar-min-height: max(var(--firefoxcss-searchbar-height), 1.4em) !important;
 }
 
 #urlbar[breakout] {
+  --urlbar-height: var(--firefoxcss-searchbar-height) !important;
+}
+
+/* Search Bar container height */
+#urlbar-container {
+  --urlbar-container-height: var(--firefoxcss-searchbar-container-height) !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  & > .urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    padding-block: 0px !important;
+    padding-inline: 0px !important;
+    transition: none !important;
+  }
+}
+
+#search-container {
+  padding-block: 0px !important;
+}
+
+#urlbar .urlbar-input-container {
+  padding: 0 !important;
+}
+
+#urlbar,
+#searchbar {
+  margin-top: var(--firefoxcss-searchbars-top-margin) !important;
+}
+
+
+#urlbar[breakout] {
   top: calc(
-    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    (var(--urlbar-container-height) - var(--urlbar-height)) / 2
   ) !important;
   left: 0 !important;
   width: 100% !important;
+  margin-inline-start: 0px !important;
 }
 
-#urlbar[breakout]:not([open]){
-  bottom: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2) !important;
+#urlbar[breakout]:not([open]) {
+  bottom: calc(
+    (var(--urlbar-container-height) - var(--urlbar-height)) / 2
+  ) !important;
 }
+
 
 /* Styling Extra search bar that you can add to firefox */
 #search-container #searchbar {
@@ -554,6 +571,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 #PopupSearchAutoComplete {
   --panel-background: var(--firefoxcss-url-breakout-bar-bg-color) !important;
 }
+
 
 /*=====================================================================
 ============================= T A B S =================================
@@ -1107,7 +1125,7 @@ toolbar
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
-  > #urlbar-input-container
+  > .urlbar-input-container
   > #page-action-buttons
   .urlbar-page-action {
   opacity: 0;
@@ -1118,7 +1136,7 @@ toolbar
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
-  > #urlbar-input-container
+  > .urlbar-input-container
   > #identity-box
   #notification-popup-box:not([open])
   .notification-anchor-icon {
@@ -1130,7 +1148,7 @@ toolbar
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
-  > #urlbar-input-container
+  > .urlbar-input-container
   > #identity-box
   > #identity-permission-box:not([open]) {
   opacity: 0;
@@ -1141,7 +1159,7 @@ toolbar
   > #nav-bar-customization-target
   > #urlbar-container
   > #urlbar
-  > #urlbar-input-container
+  > .urlbar-input-container
   > #identity-box
   > #identity-icon-box:not([open])
   > #identity-icon-label {
@@ -1150,7 +1168,7 @@ toolbar
 }
 
 #identity-icon-label {
-  transition:  opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 #page-action-buttons .urlbar-page-action,
@@ -1173,7 +1191,7 @@ toolbar
 }
 
 #urlbar #identity-box.extensionPage #identity-icon-box {
-  /* padding-inline: var(--urlbar-icon-padding) !important; */
+  /*   padding-inline: var(--urlbar-icon-padding) !important; */
   margin-inline-start: initial !important;
   opacity: 1 !important;
 }
@@ -1181,12 +1199,12 @@ toolbar
 #identity-box:hover #identity-icon-box,
 #identity-box:hover #identity-permission-box,
 #identity-box #identity-permission-box[open="true"],
-#identity-box #identity-icon-box[open="true"]{
+#identity-box #identity-icon-box[open="true"] {
   opacity: 1 !important;
   margin-inline-start: initial !important;
 }
 
-#urlbar-input-container .urlbar-input-box {
+.urlbar-input-container .urlbar-input-box {
   padding-inline-start: 2px !important;
 }
 
@@ -1194,8 +1212,15 @@ toolbar
   mask-image: linear-gradient(to right, transparent, black 3ch) !important;
 }
 
-#page-action-buttons {
+#urlbar:is(:not([usertyping]), :not([focused])) #page-action-buttons {
   padding-inline-start: 8px;
+}
+
+#urlbar:not(.searchButton)
+  > .urlbar-input-container
+  > #identity-box[pageproxystate="invalid"]
+  > .identity-box-button {
+  padding-inline: var(--urlbar-icon-padding) !important;
 }
 
 #page-action-buttons .urlbar-page-action {
@@ -1221,14 +1246,15 @@ toolbar
   opacity: 0 !important;
 }
 
-#page-action-buttons:not(:hover) #translations-button[translationsactive="true"]:not([open]) {
-  visibility:collapse !important;
-} 
+#page-action-buttons:not(:hover)
+  #translations-button[translationsactive="true"]:not([open]) {
+  visibility: collapse !important;
+}
 
 /* Create visual dots on both sides */
 /* left side identity-box dots modification */
-#identity-box::after,
-#page-action-buttons::before {
+#urlbar:is(:not([usertyping]), :not([focused])) #identity-box::after,
+#urlbar:is(:not([usertyping]), :not([focused])) #page-action-buttons::before {
   position: relative;
   content: "•••";
   pointer-events: none;
@@ -1260,7 +1286,7 @@ toolbar
 }
 
 #identity-box[pageproxystate="invalid"]::after,
-#urlbar-input-container[pageproxystate="invalid"]
+.urlbar-input-container[pageproxystate="invalid"]
   > #page-action-buttons::before {
   opacity: 0 !important;
   transition: opacity 50ms ease;
@@ -1286,13 +1312,13 @@ toolbar
 
 /* Search button show on hover in URL bar. */
 /* #urlbar-container:not(:hover) #urlbar:not(.searchButton):not([focused])
-  > #urlbar-input-container > 
+  > .urlbar-input-container > 
   #identity-box[pageproxystate="invalid"] #identity-icon {
     opacity: 0 !important; 
   }
   
   #urlbar-container #urlbar:not(.searchButton)
-  > #urlbar-input-container > 
+  > .urlbar-input-container > 
   #identity-box[pageproxystate="invalid"] #identity-icon {
     opacity: 1 !important; 
     visibility: visible !important;
@@ -1309,14 +1335,6 @@ toolbar
 
 #urlbar-zoom-button:hover {
   background-color: var(--firefoxcss-urlbar-zoom-button) !important;
-}
-
-#urlbar-input-container #identity-box > .identity-box-button,
-#tracking-protection-icon-container,
-#urlbar-go-button,
-#page-action-buttons .urlbar-page-action,
-#notification-popup-box {
-  border-radius: 8px !important;
 }
 
 /*=====================================================================
