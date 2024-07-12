@@ -762,16 +762,35 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 @media (-moz-platform: windows) {
   /* ----- Close/min/max fix ----- */
-  #toolbar-menubar .titlebar-button {
-    padding-block: 0px !important;
-  }
-
   #TabsToolbar .titlebar-buttonbox-container {
     order: 1 !important;
     padding-top: 3px !important;
     padding-bottom: 3px !important;
     padding-right: 3px !important;
     padding-left: 3px !important;
+  }
+
+  .titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
+    height: 12px !important;
+    min-height: 12px !important;
+    width: 12px !important;
+    min-width: 12px !important;
+  }
+
+  .titlebar-buttonbox-container .titlebar-button {
+    border-radius: var(--toolbarbutton-border-radius);
+    padding: 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  
+  
+
+ @media not (-moz-bool-pref: "firefoxcss.tabs.on.top.enable") {
+  #toolbar-menubar .titlebar-button {
+    padding-block: 0px !important;
   }
 
   #nav-bar-customization-target > :is(toolbarbutton, toolbaritem):first-child {
@@ -792,22 +811,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     right: 0;
   }
 
-  .titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
-    height: 12px !important;
-    min-height: 12px !important;
-    width: 12px !important;
-    min-width: 12px !important;
-  }
-
-  .titlebar-buttonbox-container .titlebar-button {
-    border-radius: var(--toolbarbutton-border-radius);
-    padding: 10px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
-
+     
   :root[sizemode="maximized"] .titlebar-buttonbox-container {
     padding-top: 0px !important;
   }
@@ -844,6 +848,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     #navigator-toolbox:not([inFullscreen]) #nav-bar {
       padding-right: initial !important;
     }
+  }
   }
 }
 
@@ -1573,3 +1578,49 @@ toolbar
   margin: 8px !important;
   z-index: 3;
 } */
+
+/* Tabs On Top */
+@media (-moz-bool-pref: "firefoxcss.tabs.on.top.enable") {
+  /* SEARCH BAR TOOLBAR */
+  #nav-bar {
+    order: 1 !important;
+  }
+
+  /* TABS TOOLBAR */
+  #titlebar {
+    order: 0 !important;
+  }
+
+  /* BOOKMARKS TOOLBAR*/
+  #PersonalToolbar {
+    order: 2 !important;
+  }
+
+  /* Extra titlebar menu (above or below tabs, opens with alt) */
+  #titlebar #toolbar-menubar {
+    order: 0 !important;
+  }
+
+  /* Tab bar top and bottom padding */
+  #TabsToolbar {
+    padding-top: 2px !important;
+    padding-bottom: 0px !important;
+  }
+
+  #nav-bar {
+    padding-bottom: 2px !important;
+  }
+
+  :root {
+    --firefoxcss-searchbar-container-height: 36px !important;
+  }
+  
+    #PanelUI-menu-button {
+    padding-inline-end: 3px !important;;
+  }
+  
+  #TabsToolbar .titlebar-buttonbox-container {
+    order: 1 !important;
+    padding: 0px !important;
+  }
+}
