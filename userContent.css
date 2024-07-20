@@ -545,7 +545,10 @@ url("about:newtab") {
     padding-bottom: 0 !important;
     row-gap: 0 !important;
     overflow: hidden !important;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+	@media (-moz-bool-pref: "firefoxcss.pocket.4.cards.enable") {
+           grid-template-columns: repeat(auto-fill,minmax(200px,1fr)) !important;
+      	}
   }
 }
 	
