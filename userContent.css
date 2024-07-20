@@ -438,9 +438,9 @@ url("about:newtab") {
     min-height: 60px !important;
   }
 
-  body:not(.inline-onboarding) .fixed-search.visible-logo main {
+/*   body:not(.inline-onboarding) .fixed-search.visible-logo main {
     padding-top: 0px !important;
-  }
+  } */
 
   .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
     top: 0 !important;
@@ -510,6 +510,45 @@ url("about:newtab") {
      background-image: url("ASSETS/icons/search-glass.svg") !important;
      background-size: 16px !important;  
   }*/
+
+/* Pocket extra modification by request */
+@media (-moz-bool-pref: "firefoxcss.pocket.oneline.enable") {
+  /* Pocket new tab - Learn More text disable  */
+  .collapsible-section .section-title-container .learn-more-link-wrapper {
+    display: none !important;
+  }
+
+  @media (-moz-bool-pref: "firefoxcss.pocket.hide.populartopics.links") {
+    /* Pocket new tab - Popular Topics bottom links text disable  */
+    .discovery-stream.ds-layout .ds-navigation.ds-navigation-left-align {
+      display: none !important;
+    }
+  }
+
+  /* Pocket new tab - Privacy Notice text disable  */
+  .ds-navigation .ds-navigation-privacy {
+    display: none !important;
+  }
+
+  /* pocket new tab context menu  */
+  .context-menu {
+    background-image: var(--firefoxcss-customize-menu-bg-image) !important;
+    background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
+    backdrop-filter: blur(32px) !important;
+    border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border);
+    border-radius: 8px !important;
+  }
+
+  .discovery-stream.ds-layout .ds-card-grid {
+    grid-template-rows: 1fr !important;
+    grid-auto-rows: 0 !important;
+    padding-bottom: 0 !important;
+    row-gap: 0 !important;
+    overflow: hidden !important;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+  }
+}
+	
 }
 
 @-moz-document url-prefix(about:firefoxview) {
