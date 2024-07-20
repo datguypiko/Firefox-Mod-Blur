@@ -511,6 +511,41 @@ url("about:newtab") {
      background-size: 16px !important;  
   }*/
 
+/* When Dark Wallpaper set */
+.activity-stream.darkWallpaper {
+    & .body-wrapper .tile {
+      background-color: hsla(0, 0%, 12%, 0.6) !important;
+      backdrop-filter: blur(24px) !important;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
+    }
+    
+    & .body-wrapper .top-site-button:hover .tile {
+       filter: brightness(115%);
+       background-color: hsla(0, 0%, 15%, 0.5) !important;
+       border-top: 1px solid hsla(0, 0%, 58%, 0.3) !important;
+    }
+    
+    & .ds-card-grid .ds-card:not(.placeholder) {
+       backdrop-filter: blur(20px); 
+    }
+	
+	/*  Pocket cards background blur - new tab */
+    & .ds-card-grid .ds-card:not(.placeholder) {
+       backdrop-filter: blur(20px); 
+    }
+    
+  }
+
+/* When Light Wallpaper set */
+  .activity-stream.lightWallpaper {
+	  
+   /*  Pocket cards background blur - new tab */
+    & .ds-card-grid .ds-card:not(.placeholder) {
+       backdrop-filter: blur(20px); 
+    }
+	  
+  }
+
 /* Pocket extra modification by request */
 @media (-moz-bool-pref: "firefoxcss.pocket.oneline.enable") {
   /* Pocket new tab - Learn More text disable  */
