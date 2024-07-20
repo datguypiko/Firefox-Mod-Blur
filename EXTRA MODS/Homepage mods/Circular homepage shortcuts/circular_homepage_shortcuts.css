@@ -1,10 +1,9 @@
-
-  @-moz-document url("about:home"),
+@-moz-document url("about:home"),
   url("about:newtab") {
   
-    #root .outer-wrapper .top-sites-list .top-site-outer {
+/*     #root .outer-wrapper .top-sites-list .top-site-outer {
         padding: 20px 20px 4px !important;
-    }
+    } */
   
     #root .top-site-outer .tile .icon-wrapper,
     #root .outer-wrapper .top-site-outer .top-site-inner,
@@ -26,4 +25,3 @@
     }
   
 }
-  
