@@ -7,3 +7,16 @@
     background-color: transparent !important;
   }
 }
+
+/* Secondary search bar */
+#nav-bar #search-container #searchbar {
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+/* Moves both searchbars up. Uses 1px by default when border is set for better visual centering.  */
+:root {
+  --firefoxcss-searchbars-top-margin: 0px !important;
+}
