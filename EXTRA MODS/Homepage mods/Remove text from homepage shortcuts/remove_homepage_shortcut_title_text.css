@@ -16,6 +16,6 @@ url("about:newtab") {
         border-bottom: 0 !important;
     }
      #root .outer-wrapper .top-sites-list .top-site-outer {
-        padding: 20px 20px 4px !important;
+        padding: 8px 0 16px 0 !important;
     }
 }
