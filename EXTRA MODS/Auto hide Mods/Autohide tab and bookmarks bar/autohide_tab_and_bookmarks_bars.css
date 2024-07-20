@@ -1,6 +1,5 @@
 /* Tab hide based on https://mrotherguy.github.io/firefox-csshacks/?file=autohide_tabstoolbar.css */
 #nav-bar {
-    margin-bottom: 3px !important;
   }
   
   :root:not([customizing]) #navigator-toolbox{
@@ -13,24 +12,25 @@
     pointer-events: none
   }
   
-  :root:not([customizing]) #navigator-toolbox:hover,
-  :root:not([customizing]) #titlebar{
-    margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height)) !important;
+  :root:not([customizing],[chromehidden~="menubar"]) #navigator-toolbox:hover,
+  :root:not([customizing],[chromehidden~="menubar"]) #titlebar{
+    margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
   }
-  #TabsToolbar:not([customizing]){ visibility: hidden; transition: visibility 0ms linear 450ms }
+  #TabsToolbar:not([customizing]){ visibility: hidden; transition: visibility 0ms linear 200ms !important; }
   
   #navigator-toolbox,
-  #titlebar{ transition: margin-bottom 48ms linear 450ms }
+  #titlebar{ transition: margin-bottom 48ms ease-out 200ms !important; }
   
-  #navigator-toolbox:hover{ transition-delay: 0s }
+  #navigator-toolbox:hover{ transition-delay: 0s !important; }
+
   #navigator-toolbox:hover > #titlebar{
     margin-bottom: 0px !important;
-    transition-delay: 0s;
+    transition-delay: 0s !important;
   }
   
   #navigator-toolbox:hover #TabsToolbar{
     visibility: visible;
-    transition-delay: 18ms;
+    transition-delay: 18ms !important;
   }
   /* These rules make sure that height of tabs toolbar doesn't exceed tab-min-height */
   #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
@@ -61,7 +61,7 @@
     ) !important;
     transform: rotateX(90deg) !important;
     transform-origin: top !important;
-    transition: transform 48ms linear 450ms !important;
+    transition: transform 140ms linear 200ms !important;
     z-index: 2 !important;
   }
   
@@ -72,13 +72,13 @@
   }
   
   #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
-    transition: opacity 20ms linear 450ms !important;
+    transition: opacity 200ms linear 200ms !important;
     opacity: 0 !important;
   }
   
   /* Show when cursor is over the toolbar area */
   #navigator-toolbox:hover > #PersonalToolbar {
-    transition-delay: 18ms !important;
+    transition-delay: 40ms !important;
     transform: rotateX(0) !important;
   }
   
@@ -91,7 +91,7 @@
   }
   
   #PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
-    transition: opacity 20ms linear 450ms !important;
+    transition: opacity 200ms linear 300ms !important;
     opacity: 0 !important;
   }
   
@@ -99,6 +99,7 @@
     #PlacesToolbarItems
     > .bookmark-item
     .toolbarbutton-text {
-    transition-delay: 30ms !important;
+    transition-delay: 40ms !important;
     opacity: 1 !important;
   }
+
