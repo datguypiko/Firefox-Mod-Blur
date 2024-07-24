@@ -760,6 +760,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
 ============ W I N D O W   C O N T R O L   B U T T O N S ==============
 =====================================================================*/
 
+:root[sizemode="fullscreen"] #navigator-toolbox { position: relative; }
+
 @media (-moz-platform: windows) {
   /* ----- Close/min/max fix ----- */
   #TabsToolbar .titlebar-buttonbox-container {
