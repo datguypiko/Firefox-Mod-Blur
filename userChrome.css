@@ -759,7 +759,12 @@ about:config -> svg.context-properties.content.enabled -> true*/
 /*=====================================================================
 ============ W I N D O W   C O N T R O L   B U T T O N S ==============
 =====================================================================*/
-
+/* Keep showing the buttons when alt menu visible */
+.titlebar-buttonbox-container {
+  #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > & {
+    visibility: visible !important;
+  }
+} 
 /* :root[sizemode="fullscreen"] #navigator-toolbox { position: relative; } */
 
 @media (-moz-platform: windows) {
