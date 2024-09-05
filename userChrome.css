@@ -137,6 +137,9 @@
     --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
     --urlbarView-highlight-background: hsl(240, 2%, 20%) !important;
     --urlbarView-hover-background: color-mix(in srgb, currentColor 8%, transparent) !important;
+    /* Color for add bookmarks menu when adding through tabs */
+    --in-content-page-background: var(--arrowpanel-background) !important;
+    --firefoxcss-context-menu-item-bg-color: hsla(0, 0%, 60%, 0.2) !important;
   }
 }
 
@@ -220,6 +223,9 @@
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
     --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
     --urlbarView-hover-background: color-mix(in srgb, currentColor 8%, transparent) !important;
+    /* Color for add bookmarks menu when adding through tabs */
+    --in-content-page-background: var(--arrowpanel-background) !important;
+    --firefoxcss-context-menu-item-bg-color: hsla(240, 5%, 70%, 0.35) !important;
   }
 }
 
