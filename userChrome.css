@@ -864,11 +864,23 @@ about:config -> svg.context-properties.content.enabled -> true*/
 =====================================================================*/
 
 menupopup :-moz-any(menu, menuitem) {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
+  margin-top: 2px !important;
+  margin-bottom: 1px !important;
+/*   padding-top: 4px !important;
+  padding-bottom: 4px !important; */
+
 }
+
+menupopup {
+  @media (-moz-platform: windows) {
+    & > menu, & > menuitem {
+      padding-block: 0.35em !important;
+      margin-left: 2px !important;
+      margin-right: 2px !important;
+    }
+  }
+}
+
 
 @media (-moz-platform: windows) {
   #context-navigation
@@ -878,22 +890,13 @@ menupopup :-moz-any(menu, menuitem) {
     border-radius: var(--toolbarbutton-border-radius) !important;
     background-color: var(--button-hover-bgcolor) !important;
   }
-
+  
   menupopup
     > :-moz-any(
       menu[_moz-menuactive="true"],
-      menuitem[_moz-menuactive="true"]
+      menuitem[_moz-menuactive="true"]:not([selected])
     ) {
-    background-color: color-mix(
-      in srgb,
-      currentColor 9%,
-      transparent
-    ) !important;
-  }
-
-  /* Fixes color for native context menu */
-   #ContentSelectDropdownPopup {
-    --content-select-background-image: none !important;
+     background-color: var(--firefoxcss-context-menu-item-bg-color) !important;
   }
   
   #context-navigation > .menuitem-iconic[_moz-menuactive] {
@@ -907,19 +910,23 @@ menupopup :-moz-any(menu, menuitem) {
   }
 }
 
-menupopup :-moz-any(menu:first-child, menuitem:first-child) {
+#ContentSelectDropdownPopup {
+   --content-select-background-image: none !important;
+  }
+
+/* menupopup :-moz-any(menu:first-child, menuitem:first-child) {
   margin-top: 0px !important;
 }
 
 menupopup :-moz-any(menu:last-child, menuitem:last-child) {
   margin-bottom: 0px !important;
-}
+} */
 
 /* ----- Menu Separator #context-sep-selectall ----- */
 menuseparator {
   border-color: var(--arrowpanel-border-color) !important;
   /* border-top: 1px solid ThreeDShadow; */
-  padding-block: 2px !important;
+  padding-block: 1px !important;
 }
 
 menuseparator#context-sep-navigation {
@@ -930,13 +937,13 @@ menuseparator#context-sep-navigation {
 :not(#ContentSelectDropdown) > menupopup {
   --panel-border-color: var(--arrowpanel-border-color) !important;
   --panel-background: var(--firefoxcss-main-bg-color) !important;
-  --panel-padding: 5px 0 5px !important;
+  --panel-padding: 2px 0 2px !important;
   --panel-border-radius: 8px !important;
 }
 
 #context-navigation:not([hidden]) {
   background-color: var(--firefoxcss-context-menu-top-color) !important;
-  padding: 1px 0px 1px !important;
+  padding: 2px 0px 2px !important;
   border-top-left-radius: 8px !important;
   border-top-right-radius: 8px !important;
   margin-left: 0px !important;
@@ -945,12 +952,12 @@ menuseparator#context-sep-navigation {
 
 menupopup#contentAreaContextMenu {
   --panel-padding: unset !important;
-  --panel-padding: 0 0 5px !important;
+  --panel-padding: 0 0 3px !important;
 }
 
 menupopup
   menuitem:is(#context-openlinkintab, #context-undo, #context-viewimage) {
-  margin-top: 5px !important;
+  margin-top: 3px !important;
 }
 
 #context-sep-navigation {
