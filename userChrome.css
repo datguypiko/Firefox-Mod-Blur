@@ -890,6 +890,12 @@ menupopup :-moz-any(menu, menuitem) {
       transparent
     ) !important;
   }
+
+  /* Fixes color for native context menu */
+   #ContentSelectDropdownPopup {
+    --content-select-background-image: none !important;
+  }
+  
   #context-navigation > .menuitem-iconic[_moz-menuactive] {
     &:not([disabled]) {
       background-color: transparent !important;
