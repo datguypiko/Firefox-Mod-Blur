@@ -870,7 +870,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 =====================================================================*/
 
 menupopup :-moz-any(menu, menuitem) {
-  margin-top: 2px !important;
+  margin-top: 1px !important;
   margin-bottom: 1px !important;
 /*   padding-top: 4px !important;
   padding-bottom: 4px !important; */
@@ -880,7 +880,7 @@ menupopup :-moz-any(menu, menuitem) {
 menupopup {
   @media (-moz-platform: windows) {
     & > menu, & > menuitem {
-      padding-block: 0.35em !important;
+      padding-block: 0.30em !important;
       margin-left: 2px !important;
       margin-right: 2px !important;
     }
