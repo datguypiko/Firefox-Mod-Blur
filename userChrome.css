@@ -150,15 +150,15 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Main dark color, url bar, active tab etc. */
-    --firefoxcss-main-bg-color: hsl(240, 10%, 98%);
+    --firefoxcss-main-bg-color: hsl(200, 5%, 98%);
 
     /* Main lighter color, toolbar background */
-    --firefoxcss-item-bg-color: hsl(240, 20%, 98%);
+    --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
 
     /* Tab colors hsl(240, 15%, 90%) */
-    --firefoxcss-tab-bg-color: hsl(240, 8%, 96%);
-    --firefoxcss-tab-hover-bg-color: hsl(240, 8%, 90%);
-    --firefoxcss-tab-active-bg-color: hsl(240, 6%, 86%);
+    --firefoxcss-tab-bg-color: hsl(200, 5%, 92%);
+    --firefoxcss-tab-hover-bg-color: hsl(200, 5%, 86%);
+    --firefoxcss-tab-active-bg-color: hsl(200, 5%, 85%);
     --firefoxcss-non-active-tabs: hsl(0, 0%, 25%);
 
     --firefoxcss-normal-tabs-box-shadow: none;
@@ -183,47 +183,47 @@
     --firefoxcss-toolbar-button-box-shadow: rgba(0, 0, 0, 0);
     --firefoxcss-toolbar-button-active-box-shadow: rgba(0, 0, 0, 0);
 
-    --firefoxcss-new-tab-button-active: hsl(240, 15%, 95%);
+    --firefoxcss-new-tab-button-active: hsl(200, 10%, 90%);
     --firefoxcss-new-tab-button-box-shadow-active: rgba(0, 0, 0, 0.4);
 
-    --firefoxcss-new-tab-button-hover: hsla(240, 5%, 83%, 0.65);
+    --firefoxcss-new-tab-button-hover: hsla(200, 5%, 83%, 0.65);
     --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0);
 
     /* Search Bar and breakout (when in focus) colors */
-    --firefoxcss-url-bar-bg-color: hsl(240, 15%, 95%);
+    --firefoxcss-url-bar-bg-color: hsl(200, 5%, 92%);
     --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 1);
     --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0);
-    --firefoxcss-url-breakout-bar-bg-color: hsl(240, 15%, 98%);
+    --firefoxcss-url-breakout-bar-bg-color: hsl(200, 5%, 98%);
     --firefoxcss-url-breakout-border-bottom-color: hsla(0, 0%, 70%, 0.05);
     --firefoxcss-url-box-shadow-color: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
-    --firefoxcss-url-autocomplete-highlight: hsl(240, 10%, 90%);
+    --firefoxcss-url-autocomplete-highlight: hsl(200, 5%, 90%);
     --firefoxcss-url-breakout-box-shadow: transparent 0 0 0 3px,
-      rgba(18, 18, 18, 0.08) 2px 10px 22px;
+      rgba(18, 18, 18, 0.1) 2px 10px 22px;
     --firefoxcss-url-clipboard-button: color-mix(in srgb, currentColor 10%, transparent);
 
     /* Other colors */
-    --firefoxcss-urlbar-zoom-button: hsla(240, 8%, 60%, 0.35);
+    --firefoxcss-urlbar-zoom-button: hsla(200, 5%, 60%, 0.35);
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 0%, 0.1);
     --firefoxcss-private-browsing-menu-color: hsl(277, 80%, 55%);
     --firefoxcss-private-browsing-drop-shadow: none;
-    --firefoxcss-statuspanel-bg-color: hsl(240, 20%, 98%);
+    --firefoxcss-statuspanel-bg-color: hsl(200, 10%, 98%);
     --firefoxcss-contextmenu-hover-text: black;
     --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 0%, 0.2);
     --firefoxcss-customize-view-flex-space: hsl(34, 50%, 70%);
-    --firefoxcss-customize-view-overflow-menu: hsl(240, 10%, 100%);
+    --firefoxcss-customize-view-overflow-menu: hsl(200, 5%, 100%);
     
     /* ============== Firefox Global colors change ==================== */
-    --arrowpanel-background: hsl(240, 15%, 98%) !important;
-    --button-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
-    --button-active-bgcolor: hsla(240, 5%, 50%, 0.35) !important;
+    --arrowpanel-background: hsl(200, 10%, 96%) !important;
+    --button-hover-bgcolor: hsla(200, 5%, 70%, 0.35) !important;
+    --button-active-bgcolor: hsla(200, 5%, 50%, 0.35) !important;
     --button-bgcolor: hsla(0, 0%, 45%, 0.1) !important;
     /* Search Bar */
-    --arrowpanel-border-color: hsla(0, 0%, 50%, 0.25) !important;
-    --panel-separator-color: var(--arrowpanel-border-color) !important;
+    --arrowpanel-border-color: hsla(0, 0%, 100%, 0.5) !important;
+    --panel-separator-color: hsla(0, 0%, 20%, 0.15) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
     --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
     --urlbarView-hover-background: color-mix(in srgb, currentColor 8%, transparent) !important;
-    /* Color for add bookmarks menu when adding through tabs */
+     /* Color for add bookmarks menu when adding through tabs */
     --in-content-page-background: var(--arrowpanel-background) !important;
     --firefoxcss-context-menu-item-bg-color: hsla(240, 5%, 70%, 0.35) !important;
   }
@@ -880,7 +880,7 @@ menupopup :-moz-any(menu, menuitem) {
 menupopup {
   @media (-moz-platform: windows) {
     & > menu, & > menuitem {
-      padding-block: 0.30em !important;
+      padding-block: 0.3em !important;
       margin-left: 2px !important;
       margin-right: 2px !important;
     }
