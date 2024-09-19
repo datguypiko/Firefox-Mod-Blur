@@ -7,6 +7,12 @@
     background-color: hsl(0, 0%, 8%) !important;
 }
 
+#PersonalToolbar:not([customizing]) {
+     align-self: center;
+     width: 100vw;
+     max-width: fit-content;
+  }
+
 #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover{
     background-color: #393939 !important;
 }
@@ -17,4 +23,10 @@
 
 #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item[open="true"] {
     background-color: #555555 !important;
+}
+
+#PersonalToolbar:not([customizing]) {
+     align-self: center;
+     width: 100vw;
+     max-width: fit-content;
 }
