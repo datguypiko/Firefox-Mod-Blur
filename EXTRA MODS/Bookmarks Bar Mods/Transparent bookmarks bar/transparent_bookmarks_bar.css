@@ -21,4 +21,7 @@
 
 #PersonalToolbar:not([customizing]) {
     max-width: fit-content;
+/*   For centering
+    width:100vw;
+    align-self:center; */
   }
