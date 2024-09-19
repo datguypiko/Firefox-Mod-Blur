@@ -20,7 +20,5 @@
 }
 
 #PersonalToolbar:not([customizing]) {
-     align-self: center;
-     width: 100vw;
-     max-width: fit-content;
+    max-width: fit-content;
   }
