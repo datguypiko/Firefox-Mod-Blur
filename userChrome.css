@@ -302,6 +302,14 @@ Order of Toolbars
   background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
+/* Fix some custom firefox themes that break */
+#navigator-toolbox {  
+  :root[lwtheme-image] & 
+  {
+    background-image: var(--lwt-additional-images) !important;
+  } 
+}
+
 /* Avoids bright flash */
 #tabbrowser-tabpanels {
   background-color: var(
