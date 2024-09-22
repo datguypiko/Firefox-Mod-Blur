@@ -1166,7 +1166,7 @@ toolbar
   > #urlbar:not([focused])
   > .urlbar-input-container
   > #page-action-buttons
-  .urlbar-page-action {
+  .urlbar-page-action:not([open]) {
   opacity: 0;
   transition-delay: 500ms;
 }
@@ -1204,6 +1204,7 @@ toolbar
   > #identity-icon-label {
   opacity: 0;
   visibility: collapse;
+    
 }
 
 #identity-icon-label {
@@ -1223,17 +1224,6 @@ toolbar
   transition: margin-inline-start 100ms linear, opacity 200ms linear;
 }
 
-#urlbar #identity-box.notSecureText #identity-icon-box {
-  margin-inline-start: initial !important;
-  opacity: 1 !important;
-  color: #e36f6f !important;
-}
-
-#urlbar #identity-box.extensionPage #identity-icon-box {
-  /*   padding-inline: var(--urlbar-icon-padding) !important; */
-  margin-inline-start: initial !important;
-  opacity: 1 !important;
-}
 
 #identity-box:hover #identity-icon-box,
 #identity-box:hover #identity-permission-box,
@@ -1243,8 +1233,69 @@ toolbar
   margin-inline-start: initial !important;
 }
 
+
+#urlbar-label-box,
+#urlbar-zoom-button {
+  background-color: var(--firefoxcss-item-bg-color) !important;
+}
+
+#urlbar-zoom-button:hover {
+  background-color: var(--firefoxcss-urlbar-zoom-button) !important;
+}
+
+#urlbar #identity-box[pageproxystate="valid"] {
+    &.weakCipher,
+    &.mixedDisplayContent,
+    &.mixedDisplayContentLoadedActiveBlocked,
+    &.certUserOverridden,
+    &.certErrorPage,
+    &.notSecure,
+    &.mixedActiveContent,
+    &.httpsOnlyErrorPage,
+    &.notSecureText{
+        & #identity-icon-box {
+          margin-inline-start: initial !important;
+          opacity: 1 !important;
+          color: #e36f6f !important;
+          background-color: var(--firefoxcss-item-bg-color) !important;
+          
+          &:hover:not([open]) {
+             background-color: var(--firefoxcss-urlbar-zoom-button) !important;
+          }
+          
+          &:is(:hover:active, [open]) {
+            background-color: var(--firefoxcss-urlbar-zoom-button) !important;
+          }
+        }
+  }
+}
+
+#urlbar #identity-box[pageproxystate="valid"]:is(.chromeUI, .extensionPage) > #identity-icon-box {
+  margin-inline-start: initial !important;
+  opacity: 1 !important;
+  background-color: var(--firefoxcss-item-bg-color) !important;
+  &:hover:not([open]) {
+     background-color: var(--firefoxcss-urlbar-zoom-button) !important;
+  }
+  
+  &:is(:hover:active, [open]) {
+    background-color: var(--firefoxcss-urlbar-zoom-button) !important;
+  }
+}
+
+/* #identity-box.chromeUI::after,
+#identity-box.chromeUI:hover::after {
+  opacity: 0 !important;
+} */
+
+#page-action-buttons:not(:hover)
+  #translations-button[translationsactive="true"]:not([open]) {
+  visibility: collapse !important;
+}
+
+
 .urlbar-input-container .urlbar-input-box {
-  padding-inline-start: 2px !important;
+  padding-inline-start: 3px !important;
 }
 
 #identity-box:hover ~ .urlbar-input-box > #urlbar-input {
@@ -1269,26 +1320,12 @@ toolbar
 }
 
 #page-action-buttons:hover > .urlbar-page-action,
-.urlbar-page-action[open],
-.urlbar-page-action[open] ~ .urlbar-page-action {
+#page-action-buttons .urlbar-page-action[open],
+#page-action-buttons .urlbar-page-action[open] ~ .urlbar-page-action {
   opacity: 1;
   margin-inline-end: 0px !important;
 }
 
-#identity-box.chromeUI #identity-icon-box {
-  opacity: 1 !important;
-  margin-inline-start: initial;
-}
-
-#identity-box.chromeUI::after,
-#identity-box.chromeUI:hover::after {
-  opacity: 0 !important;
-}
-
-#page-action-buttons:not(:hover)
-  #translations-button[translationsactive="true"]:not([open]) {
-  visibility: collapse !important;
-}
 
 /* Create visual dots on both sides */
 /* left side identity-box dots modification */
@@ -1363,18 +1400,6 @@ toolbar
     visibility: visible !important;
     transition: opacity 0.2s ease;
   } */
-
-#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
-#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
-#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
-#urlbar-label-box,
-#urlbar-zoom-button {
-  background-color: var(--firefoxcss-item-bg-color) !important;
-}
-
-#urlbar-zoom-button:hover {
-  background-color: var(--firefoxcss-urlbar-zoom-button) !important;
-}
 
 /*=====================================================================
 ==================== L I N U X   S U P P O R T ========================
