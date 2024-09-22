@@ -1249,9 +1249,6 @@ toolbar
     &.mixedDisplayContentLoadedActiveBlocked,
     &.certUserOverridden,
     &.certErrorPage,
-    &.notSecure,
-    &.mixedActiveContent,
-    &.httpsOnlyErrorPage,
     &.notSecureText{
         & #identity-icon-box {
           margin-inline-start: initial !important;
@@ -1267,6 +1264,15 @@ toolbar
             background-color: var(--firefoxcss-urlbar-zoom-button) !important;
           }
         }
+  }
+    &.notSecure,
+    &.mixedActiveContent,
+    &.httpsOnlyErrorPage {
+      & #identity-icon-box {
+        margin-inline-start: initial !important;
+        opacity: 1 !important;
+      }
+    
   }
 }
 
