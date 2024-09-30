@@ -7,7 +7,7 @@
     width: 100% !important;  /*  For firefox v115.x */
 }
 
-:is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
+#unified-extensions-view:is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
     margin: 2px 4px !important;  /*  For firefox v115.x / Makes more compact */
 }
 

@@ -18,3 +18,10 @@
 #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item[open="true"] {
     background-color: #555555 !important;
 }
+
+#PersonalToolbar:not([customizing]) {
+    max-width: fit-content;
+/*   For centering
+    width:100vw;
+    align-self:center; */
+  }
