@@ -202,8 +202,13 @@ body {
   }
 
   .logo-and-wordmark .wordmark {
+    background-image: url("ASSETS/icons/Logo_Private.png") !important;
     fill: #8f25d1 !important;
     opacity: 0.9 !important;
+  }
+
+  #about-private-browsing-logo {
+    background-image: url("ASSETS/icons/icon_transparent_private.svg") !important;
   }
 
   .showPrivate.showSearch.container .info {
@@ -386,12 +391,14 @@ url("about:newtab") {
   }
 
   .search-wrapper .logo-and-wordmark .logo {
+    background-image: url("ASSETS/icons/icon_transparent.svg") !important;
     background-size: 60px !important;
     height: 60px !important;
     width: 60px !important;
   }
 
   .search-wrapper .logo-and-wordmark .wordmark {
+    background-image: url("ASSETS/icons/Logo.png") !important;
     background-size: 132px !important;
     height: 42px !important;
     margin-inline-start: 12px !important;

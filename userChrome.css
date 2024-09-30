@@ -230,7 +230,7 @@
 :root {
   --firefoxcss-top-bar-border-bottom-size: 1px;
   --firefoxcss-border-radius: 10px;
-  --firefoxcss-control-buttons-margin: 95px;
+  --firefoxcss-control-buttons-margin: 25px;
   --firefoxcss-tab-min-width: 110px;
   --firefoxcss-tab-max-width: 150px;
   
@@ -1422,8 +1422,8 @@ toolbar
 
   #TabsToolbar .titlebar-buttonbox-container {
     order: 1 !important;
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     padding-right: 3px !important;
     padding-left: 3px !important;
   }
