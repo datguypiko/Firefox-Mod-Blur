@@ -1,8 +1,15 @@
 /* Spill style. Modifications for userChrome file */
 
 /* ----- My Custom Colors ----- */
-:root {
-    --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 20%) !important;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 20%) !important;
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --firefoxcss-bookmarks-bg-color: hsl(200, 0%, 95%) !important;
+    }
 }
 
 /* Main BAR */
