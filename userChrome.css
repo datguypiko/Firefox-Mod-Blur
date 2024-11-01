@@ -750,8 +750,14 @@ about:config -> svg.context-properties.content.enabled -> true*/
     background-color 0.15s ease !important;
 }
 
-#titlebar #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
   margin-block: 2px !important;
+}
+
+#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > 
+.tabbrowser-tab:is([selected], [multiselected]) .tab-background{
+    background-color: color-mix(in srgb, var(--firefoxcss-tab-active-bg-color) 50%, transparent) !important;
+    backdrop-filter: blur(12px);
 }
 
 /* Remove right and left side tab overflow border line */
