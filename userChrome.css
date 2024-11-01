@@ -1643,6 +1643,11 @@ toolbar
 /*=====================================================================
 ============================= O T H E R ===============================
 =====================================================================*/
+@media (-moz-bool-pref: "firefoxcss.disable.tab.preview.panel.fully") {
+  #tab-preview-panel, #tabbrowser-tab-tooltip {
+    display: none !important;
+  }
+}
 
 /* Status URL change (bottom left when hovering a link)  */
 #statuspanel-label {
