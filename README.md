@@ -164,11 +164,7 @@ Installation Instructions https://github.com/Alan-Kuan/Firefox-Mod-Blur#page_wit
 <h2>:wrench: MicaForEveryone Installation</h2>
 
 > [!Warning]
-> ##### -------
-> ##### Native Mica transparency is coming to firefox soon so this will 1. not be required or 2. can be used for better blur effect.
-> ##### -------
-> ##### DEPRECATED WITH FIREFOX v117 and up
-> ##### To continue using MicaForEveryone you can use Firefox v115 ESR - Extended Support Release version which will be supported and have security updates for at least a year. You can install ESR version to separate folder so you are able continue using both versions. I haven't tested that version so there could be some minor issues. https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr. I recommend using my older version files. [Maybe something like v115.x - v117.x should work fine.](https://github.com/datguypiko/Firefox-Mod-Blur/releases).
+> ##### Coming soon again in firefox v133,v134 or v135. Will probably come with v3.0.
  
 1. Download the portable or installation file from [github.com/MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone/releases).
 2. Install the extra files it asks you to install. And run the program.
