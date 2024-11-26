@@ -90,18 +90,27 @@
     --firefoxcss-new-tab-button-hover: hsla(0, 0%, 30%, 0.85);
     --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0.5);
 
-    /* Search Bar and breakout (when in focus) colors */
+     /* Search Bar and breakout (when in focus) colors */
+     --firefoxcss-url-dark-border: color-mix(
+      in srgb,
+      var(--firefoxcss-main-bg-color) 35%,
+      black
+    );
+    --firefoxcss-url-breakout-border-bottom-color: 1px solid
+      color-mix(in srgb, var(--firefoxcss-url-dark-border) 25%, transparent);
+    
+    --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
     --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 0.2);
     --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0.15);
     --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-url-breakout-border-bottom-color: hsla(0, 0%, 70%, 0.05);
     --firefoxcss-url-box-shadow-color: 0px 1px 0 0px hsla(0, 0%, 100%, 0.1),
-    inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+    inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25) !important;
     --firefoxcss-url-autocomplete-highlight: hsl(240, 2%, 26%);
     --firefoxcss-url-breakout-box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
       rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px,
+      0px -1px 0 0px hsla(0, 0%, 20%, 0.1);
     --firefoxcss-url-clipboard-button: color-mix(
       in srgb,
       currentColor 10%,
@@ -202,6 +211,7 @@
     --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0);
 
     /* Search Bar and breakout (when in focus) colors */
+    --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
     --firefoxcss-url-bar-bg-color: hsl(200, 5%, 92%);
     --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 1);
     --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0);
