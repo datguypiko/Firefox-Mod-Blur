@@ -1,4 +1,4 @@
-
+ @media not (-moz-bool-pref: "sidebar.verticalTabs") {
 
 @media (prefers-color-scheme: dark) {
  /* Tab Separators  */
@@ -49,4 +49,5 @@
   height: unset !important;
 }
   
+}
 }
