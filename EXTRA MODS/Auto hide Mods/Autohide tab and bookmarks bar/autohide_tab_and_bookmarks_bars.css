@@ -1,44 +1,75 @@
 /* Tab hide based on https://mrotherguy.github.io/firefox-csshacks/?file=autohide_tabstoolbar.css */
-#nav-bar {
+:root{
+  --uc-tabs-hide-animation-duration: 40ms;
+  --uc-tabs-hide-animation-delay: 200ms;
+}
+
+@media (-moz-bool-pref: "sidebar.verticalTabs"){
+  #sidebar-main:has(>[expanded]){
+    overflow: visible !important;
+    max-width: var(--tab-collapsed-width);
+    z-index: var(--browser-area-z-index-toolbox-while-animating);
+    transition: z-index 0s linear var(--uc-tabs-hide-duration);
   }
-  
-  :root:not([customizing]) #navigator-toolbox{
-    position: relative !important;
-    z-index: 1;
+  #sidebar-main >[expanded]{
+    --tab-pinned-horizontal-count: 5; /* This needs to match whatever is used in sidebar-main.css - currently 5 */
+    background: inherit;
+    overflow: hidden;
+    min-width: var(--tab-collapsed-width);
+    transition: min-width var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay);
+    border-inline: 0.01px solid var(--chrome-content-separator-color);
+    border-inline-width: 0 0.01px;
+    &[positionend]{
+      transition-property: min-width, transform;
+      border-inline-width: 0.01px 0;
+    }
   }
-  
-  #navigator-toolbox:not(:hover) > #titlebar{
-    -moz-window-dragging: no-drag !important;
-    pointer-events: none
+  #sidebar-main >[expanded]:hover{
+    min-width: calc(var(--tab-pinned-horizontal-count) * var(--tab-pinned-min-width-expanded) + 2 * var(--tab-pinned-container-margin-inline-expanded) + 1px);
+    transition-delay: 0ms !important;
+    &[positionend]{
+      transform: translateX(calc(var(--tab-collapsed-width) - 100%));
+    }
   }
-  
+}
+@media not (-moz-bool-pref: "sidebar.verticalTabs"){
   :root:not([customizing],[chromehidden~="menubar"]) #navigator-toolbox:hover,
-  :root:not([customizing],[chromehidden~="menubar"]) #titlebar{
+  :root:not([customizing],[chromehidden~="menubar"]) #TabsToolbar{
     margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
   }
-  #TabsToolbar:not([customizing]){ visibility: hidden; transition: visibility 0ms linear 200ms !important; }
-  
-  #navigator-toolbox,
-  #titlebar{ transition: margin-bottom 48ms ease-out 200ms !important; }
-  
-  #navigator-toolbox:hover{ transition-delay: 0s !important; }
-
-  #navigator-toolbox:hover > #titlebar{
-    margin-bottom: 0px !important;
-    transition-delay: 0s !important;
+  #navigator-toolbox{
+    transition: margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
+    --browser-area-z-index-toolbox: 3;
   }
-  
-  #navigator-toolbox:hover #TabsToolbar{
-    visibility: visible;
-    transition-delay: 18ms !important;
+  #TabsToolbar:not([customizing]){
+    visibility: hidden;
+    transition: visibility 0ms linear var(--uc-tabs-hide-animation-delay),
+                margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
+  }
+  #navigator-toolbox:hover{
+    transition-delay: 0s !important;
+    > #TabsToolbar{
+      visibility: visible;
+      margin-bottom: 0px;
+      transition-delay: 18ms, 0ms !important;
+    }
+  }
+  @media (-moz-bool-pref: "userchrome.autohidetabs.show-while-inactive.enabled"){
+    #navigator-toolbox:-moz-window-inactive{
+      margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
+      > #TabsToolbar{
+        visibility: visible;
+        margin-bottom: 0px;
+      }
+    }
   }
   /* These rules make sure that height of tabs toolbar doesn't exceed tab-min-height */
   #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
-    max-height: var(--tab-min-height) !important;
+    max-height: var(--tab-min-height);
   }
   .tab-label{ line-height: 20px !important; }
   :root[uidensity="compact"] .tab-label{ line-height: 18px !important; }
-
+}
 
 
   /* Bookmarks hide */
