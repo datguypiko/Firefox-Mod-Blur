@@ -277,10 +277,12 @@
     --tab-block-margin: 2px !important; /* Default: 4px */
     --tab-min-height: 28px !important; /* Default: 36px */
 
-    /* Toolbar Buttons */
+    
+  }
+
+  /* Toolbar Buttons */
     --toolbarbutton-outer-padding: 2px !important; /* Default: 2px */
     --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
-  }
 
   /* Menu items */
   --arrowpanel-menuitem-padding-block: 4px !important; /* Default: 8px */
