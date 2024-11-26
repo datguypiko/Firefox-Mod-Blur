@@ -18,7 +18,7 @@
 }
 
 #unified-extensions-view .panel-subview-body {
-    padding:4px !important;
+    padding:2px !important;
 }
 
 #unified-extensions-view .unified-extensions-item .unified-extensions-item-icon, 
@@ -50,6 +50,6 @@
 }
 
 #unified-extensions-view:is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
-  margin: 1px !important;
+  margin: 3px !important;
 }
 
