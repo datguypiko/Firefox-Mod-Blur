@@ -6,6 +6,16 @@
   padding-right: initial !important;
 }
 
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+  #nav-bar .titlebar-buttonbox-container {
+    display: none !important;
+  }
+  
+    #navigator-toolbox #nav-bar .titlebar-spacer[type="post-tabs"] {
+      display: none !important;
+    }
+}
+
 :root {
   --toolbar-start-end-padding: 3px !important;
   /* padding of frst and last child ,default - 8px */
