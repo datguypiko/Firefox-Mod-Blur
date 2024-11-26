@@ -2036,22 +2036,3 @@ mask-composite: intersect;
   }
 }
 
-/* Menu panels open animation */
-panel[type="arrow"][animate][animate="open"] {
-  animation: mod-panel-animation 0.2s ease-in-out;
-}
-
-@keyframes mod-panel-animation {
-  0% {
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-
-  60% {
-    transform: scale3d(1.02, 1.02, 1.02);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
