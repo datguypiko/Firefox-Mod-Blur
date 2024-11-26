@@ -1,5 +1,13 @@
 /* ----- Move menu buttons to the left side ----- */
-
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+  #nav-bar .titlebar-buttonbox-container {
+    display: none !important;
+  }
+  
+    #navigator-toolbox #nav-bar .titlebar-spacer[type="post-tabs"] {
+      display: none !important;
+    }
+}
 #nav-bar #PanelUI-button #PanelUI-menu-button {
   padding-right: 2px !important;
   padding-left: 4px !important;
