@@ -4,6 +4,16 @@
    padding-right: 4px !important;
    padding-left: 2px !important;
   }
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+  #nav-bar .titlebar-buttonbox-container {
+    display: none !important;
+  }
+  
+    #navigator-toolbox #nav-bar .titlebar-spacer[type="post-tabs"] {
+      display: none !important;
+    }
+}
  
  /* ----------------------------------------------------------------- */
  /* ---------- Default OS style close/min/max window buttons -------- */
