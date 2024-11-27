@@ -279,7 +279,7 @@
   --firefoxcss-tab-max-width: 150px;
 
   --firefoxcss-searchbar-height: 30px;
-  --firefoxcss-searchbar-container-height: 38px;
+  --firefoxcss-searchbar-container-height: 36px;
   --urlbar-icon-border-radius: calc(
     var(--firefoxcss-border-radius) - 2px
   ) !important;
