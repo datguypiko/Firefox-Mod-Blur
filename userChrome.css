@@ -284,10 +284,14 @@
     var(--firefoxcss-border-radius) - 2px
   ) !important;
   @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-    --tab-block-margin: 2px !important; /* Default: 4px */
-    --tab-min-height: 28px !important; /* Default: 36px */
-
     
+    --tab-block-margin: 2px !important;
+    /* Default: 4px */
+
+    --tab-min-height: 28px !important;
+    /* Default: 36px */
+
+    --tabstrip-min-height: 28px !important;
   }
 
   /* Toolbar Buttons */
