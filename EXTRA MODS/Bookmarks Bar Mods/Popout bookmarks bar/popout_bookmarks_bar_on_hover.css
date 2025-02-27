@@ -33,7 +33,8 @@
   }
 
   /* Show when cursor is over the toolbar area */
-  #navigator-toolbox:hover > #PersonalToolbar {
+  #navigator-toolbox:hover > #PersonalToolbar,
+  #navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]){
     transition-delay: 100ms !important;
     transform: rotateX(0) !important;
   }
@@ -57,7 +58,9 @@
  #navigator-toolbox:hover
     #PlacesToolbarItems
     > .bookmark-item
-    .toolbarbutton-icon {
+    .toolbarbutton-icon,
+ #navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) 
+> .bookmark-item .toolbarbutton-icon{
     transition-delay: 100ms !important;
     opacity: 1 !important;
   }
@@ -65,7 +68,9 @@
   #navigator-toolbox:hover
     #PlacesToolbarItems
     > .bookmark-item
-    .toolbarbutton-text {
+    .toolbarbutton-text,
+#navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) 
+> .bookmark-item .toolbarbutton-text{
     transition-delay: 100ms !important;
     opacity: 1 !important;
   }
