@@ -21,6 +21,10 @@
 	--browser-area-z-index-toolbox: initial;
 }
 
+/* Bookmarks bar background color */
+#navigator-toolbox #PersonalToolbar {
+  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
+}
 
   #PersonalToolbar:not([customizing]) {
     margin-bottom: calc(
