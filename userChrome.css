@@ -347,6 +347,14 @@ Order of Toolbars
   background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
+@media not (-moz-bool-pref: "sidebar.revamp") {
+  /* Remove line between website content and top bar */
+  #navigator-toolbox {
+    border-bottom: var(--firefoxcss-top-bar-border-bottom-size) solid
+      var(--firefoxcss-top-bar-border-bottom-color) !important;
+  } 
+}
+
 /* Set navigation toolbar to transparent */
 #navigator-toolbox #nav-bar {
   background-color: transparent !important;
