@@ -1497,6 +1497,21 @@ toolbar
     background-color: var(--firefoxcss-urlbar-zoom-button) !important;
   }
 
+/* Let you hide location permission icons to fix padding     */
+/*   #identity-permission-box box image.sharing-icon {
+    opacity: 0 !important;
+    visibility: collapse !important; 
+    transition: opacity 100ms ease-in-out, visibility 100ms ease-in-out;
+    transition-delay: 100ms;
+  }
+  
+  #identity-permission-box[open="true"] box image.sharing-icon{
+    opacity: 1 !important;
+    visibility: visible !important; 
+    transition: opacity 100ms ease, visibility 100ms ease;
+    transition-delay: 100ms;
+  } */
+
   #tracking-protection-icon-container,
   #identity-icon-box,
   #identity-permission-box {
@@ -1524,6 +1539,14 @@ toolbar
       opacity: 1 !important;
       margin-inline-start: initial !important;
     }
+  }
+
+/*   When location permission granted show permission box */
+  #urlbar #identity-permission-box:has(image.sharing-icon[sharing]) {
+    opacity: 1 !important;
+     margin-inline-start: initial !important;
+     transition: margin-inline-start 100ms ease, opacity 100ms ease;
+     transition-delay: 100ms;
   }
 
   #urlbar #identity-box[pageproxystate="valid"] {
