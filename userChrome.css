@@ -1498,7 +1498,8 @@ toolbar
   }
 
 /* Let you hide location permission icons to fix padding     */
-/*   #identity-permission-box box image.sharing-icon {
+@media (-moz-bool-pref: "mod.hide.location.permissions.icon") {
+  #identity-permission-box box image.sharing-icon {
     opacity: 0 !important;
     visibility: collapse !important; 
     transition: opacity 100ms ease-in-out, visibility 100ms ease-in-out;
@@ -1510,7 +1511,8 @@ toolbar
     visibility: visible !important; 
     transition: opacity 100ms ease, visibility 100ms ease;
     transition-delay: 100ms;
-  } */
+  }
+}
 
   #tracking-protection-icon-container,
   #identity-icon-box,
@@ -1542,12 +1544,14 @@ toolbar
   }
 
 /*   When location permission granted show permission box */
+@media not (-moz-bool-pref: "mod.hide.location.permissions.icon") {
   #urlbar #identity-permission-box:has(image.sharing-icon[sharing]) {
     opacity: 1 !important;
      margin-inline-start: initial !important;
      transition: margin-inline-start 100ms ease, opacity 100ms ease;
      transition-delay: 100ms;
   }
+}
 
   #urlbar #identity-box[pageproxystate="valid"] {
     &.weakCipher,
