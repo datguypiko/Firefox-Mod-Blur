@@ -791,13 +791,129 @@ about:config -> svg.context-properties.content.enabled -> true*/
   }
 } */
 
-.tabbrowser-tab[pinned] .tab-icon-overlay:not([crashed]) {
+.tab-audio-button {
+  #tabbrowser-tabs:is([orient="vertical"][expanded], [orient="horizontal"])
+    &:not([pinned]):not([crashed]) {
+    &:is([soundplaying], [muted], [activemedia-blocked]) {
+      /*     fill: var(--firefoxcss-tab-speaker-icon-color) !important; */
+      color: var(--firefoxcss-tab-speaker-icon-color) !important;
+      border-radius: 20px !important;
+      transform: scale(1);
+      filter: drop-shadow(-1px 1px 1px light-dark(#0000002e, #00000052));
+      border: none !important;
+      background-color: transparent !important;
+      transition: transform 150ms ease-in-out, fill 100ms ease-in-out,
+        background-color 100ms ease-in-out !important;
+      --button-border-radius: 20px !important;
+
+      &:hover {
+        background-color: var(--firefoxcss-tab-speaker-color) !important;
+        color: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
+        /*     fill: var(--firefoxcss-tab-speaker-icon-hover-color) !important; */
+        transform: scale(0.8);
+        border: none !important;
+        transition: transform 150ms ease-in-out, fill 100ms ease-in-out,
+          background-color 100ms ease-in-out, filter 100ms ease-in-out !important;
+        /*            animation: mod-bounce 250ms ease; */
+      }
+    }
+  }
+}
+
+/* button > .button-background {
+  &[type~="icon"]:not(.labelled) {
+    fill: var(--firefoxcss-tab-speaker-icon-color) !important;
+    border-radius: 20px !important;
+    transform: scale(1);
+    filter: drop-shadow(-1px 1px 1px light-dark(#0000002e, #00000052));
+    border: none !important;
+    transition: transform 150ms ease-in-out, fill 100ms ease-in-out,
+      background-color 100ms ease-in-out !important;
+  }
+}
+
+button:hover > .button-background {
+  &[type~="ghost"] {
+    background-color: var(--firefoxcss-tab-speaker-color) !important;
+    fill: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
+    transform: scale(0.8);
+    border: none !important;
+    transition: transform 150ms ease-in-out, fill 100ms ease-in-out,
+      background-color 100ms ease-in-out, filter 100ms ease-in-out !important;
+  }
+} */
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+  .tabbrowser-tab .tab-icon-overlay:not([crashed]) {
     &:is([soundplaying], [muted], [activemedia-blocked]) {
       background-image:none !important;
       background-color: var(--firefoxcss-tab-speaker-color) !important;
       /*     background-color: #ffffff26 !important;  */
       background-color: #0000002e !important;
       backdrop-filter: blur(6px);
+/*         border: 1px solid #ffffff29 !important; */
+      /*      fill:  var(--firefoxcss-tab-speaker-icon-hover-color) !important; */
+      fill: var(--firefoxcss-tab-speaker-icon-color) !important;
+/*       border: 1px solid #ffffff29 !important; */
+   
+      transition: transform 100ms ease-in-out, fill 100ms ease-in-out,
+        background-color 100ms ease-in-out;
+
+      &:hover {
+        fill: var(--firefoxcss-tab-speaker-icon-color) !important;
+        background-color: transparent !important;
+/*         background-color: #ffffff24 !important; */
+        border: 1px solid #ffffff29 !important;
+          background-color: #ffffff14 !important;
+        transition: transform 100ms ease-in-out, fill 100ms ease-in-out,
+          background-color 100ms ease-in-out !important;
+        /*     transform: scale(1.4) translate(-0.35rem, 0.48rem); */
+        transform: scale(1.2) translate(-8%, 14%);
+        transform-origin: center !important;
+      }
+    }
+  }
+  
+  .tabbrowser-tab[pinned] .tab-icon-overlay:not([crashed]) {
+    &:is([soundplaying], [muted], [activemedia-blocked]) {
+      background-image:none !important;
+      background-color: var(--firefoxcss-tab-speaker-color) !important;
+      /*     background-color: #ffffff26 !important;  */
+      background-color: #0000002e !important;
+      backdrop-filter: blur(6px);
+/*         border: 1px solid #ffffff29 !important; */
+      /*      fill:  var(--firefoxcss-tab-speaker-icon-hover-color) !important; */
+      fill: var(--firefoxcss-tab-speaker-icon-color) !important;
+/*       border: 1px solid #ffffff29 !important; */
+      transition: transform 100ms ease-in-out, fill 100ms ease-in-out,
+        background-color 100ms ease-in-out;
+
+      &:hover {
+        fill: var(--firefoxcss-tab-speaker-icon-color) !important;
+        background-color: transparent !important;
+/*         background-color: #ffffff24 !important; */
+        border: 1px solid #ffffff29 !important;
+          background-color: #ffffff14 !important;
+        transition: transform 100ms ease-in-out, fill 100ms ease-in-out,  
+          background-color 100ms ease-in-out !important;
+        /*     transform: scale(1.4) translate(-0.35rem, 0.48rem); */
+        transform: scale(1.2) translate(-8%, 14%);
+        transform-origin: center !important;
+      }
+    }
+  }
+}
+
+
+@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    .tabbrowser-tab[pinned] .tab-icon-overlay:not([crashed]) {
+    &:is([soundplaying], [muted], [activemedia-blocked]) {
+      background-image:none !important;
+      background-color: var(--firefoxcss-tab-speaker-color) !important;
+      /*     background-color: #ffffff26 !important;  */
+      background-color: #0000002e !important;
+      backdrop-filter: blur(6px);
+        border: 1px solid #ffffff29 !important;
       /*      fill:  var(--firefoxcss-tab-speaker-icon-hover-color) !important; */
       fill: var(--firefoxcss-tab-speaker-icon-color) !important;
 /*       border: 1px solid #ffffff29 !important; */
@@ -820,43 +936,6 @@ about:config -> svg.context-properties.content.enabled -> true*/
     }
   }
   
-button > .button-background {
-  &[type~="icon"]:not(.labelled) {
-    fill: var(--firefoxcss-tab-speaker-icon-color) !important;
-    border-radius: 20px !important;
-    transform: scale(1);
-    filter: drop-shadow(-1px 1px 1px light-dark(#0000002e, #00000052));
-    border: none !important;
-
-    /*     background-color: transparent !important; */
-    transition: transform 150ms ease-in-out, fill 100ms ease-in-out,
-      background-color 100ms ease-in-out !important;
-  }
-}
-
-button:hover > .button-background {
-  &[type~="ghost"] {
-    background-color: var(--firefoxcss-tab-speaker-color) !important;
-    fill: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
-    transform: scale(0.8);
-    border: none !important;
-    transition: transform 150ms ease-in-out, fill 100ms ease-in-out,
-      background-color 100ms ease-in-out, filter 100ms ease-in-out !important;
-    /*            animation: mod-bounce 250ms ease; */
-  }
-}
-
-  /* .tab-icon-overlay {
-  &:not([indicator-replaces-favicon]) {
-    &:is([soundplaying], [muted], [activemedia-blocked]) {
-      top: unset !important;
-      inset-inline-end: unset !important;
-      transform: translate(50%,-50%); 
-    }
-  }
-} */
-
-@media not (-moz-bool-pref: "sidebar.verticalTabs") {
   /* Pinned tabs padding  */
   :root:not([uidensity="compact"]) .tab-content[pinned] {
     padding: 0 8px !important;
