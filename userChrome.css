@@ -844,6 +844,12 @@ button:hover > .button-background {
 } */
 
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
+
+/* More compact vertical tabs */
+#tabbrowser-tabs[orient="vertical"] .tab-background {
+  margin-block: 0px !important;
+}
+  
   .tabbrowser-tab .tab-icon-overlay:not([crashed]) {
     &:is([soundplaying], [muted], [activemedia-blocked]) {
       background-image:none !important;
