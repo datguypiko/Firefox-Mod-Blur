@@ -2030,6 +2030,10 @@ mask-composite: intersect;
     width: 20px !important;
     display: initial !important;
   }
+
+  #tabbrowser-arrowscrollbox {
+    --toolbox-bgcolor: var(--firefoxcss-item-bg-color) !important;
+  }
   
   @media (-moz-bool-pref: "mod.disable.scrollbar.in.vertical.tabs") {
     spacer[part="overflow-start-indicator"] + scrollbox[orient="vertical"][part="scrollbox"] {
