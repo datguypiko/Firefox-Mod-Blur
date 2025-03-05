@@ -24,7 +24,11 @@
 @import url("min-max-close_buttons.css");
 @import url("acrylic_micaforeveryone.css");
 @import url("privacy_blur_tabs_content.css");
+
+/* Use only one of the two methods below to change how the bookmark bar hide */
 @import url("popout_bookmarks_bar_on_hover.css");
+/* @import url("push_bookmarks_bar_on_hover.css"); */
+
 @import url("remove_folder_icons_from_bookmarks.css");
 @import url("icons_in_main_menu.css");
 @import url("ublock-icon-change.css");
