@@ -1964,33 +1964,33 @@ mask-composite: intersect;
     --firefoxcss-top-bar-border-bottom-size: 0px;
   }
 
-  /* Remove the white line around the content window */
-    #tabbrowser-tabbox {
-      outline: 1px solid light-dark(#0000000a, #00000026) !important;
-      /*! box-shadow: none !important; */
-    }
- 
- 
-    #nav-bar .titlebar-spacer[type="post-tabs"] {
-      width: 20px !important;
-      display: initial !important;
-    }
-  
+  #nav-bar .titlebar-spacer[type="post-tabs"] {
+    width: 20px !important;
+    display: initial !important;
+  }
   
   @media (-moz-bool-pref: "mod.disable.scrollbar.in.vertical.tabs") {
-    #tabbrowser-arrowscrollbox[orient="vertical"] {
-    &::part(scrollbox) {
-      scrollbar-width: none !important;
+    spacer[part="overflow-start-indicator"] + scrollbox[orient="vertical"][part="scrollbox"] {
+       scrollbar-width: none !important;
     }
   }
 }
+
+@media (-moz-bool-pref: "sidebar.revamp") {
+    #sidebar-main,
+    #sidebar-box {
+      :root[lwtheme] & {
+        background-color: var(--firefoxcss-item-bg-color) !important;
+        background-image: none !important;
+      }
+    }
   
+    /* Remove the white line around the content window */
+  #tabbrowser-tabbox {
+    outline: 1px solid light-dark(#0000000a, #00000026) !important;
+    /*! box-shadow: none !important; */
+  }
 }
-
-
-
-
-
 
 /*===================== TABS TOP =========================*/
 
