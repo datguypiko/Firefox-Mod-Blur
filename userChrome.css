@@ -342,8 +342,9 @@ Order of Toolbars
 
 /* Bookmarks bar background color */
 #PersonalToolbar {
-  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
-  backdrop-filter: blur(10px) !important;
+/*   background-color: var(--firefoxcss-bookmarks-bg-color) !important; */
+/*   backdrop-filter: blur(10px) !important; */
+  background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
 /* Set navigation toolbar to transparent */
@@ -407,8 +408,8 @@ Order of Toolbars
 
 /* Remove line between website content and top bar */
 #navigator-toolbox {
-  border-bottom: var(--firefoxcss-top-bar-border-bottom-size) solid
-    var(--firefoxcss-top-bar-border-bottom-color) !important;
+/*   border-bottom: var(--firefoxcss-top-bar-border-bottom-size) solid
+    var(--firefoxcss-top-bar-border-bottom-color) !important; */
 }
 
 /*=====================================================================
