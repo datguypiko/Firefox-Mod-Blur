@@ -1,0 +1,36 @@
+:root {
+  --uc-bm-height: 24px;
+  --uc-bm-padding: 6px;
+}
+
+#PersonalToolbar {
+  padding: 1px 6px !important;
+  height: 0px !important;
+  opacity: 0 !important;
+  transition-property: height, opacity !important;
+  transition-duration: 300ms, 300ms !important;
+  transition-delay: 200ms, 200ms !important;
+  transition-timing-function: ease-in-out, ease-in-out !important;
+}
+
+#navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
+#PersonalToolbar:has(.bookmark-item[open]),
+#navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]) {
+  height: calc(var(--uc-bm-height) + 2*var(--uc-bm-padding)) !important;
+  opacity: 1 !important;
+}
+
+:root[uidensity="touch"] #PersonalToolbar {
+  --uc-bm-padding: 6px;
+}
+
+/* Firefox v133 fix */
+#navigator-toolbox{
+  --browser-area-z-index-toolbox: 4;
+}
+
+/* Fix navigator-toolbox absolute elements when in fullscreen. Like in fullscreen video. */
+:root[inDOMFullscreen] #navigator-toolbox {
+	--browser-area-z-index-toolbox: initial;
+}
+
