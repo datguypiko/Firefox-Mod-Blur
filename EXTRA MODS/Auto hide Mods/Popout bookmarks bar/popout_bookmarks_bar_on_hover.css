@@ -15,9 +15,15 @@
   #navigator-toolbox{
     --browser-area-z-index-toolbox: 4;
   }
+
   /* Fix navigator-toolbox absolute elements when in fullscreen. Like in fullscreen video.   */
 :root[inDOMFullscreen] #navigator-toolbox {
 	--browser-area-z-index-toolbox: initial;
+}
+
+/* Bookmarks bar background color */
+#navigator-toolbox #PersonalToolbar {
+  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
 }
 
   #PersonalToolbar:not([customizing]) {
@@ -31,7 +37,8 @@
   }
 
   /* Show when cursor is over the toolbar area */
-  #navigator-toolbox:hover > #PersonalToolbar {
+  #navigator-toolbox:hover > #PersonalToolbar,
+  #navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]){
     transition-delay: 100ms !important;
     transform: rotateX(0) !important;
   }
@@ -55,7 +62,9 @@
  #navigator-toolbox:hover
     #PlacesToolbarItems
     > .bookmark-item
-    .toolbarbutton-icon {
+    .toolbarbutton-icon,
+ #navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) 
+> .bookmark-item .toolbarbutton-icon{
     transition-delay: 100ms !important;
     opacity: 1 !important;
   }
@@ -63,7 +72,10 @@
   #navigator-toolbox:hover
     #PlacesToolbarItems
     > .bookmark-item
-    .toolbarbutton-text {
+    .toolbarbutton-text,
+#navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) 
+> .bookmark-item .toolbarbutton-text{
     transition-delay: 100ms !important;
     opacity: 1 !important;
   }
+
