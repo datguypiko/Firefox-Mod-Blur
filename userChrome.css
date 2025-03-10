@@ -1010,6 +1010,11 @@ button:hover > .button-background {
     border-color: transparent !important;
   }
 }
+
+/* Make tab group works correctly */
+tab-group[collapsed] > .tabbrowser-tab {
+  visibility:collapse !important;
+}
 /*=====================================================================
 ============ W I N D O W   C O N T R O L   B U T T O N S ==============
 =====================================================================*/
