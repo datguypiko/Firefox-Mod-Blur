@@ -1416,62 +1416,6 @@ toolbar
      default search engine results page" enabled.
      When you search a globe icon shows up to show full url */
 
-  #nav-bar:not([customizing="true"]):not(.searchButton)
-    > #nav-bar-customization-target
-    > #urlbar-container:not(:hover)
-    > #urlbar:not([focused])
-    > .urlbar-input-container
-    > #page-action-buttons
-    .urlbar-page-action:not([open]) {
-    /*   opacity: 0;
-    transition-delay: 500ms; */
-  }
-
-  /* #nav-bar:not([customizing="true"]):not(.searchButton)
-    > #nav-bar-customization-target
-    > #urlbar-container:not(:hover)
-    > #urlbar:not([focused])
-    > .urlbar-input-container
-    > #identity-box
-    #notification-popup-box:not([open])
-    .notification-anchor-icon {
-    opacity: 0;
-    transition-delay: 500ms;
-  } */
-
-  #nav-bar:not([customizing="true"]):not(.searchButton)
-    > #nav-bar-customization-target
-    > #urlbar-container:not(:hover)
-    > #urlbar:not([focused])
-    > .urlbar-input-container
-    > #identity-box
-    > #identity-permission-box:not([open]) {
-    /*   opacity: 0;
-    transition-delay: 500ms; */
-  }
-
-  #nav-bar:not([customizing="true"]):not(.searchButton)
-    > #nav-bar-customization-target
-    > #urlbar-container
-    > #urlbar
-    > .urlbar-input-container
-    > #identity-box
-    > #identity-icon-box:not([open])
-    > #identity-icon-label {
-    /*   opacity: 0;
-    visibility: collapse; */
-  }
-
-  #identity-icon-label {
-    /*   transition: opacity 0.3s ease; */
-  }
-
-  #page-action-buttons .urlbar-page-action,
-  #identity-permission-box,
-  #notification-popup-box .notification-anchor-icon {
-    /*   transition: opacity 0.2s ease; */
-  }
-
   /*
   #urlbar:not([persistsearchterms]) #identity-icon-box,
   #urlbar:not([persistsearchterms]) #identity-permission-box {
@@ -1527,6 +1471,15 @@ toolbar
     transition-delay: 100ms;
   }
 }
+
+  #identity-box.extensionPage #identity-icon-box:not([open]) #identity-icon-label{
+    opacity: 0;
+    visibility: collapse;
+  }
+  
+  #identity-box.extensionPage #identity-icon-box #identity-icon-label {
+    transition: opacity 0.3s ease;
+  }
 
   #tracking-protection-icon-container,
   #identity-icon-box,
