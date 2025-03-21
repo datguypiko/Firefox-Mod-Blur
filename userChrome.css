@@ -1481,6 +1481,12 @@ toolbar
     transition: opacity 0.3s ease;
   }
 
+  @media (-moz-bool-pref: "mod.hide.extension.url.icon") {  
+    #identity-box.extensionPage #identity-icon-box {
+      display: none !important;
+    }
+  }
+
   #tracking-protection-icon-container,
   #identity-icon-box,
   #identity-permission-box {
