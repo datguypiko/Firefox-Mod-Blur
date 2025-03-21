@@ -2088,4 +2088,14 @@ mask-composite: intersect;
   }
 }
 
+@media (-moz-bool-pref: "mod.centered.tabs") {
+  @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    #tabbrowser-arrowscrollbox:not([overflowing]) {
+      --uc-justify-content: center;
+    }
 
+    scrollbox[orient="horizontal"] > slot {
+      justify-content: var(--uc-justify-content, initial);
+    }
+  }
+}
