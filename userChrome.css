@@ -2042,6 +2042,7 @@ mask-composite: intersect;
 
 /* Tabs On Top */
 @media (-moz-bool-pref: "firefoxcss.tabs.on.top.enable") {
+  @media not (-moz-bool-pref: "sidebar.verticalTabs") {
   /* SEARCH BAR TOOLBAR */
   #nav-bar {
     order: 2 !important;
@@ -2083,6 +2084,7 @@ mask-composite: intersect;
   #TabsToolbar .titlebar-buttonbox-container {
     order: 1 !important;
     padding: 0px !important;
+  }
   }
 }
 
