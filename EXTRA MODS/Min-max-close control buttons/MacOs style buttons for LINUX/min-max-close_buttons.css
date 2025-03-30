@@ -122,7 +122,7 @@
     
   }
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.default.orer") {
+  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.default.order") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: 1 !important;
     }
