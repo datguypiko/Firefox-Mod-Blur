@@ -1813,20 +1813,6 @@ mask-composite: intersect;
     padding-inline-start: 2px !important;
   }
 
-  #nav-bar {
-    padding-right: var(--firefoxcss-control-buttons-margin) !important;
-  }
-
-  #navigator-toolbox:not([inFullscreen])
-    #TabsToolbar
-    .titlebar-buttonbox-container {
-    visibility: visible !important;
-    display: flex !important;
-    position: absolute !important;
-    top: 1px;
-    right: 0;
-  }
-
   #TabsToolbar .titlebar-buttonbox-container .titlebar-button {
     border-radius: var(--toolbarbutton-border-radius);
   }
@@ -1839,33 +1825,49 @@ mask-composite: intersect;
     padding-right: initial !important;
   }
 
-  .titlebar-buttonbox-container .titlebar-min {
-    order: 0 !important;
-  }
+  @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    #nav-bar {
+      padding-right: var(--firefoxcss-control-buttons-margin) !important;
+    }
 
-  .titlebar-buttonbox-container .titlebar-max,
-  .titlebar-restore {
-    order: 1 !important;
-  }
-
-  .titlebar-buttonbox-container .titlebar-close {
-    order: 2 !important;
-  }
-
-  @media only screen and (max-width: 670px) {
     #navigator-toolbox:not([inFullscreen])
       #TabsToolbar
       .titlebar-buttonbox-container {
       visibility: visible !important;
       display: flex !important;
-      position: relative !important;
-      order: 1 !important;
-      padding-top: 1px !important;
-      padding-bottom: 1px !important;
+      position: absolute !important;
+      top: 1px;
+      right: 0;
     }
 
-    #navigator-toolbox:not([inFullscreen]) #nav-bar {
-      padding-right: initial !important;
+    .titlebar-buttonbox-container .titlebar-min {
+      order: 0 !important;
+    }
+
+    .titlebar-buttonbox-container .titlebar-max,
+    .titlebar-restore {
+      order: 1 !important;
+    }
+
+    .titlebar-buttonbox-container .titlebar-close {
+      order: 2 !important;
+    }
+
+    @media only screen and (max-width: 670px) {
+      #navigator-toolbox:not([inFullscreen])
+        #TabsToolbar
+        .titlebar-buttonbox-container {
+        visibility: visible !important;
+        display: flex !important;
+        position: relative !important;
+        order: 1 !important;
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
+      }
+
+      #navigator-toolbox:not([inFullscreen]) #nav-bar {
+        padding-right: initial !important;
+      }
     }
   }
 }
