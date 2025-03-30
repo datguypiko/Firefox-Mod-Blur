@@ -1756,7 +1756,7 @@ toolbar
   /*   Smaller tab text and height. Broken on fedora? */
   #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
     height: 2.4em !important;
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 
   @media (-moz-bool-pref: "sidebar.verticalTabs") {
