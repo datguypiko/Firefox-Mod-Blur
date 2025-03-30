@@ -1923,13 +1923,25 @@ toolbar
 }
 
 @media (-moz-bool-pref: "sidebar.revamp") {
-  #sidebar-main,
-  #sidebar-box {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-    background-image: none !important;
-  }
-
-  /* Remove the white line around the content window */
+    #sidebar-main,
+    #sidebar-box {
+        background-color: var(--firefoxcss-item-bg-color) !important;
+        background-image: none !important;
+    }
+  
+  
+    @media (-moz-bool-pref:"mod.custom.firefox.theme.color.fix") {
+      #sidebar-main,
+      #sidebar-box {
+           background-color: var(--lwt-accent-color) !important;
+      }
+      
+      #tabbrowser-arrowscrollbox {
+        --toolbox-bgcolor: var(--lwt-accent-color) !important;
+      }
+    }
+  
+    /* Remove the white line around the content window */
   #tabbrowser-tabbox {
     outline: 1px solid light-dark(#0000000a, #00000026) !important;
     /*! box-shadow: none !important; */
