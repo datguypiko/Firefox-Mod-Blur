@@ -1,4 +1,4 @@
-Enable preference of your choice in about:config. (type about:config inside searchbar)
+Enable preference of your choice in about:config. (type " about:config " inside searchbar)
 
 Copy paste it and enable:
 
