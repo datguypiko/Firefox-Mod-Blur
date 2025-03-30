@@ -1,0 +1,352 @@
+/* ----------------------------------------------------------------- */
+/* ---------- MacOS style close/min/max window buttons ------------- */
+/* ----------------------------------------------------------------- */
+:root {
+    --toolbar-start-end-padding: 4px !important;
+  }
+  
+  #navigator-toolbox:not([inFullscreen])
+    .titlebar-buttonbox-container {
+  
+    padding-top: 10px !important;
+    padding-bottom: 2px !important;
+    padding-right: 2px !important;
+    padding-left: 8px !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-button {
+    width: 14px !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    height: 14px !important;
+  }
+  
+  #navigator-toolbox[inFullscreen] .titlebar-buttonbox-container {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-right: 4px !important;
+    padding-left: 8px !important;
+    margin: 0 !important;
+    align-items: center !important;
+    order: -1 !important;
+  }
+  
+  #navigator-toolbox[inFullscreen] #nav-bar {
+    padding-left: initial !important;
+  }
+  
+  :root:-moz-window-inactive:not([customizing])
+    :is(.titlebar-buttonbox)
+    > toolbarbutton:not(:hover) {
+    opacity: 0.65 !important;
+  }
+  
+  :is(.titlebar-buttonbox) .toolbarbutton-icon {
+    opacity: 1 !important;
+    appearance: none !important;
+  }
+  
+  #navigator-toolbox .titlebar-button > .toolbarbutton-icon {
+    width: 14px !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    height: 14px !important;
+    stroke: none !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox {
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
+  
+  #navigator-toolbox .titlebar-button {
+    background-color: transparent !important;
+    appearance: none !important;
+    padding: 0px !important;
+    margin: 0 !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  
+  
+  @media (-moz-bool-pref: "mod.macos.style.buttons.left.side.close-min-max") {
+    #navigator-toolbox .titlebar-buttonbox-container {
+      order: -1 !important;
+    }
+    
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-close {
+      appearance: none !important;
+      order: 0 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-min {
+      appearance: none !important;
+      order: 1 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-max,
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-restore {
+      appearance: none !important;
+      order: 2!important;
+    }
+  
+  }
+  
+  @media (-moz-bool-pref: "mod.macos.style.buttons.left.side.default.order") {
+    #navigator-toolbox .titlebar-buttonbox-container {
+      order: -1 !important;
+    }
+    
+  }
+  
+  @media (-moz-bool-pref: "mod.macos.style.buttons.left.side.close-max-min") {
+    #navigator-toolbox .titlebar-buttonbox-container {
+      order: -1 !important;
+    }
+    
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-close {
+      appearance: none !important;
+      order: 0 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-min {
+      appearance: none !important;
+      order: 2 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-max,
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-restore {
+      appearance: none !important;
+      order: 1 !important;
+    }
+    
+  }
+  
+  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.default.orer") {
+    #navigator-toolbox .titlebar-buttonbox-container {
+      order: 1 !important;
+    }
+  
+  }
+  
+  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.min-max-close") {
+    #navigator-toolbox .titlebar-buttonbox-container {
+      order: 1 !important;
+    }
+    
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-close {
+      appearance: none !important;
+      order: 2 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-min {
+      appearance: none !important;
+      order: 0 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-max,
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-restore {
+      appearance: none !important;
+      order: 1 !important;
+    }
+    
+  }  
+  
+  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.max-min-close") {
+    #navigator-toolbox .titlebar-buttonbox-container {
+      order: 1 !important;
+    }
+    
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-close {
+      appearance: none !important;
+      order: 2 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-min {
+      appearance: none !important;
+      order: 1 !important;
+    }
+  
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-max,
+    #navigator-toolbox .titlebar-buttonbox-container > .titlebar-buttonbox .titlebar-restore {
+      appearance: none !important;
+      order: 0 !important;
+    }
+    
+  } 
+  
+  
+  
+  #navigator-toolbox
+    .titlebar-buttonbox-container:not(:hover)
+    .titlebar-buttonbox
+    .titlebar-button {
+    background-color: hsla(0, 0%, 65%, 1) !important;
+    transition: background-color 200ms ease !important;
+  }
+  
+  #navigator-toolbox
+    .titlebar-buttonbox-container
+    .titlebar-button
+    > .toolbarbutton-icon {
+    list-style-image: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  
+  #navigator-toolbox
+    .titlebar-buttonbox-container
+    .titlebar-buttonbox
+    .titlebar-button {
+    border-radius: 50% !important;
+    margin-right: 8px !important;
+    position: relative !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-min::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 2px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 2px;
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-min:hover::before {
+    opacity: 1;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-max::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 55%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 2px;
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-max::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 3px;
+    height: 80%;
+    opacity: 0;
+    background: hsl(143, 100%, 40%);
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-max:hover::before,
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-max:hover::after {
+    opacity: 1;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 2px;
+    height: 9px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 1px;
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 2px;
+    height: 9px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 1px;
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-close:hover::before,
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-close:hover::after {
+    opacity: 1;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-restore:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 2px;
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-restore:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    opacity: 0;
+    background: hsl(143, 100%, 40%);
+    border-radius: 0px;
+    transition: 0ms;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-restore:hover::before,
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-restore:hover::after {
+    opacity: 1;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-close {
+    background: hsl(1, 100%, 68%) !important;
+    overflow: hidden !important;
+    transition: background-color 200ms ease !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-max,
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-restore {
+    background: hsl(143, 100%, 40%) !important;
+    overflow: hidden !important;
+    transition: background-color 200ms ease !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-min {
+    background-color: hsl(39, 100%, 63%) !important;
+    overflow: hidden !important;
+    transition: background-color 200ms ease !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-close:hover .toolbarbutton-icon{
+    background: hsl(1, 100%, 68%) !important; 
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-max:hover .toolbarbutton-icon,
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-restore:hover .toolbarbutton-icon{
+    background: hsl(143, 100%, 40%) !important;
+  }
+  
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-min:hover .toolbarbutton-icon{
+    background: hsl(39, 100%, 63%) !important;
+  }
