@@ -452,8 +452,8 @@ url("about:newtab") {
 
 @media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-b") 
 	or (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-a") {
-  .layout-variant-a .top-site-outer .tile .icon-wrapper,
-  .layout-variant-b .top-site-outer .tile .icon-wrapper {
+  .layout-variant-a .top-site-outer:not(.add-button) .tile .icon-wrapper,
+  .layout-variant-b .top-site-outer:not(.add-button) .tile .icon-wrapper {
     height: 48px !important;
     width: 48px !important;
   }
