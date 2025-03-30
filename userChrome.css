@@ -2027,10 +2027,8 @@ mask-composite: intersect;
 @media (-moz-bool-pref: "sidebar.revamp") {
     #sidebar-main,
     #sidebar-box {
-      :root[lwtheme] & {
         background-color: var(--firefoxcss-item-bg-color) !important;
         background-image: none !important;
-      }
     }
   
     /* Remove the white line around the content window */
