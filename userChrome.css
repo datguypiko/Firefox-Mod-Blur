@@ -827,6 +827,10 @@ about:config -> svg.context-properties.content.enabled -> true*/
           background-color 100ms ease-in-out, filter 100ms ease-in-out !important;
         /*            animation: mod-bounce 250ms ease; */
       }
+      &:hover:active {
+        color: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
+        --button-text-color-ghost-active: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
+      }
     }
   }
 }
