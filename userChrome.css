@@ -806,6 +806,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     &:is([soundplaying], [muted], [activemedia-blocked]) {
       /*     fill: var(--firefoxcss-tab-speaker-icon-color) !important; */
       color: var(--firefoxcss-tab-speaker-icon-color) !important;
+      --button-text-color-ghost: var(--firefoxcss-tab-speaker-icon-color) !important;
       border-radius: 20px !important;
       transform: scale(1);
       filter: drop-shadow(-1px 1px 1px light-dark(#0000002e, #00000052));
@@ -818,6 +819,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
       &:hover {
         background-color: var(--firefoxcss-tab-speaker-color) !important;
         color: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
+        --button-text-color-ghost-hover: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
         /*     fill: var(--firefoxcss-tab-speaker-icon-hover-color) !important; */
         transform: scale(0.8);
         border: none !important;
