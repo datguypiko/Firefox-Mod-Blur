@@ -1,4 +1,4 @@
- @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+ @media not -moz-pref("sidebar.verticalTabs") {
 
 @media (prefers-color-scheme: dark) {
  /* Tab Separators  */
