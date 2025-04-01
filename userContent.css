@@ -27,7 +27,9 @@
     --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
 
     --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
-    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
+    --firefoxcss-private-search-text-hover: var(
+      --firefoxcss-private-search-hover-fill
+    );
     --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
 
     --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
@@ -55,8 +57,10 @@
     --firefoxcss-customize-menu-bg-image: url("ASSETS/other/noise-512x512.png");
     --firefoxcss-customize-menu-dropdown: #1e1e1e80;
     --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.1);
-    --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
-     --firefoxcss-customize-menu-secondary-popup:hsla(210, 10%, 10%, 0.6);
+    --newtab-background-color-secondary: var(
+      --firefoxcss-customize-menu
+    ) !important;
+    --firefoxcss-customize-menu-secondary-popup: hsla(210, 10%, 10%, 0.6);
     --firefoxcss-input-focus: white;
     /*  no changes */
     --firefoxcss-shortcut-item-active: hsla(0, 0%, 10%, 0.7);
@@ -69,10 +73,12 @@
     --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 90%, 0.9);
     --firefoxcss-settings-wheel-bg-color-hover: rgba(255, 255, 255, 0.2);
     --firefoxcss-shortcut-search-icon-color: #7ae3f463;
-    
+
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+    --fxview-background-color-secondary: var(
+      --firefoxcss-item-bg-color
+    ) !important;
     --firefoxcss-firefoxview-sticky-color: hsla(240, 2%, 13%, 0.75) !important;
     --firefoxcss-firefoxview-search-color: hsla(240, 2%, 35%, 0.5) !important;
   }
@@ -86,7 +92,7 @@
   :root {
     --firefoxcss-main-bg-color: hsl(200, 5%, 90%);
     --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
-    --firefoxcss-item-hover-bg-color:  hsl(200, 0%, 100%);
+    --firefoxcss-item-hover-bg-color: hsl(200, 0%, 100%);
     --firefoxcss-text-color: hsl(0, 0%, 0%);
     --firefoxcss-other-color: hsl(290, 21%, 20%);
 
@@ -95,12 +101,14 @@
     --firefoxcss-private-search-top-border: hsla(0, 0%, 100%, 0.45);
     --firefoxcss-private-search-fill: hsl(275, 20%, 65%);
 
-    --firefoxcss-private-search-hover: hsla(276, 20%, 84%, 0.50);
+    --firefoxcss-private-search-hover: hsla(276, 20%, 84%, 0.5);
     --firefoxcss-private-search-border-hover: hsla(0, 0%, 100%, 0.55);
     --firefoxcss-private-search-hover-fill: hsl(275, 20%, 55%);
 
     --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
-    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
+    --firefoxcss-private-search-text-hover: var(
+      --firefoxcss-private-search-hover-fill
+    );
     --firefoxcss-private-search-caret: hsl(276, 20%, 40%);
 
     --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015),
@@ -128,9 +136,11 @@
     --firefoxcss-customize-menu-bg-image: none;
     --firefoxcss-customize-menu-dropdown: #fdfdfd80;
     --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.2);
-    --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
-    --firefoxcss-customize-menu-secondary-popup:hsla(200, 10%, 100%, 0.45);
-    --firefoxcss-input-focus: black;  /*  no changes */
+    --newtab-background-color-secondary: var(
+      --firefoxcss-customize-menu
+    ) !important;
+    --firefoxcss-customize-menu-secondary-popup: hsla(200, 10%, 100%, 0.45);
+    --firefoxcss-input-focus: black; /*  no changes */
     --firefoxcss-shortcut-item-active: hsla(200, 15%, 85%, 0.4);
     --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.4);
     --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.5);
@@ -141,10 +151,12 @@
     --firefoxcss-settings-wheel-color-hover: hsla(200, 20%, 10%, 0.9);
     --firefoxcss-settings-wheel-bg-color-hover: rgba(0, 0, 0, 0.1);
     --firefoxcss-shortcut-search-icon-color: #2896a870;
-    
+
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+    --fxview-background-color-secondary: var(
+      --firefoxcss-item-bg-color
+    ) !important;
     --firefoxcss-firefoxview-sticky-color: hsla(200, 10%, 95%, 0.5) !important;
     --firefoxcss-firefoxview-search-color: hsla(200, 5%, 100%, 0.95) !important;
   }
@@ -195,9 +207,9 @@ body {
     transition: color 100ms ease-in, opacity 100ms ease-in !important;
   }
 
-  #search-handoff-button:active>.fake-textbox,
-  #search-handoff-button:hover>.fake-textbox,
-  #search-handoff-button:focus>.fake-textbox {
+  #search-handoff-button:active > .fake-textbox,
+  #search-handoff-button:hover > .fake-textbox,
+  #search-handoff-button:focus > .fake-textbox {
     color: var(--firefoxcss-private-search-text-hover) !important;
   }
 
@@ -231,7 +243,6 @@ body {
 
 @-moz-document url("about:home"),
 url("about:newtab") {
-
   body {
     --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
     background-size: cover !important;
@@ -265,11 +276,12 @@ url("about:newtab") {
 
   .icon.icon-settings.personalize-button:hover {
     color: var(--firefoxcss-settings-wheel-color-hover) !important;
-    background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
+    background-color: var(
+      --firefoxcss-settings-wheel-bg-color-hover
+    ) !important;
     backdrop-filter: blur(10px);
   }
-  
- 
+
   .body-wrapper .tile {
     background-color: var(--firefoxcss-item-bg-color) !important;
     border-top: 1px solid var(--firefoxcss-shortcut-item-top-border) !important;
@@ -292,32 +304,32 @@ url("about:newtab") {
   }
 
   menu .customize-menu .arrow-button {
-    margin-top:3px !important;
-    margin-left:5px !important;
+    margin-top: 3px !important;
+    margin-left: 5px !important;
     opacity: 0.7 !important;
   }
-  
+
   menu .customize-menu {
     backdrop-filter: blur(32px) !important;
     border: var(--firefoxcss-customize-menu-border) !important;
     border-radius: 1rem !important;
-    margin:1rem !important;
-/*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
+    margin: 1rem !important;
+    /*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
     height: unset !important;
   }
-  
+
   .customize-menu .category.wallpaper-list {
     overflow: hidden !important;
     height: auto !important;
-     background-color: var(--firefoxcss-customize-menu-secondary-popup) !important;
+    background-color: var(
+      --firefoxcss-customize-menu-secondary-popup
+    ) !important;
     backdrop-filter: blur(24px) !important;
     border-radius: 8px;
     margin-top: 16px !important;
-     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2)) !important; 
-       border: var(--firefoxcss-customize-menu-border) !important;
-  
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2)) !important;
+    border: var(--firefoxcss-customize-menu-border) !important;
   }
-  
 
   .home-section .section .selector {
     background-color: var(--firefoxcss-customize-menu-dropdown) !important;
@@ -345,13 +357,12 @@ url("about:newtab") {
   .top-site-outer .top-site-button:hover .title {
     opacity: 1 !important;
   }
-  
- .top-site-outer .context-menu-button.icon:is(:active, :focus, :hover) {
+
+  .top-site-outer .context-menu-button.icon:is(:active, :focus, :hover) {
     fill: #f79743 !important;
     background-color: transparent !important;
     border: 0 !important;
   }
- 
 
   .top-site-outer .context-menu-button {
     fill: var(--firefoxcss-context-menu-three-dots) !important;
@@ -374,12 +385,11 @@ url("about:newtab") {
   .top-site-button .title.has-icon.pinned span .icon {
     opacity: 0.6 !important;
     display: none !important;
-    transition:all 800ms ease;
+    transition: all 800ms ease;
   }
 
   .top-site-button .title.has-icon.pinned span:hover .icon {
     display: inline-block !important;
-  
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
@@ -395,9 +405,10 @@ url("about:newtab") {
     border-radius: 8px !important;
   }
 
-  .top-site-outer .context-menu>ul>li.separator,
-  .card-outer .context-menu>ul>li.separator {
-    border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
+  .top-site-outer .context-menu > ul > li.separator,
+  .card-outer .context-menu > ul > li.separator {
+    border-bottom: 1px solid
+      var(--firefoxcss-shortcut-item-context-menu-separator) !important;
   }
 
   .search-wrapper .search-handoff-button input {
@@ -450,141 +461,163 @@ url("about:newtab") {
     padding: 20px 25px !important;
   }
 
-@media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-b") 
-	or (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-a") {
-  .layout-variant-a .top-site-outer:not(.add-button) .tile .icon-wrapper,
-  .layout-variant-b .top-site-outer:not(.add-button) .tile .icon-wrapper {
-    height: 48px !important;
-    width: 48px !important;
-  }
+  @media -moz-pref("browser.newtabpage.activity-stream.newtabLayouts.variant-b") or -moz-pref("browser.newtabpage.activity-stream.newtabLayouts.variant-a") {
+    .layout-variant-a .top-site-outer:not(.add-button) .tile .icon-wrapper,
+    .layout-variant-b .top-site-outer:not(.add-button) .tile .icon-wrapper {
+      height: 48px !important;
+      width: 48px !important;
+    }
 
-  .layout-variant-a .top-site-outer .tile,
-  .layout-variant-b .top-site-outer .tile {
-    height: 80px !important;
-    width: 80px !important;
-  }
+    .layout-variant-a .top-site-outer .tile,
+    .layout-variant-b .top-site-outer .tile {
+      height: 80px !important;
+      width: 80px !important;
+    }
 
-  .layout-variant-a .top-site-outer,
-  .layout-variant-b .top-site-outer {
-    width: 120px !important;
-  }
+    .layout-variant-a .top-site-outer,
+    .layout-variant-b .top-site-outer {
+      width: 120px !important;
+    }
 
-  .layout-variant-a .outer-wrapper .ds-top-sites .top-sites .top-sites-list,
-  .layout-variant-b .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
-    margin: 0 -12px !important;
-    width: auto !important;
-  }
+    .layout-variant-a .outer-wrapper .ds-top-sites .top-sites .top-sites-list,
+    .layout-variant-b .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
+      margin: 0 -12px !important;
+      width: auto !important;
+    }
 
-  .layout-variant-a .top-sites-list,
-  .layout-variant-b .top-sites-list {
-    display: flex !important;
-  }
-
-  .layout-variant-a .ds-outer-wrapper-breakpoint-override main .body-wrapper,
-  .layout-variant-b .ds-outer-wrapper-breakpoint-override main .body-wrapper {
-    width: unset !important;
-  }
-
-  .layout-variant-a .top-sites-list,
-  .layout-variant-b .top-sites-list {
-    row-gap: unset !important;
-  }
-
-  @media (min-width: 610px) {
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: unset !important;
+    .layout-variant-a .top-sites-list,
+    .layout-variant-b .top-sites-list {
+      display: flex !important;
     }
 
     .layout-variant-a .ds-outer-wrapper-breakpoint-override main .body-wrapper,
     .layout-variant-b .ds-outer-wrapper-breakpoint-override main .body-wrapper {
       width: unset !important;
     }
-  }
-  @media (min-width: 724px) {
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: unset !important;
+
+    .layout-variant-a .top-sites-list,
+    .layout-variant-b .top-sites-list {
+      row-gap: unset !important;
     }
 
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main .body-wrapper,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main .body-wrapper {
-      width: unset !important;
-    }
-  }
-  @media (min-width: 1122px) {
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: unset !important;
-    }
+    @media (min-width: 610px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: unset !important;
+      }
 
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main .body-wrapper,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main .body-wrapper {
-      width: unset !important;
+      .layout-variant-a
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper,
+      .layout-variant-b
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper {
+        width: unset !important;
+      }
     }
-  }
-  @media (min-width: 1698px) {
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: unset !important;
+    @media (min-width: 724px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: unset !important;
+      }
+
+      .layout-variant-a
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper,
+      .layout-variant-b
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper {
+        width: unset !important;
+      }
     }
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main .body-wrapper,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main .body-wrapper {
-      width: unset !important;
+    @media (min-width: 1122px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: unset !important;
+      }
+
+      .layout-variant-a
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper,
+      .layout-variant-b
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper {
+        width: unset !important;
+      }
     }
-  }
-
-  .layout-variant-a .search-wrapper .search-inner-wrapper,
-  .layout-variant-b .search-wrapper .search-inner-wrapper {
-    width: 200px !important;
-  }
-
-  .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-  .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-    width: 266px !important;
-  }
-
-  @media (min-width: 610px) {
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: 510px !important;
+    @media (min-width: 1698px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: unset !important;
+      }
+      .layout-variant-a
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper,
+      .layout-variant-b
+        .ds-outer-wrapper-breakpoint-override
+        main
+        .body-wrapper {
+        width: unset !important;
+      }
     }
 
     .layout-variant-a .search-wrapper .search-inner-wrapper,
     .layout-variant-b .search-wrapper .search-inner-wrapper {
-      width: 360px !important;
+      width: 200px !important;
     }
-  }
 
-  @media (min-width: 866px) {
     .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
     .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: 746px !important;
+      width: 266px !important;
     }
 
-    .layout-variant-a .search-wrapper .search-inner-wrapper,
-    .layout-variant-b .search-wrapper .search-inner-wrapper {
-      width: 600px !important;
+    @media (min-width: 610px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: 510px !important;
+      }
+
+      .layout-variant-a .search-wrapper .search-inner-wrapper,
+      .layout-variant-b .search-wrapper .search-inner-wrapper {
+        width: 360px !important;
+      }
+    }
+
+    @media (min-width: 866px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: 746px !important;
+      }
+
+      .layout-variant-a .search-wrapper .search-inner-wrapper,
+      .layout-variant-b .search-wrapper .search-inner-wrapper {
+        width: 600px !important;
+      }
+    }
+
+    @media (min-width: 1122px) {
+      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
+      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
+        width: 986px !important;
+      }
+
+      .layout-variant-a .search-wrapper .search-inner-wrapper,
+      .layout-variant-b .search-wrapper .search-inner-wrapper {
+        width: 720px !important;
+      }
+    }
+
+    main.newtab-main {
+      min-width: min-content !important;
     }
   }
-
-  @media (min-width: 1122px) {
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: 986px !important;
-    }
-
-    .layout-variant-a .search-wrapper .search-inner-wrapper,
-    .layout-variant-b .search-wrapper .search-inner-wrapper {
-      width: 720px !important;
-    }
-  }
-
-  main.newtab-main {
-    min-width: min-content !important;
-  }
-}
-
 
   .search-wrapper .search-handoff-button,
   .search-wrapper input {
@@ -615,7 +648,10 @@ url("about:newtab") {
     top: 0 !important;
   }
 
-  .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper button.search-handoff-button {
+  .outer-wrapper.fixed-search
+    .search-wrapper
+    .search-inner-wrapper
+    button.search-handoff-button {
     backdrop-filter: blur(22px) !important;
     background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
     box-shadow: none !important;
@@ -629,9 +665,9 @@ url("about:newtab") {
     transition: opacity 0.4s !important;
   }
 
-  .search-wrapper .search-handoff-button:active>.fake-textbox,
-  .search-wrapper .search-handoff-button:hover>.fake-textbox,
-  .search-wrapper .search-handoff-button:focus>.fake-textbox {
+  .search-wrapper .search-handoff-button:active > .fake-textbox,
+  .search-wrapper .search-handoff-button:hover > .fake-textbox,
+  .search-wrapper .search-handoff-button:focus > .fake-textbox {
     opacity: 0.8 !important;
   }
 
@@ -679,168 +715,196 @@ url("about:newtab") {
      background-image: url("ASSETS/icons/search-glass.svg") !important;
      background-size: 16px !important;  
   }*/
-  
+
   /* Remove photo attribution when wallpaper for new tab is set */
   .wallpaper-attribution {
     display: none !important;
   }
-  
+
   /* Customization menu close button changes */
   .customize-menu .close-button {
     backdrop-filter: blur(24px) !important;
   }
-  
+
   .activity-stream.darkWallpaper {
-     @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: dark) {
       --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.6) !important;
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.5) !important;
     }
-    
+
     @media (prefers-color-scheme: light) {
       --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.25) !important;
       --firefoxcss-item-hover-bg-color: hsla(200, 10%, 98%, 0.28) !important;
       --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.1) !important;
       --firefoxcss-search-text-fill: rgba(255, 255, 255, 0.6) !important;
       --firefoxcss-search-bar-text-color: rgba(255, 255, 255, 0.9) !important;
-      --firefoxcss-search-bar-fill-icon-hover: rgba(255, 255, 255, 0.8) !important;
-      --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.15) !important;
+      --firefoxcss-search-bar-fill-icon-hover: rgba(
+        255,
+        255,
+        255,
+        0.8
+      ) !important;
+      --firefoxcss-shortcut-item-top-border-hover: hsla(
+        0,
+        0%,
+        100%,
+        0.15
+      ) !important;
       --firefoxcss-settings-wheel-color: hsla(200, 20%, 90%, 0.6) !important;
-      --firefoxcss-settings-wheel-color-hover: hsla(200, 20%, 90%, 0.9) !important;
+      --firefoxcss-settings-wheel-color-hover: hsla(
+        200,
+        20%,
+        90%,
+        0.9
+      ) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
-      
-      
+
       .top-site-outer:hover:not(.active) .title,
-       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small{
+      .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
         color: #fbfbfe !important;
-       }
-      
-       .top-site-outer .context-menu,
+      }
+
+      .top-site-outer .context-menu,
       .card-outer .context-menu {
-        --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.8) !important;
-        --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.1) !important;
-        --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 0%, 0.1) !important;
+        --firefoxcss-shortcut-item-context-menu: hsla(
+          0,
+          0%,
+          95%,
+          0.8
+        ) !important;
+        --firefoxcss-shortcut-item-context-menu-border: hsla(
+          0,
+          0%,
+          100%,
+          0.1
+        ) !important;
+        --firefoxcss-shortcut-item-context-menu-separator: hsla(
+          0,
+          0%,
+          0%,
+          0.1
+        ) !important;
       }
     }
-    
+
     & .collapsible-section .card-outer {
       backdrop-filter: blur(20px) !important;
     }
-    
+
     & .body-wrapper .tile {
       backdrop-filter: blur(20px) !important;
       border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
     }
-    
+
     & .body-wrapper .top-site-button:hover .tile {
-       filter: brightness(115%);
-       border-top: 1px solid hsla(0, 0%, 58%, 0.3) !important;
-    } 
-    
+      filter: brightness(115%);
+      border-top: 1px solid hsla(0, 0%, 58%, 0.3) !important;
+    }
+
     /*  Pocket cards background blur - new tab */
     & .ds-card-grid .ds-card:not(.placeholder) {
-       backdrop-filter: blur(20px); 
+      backdrop-filter: blur(20px);
     }
-    
   }
-  
+
   .activity-stream.lightWallpaper {
     @media (prefers-color-scheme: dark) {
-       --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.8) !important;
-       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.7) !important;
-       --firefoxcss-settings-wheel-color: hsla(0, 0%, 12%, 0.75) !important;
-       --firefoxcss-settings-wheel-color-hover:  hsla(0, 0%, 12%, 0.55) !important; 
-      
-       .top-site-outer:hover:not(.active) .title,
-       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small{
+      --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.8) !important;
+      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.7) !important;
+      --firefoxcss-settings-wheel-color: hsla(0, 0%, 12%, 0.75) !important;
+      --firefoxcss-settings-wheel-color-hover: hsla(
+        0,
+        0%,
+        12%,
+        0.55
+      ) !important;
+
+      .top-site-outer:hover:not(.active) .title,
+      .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
         color: hsl(250, 13%, 9%) !important;
-       }
-  
+      }
     }
-    
-     @media (prefers-color-scheme: light) {
+
+    @media (prefers-color-scheme: light) {
       --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.75) !important;
       --firefoxcss-item-hover-bg-color: hsla(200, 10%, 98%, 0.85) !important;
     }
-    
+
     & .collapsible-section .card-outer {
       backdrop-filter: blur(22px) !important;
     }
-    
+
     & .body-wrapper .tile {
       backdrop-filter: blur(22px) !important;
     }
-    
+
     & .body-wrapper .top-site-button:hover .tile {
-       filter: brightness(115%);
-       border-top: 1px solid hsla(0, 0%, 58%, 0.1) !important;
-    } 
-    
+      filter: brightness(115%);
+      border-top: 1px solid hsla(0, 0%, 58%, 0.1) !important;
+    }
+
     /*  Pocket cards background blur - new tab */
     & .ds-card-grid .ds-card:not(.placeholder) {
-       backdrop-filter: blur(20px); 
+      backdrop-filter: blur(20px);
     }
-    
-  }
-  
-  /* Pocket extra modification by request */
-@media (-moz-bool-pref: "firefoxcss.pocket.oneline.enable") {
-  /* Pocket new tab - Learn More text disable  */
-  .collapsible-section .section-title-container .learn-more-link-wrapper {
-    display: none !important;
   }
 
-  @media (-moz-bool-pref: "firefoxcss.pocket.hide.populartopics.links") {
-    /* Pocket new tab - Popular Topics bottom links text disable  */
-    .discovery-stream.ds-layout .ds-navigation.ds-navigation-left-align {
+  /* Pocket extra modification by request */
+  @media -moz-pref("firefoxcss.pocket.oneline.enable") {
+    /* Pocket new tab - Learn More text disable  */
+    .collapsible-section .section-title-container .learn-more-link-wrapper {
       display: none !important;
     }
-  }
 
-  /* Pocket new tab - Privacy Notice text disable  */
-  .ds-navigation .ds-navigation-privacy {
-    display: none !important;
-  }
+    @media -moz-pref("firefoxcss.pocket.hide.populartopics.links") {
+      /* Pocket new tab - Popular Topics bottom links text disable  */
+      .discovery-stream.ds-layout .ds-navigation.ds-navigation-left-align {
+        display: none !important;
+      }
+    }
 
-  /* pocket new tab context menu  */
-  .context-menu {
-    background-image: var(--firefoxcss-customize-menu-bg-image) !important;
-    background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
-    backdrop-filter: blur(32px) !important;
-    border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border);
-    border-radius: 8px !important;
-  }
+    /* Pocket new tab - Privacy Notice text disable  */
+    .ds-navigation .ds-navigation-privacy {
+      display: none !important;
+    }
 
-  .discovery-stream.ds-layout .ds-card-grid {
-    grid-template-rows: 1fr !important;
-    grid-auto-rows: 0 !important;
-    padding-bottom: 0 !important;
-    row-gap: 0 !important;
-    overflow: hidden !important;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
-	@media (-moz-bool-pref: "firefoxcss.pocket.4.cards.enable") {
-           	grid-template-columns: repeat(auto-fill,minmax(200px,1fr)) !important;
-           	column-gap: 16px !important;
-      	}
-	@media  (-moz-bool-pref: "firefoxcss.pocket.5.cards.enable") {
-        	grid-template-columns: repeat(auto-fill,minmax(150px,1fr)) !important;
-        	column-gap: 12px !important;
-      	}
+    /* pocket new tab context menu  */
+    .context-menu {
+      background-image: var(--firefoxcss-customize-menu-bg-image) !important;
+      background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
+      backdrop-filter: blur(32px) !important;
+      border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border);
+      border-radius: 8px !important;
+    }
+
+    .discovery-stream.ds-layout .ds-card-grid {
+      grid-template-rows: 1fr !important;
+      grid-auto-rows: 0 !important;
+      padding-bottom: 0 !important;
+      row-gap: 0 !important;
+      overflow: hidden !important;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+      @media -moz-pref("firefoxcss.pocket.4.cards.enable") {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+        column-gap: 16px !important;
+      }
+      @media -moz-pref("firefoxcss.pocket.5.cards.enable") {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+        column-gap: 12px !important;
+      }
+    }
   }
-}
-  
-  
 }
 
 @-moz-document url-prefix(about:firefoxview) {
-
   .search-container {
     border: none !important;
   }
-  
+
   .search-container input {
     background-color: var(--firefoxcss-firefoxview-search-color) !important;
   }
-  
+
   div.sticky-container.bottom-fade {
     background: none !important;
     background-color: var(--firefoxcss-firefoxview-sticky-color) !important;
@@ -848,26 +912,24 @@ url("about:newtab") {
     flex-direction: row !important;
     padding-block: 30px 20px !important;
   }
- 
+
   @media (max-width: 52rem) {
-  div.sticky-container.bottom-fade {
-    flex-direction: column !important;
+    div.sticky-container.bottom-fade {
+      flex-direction: column !important;
     }
   }
-
 }
 
 @-moz-document url-prefix("about:") {
   :root {
-     --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
-     --in-content-table-background: var(--firefoxcss-item-bg-color) !important; 
-     --in-content-page-background: var(--firefoxcss-main-bg-color) !important; 
+    --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
+    --in-content-table-background: var(--firefoxcss-item-bg-color) !important;
+    --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
   }
 }
 
 @-moz-document url("about:blank") {
-
-/*   html:not(#ublock0-epicker),
+  /*   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body, */
   #newtab-customize-overlay {
     background-color: var(--firefoxcss-main-bg-color) !important;
