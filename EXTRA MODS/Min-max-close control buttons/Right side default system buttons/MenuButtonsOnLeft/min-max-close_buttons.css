@@ -1,7 +1,7 @@
 /* ----- Move menu buttons to the left side ----- */
 
 
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
+@media -moz-pref("sidebar.verticalTabs") {
   
   :root {
   --firefoxcss-control-buttons-margin: 0px !important;
