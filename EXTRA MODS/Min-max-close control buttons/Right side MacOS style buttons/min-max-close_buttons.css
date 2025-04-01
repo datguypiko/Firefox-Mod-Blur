@@ -5,7 +5,7 @@
 }
 
 
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
+@media -moz-pref("sidebar.verticalTabs") {
   #nav-bar .titlebar-buttonbox-container {
     display: none !important;
   }
