@@ -69,7 +69,7 @@
   }
   
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.left.side.close-min-max") {
+  @media -moz-pref("mod.macos.style.buttons.left.side.close-min-max") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: -1 !important;
     }
@@ -92,14 +92,14 @@
   
   }
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.left.side.default.order") {
+  @media -moz-pref("mod.macos.style.buttons.left.side.default.order") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: -1 !important;
     }
     
   }
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.left.side.close-max-min") {
+  @media -moz-pref("mod.macos.style.buttons.left.side.close-max-min") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: -1 !important;
     }
@@ -122,14 +122,14 @@
     
   }
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.default.order") {
+  @media -moz-pref("mod.macos.style.buttons.right.side.default.order") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: 1 !important;
     }
   
   }
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.min-max-close") {
+  @media -moz-pref("mod.macos.style.buttons.right.side.min-max-close") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: 1 !important;
     }
@@ -152,7 +152,7 @@
     
   }  
   
-  @media (-moz-bool-pref: "mod.macos.style.buttons.right.side.max-min-close") {
+  @media -moz-pref("mod.macos.style.buttons.right.side.max-min-close") {
     #navigator-toolbox .titlebar-buttonbox-container {
       order: 1 !important;
     }
@@ -174,8 +174,6 @@
     }
     
   } 
-  
-  
   
   #navigator-toolbox
     .titlebar-buttonbox-container:not(:hover)
