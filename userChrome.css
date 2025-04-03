@@ -2151,3 +2151,12 @@ toolbar
     }
   }
 }
+
+@media -moz-pref("sidebar.verticalTabs") {
+  @media -moz-pref("mod.vertical-tabs.frame.no.borders") {
+      #browser #tabbrowser-tabbox {
+          outline: none !important;
+          box-shadow: none !important;
+      }
+  }
+}
