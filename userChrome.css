@@ -355,6 +355,14 @@ Order of Toolbars
   }
 }
 
+@media -moz-pref("sidebar.revamp") {
+  @media not -moz-pref("sidebar.verticaltabs") {
+    #navigator-toolbox {
+      border-bottom: none !important;
+    }
+  }
+}
+
 /* Set navigation toolbar to transparent */
 #navigator-toolbox #nav-bar {
   background-color: transparent !important;
