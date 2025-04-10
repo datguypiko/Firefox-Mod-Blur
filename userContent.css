@@ -640,10 +640,6 @@ url("about:newtab") {
     min-height: 60px !important;
   }
 
-  body:not(.inline-onboarding) .fixed-search.visible-logo main {
-    padding-top: 0px !important;
-  }
-
   .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
     top: 0 !important;
   }
