@@ -2170,3 +2170,12 @@ toolbar
       }
   }
 }
+
+
+@media -moz-pref("browser.tabs.fadeOutUnloadedTabs") {
+  browser.tabs.fadeOutUnloadedTabs
+  .tabbrowser-tab[pending] .tab-icon-stack,
+  .tabbrowser-tab[pending] .tab-text.tab-label {
+    opacity: 0.65 !important;
+  }
+}
