@@ -187,7 +187,7 @@ Installation Instructions https://github.com/Alan-Kuan/Firefox-Mod-Blur#page_wit
 <h2>:wrench: MicaForEveryone Installation</h2>
 
 > [!Warning]
-> ##### Coming soon again in firefox v133,v134 or v135. Will probably come with v3.0.
+> ##### Coming soon again with v3.0 version.
  
 1. Download the portable or installation file from [github.com/MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone/releases).
 2. Install the extra files it asks you to install. And run the program.
