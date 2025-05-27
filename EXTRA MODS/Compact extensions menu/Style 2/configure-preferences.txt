@@ -1,1 +1,20 @@
-No width change required anymore. Now change "--firefoxcss-number-of-extensions-in-a-row" value to wanted extensions icon count in a row. It automatically adjusts the width if number of extensions below the number of icons set in a row which default is 3.
+=====================================================
+How to enable/disable extra functionality
+=====================================================
+In search bar type -> about:config
+
+If it's configured using numbers select "number" 
+else select "boolean" and press add -> "+"
+
+=====================================================
+Copy and Enable preferred modifications:
+
+mod.number.of.extensions.in.a.row  [1 to 10] - default is [4].
+
+mod.extensions.menu.extention-icon.size [12 to 30] - default [22].
+
+mod.hide.manage-extensions.button - hide the button that opens all extensions manager inside settings.
+
+mod.disable.extensions-menu.separator - hide sepatator between active and inactive/faded extensions. Only visible when there is at least one faded extension.
+
+mod.hide.faded-extensions.inside.extensions-menu - hide all faded/inactive non interactable extensions from extension menu.
