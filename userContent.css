@@ -392,6 +392,18 @@ url("about:newtab") {
     display: inline-block !important;
   }
 
+ @media -moz-pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh") {
+    .top-site-button .icon.icon-pin-small {
+      opacity: 0 !important;
+      transition: opacity 200ms ease 0ms;
+    }
+    
+    .top-site-button:has(.title.has-icon.pinned:hover) .icon.icon-pin-small {
+      opacity: 0.6 !important;
+      transition: opacity 200ms ease 300ms;
+    }
+  }
+
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
     background-color: var(--firefoxcss-shortcut-item-active) !important;
   }
