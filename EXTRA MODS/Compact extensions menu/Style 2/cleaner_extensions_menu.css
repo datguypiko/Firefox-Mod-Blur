@@ -14,9 +14,9 @@
 @media -moz-pref("mod.number.of.extensions.in.a.row", 7) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a-row: 7 !important; }}
 @media -moz-pref("mod.number.of.extensions.in.a.row", 6) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a-row: 6 !important; }}
 @media -moz-pref("mod.number.of.extensions.in.a.row", 5) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a-row: 5 !important; }}
-@media -moz-pref("mod.number.of.extensions.in.a.row", 3) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a.row: 3 !important; }}
-@media -moz-pref("mod.number.of.extensions.in.a.row", 2) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a.row: 2 !important; }}
-@media -moz-pref("mod.number.of.extensions.in.a.row", 1) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a.row: 1 !important; }}
+@media -moz-pref("mod.number.of.extensions.in.a.row", 3) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a-row: 3 !important; }}
+@media -moz-pref("mod.number.of.extensions.in.a.row", 2) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a-row: 2 !important; }}
+@media -moz-pref("mod.number.of.extensions.in.a.row", 1) { #unified-extensions-view { --firefoxcss-number-of-extensions-in-a-row: 1 !important; }}
 
 @media -moz-pref("mod.extensions.menu.extention-icon.size", 12) { #unified-extensions-view { --uei-icon-size: 12px !important; }}
 @media -moz-pref("mod.extensions.menu.extention-icon.size", 13) { #unified-extensions-view { --uei-icon-size: 13px !important; }}
