@@ -1,6 +1,6 @@
 /*  Clean and tight extensions menu */
 #unified-extensions-panel #unified-extensions-view {
-    width: 100% !important; /*  For firefox v115.x */
+    width: 100% !important;  /*  For firefox v115.x */
 }
 
 #unified-extensions-view{
@@ -26,6 +26,10 @@
     margin-inline-end: 0px !important;
 }
 
+#unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack {
+    padding: 2px !important;
+}
+
 #unified-extensions-view #overflowed-extensions-list,
 #unified-extensions-view #unified-extensions-area,
 #unified-extensions-view .unified-extensions-list {
@@ -41,8 +45,8 @@
 }
 
 #unified-extensions-view #unified-extensions-area {
-    padding-bottom: 3px !important;
-    border-bottom: 1px solid #aeaeae33 !important;
+/*     padding-bottom: 3px !important; */
+/*     border-bottom: 1px solid #aeaeae33 !important; */
 }
 
 #unified-extensions-view .unified-extensions-list {
@@ -50,6 +54,5 @@
 }
 
 #unified-extensions-view:is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
-  margin: 3px !important;
+  margin: 2px !important;
 }
-
