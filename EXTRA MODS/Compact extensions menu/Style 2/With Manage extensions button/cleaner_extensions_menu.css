@@ -26,17 +26,17 @@
   background-color: light-dark(black, white); /* Auto adapted color */
   border-radius: 6px; /* Rounded ends */
   transition: width 0.15s ease 0.2s, opacity 0.15s ease 0.2s; /* 0.2s delay before expanding */
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 #unified-extensions-manage-extensions:hover::after {
-  width: 80%;
+  width: 70%;
   transition: width 0.15s ease 0s, opacity 0.15s ease 0s; /* No delay when hovering (expanding) */
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 #unified-extensions-manage-extensions:not(:hover)::after {
-  width: 60%;
+  width: 50%;
   transition: width 0.15s ease 0.15s, opacity 0.15s ease 0.15s; /* 0.2s delay before shrinking */
 }
 
