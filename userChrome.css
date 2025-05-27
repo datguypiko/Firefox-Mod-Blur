@@ -2178,3 +2178,47 @@ toolbar
     opacity: 0.65 !important;
   }
 }
+
+
+/*=====================================================================
+----------------- S E A R C H   M O D E   S W I T C H E R -------------
+=====================================================================*/
+@media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or 
+  -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
+  /* Disable searchmode switcher arrow */
+  #urlbar[searchmode] #urlbar-searchmode-switcher,
+  #urlbar[searchmode] #searchmode-switcher-chicklet {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+  }
+
+  #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
+    background-color: transparent !important;
+  }
+
+  #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
+    &:hover,
+    &:hover:active,
+    &[open] {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+    }
+  }
+
+  #searchmode-switcher-dropmarker {
+    fill: color-mix(in srgb, currentColor 60%, transparent) !important;
+  }
+
+  #searchmode-switcher-dropmarker {
+    #urlbar-searchmode-switcher[open] & {
+      transform: rotate(180deg);
+      transition: transform 150ms ease;
+    }
+
+    #urlbar-searchmode-switcher & {
+      transition: transform 150ms ease;
+    }
+
+    #urlbar-searchmode-switcher:hover & {
+      fill: color-mix(in srgb, currentColor 90%, transparent) !important;
+    }
+  }
+}
