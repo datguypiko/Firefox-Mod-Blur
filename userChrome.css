@@ -1873,13 +1873,6 @@ toolbar
   display: none !important;
 }
 
-/* Some color fixes after 125.0.1 update. URLBAR Clipboard buttons  */
-.urlbarView-row:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) {
-  & > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
-    background-color: var(--firefoxcss-url-clipboard-button) !important;
-    padding: 4px 8px !important;
-  }
-}
 .urlbarView-button {
   .urlbarView-row:is([row-selectable]:hover, [selected])
     > &:not(:hover, [open]) {
