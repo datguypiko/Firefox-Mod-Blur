@@ -6,10 +6,6 @@
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/qKY03RN.png"></p>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219372937-bae303d6-3b10-45bd-85f2-555a90f5fe9b.png"></p></details>
 
-<details><summary>Acrylic MicaForEveryone :hammer:</summary>
-<p align="center"><i>acrylic_micaforeveryone.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"></p></details>
-
 <details><summary>Wallpaper style themes :hammer:</summary>
 <p align="center"><i>style_1-wallpaper-edition.css</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204525862-9f92f7f2-ab37-4c98-9b83-8ad3d9166ac1.png" width="85%" height="85%" ></p>
