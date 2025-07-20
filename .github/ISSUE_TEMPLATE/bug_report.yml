@@ -4,7 +4,7 @@ title: Title of the issue
 
 description: Report an issue with firefox theme. Make sure to read installation instructions.
 
-labels: Bug
+labels: ["bug"]
 
 assignees:
   - datguypiko
@@ -27,13 +27,13 @@ body:
   attributes:
     label: Select Firefox Build
     description: |
-      Select the branch of firefox you reproduce the issue with. Theme code is based on Stable version. 
-      `Beta` - May suggest for a manual fix or not.  
-      `Nightly` -  May suggest for a manual fix or not.  
-      `Dev` - Not Tested.  
-      `ESR` - Not Tested, Try using older theme files.
+      Select the branch of firefox you reproduce the issue with. Theme code is based on Stable version.  
+      `Beta`    - May suggest for a manual fix or not.  
+      `Nightly` - May suggest for a manual fix or not.  
+      `Dev`     - Not Tested.  
+      `ESR`     - Not Tested, Try using older theme files.
     options:
-       - label: Firefox Stable (Normal)
+       - label: Firefox Stable
        - label: Firefox Beta
        - label: Firefox Nightly
   validations:
@@ -58,9 +58,9 @@ body:
   attributes:
     label: Add picture of your Chrome folder to see what extra mods used and correct file structure.
     placeholder: |
-      "`your profile` `/` `chrome` `/` `userChrome.css`"
-      "`your profile` `/` `chrome` `/` `userContent.css`"
-      "`your profile` `/` `chrome` `/` `ASSETS` `/`"
-      "`your profile` `/` `chrome` `/` `[extra modification file].css`"
+      `your profile` `/` `chrome` `/` `userChrome.css`
+      `your profile` `/` `chrome` `/` `userContent.css`
+      `your profile` `/` `chrome` `/` `ASSETS` `/`
+      `your profile` `/` `chrome` `/` `[extra modification file].css`
   validations:
     required: true
