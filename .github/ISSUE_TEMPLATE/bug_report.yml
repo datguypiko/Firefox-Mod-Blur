@@ -28,7 +28,7 @@ body:
     label: Select Firefox Build
     description: |
       Select the branch of firefox you reproduce the issue with. Theme code is based on Stable version.  
-      `Stable`  - Full support.
+      `Stable`  - Full support.  
       `Beta`    - May suggest for a manual fix or not.  
       `Nightly` - May suggest for a manual fix or not.  
       `Dev`     - Not Tested.  
@@ -61,3 +61,21 @@ body:
     placeholder: Copy paste or attach files..
   validations:
     required: true
+
+    - type: Dropdown
+  attributes:
+    label: Any 3rd party modification to OS?
+    description: Do you use any 3rd party modifications that could affect window 
+    options:
+      - Yes
+      - No
+      - "I don't know"
+  validations:
+    required: false
+
+    - type: markdown
+  attributes:
+    value: |
+      Make sure that any 3rd party operating system modifications  
+      you’re using aren’t negatively affecting the Firefox window: micaForEveryone, DWMBlurGlass, startallback  
+      or custom linux themes.
