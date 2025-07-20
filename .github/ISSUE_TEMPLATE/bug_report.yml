@@ -65,6 +65,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Make sure that any 3rd party operating system modifications  
-      you’re using aren’t negatively affecting the Firefox window: micaForEveryone, DWMBlurGlass, startallback  
-      or custom linux themes.
+      > [!NOTE]  
+      > Make sure that any 3rd party system modifications you’re using aren’t negatively  
+      > affecting the Firefox window: like micaForEveryone, DWMBlurGlass, startallback  
+      > or custom linux themes.
