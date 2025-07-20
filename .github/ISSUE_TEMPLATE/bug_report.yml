@@ -62,18 +62,7 @@ body:
   validations:
     required: true
 
-    - type: Dropdown
-  attributes:
-    label: Any 3rd party modification to OS?
-    description: Do you use any 3rd party modifications that could affect window 
-    options:
-      - Yes
-      - No
-      - "I don't know"
-  validations:
-    required: false
-
-    - type: markdown
+- type: markdown
   attributes:
     value: |
       Make sure that any 3rd party operating system modifications  
