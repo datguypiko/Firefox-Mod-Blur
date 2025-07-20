@@ -6,6 +6,9 @@ description: Report an issue with firefox theme. Make sure to read installation 
 
 labels: Bug
 
+assignees:
+  - datguypiko
+
 body:
 
 - type: dropdown
@@ -20,7 +23,7 @@ body:
   validations:
     required: true
 
-- type: checkboxes
+- type: dropdown
   attributes:
     label: Select Firefox Build
     description: |
