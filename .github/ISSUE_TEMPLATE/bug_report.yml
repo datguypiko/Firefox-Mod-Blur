@@ -57,7 +57,8 @@ body:
 
 - type: textarea
   attributes:
-    label: Add picture of your `Chrome` folder to see What `Extra Mods` and the correct file structure you are using.
+    label: Your `Chrome` folder structure
+    description: Add picture of your `Chrome` folder to see what `Extra Mods` you have and what file structure you are using.
     placeholder: Copy paste or attach files..
   validations:
     required: true
@@ -66,6 +67,6 @@ body:
   attributes:
     value: |
       > [!NOTE]  
-      > Make sure that any 3rd party system modifications you’re using aren’t negatively  
-      > affecting the Firefox window: like micaForEveryone, DWMBlurGlass, startallback  
-      > or custom linux themes.
+      > ###### Make sure that any 3rd party system modifications you’re using aren’t negatively  
+      > ###### affecting the Firefox window: like micaForEveryone, DWMBlurGlass, startallback  
+      > ###### or custom linux themes.
