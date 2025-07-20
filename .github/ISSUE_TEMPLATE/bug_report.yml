@@ -58,9 +58,9 @@ body:
   attributes:
     label: Add picture of your Chrome folder to see what extra mods used and correct file structure.
     placeholder: |
-      `your profile` `/` `chrome` `/` `userChrome.css`
-      `your profile` `/` `chrome` `/` `userContent.css`
-      `your profile` `/` `chrome` `/` `ASSETS` `/`
-      `your profile` `/` `chrome` `/` `[extra modification file].css`
+      "`your profile` `/` `chrome` `/` `userChrome.css`"
+      "`your profile` `/` `chrome` `/` `userContent.css`"
+      "`your profile` `/` `chrome` `/` `ASSETS` `/`"
+      "`your profile` `/` `chrome` `/` `[extra modification file].css`"
   validations:
     required: true
