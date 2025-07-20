@@ -28,6 +28,7 @@ body:
     label: Select Firefox Build
     description: |
       Select the branch of firefox you reproduce the issue with. Theme code is based on Stable version.  
+      `Stable`  - Full support.
       `Beta`    - May suggest for a manual fix or not.  
       `Nightly` - May suggest for a manual fix or not.  
       `Dev`     - Not Tested.  
@@ -50,17 +51,13 @@ body:
   attributes:
     label: Describe Your Issue
     description: Issue / Expected behavior / Add picture/video previews
-    placeholder: Report the issue
+    placeholder: Report the issue..
   validations:
     required: true
 
 - type: textarea
   attributes:
-    label: Add picture of your Chrome folder to see what extra mods used and correct file structure.
-    placeholder: |
-      `your profile` `/` `chrome` `/` `userChrome.css`
-      `your profile` `/` `chrome` `/` `userContent.css`
-      `your profile` `/` `chrome` `/` `ASSETS` `/`
-      `your profile` `/` `chrome` `/` `[extra modification file].css`
+    label: Add picture of your `Chrome` folder to see What `Extra Mods` and the correct file structure you are using.
+    placeholder: Copy paste or attach files..
   validations:
     required: true
