@@ -67,6 +67,4 @@ body:
   attributes:
     value: |
       > [!NOTE]  
-      > ###### Make sure that any 3rd party system modifications you’re using aren’t negatively  
-      > ###### affecting the Firefox window: like micaForEveryone, DWMBlurGlass, startallback  
-      > ###### or custom linux themes.
+      > ###### Make sure that any 3rd party system modifications you’re using aren’t negatively <br> affecting the Firefox window: like micaForEveryone, DWMBlurGlass, startallback <br> or custom linux themes.
