@@ -20,6 +20,7 @@
 @import url("spill-style-part1-file.css");
 @import url("white_github_icon_in_bookmarks.css");
 @import url("only_show_list-all-tabs_when_tabs_overflowing.css");
+@import url("thicker_control_buttons.css");
 @import url("min-max-close_buttons.css");
 @import url("acrylic_micaforeveryone.css");
 @import url("privacy_blur_tabs_content.css");
@@ -44,7 +45,6 @@
 @import url("searchbox_text_align_left.css");
 @import url("tabs_take_full_bar_width.css");
 @import url("show_searchbar_dots_only_on_hover.css");
-@import url("thicker_control_buttons.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
