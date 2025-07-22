@@ -27,19 +27,15 @@
     --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
 
     --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
-    --firefoxcss-private-search-text-hover: var(
-      --firefoxcss-private-search-hover-fill
-    );
+    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
     --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
 
-    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095);
+    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075), 0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095);
 
     /* ----- Normal Page Colors ----- */
-    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095);
+    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095);
 
     --firefoxcss-search-color: rgb(251, 251, 254, 1);
     --firefoxcss-search-border-top-color: #ffffff26;
@@ -47,9 +43,8 @@
     --firefoxcss-search-bar-text-color: rgba(251, 251, 254, 1);
     --firefoxcss-search-bar-fill-icon-hover: rgba(251, 251, 254, 0.8);
 
-    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
     --firefoxcss-shortcut-item-top-border: #ffffff26;
     --firefoxcss-shortcut-item-top-border-hover: #97979791;
 
@@ -57,9 +52,7 @@
     --firefoxcss-customize-menu-bg-image: url("ASSETS/other/noise-512x512.png");
     --firefoxcss-customize-menu-dropdown: #1e1e1e80;
     --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.1);
-    --newtab-background-color-secondary: var(
-      --firefoxcss-customize-menu
-    ) !important;
+    --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
     --firefoxcss-customize-menu-secondary-popup: hsla(210, 10%, 10%, 0.6);
     --firefoxcss-input-focus: white;
     /*  no changes */
@@ -76,9 +69,7 @@
 
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(
-      --firefoxcss-item-bg-color
-    ) !important;
+    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
     --firefoxcss-firefoxview-sticky-color: hsla(240, 2%, 13%, 0.75) !important;
     --firefoxcss-firefoxview-search-color: hsla(240, 2%, 35%, 0.5) !important;
   }
@@ -106,19 +97,15 @@
     --firefoxcss-private-search-hover-fill: hsl(275, 20%, 55%);
 
     --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
-    --firefoxcss-private-search-text-hover: var(
-      --firefoxcss-private-search-hover-fill
-    );
+    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
     --firefoxcss-private-search-caret: hsl(276, 20%, 40%);
 
-    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015),
-      0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
-      0 6px 6px hsl(0deg 0% 0% / 0.015), 0 12px 12px hsl(0deg 0% 0% / 0.035);
+    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015),
+      0 4px 4px hsl(0deg 0% 0% / 0.015), 0 6px 6px hsl(0deg 0% 0% / 0.015), 0 12px 12px hsl(0deg 0% 0% / 0.035);
 
     /* ----- Normal Page Colors ----- */
-    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015),
-      0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
-      0 8px 8px hsl(0deg 0% 0% / 0.015), 0 16px 16px hsl(0deg 0% 0% / 0.035);
+    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015),
+      0 4px 4px hsl(0deg 0% 0% / 0.015), 0 8px 8px hsl(0deg 0% 0% / 0.015), 0 16px 16px hsl(0deg 0% 0% / 0.035);
 
     --firefoxcss-search-color: rgb(87, 87, 87, 1);
     --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.9);
@@ -126,9 +113,8 @@
     --firefoxcss-search-bar-text-color: rgba(10, 10, 10, 0.65);
     --firefoxcss-search-bar-fill-icon-hover: rgba(0, 0, 0, 0.5);
 
-    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.025),
-      0 2px 2px hsl(0deg 0% 0% / 0.025), 0 4px 4px hsl(0deg 0% 0% / 0.025),
-      0 8px 8px hsl(0deg 0% 0% / 0.025), 0 16px 16px hsl(0deg 0% 0% / 0.025);
+    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.025), 0 2px 2px hsl(0deg 0% 0% / 0.025),
+      0 4px 4px hsl(0deg 0% 0% / 0.025), 0 8px 8px hsl(0deg 0% 0% / 0.025), 0 16px 16px hsl(0deg 0% 0% / 0.025);
     --firefoxcss-shortcut-item-top-border: hsla(0, 0%, 100%, 0.9);
     --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.6);
 
@@ -136,9 +122,7 @@
     --firefoxcss-customize-menu-bg-image: none;
     --firefoxcss-customize-menu-dropdown: #fdfdfd80;
     --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.2);
-    --newtab-background-color-secondary: var(
-      --firefoxcss-customize-menu
-    ) !important;
+    --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
     --firefoxcss-customize-menu-secondary-popup: hsla(200, 10%, 100%, 0.45);
     --firefoxcss-input-focus: black; /*  no changes */
     --firefoxcss-shortcut-item-active: hsla(200, 15%, 85%, 0.4);
@@ -154,9 +138,7 @@
 
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(
-      --firefoxcss-item-bg-color
-    ) !important;
+    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
     --firefoxcss-firefoxview-sticky-color: hsla(200, 10%, 95%, 0.5) !important;
     --firefoxcss-firefoxview-search-color: hsla(200, 5%, 100%, 0.95) !important;
   }
@@ -188,8 +170,7 @@ body {
     border-radius: 10px 10px 10px 10px !important;
     fill: var(--firefoxcss-private-search-fill) !important;
     box-shadow: var(--firefoxcss-private-search-box-shadow) !important;
-    transition: background-color 100ms ease-in, border-color 100ms ease-in,
-      fill 100ms ease-in !important;
+    transition: background-color 100ms ease-in, border-color 100ms ease-in, fill 100ms ease-in !important;
     backdrop-filter: blur(24px) !important;
   }
 
@@ -265,8 +246,7 @@ url("about:newtab") {
     backdrop-filter: blur(24px) !important;
     box-shadow: var(--firefoxcss-search-box-shadow) !important;
     fill: var(--firefoxcss-search-text-fill) !important;
-    transition: background-color 200ms ease, border-color 200ms ease,
-      fill 200ms ease !important;
+    transition: background-color 200ms ease, border-color 200ms ease, fill 200ms ease !important;
     padding-inline-start: 48px !important;
   }
 
@@ -276,9 +256,7 @@ url("about:newtab") {
 
   .icon.icon-settings.personalize-button:hover {
     color: var(--firefoxcss-settings-wheel-color-hover) !important;
-    background-color: var(
-      --firefoxcss-settings-wheel-bg-color-hover
-    ) !important;
+    background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
     backdrop-filter: blur(10px);
   }
 
@@ -321,9 +299,7 @@ url("about:newtab") {
   .customize-menu .category.wallpaper-list {
     overflow: hidden !important;
     height: auto !important;
-    background-color: var(
-      --firefoxcss-customize-menu-secondary-popup
-    ) !important;
+    background-color: var(--firefoxcss-customize-menu-secondary-popup) !important;
     backdrop-filter: blur(24px) !important;
     border-radius: 8px;
     margin-top: 16px !important;
@@ -392,12 +368,12 @@ url("about:newtab") {
     display: inline-block !important;
   }
 
- @media -moz-pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh") {
+  @media -moz-pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh") {
     .top-site-button .icon.icon-pin-small {
       opacity: 0 !important;
       transition: opacity 200ms ease 0ms;
     }
-    
+
     .top-site-button:has(.title.has-icon.pinned:hover) .icon.icon-pin-small {
       opacity: 0.6 !important;
       transition: opacity 200ms ease 300ms;
@@ -419,8 +395,7 @@ url("about:newtab") {
 
   .top-site-outer .context-menu > ul > li.separator,
   .card-outer .context-menu > ul > li.separator {
-    border-bottom: 1px solid
-      var(--firefoxcss-shortcut-item-context-menu-separator) !important;
+    border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
   }
 
   .search-wrapper .search-handoff-button input {
@@ -470,164 +445,113 @@ url("about:newtab") {
   }
 
   .body-wrapper .collapsible-section {
-    padding: 20px 25px !important;
+    padding: 20px 0px !important;
   }
 
-  @media -moz-pref("browser.newtabpage.activity-stream.newtabLayouts.variant-b") or -moz-pref("browser.newtabpage.activity-stream.newtabLayouts.variant-a") {
-    .layout-variant-a .top-site-outer:not(.add-button) .tile .icon-wrapper,
-    .layout-variant-b .top-site-outer:not(.add-button) .tile .icon-wrapper {
-      height: 48px !important;
-      width: 48px !important;
-    }
+  .top-sites-list-wrapper .top-site-outer:not(.add-button) .tile .icon-wrapper {
+    height: 48px !important;
+    width: 48px !important;
+  }
 
-    .layout-variant-a .top-site-outer .tile,
-    .layout-variant-b .top-site-outer .tile {
-      height: 80px !important;
-      width: 80px !important;
-    }
+  .top-sites-list-wrapper .top-site-outer .tile {
+    height: 80px !important;
+    width: 80px !important;
+  }
 
-    .layout-variant-a .top-site-outer,
-    .layout-variant-b .top-site-outer {
-      width: 120px !important;
-    }
+  .top-sites-list-wrapper .top-site-outer {
+    /*     width: 120px !important; */
+  }
 
-    .layout-variant-a .outer-wrapper .ds-top-sites .top-sites .top-sites-list,
-    .layout-variant-b .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
-      margin: 0 -12px !important;
-      width: auto !important;
-    }
+  .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
+    /*     margin: 0 -12px !important; */
+    width: auto !important;
+  }
 
-    .layout-variant-a .top-sites-list,
-    .layout-variant-b .top-sites-list {
-      display: flex !important;
-    }
+  .top-sites-list-wrapper .top-sites-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
 
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main .body-wrapper,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+  .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+    width: unset !important;
+  }
+
+  .top-sites-list-wrapper .top-sites-list {
+    row-gap: unset !important;
+  }
+
+  @media (min-width: 610px) {
+    .ds-outer-wrapper-breakpoint-override main {
       width: unset !important;
     }
 
-    .layout-variant-a .top-sites-list,
-    .layout-variant-b .top-sites-list {
-      row-gap: unset !important;
+    .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+      width: unset !important;
+    }
+  }
+  @media (min-width: 724px) {
+    .ds-outer-wrapper-breakpoint-override main {
+      width: unset !important;
     }
 
-    @media (min-width: 610px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: unset !important;
-      }
-
-      .layout-variant-a
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper,
-      .layout-variant-b
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper {
-        width: unset !important;
-      }
+    .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+      width: unset !important;
     }
-    @media (min-width: 724px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: unset !important;
-      }
-
-      .layout-variant-a
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper,
-      .layout-variant-b
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper {
-        width: unset !important;
-      }
-    }
-    @media (min-width: 1122px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: unset !important;
-      }
-
-      .layout-variant-a
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper,
-      .layout-variant-b
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper {
-        width: unset !important;
-      }
-    }
-    @media (min-width: 1698px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: unset !important;
-      }
-      .layout-variant-a
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper,
-      .layout-variant-b
-        .ds-outer-wrapper-breakpoint-override
-        main
-        .body-wrapper {
-        width: unset !important;
-      }
+  }
+  @media (min-width: 1122px) {
+    .ds-outer-wrapper-breakpoint-override main {
+      width: unset !important;
     }
 
-    .layout-variant-a .search-wrapper .search-inner-wrapper,
-    .layout-variant-b .search-wrapper .search-inner-wrapper {
-      width: 200px !important;
+    .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+      width: unset !important;
+    }
+  }
+  @media (min-width: 1698px) {
+    .ds-outer-wrapper-breakpoint-override main {
+      width: unset !important;
+    }
+    .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+      width: unset !important;
+    }
+  }
+
+  .search-wrapper .search-inner-wrapper {
+    width: 200px !important;
+  }
+
+  .ds-outer-wrapper-breakpoint-override main {
+    width: 266px !important;
+  }
+
+  @media (min-width: 610px) {
+    .ds-outer-wrapper-breakpoint-override main {
+      width: 510px !important;
     }
 
-    .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-    .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-      width: 266px !important;
+    .search-wrapper .search-inner-wrapper {
+      width: 360px !important;
+    }
+  }
+
+  @media (min-width: 866px) {
+    .ds-outer-wrapper-breakpoint-override main {
+      width: 746px !important;
     }
 
-    @media (min-width: 610px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: 510px !important;
-      }
+    .search-wrapper .search-inner-wrapper {
+      width: 600px !important;
+    }
+  }
 
-      .layout-variant-a .search-wrapper .search-inner-wrapper,
-      .layout-variant-b .search-wrapper .search-inner-wrapper {
-        width: 360px !important;
-      }
+  @media (min-width: 1122px) {
+    .ds-outer-wrapper-breakpoint-override main {
+      width: 986px !important;
     }
 
-    @media (min-width: 866px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: 746px !important;
-      }
-
-      .layout-variant-a .search-wrapper .search-inner-wrapper,
-      .layout-variant-b .search-wrapper .search-inner-wrapper {
-        width: 600px !important;
-      }
-    }
-
-    @media (min-width: 1122px) {
-      .layout-variant-a .ds-outer-wrapper-breakpoint-override main,
-      .layout-variant-b .ds-outer-wrapper-breakpoint-override main {
-        width: 986px !important;
-      }
-
-      .layout-variant-a .search-wrapper .search-inner-wrapper,
-      .layout-variant-b .search-wrapper .search-inner-wrapper {
-        width: 720px !important;
-      }
-    }
-
-    main.newtab-main {
-      min-width: min-content !important;
+    .search-wrapper .search-inner-wrapper {
+      width: 720px !important;
     }
   }
 
@@ -656,10 +580,7 @@ url("about:newtab") {
     top: 0 !important;
   }
 
-  .outer-wrapper.fixed-search
-    .search-wrapper
-    .search-inner-wrapper
-    button.search-handoff-button {
+  .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper button.search-handoff-button {
     backdrop-filter: blur(22px) !important;
     background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
     box-shadow: none !important;
@@ -746,25 +667,10 @@ url("about:newtab") {
       --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.1) !important;
       --firefoxcss-search-text-fill: rgba(255, 255, 255, 0.6) !important;
       --firefoxcss-search-bar-text-color: rgba(255, 255, 255, 0.9) !important;
-      --firefoxcss-search-bar-fill-icon-hover: rgba(
-        255,
-        255,
-        255,
-        0.8
-      ) !important;
-      --firefoxcss-shortcut-item-top-border-hover: hsla(
-        0,
-        0%,
-        100%,
-        0.15
-      ) !important;
+      --firefoxcss-search-bar-fill-icon-hover: rgba(255, 255, 255, 0.8) !important;
+      --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.15) !important;
       --firefoxcss-settings-wheel-color: hsla(200, 20%, 90%, 0.6) !important;
-      --firefoxcss-settings-wheel-color-hover: hsla(
-        200,
-        20%,
-        90%,
-        0.9
-      ) !important;
+      --firefoxcss-settings-wheel-color-hover: hsla(200, 20%, 90%, 0.9) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
 
       .top-site-outer:hover:not(.active) .title,
@@ -774,24 +680,9 @@ url("about:newtab") {
 
       .top-site-outer .context-menu,
       .card-outer .context-menu {
-        --firefoxcss-shortcut-item-context-menu: hsla(
-          0,
-          0%,
-          95%,
-          0.8
-        ) !important;
-        --firefoxcss-shortcut-item-context-menu-border: hsla(
-          0,
-          0%,
-          100%,
-          0.1
-        ) !important;
-        --firefoxcss-shortcut-item-context-menu-separator: hsla(
-          0,
-          0%,
-          0%,
-          0.1
-        ) !important;
+        --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.8) !important;
+        --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.1) !important;
+        --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 0%, 0.1) !important;
       }
     }
 
@@ -820,12 +711,7 @@ url("about:newtab") {
       --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.8) !important;
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.7) !important;
       --firefoxcss-settings-wheel-color: hsla(0, 0%, 12%, 0.75) !important;
-      --firefoxcss-settings-wheel-color-hover: hsla(
-        0,
-        0%,
-        12%,
-        0.55
-      ) !important;
+      --firefoxcss-settings-wheel-color-hover: hsla(0, 0%, 12%, 0.55) !important;
 
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
