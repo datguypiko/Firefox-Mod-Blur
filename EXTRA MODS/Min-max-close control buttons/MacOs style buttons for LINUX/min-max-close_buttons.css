@@ -4,6 +4,10 @@
 :root {
     --toolbar-start-end-padding: 4px !important;
   }
+
+  #navigator-toolbox .titlebar-buttonbox-container .titlebar-button{
+  content: "" !important;
+}
   
   #navigator-toolbox:not([inFullscreen])
     .titlebar-buttonbox-container {

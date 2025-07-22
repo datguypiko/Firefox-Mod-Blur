@@ -6,6 +6,10 @@
   padding-right: initial !important;
 }
 
+#navigator-toolbox .titlebar-buttonbox-container .titlebar-button{
+  content: "" !important;
+}
+
 @media -moz-pref("sidebar.verticalTabs") {
   #nav-bar .titlebar-buttonbox-container {
     display: none !important;

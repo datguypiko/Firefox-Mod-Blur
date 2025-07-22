@@ -4,7 +4,11 @@
 #navigator-toolbox #nav-bar {
 	padding-left: var(--firefoxcss-control-buttons-margin) !important;
 	padding-right: initial !important;
-  }
+}
+
+#navigator-toolbox .titlebar-buttonbox-container .titlebar-button{
+  content: "" !important;
+}
 
 @media -moz-pref("sidebar.verticalTabs") {
   #nav-bar .titlebar-buttonbox-container {
