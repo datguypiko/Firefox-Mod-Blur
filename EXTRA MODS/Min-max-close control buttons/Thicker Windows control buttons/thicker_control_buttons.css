@@ -1,16 +1,21 @@
-/* Thicker min/max/close MS Windows control buttons taken from firefox */
+/* Thicker min/max/close MS Windows control buttons.
+   Uses HighContrast buttons.  */
 .titlebar-buttonbox-container .titlebar-button.titlebar-min {
-  list-style-image: url(chrome://browser/skin/window-controls/minimize-themes.svg) !important;
+    content: "\ef2d" !important;
+/*    -webkit-text-stroke-width: 1px; */
 }
 
 .titlebar-buttonbox-container .titlebar-button.titlebar-max {
-  list-style-image: url(chrome://browser/skin/window-controls/maximize-themes.svg) !important;
+    content: "\ef2e" !important;
+/*  -webkit-text-stroke-width: 1px; */
 }
 
 .titlebar-buttonbox-container .titlebar-button.titlebar-restore {
-  list-style-image: url(chrome://browser/skin/window-controls/restore-themes.svg) !important;
+    content: "\ef2f" !important;
+/*    -webkit-text-stroke-width: 1px; */
 }
 
 .titlebar-buttonbox-container .titlebar-button.titlebar-close {
-  list-style-image: url(chrome://browser/skin/window-controls/close-themes.svg) !important;
+    content: "\ef2c" !important;
+/*    -webkit-text-stroke-width: 1px; */
 }
