@@ -229,6 +229,13 @@ url("about:newtab") {
     background-size: cover !important;
   }
 
+	  
+/*   Edit shortcut menu */
+  .edit-topsites-wrapper .modal {
+    backdrop-filter: blur(16px);
+    filter: saturate(0.8) brightness(1.1);
+  }
+
   /* For background blur */
   /* .outer-wrapper {
     background-color: #1e1e1e88 !important;
@@ -294,6 +301,7 @@ url("about:newtab") {
     margin: 1rem !important;
     /*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
     height: unset !important;
+    filter: saturate(0.8) brightness(1.1);
   }
 
   .customize-menu .category.wallpaper-list {
