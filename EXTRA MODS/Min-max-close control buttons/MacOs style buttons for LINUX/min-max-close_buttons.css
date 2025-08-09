@@ -194,6 +194,7 @@
     list-style-image: none !important;
     margin: 0px !important;
     padding: 0px !important;
+    display: none !important;
   }
   
   #navigator-toolbox
@@ -352,3 +353,4 @@
   #navigator-toolbox .titlebar-buttonbox-container .titlebar-min:hover .toolbarbutton-icon{
     background: hsl(39, 100%, 63%) !important;
   }
+
