@@ -1180,11 +1180,13 @@ menuseparator#context-sep-navigation {
 /* ----- Menu Colors ----- */
 menupopup,
 panel {
-  :not(#ContentSelectDropdown) > & {
-    --panel-border-color: var(--arrowpanel-border-color) !important;
-    --panel-padding: 2px 0px !important;
+/*   #ContentSelectDropdown used to remove websites native dropdown modifications */
+/*   #ctrlTab-panel used to fix Ctr+Tab */
+  :not(#ContentSelectDropdown) > &:not(#ctrlTab-panel, #autoscroller) {
+/*     --panel-border-color: var(--arrowpanel-border-color) !important; */
+    --panel-padding: 1px 0px !important;
     --panel-border-radius: 8px !important;
-    --panel-padding-block: 4px !important;
+/*     --panel-padding-block: 4px !important; */
     --panel-background: var(--firefoxcss-main-bg-color) !important;
   }
 }
@@ -1202,7 +1204,7 @@ panel {
 /* Top of context menu  */
 menupopup#contentAreaContextMenu {
   --panel-padding: unset !important;
-  --panel-padding: 0 0 4px !important;
+  --panel-padding: 0 0 2px !important;
 }
 
 /* Menu when right clicking links  */
