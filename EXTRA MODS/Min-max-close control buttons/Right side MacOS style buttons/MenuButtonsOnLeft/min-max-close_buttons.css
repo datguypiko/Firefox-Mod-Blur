@@ -9,6 +9,13 @@
     }
 }
 
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
+
 #navigator-toolbox .titlebar-buttonbox-container .titlebar-button{
   content: "" !important;
 }

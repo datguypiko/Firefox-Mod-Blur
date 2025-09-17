@@ -14,6 +14,13 @@
       display: none !important;
     }
 }
+
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
  
  /* ----------------------------------------------------------------- */
  /* ---------- Default OS style close/min/max window buttons -------- */

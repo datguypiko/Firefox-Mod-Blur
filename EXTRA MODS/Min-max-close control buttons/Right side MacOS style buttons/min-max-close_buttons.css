@@ -18,6 +18,13 @@
     }
 }
 
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
+
 /* ----------------------------------------------------------------- */
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */

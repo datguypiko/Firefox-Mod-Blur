@@ -8,6 +8,14 @@
       display: none !important;
     }
 }
+
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
+
 #nav-bar #PanelUI-button #PanelUI-menu-button {
   padding-right: 2px !important;
   padding-left: 4px !important;

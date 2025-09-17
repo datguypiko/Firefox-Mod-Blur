@@ -20,6 +20,13 @@
     }
 }
 
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
+
 :root {
   --toolbar-start-end-padding: 3px !important;
   /* padding of frst and last child ,default - 8px */
