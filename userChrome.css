@@ -521,9 +521,9 @@ about:config -> svg.context-properties.content.enabled -> true*/
 }
 
 /* Styling Search Containers 
-    #urlbar-background - main search container
+    .urlbar-background - main search container
     #searchbar - secondary/extra search container */
-#urlbar-background,
+.urlbar-background,
 #searchbar {
   border: 0 !important;
   border-radius: var(--firefoxcss-border-radius) !important;
@@ -540,7 +540,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 }
 
 /* Search box border radius  */
-#urlbar-background,
+.urlbar-background,
 #urlbar .urlbar-input-container,
 #searchbar {
   border-radius: var(--firefoxcss-border-radius) !important;
@@ -554,7 +554,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 /* Search outline disabled by default  */
 @media not -moz-pref("mod.searchBox.focus.outline.enable") {
   /* Disable Focus outline */
-  #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+  #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background,
   #searchbar:focus-within {
     outline: none !important;
   }
@@ -580,7 +580,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 }
 
 /* Dropdown search box colors */
-#urlbar[breakout][breakout-extend][open] #urlbar-background {
+#urlbar[breakout][breakout-extend][open] .urlbar-background {
   border-bottom: var(--firefoxcss-url-breakout-border-bottom-color) !important;
   border-top: var(--firefoxcss-url-breakout-border-top-color) !important;
   box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
@@ -593,7 +593,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 /* Disable weird animation */
 #urlbar[breakout][breakout-extend][breakout-extend-animate]
-  > #urlbar-background {
+  > .urlbar-background {
   animation: none !important;
 }
 
