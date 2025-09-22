@@ -1,11 +1,11 @@
 /* Remove border from search bar */
  #nav-bar #urlbar[breakout] {
-  &:not([breakout-extend]) #urlbar-background {
+  &:not([breakout-extend]) .urlbar-background {
     border-bottom: none !important;
     border-top: none !important;
     box-shadow: none !important;
   }
-   &[breakout-extend][open] #urlbar-background{
+   &[breakout-extend][open] .urlbar-background{
     border-bottom: none !important;
     border-top: none !important;
    } 

@@ -1,6 +1,6 @@
 /* No background color for url bar */
 #nav-bar #urlbar[breakout] {
-  &:not([breakout-extend]) #urlbar-background {
+  &:not([breakout-extend]) .urlbar-background {
     border-bottom: none !important;
     border-top: none !important;
     box-shadow: none !important;
