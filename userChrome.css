@@ -2180,8 +2180,14 @@ toolbar
   -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
   /* Disable searchmode switcher arrow */
   #urlbar[searchmode] #urlbar-searchmode-switcher,
-  #urlbar[searchmode] #searchmode-switcher-chicklet {
+  #urlbar[searchmode] .searchmode-switcher-chicklet {
     background-color: var(--firefoxcss-item-bg-color) !important;
+  }
+    
+    
+  #urlbar[searchmode] .searchmode-switcher-chicklet {
+    border-end-end-radius: var(--urlbar-icon-border-radius) !important;
+    border-start-end-radius: var(--urlbar-icon-border-radius) !important;
   }
 
   #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
