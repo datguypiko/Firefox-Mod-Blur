@@ -1034,6 +1034,13 @@ tab-group[collapsed] > .tabbrowser-tab {
 =====================================================================*/
 /* :root[sizemode="fullscreen"] #navigator-toolbox { position: relative; } */
 
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
+
 @media (-moz-platform: windows) {
   /* Keep showing the buttons when alt menu visible */
   .titlebar-buttonbox-container {
