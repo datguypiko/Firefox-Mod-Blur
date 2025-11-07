@@ -1035,9 +1035,9 @@ tab-group[collapsed] > .tabbrowser-tab {
 /* :root[sizemode="fullscreen"] #navigator-toolbox { position: relative; } */
 
 /* Fix for web apps */
-#navigator-toolbox[tabs-hidden] {
+:root[taskbartab] #navigator-toolbox:not([tabs-hidden]) {
 	#nav-bar .titlebar-buttonbox-container {
-	  display: none !important;
+      display: none !important;
 	}
 }
 
