@@ -242,6 +242,11 @@ url("about:newtab") {
     background-size: cover !important;
   }
 
+/*   Disable phone button in new tab */
+  .mobileDownloadPromoWrapper  {
+    display: none !important;
+  }
+
 	  
 /*   Edit shortcut menu */
   .edit-topsites-wrapper .modal {
@@ -850,4 +855,5 @@ url("about:newtab") {
     background-color: var(--firefoxcss-main-bg-color) !important;
   }
 }
+
 
