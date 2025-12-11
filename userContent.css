@@ -49,11 +49,10 @@
     --firefoxcss-shortcut-item-top-border-hover: #97979791;
 
     --firefoxcss-customize-menu: hsla(210, 10%, 20%, 0.3);
-    --firefoxcss-customize-menu-bg-image: url("ASSETS/other/noise-512x512.png");
     --firefoxcss-customize-menu-dropdown: #1e1e1e80;
     --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.1);
     --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
-    --firefoxcss-customize-menu-secondary-popup: hsla(210, 10%, 10%, 0.6);
+    --firefoxcss-customize-menu-secondary-popup: hsla(210, 10%, 10%, 1);
     --firefoxcss-input-focus: white;
     /*  no changes */
     --firefoxcss-shortcut-item-active: hsla(0, 0%, 10%, 0.7);
@@ -123,7 +122,7 @@
     --firefoxcss-customize-menu-dropdown: #fdfdfd80;
     --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.2);
     --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
-    --firefoxcss-customize-menu-secondary-popup: hsla(200, 10%, 100%, 0.45);
+    --firefoxcss-customize-menu-secondary-popup: hsla(200, 10%, 100%, 1);
     --firefoxcss-input-focus: black; /*  no changes */
     --firefoxcss-shortcut-item-active: hsla(200, 15%, 85%, 0.4);
     --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.4);
@@ -312,25 +311,64 @@ url("about:newtab") {
     opacity: 0.7 !important;
   }
 
-  menu .customize-menu {
-    backdrop-filter: blur(32px) !important;
+  .personalizeButtonWrapper .customize-menu-animate-wrapper{
     border: var(--firefoxcss-customize-menu-border) !important;
     border-radius: 1rem !important;
     margin: 1rem !important;
     /*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
     height: unset !important;
+    backdrop-filter: blur(32px);
     filter: saturate(0.8) brightness(1.1);
   }
 
-  .customize-menu .category.wallpaper-list {
-    overflow: hidden !important;
+  .customize-menu .category.wallpaper-list.category {
+/*     overflow: hidden !important;
     height: auto !important;
     background-color: var(--firefoxcss-customize-menu-secondary-popup) !important;
-    backdrop-filter: blur(24px) !important;
+    backdrop-filter: blur(30px) !important;
     border-radius: 8px;
     margin-top: 16px !important;
     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2)) !important;
     border: var(--firefoxcss-customize-menu-border) !important;
+        background-color: rgba(0, 0, 0, 0.2) !important; */
+  }
+  .customize-menu-animate-wrapper .customize-menu {
+       overflow-x: hidden !important;
+  }
+  
+  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .wallpapers-section ~ *,
+  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .wallpapers-section .category-header,
+  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .wallpapers-section .category-list,
+  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .close-button-wrapper{
+    opacity: 1 !important;
+    visibility: visible !important;
+     transform: translateX(0) !important;
+     transition: opacity 0.4s ease, transform 0.2s ease;
+    
+  }
+  
+  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .wallpapers-section ~ *,
+  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .wallpapers-section .category-header,
+  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .wallpapers-section .category-list,
+  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .close-button-wrapper {
+    opacity: 0  !important;
+    visibility: hidden !important;
+    transform: translateX(100px) !important;  /* Move to the right */
+    transition: opacity 0.2s ease,  transform 0.3s ease, visibility 2s 0.2s !important;
+  }
+
+  .customize-menu .category.wallpaper-list{
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    border:none !important;
+    box-shadow: none !important;
+    margin-block-start: 0px !important;
+    padding-top: var(--space-large) !important;
+
+  }
+  
+  .customize-menu:has(.category.wallpaper-list) {
+     overflow-x: hidden !important;
   }
 
   .home-section .section .selector {
@@ -855,5 +893,3 @@ url("about:newtab") {
     background-color: var(--firefoxcss-main-bg-color) !important;
   }
 }
-
-
