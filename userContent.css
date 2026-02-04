@@ -9,6 +9,9 @@
 ================= D A R K   T H E M E   C O L O R S ===================
 =====================================================================*/
 
+@-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing"),
+               url-prefix("about:"), url("about:blank"), url-prefix(about:firefoxview) {
+
 @media (prefers-color-scheme: dark) {
   :root {
     --firefoxcss-main-bg-color: hsl(220, 2%, 13%);
@@ -145,6 +148,8 @@
 
 body {
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+}
+                 
 }
 
 @-moz-document url("about:privatebrowsing") {
