@@ -1,17 +1,19 @@
+@-moz-document url("about:home"), url("about:newtab") {
 :root {
   --firefoxcss-wallpaper-item-bg-color: hsla(0, 0%, 12%, 0.6);
   --firefoxcss-wallpaper-item-hover-bg-color: hsla(0, 0%, 16%, 0.5);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --newtab-wordmark-color: #fbfbfe !important;
-    --firefoxcss-search-bar-text-color: #fbfbfe !important;
-    --firefoxcss-context-menu-three-dots: #fbfbfe !important;
-  }
-
-  .top-site-outer .title {
-  color: #fbfbfe !important;
+  @media (prefers-color-scheme: light) {
+    :root {
+      --newtab-wordmark-color: #fbfbfe !important;
+      --firefoxcss-search-bar-text-color: #fbfbfe !important;
+      --firefoxcss-context-menu-three-dots: #fbfbfe !important;
+    }
+  
+    .top-site-outer .title {
+    color: #fbfbfe !important;
+    }
   }
 }
 
