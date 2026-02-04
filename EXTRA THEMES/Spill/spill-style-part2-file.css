@@ -1,11 +1,12 @@
 /* Spill style. Modifications for userContent file */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --firefoxcss-item-bg-color: hsla(240, 2%, 45%, 0.4) !important;
-    --firefoxcss-item-hover-bg-color: hsl(240, 2%, 55%, 0.4) !important;
-    --firefoxcss-settings-wheel-color: hsla(240, 20%, 80%, 0.6) !important;
-    --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 80%, 0.9) !important;
+@-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing") {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --firefoxcss-item-bg-color: hsla(240, 2%, 45%, 0.4) !important;
+      --firefoxcss-item-hover-bg-color: hsl(240, 2%, 55%, 0.4) !important;
+      --firefoxcss-settings-wheel-color: hsla(240, 20%, 80%, 0.6) !important;
+      --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 80%, 0.9) !important;
+    }
   }
 }
 
