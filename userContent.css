@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --firefoxcss-main-bg-color: hsl(220, 2%, 13%);
-    --firefoxcss-item-bg-color: hsl(220, 2%, 20%);
+    --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+    --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
     --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
     --firefoxcss-text-color: hsl(0, 0%, 100%);
     --firefoxcss-other-color: hsl(290, 21%, 20%);
@@ -64,10 +64,10 @@
     --firefoxcss-shortcut-item-context-menu-separator: #ffffff29;
     --firefoxcss-extra-search-bar-when-scroll: #1e1e1e8c;
     --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
-    --firefoxcss-settings-wheel-bg-color-hover: hsl(220, 2%, 30%);
+    --firefoxcss-settings-wheel-bg-color-hover: hsl(240, 2%, 30%);
     --firefoxcss-shortcut-search-icon-color: #7ae3f463;
-    --firefoxcss-weather-widget: hsla(220, 2%, 10%, 0.2);
-    --firefoxcss-weather-widget-hover: hsla(220, 2%, 35%, 0.3);
+    --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.2);
+    --firefoxcss-weather-widget-hover: hsla(240, 2%, 35%, 0.3);
 
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
@@ -133,10 +133,8 @@
     --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 50%, 0.2);
     --firefoxcss-extra-search-bar-when-scroll: hsla(0, 0%, 10%, 0.3);
     --firefoxcss-context-menu-three-dots: hsla(200, 10%, 50%, 0.6);
-    --firefoxcss-settings-wheel-bg-color-hover: hsl(200, 5%, 96%);
+    --firefoxcss-settings-wheel-bg-color-hover: hsl(0, 0%, 100%);
     --firefoxcss-shortcut-search-icon-color: #2896a870;
-    --firefoxcss-weather-widget: hsla(220, 2%, 10%, 0.2);
-    --firefoxcss-weather-widget-hover: hsla(220, 2%, 35%, 0.3);
 
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
@@ -720,7 +718,7 @@ url("about:newtab") {
   
  /* ================== Weather widget mods ============================================ */
   .weatherButtonContextMenuWrapper .context-menu {
-    background-color: hsla(220, 2%, 20%, 1) !important; 
+    background-color: hsla(240, 2%, 20%, 1) !important; 
   }
   
   .activity-stream:not(.darkWallpaper, .lightWallpaper) {
@@ -794,13 +792,13 @@ url("about:newtab") {
           color-scheme: dark !important;
       }
       .weatherButtonContextMenuWrapper .context-menu {
-        background-color: hsla(220, 2%, 95%, 1) !important; 
+        background-color: hsla(240, 2%, 95%, 1) !important; 
       }
     }
    
     .activity-stream.lightWallpaper {
       .weatherButtonContextMenuWrapper .context-menu {
-        background-color: hsla(220, 2%, 95%, 1) !important; 
+        background-color: hsla(240, 2%, 95%, 1) !important; 
       }
     }
   }
@@ -932,8 +930,8 @@ url("about:newtab") {
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 20%, 0.8) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;
       --firefoxcss-customize-menu: hsla(210, 10%, 10%, 0.6)  !important;
-      --firefoxcss-weather-widget: hsla(220, 2%, 10%, 0.8)  !important;
-      --firefoxcss-weather-widget-hover: hsla(220, 2%, 18%, 0.8)  !important;
+      --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.8)  !important;
+      --firefoxcss-weather-widget-hover: hsla(240, 2%, 18%, 0.8)  !important;
 
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {--firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important; --firefoxcss-item-hover-bg-color: hsla(0, 0%, 0%, 0.50) !important; --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;}
@@ -997,11 +995,6 @@ url("about:newtab") {
     --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
     --in-content-table-background: var(--firefoxcss-item-bg-color) !important;
     --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
-    
-    --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
-    --background-color-box: var(--firefoxcss-item-bg-color) !important;
-    --promo-background-color:  var(--firefoxcss-item-bg-color) !important;
-    --background-color-box-info:  var(--firefoxcss-item-bg-color) !important;
   }
 }
 
