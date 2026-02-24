@@ -602,6 +602,7 @@ url("about:newtab") {
 
     .search-wrapper .search-inner-wrapper {
       width: 600px !important;
+      padding-left:10px !important;
     }
   }
 
