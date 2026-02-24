@@ -625,8 +625,8 @@ url("about:newtab") {
     /* 52px default */
     order: 2 !important;
     flex: 3 !important;
-    /*! flex-basis: 60% !important; */
-    /*! top: 4px !important; */
+    flex-basis: 60% !important;
+    top: 4px !important;
   }
 
   /* When there is overflow because of the height, search bar gets fixed position */
