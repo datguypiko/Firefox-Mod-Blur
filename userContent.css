@@ -995,9 +995,9 @@ url("about:newtab") {
 
 @-moz-document url-prefix("about:") {
   :root {
-    --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
-    --in-content-table-background: var(--firefoxcss-item-bg-color) !important;
-    --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
+    --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
+    --background-color-box: var(--firefoxcss-item-bg-color) !important;
+    --background-color-box-info: var(--firefoxcss-item-bg-color) !important;
   }
 }
 
