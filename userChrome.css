@@ -392,10 +392,12 @@ window for this specific moz preference. */
 
 /* Avoids bright flash */
 #tabbrowser-tabpanels {
-  background-color: var(
-    --uc-light-bkgnd-color,
-    var(--firefoxcss-bright-flash-color)
-  ) !important;
+/*   background-color: var( --uc-light-bkgnd-color,var(--firefoxcss-bright-flash-color)) !important; */
+}
+
+/* New fix? */
+#tabbrowser-tabpanels .browserContainer {
+  background-color: var(--firefoxcss-bright-flash-color) !important;
 }
 
 /* CTRL+F Search Bar color changes  */
