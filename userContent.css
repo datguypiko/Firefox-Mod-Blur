@@ -64,10 +64,10 @@
     --firefoxcss-shortcut-item-context-menu-separator: #ffffff29;
     --firefoxcss-extra-search-bar-when-scroll: #1e1e1e8c;
     --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
-    --firefoxcss-settings-wheel-color: hsla(240, 20%, 90%, 0.6);
-    --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 90%, 0.9);
-    --firefoxcss-settings-wheel-bg-color-hover: rgba(255, 255, 255, 0.2);
+    --firefoxcss-settings-wheel-bg-color-hover: hsl(220, 2%, 30%);
     --firefoxcss-shortcut-search-icon-color: #7ae3f463;
+    --firefoxcss-weather-widget: hsla(220, 2%, 10%, 0.2);
+    --firefoxcss-weather-widget-hover: hsla(220, 2%, 35%, 0.3);
 
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
@@ -133,10 +133,10 @@
     --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 50%, 0.2);
     --firefoxcss-extra-search-bar-when-scroll: hsla(0, 0%, 10%, 0.3);
     --firefoxcss-context-menu-three-dots: hsla(200, 10%, 50%, 0.6);
-    --firefoxcss-settings-wheel-color: hsla(200, 20%, 10%, 0.6);
-    --firefoxcss-settings-wheel-color-hover: hsla(200, 20%, 10%, 0.9);
-    --firefoxcss-settings-wheel-bg-color-hover: rgba(0, 0, 0, 0.1);
+    --firefoxcss-settings-wheel-bg-color-hover: hsl(200, 5%, 96%);
     --firefoxcss-shortcut-search-icon-color: #2896a870;
+    --firefoxcss-weather-widget: hsla(220, 2%, 10%, 0.2);
+    --firefoxcss-weather-widget-hover: hsla(220, 2%, 35%, 0.3);
 
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
@@ -178,7 +178,7 @@ window for this specific moz preference. */
 		background-size: cover  !important;
 	} */
 
-  #search-handoff-button {
+  .search-handoff-button {
     appearance: none !important;
     background-color: var(--firefoxcss-private-search-bg-color) !important;
     border: none !important;
@@ -191,27 +191,27 @@ window for this specific moz preference. */
     backdrop-filter: blur(24px) !important;
   }
 
-  #search-handoff-button:hover,
-  #search-handoff-button:focus,
-  #search-handoff-button:active {
+  .search-handoff-button:hover,
+  .search-handoff-button:focus,
+  .search-handoff-button:active {
     background-color: var(--firefoxcss-private-search-hover) !important;
     border-top: 1px solid var(--firefoxcss-private-search-border-hover) !important;
     fill: var(--firefoxcss-private-search-hover-fill) !important;
   }
 
-  #search-handoff-button .fake-textbox {
+  .search-handoff-button .fake-textbox {
     color: var(--firefoxcss-private-search-text) !important;
     opacity: 0.8 !important;
     transition: color 100ms ease-in, opacity 100ms ease-in !important;
   }
 
-  #search-handoff-button:active > .fake-textbox,
-  #search-handoff-button:hover > .fake-textbox,
-  #search-handoff-button:focus > .fake-textbox {
+  .search-handoff-button:active > .fake-textbox,
+  .search-handoff-button:hover > .fake-textbox,
+  .search-handoff-button:focus > .fake-textbox {
     color: var(--firefoxcss-private-search-text-hover) !important;
   }
 
-  #search-handoff-button .fake-caret {
+  .search-handoff-button .fake-caret {
     background: var(--firefoxcss-private-search-caret) !important;
   }
 
@@ -229,12 +229,8 @@ window for this specific moz preference. */
     /* 48px default */
   }
 
-  .private .search-inner-wrapper .fake-caret {
-    top: 13px !important;
-    /* 16px default */
-  }
-
-  .private .search-inner-wrapper #search-handoff-button {
+  /* Size of the search icon in searchbox */
+  .search-handoff-button {
     background-size: 20px !important;
   }
 }
@@ -264,10 +260,10 @@ url("about:newtab") {
     backdrop-filter: blur(24px) !important;
   } */
 
-  .search-wrapper .search-handoff-button {
+  .search-handoff-button {
     appearance: none !important;
     background-color: var(--firefoxcss-item-bg-color) !important;
-    color: var(--firefoxcss-search-color) !important;
+   
     border: none !important;
     box-shadow: none !important;
     border-top: 1px solid var(--firefoxcss-search-border-top-color) !important;
@@ -278,16 +274,18 @@ url("about:newtab") {
     transition: background-color 200ms ease, border-color 200ms ease, fill 200ms ease !important;
     padding-inline-start: 48px !important;
   }
+  
+  .activity-stream.darkWallpaper {
+    @media (prefers-color-scheme: light) {
+      .search-wrapper content-search-handoff-ui {
+        --content-search-handoff-ui-color: white !important;
+        --content-search-handoff-ui-caret-color: white !important;
+      }
 
-  .icon.icon-settings.personalize-button {
-    color: var(--firefoxcss-settings-wheel-color) !important;
+    }
   }
 
-  .icon.icon-settings.personalize-button:hover {
-    color: var(--firefoxcss-settings-wheel-color-hover) !important;
-    background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
-    backdrop-filter: blur(10px);
-  }
+
 
   .body-wrapper .tile {
     background-color: var(--firefoxcss-item-bg-color) !important;
@@ -320,11 +318,26 @@ url("about:newtab") {
     border: var(--firefoxcss-customize-menu-border) !important;
     border-radius: 1rem !important;
     margin: 1rem !important;
-    /*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
+    /*! filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
     height: unset !important;
     backdrop-filter: blur(32px);
     filter: saturate(0.8) brightness(1.1);
   }
+  
+  .activity-stream.lightWallpaper {
+    @media (prefers-color-scheme: dark) {
+      
+          .customize-menu-animate-wrapper.customize-animate-enter-done,
+          .customize-menu-animate-wrapper.customize-animate-enter-active {
+              box-shadow: none !important;
+          }
+       }
+    
+  }
+  
+  
+  
+
 
   .customize-menu .category.wallpaper-list.category {
 /*     overflow: hidden !important;
@@ -437,18 +450,6 @@ url("about:newtab") {
     display: inline-block !important;
   }
 
-  @media -moz-pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh") {
-    .top-site-button .icon.icon-pin-small {
-      opacity: 0 !important;
-      transition: opacity 200ms ease 0ms;
-    }
-
-    .top-site-button:has(.title.has-icon.pinned:hover) .icon.icon-pin-small {
-      opacity: 0.6 !important;
-      transition: opacity 200ms ease 300ms;
-    }
-  }
-
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
     background-color: var(--firefoxcss-shortcut-item-active) !important;
   }
@@ -467,15 +468,7 @@ url("about:newtab") {
     border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
   }
 
-  .search-wrapper .search-handoff-button input {
-    border-radius: 10px 10px 10px 10px !important;
-  }
 
-  .search-wrapper .search-handoff-button .fake-caret {
-    top: 13px !important;
-    /*18 default. calculate=18-((52px - min-height)/2) */
-    inset-inline-start: 48px !important;
-  }
 
   .search-wrapper .logo-and-wordmark {
     opacity: 0.9 !important;
@@ -640,36 +633,37 @@ url("about:newtab") {
 
   /* When there is overflow because of the height, search bar gets fixed position */
   .outer-wrapper.fixed-search .search-wrapper {
-    backdrop-filter: blur(18px) !important;
+/*     backdrop-filter: blur(18px) !important;
     gap: 0px 0px !important;
-    min-height: 60px !important;
+    min-height: 60px !important; */
   }
-
+  
   .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
     top: 0 !important;
   }
 
-  .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper button.search-handoff-button {
-    backdrop-filter: blur(22px) !important;
+/*   Fixed search need fix  */
+  button.search-handoff-button {
+/*     backdrop-filter: blur(22px) !important;
     background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
     box-shadow: none !important;
     border: none !important;
-    margin: 0px 50px !important;
+    margin: 0px 50px !important; */
   }
 
-  .search-wrapper .search-handoff-button .fake-textbox {
+  .search-handoff-button .fake-textbox {
     opacity: 0.5 !important;
     color: var(--firefoxcss-search-bar-text-color) !important;
     transition: opacity 0.4s !important;
   }
 
-  .search-wrapper .search-handoff-button:active > .fake-textbox,
-  .search-wrapper .search-handoff-button:hover > .fake-textbox,
-  .search-wrapper .search-handoff-button:focus > .fake-textbox {
+  .search-handoff-button:active > .fake-textbox,
+  .search-handoff-button:hover > .fake-textbox,
+  .search-handoff-button:focus > .fake-textbox {
     opacity: 0.8 !important;
   }
 
-  .search-inner-wrapper:hover .search-handoff-button {
+  .search-handoff-button:hover {
     background-color: var(--firefoxcss-item-hover-bg-color) !important;
     border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
     fill: var(--firefoxcss-search-bar-fill-icon-hover) !important;
@@ -694,7 +688,7 @@ url("about:newtab") {
   }
 
   @media only screen and (max-width: 385px) {
-    .search-wrapper .search-inner-wrapper .search-handoff-button {
+    .search-handoff-button {
       padding-top: 4px !important;
       padding-bottom: 6px !important;
     }
@@ -709,7 +703,7 @@ url("about:newtab") {
     background-color: transparent !important;
   }
 
-  /*.outer-wrapper .search-wrapper .search-handoff-button {
+  /*.search-handoff-button {
      background-image: url("ASSETS/icons/search-glass.svg") !important;
      background-size: 16px !important;  
   }*/
@@ -723,24 +717,180 @@ url("about:newtab") {
   .customize-menu .close-button {
     backdrop-filter: blur(24px) !important;
   }
+  
+ /* ================== Weather widget mods ============================================ */
+  .weatherButtonContextMenuWrapper .context-menu {
+    background-color: hsla(220, 2%, 20%, 1) !important; 
+  }
+  
+  .activity-stream:not(.darkWallpaper, .lightWallpaper) {
+      .weatherInfoLink {
+        background-color: transparent !important;
+         &:hover {
+          background-color: var(--firefoxcss-item-hover-bg-color) !important;
+        }
+      }
+      .weatherButtonContextMenuWrapper {
+        background-color: transparent !important;
+         &:hover {
+          background-color: var(--firefoxcss-item-hover-bg-color) !important;
+        }
+      }
+   }
+  
+  .weatherCard .weatherButtonContextMenuWrapper {
+    opacity: 0 !important;
+    width: 0px !important;
+    visibility: collapse !important;
+    transition: opacity 0.3s ease, width 0.3s ease, visibility 0.0s ease;
+  }
+  
+  .weatherCard:hover .weatherButtonContextMenuWrapper,
+  .weatherCard:has(.context-menu) .weatherButtonContextMenuWrapper{
+    opacity: 1 !important;
+     width: 50px !important;
+    visibility: visible !important;
+  }
 
-  .activity-stream.darkWallpaper {
+  
+  .weatherCard .weatherInfoLink {
+    border-start-end-radius: var(--border-radius-medium) !important;
+    border-end-end-radius: var(--border-radius-medium) !important;
+  }
+  
+  .weatherCard:hover .weatherInfoLink,
+  .weatherCard:has(.context-menu) .weatherInfoLink{
+    border-start-end-radius: 0!important;
+    border-end-end-radius: 0 !important;
+  }
+
+  
+  .weather .weatherSponsorText {
+    display: none !important;
+  }
+
+  .weatherInfoLink {
+    background-color: var(--firefoxcss-weather-widget) !important;
+    &:hover {
+      background-color: var(--firefoxcss-weather-widget-hover) !important;
+    }
+  }
+  
+  .weatherButtonContextMenuWrapper {
+    background-color: var(--firefoxcss-weather-widget) !important;
+    &:hover {
+      background-color: var(--firefoxcss-weather-widget-hover) !important;
+    }
+  }
+  
+  .activity-stream.darkWallpaper .weatherInfoLink,
+  .activity-stream.darkWallpaper .weatherButtonContextMenuWrapper{
+    border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .activity-stream.darkWallpaper {
+      .weatherCard {
+          color-scheme: dark !important;
+      }
+      .weatherButtonContextMenuWrapper .context-menu {
+        background-color: hsla(220, 2%, 95%, 1) !important; 
+      }
+    }
+   
+    .activity-stream.lightWallpaper {
+      .weatherButtonContextMenuWrapper .context-menu {
+        background-color: hsla(220, 2%, 95%, 1) !important; 
+      }
+    }
+  }
+  
+  .weatherCard {
+   backdrop-filter: blur(6px) !important;
+  }
+
+
+  .weatherButtonContextMenuWrapper::after {
+    opacity: 0.1 !important;
+    background-color: white !important;
+  }
+  
+  .weatherButtonContextMenuWrapper:hover::after {
+    opacity: 0 !important;
+  }
+  
+  .weatherInfoLink:hover ~ .weatherButtonContextMenuWrapper::after {
+    opacity: 0 !important;
+  }
+  
+  /* ================== Customization Menu button ===================================== */
+  .personalize-button  {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+    border-radius: 16px !important;
+    min-width: unset !important;
+    width: auto !important;
+    transition: all 0.2s ease !important;
+  
+    & > div {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    & > label {
+       display: none !important;
+    }
+    &:hover {
+      background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
+    }
+  }
+  
+  :root:has(.activity-stream.darkWallpaper) {
+    @media (prefers-color-scheme: light) {
+      .personalize-button {
+      
+        & > div > img {
+            color: white !important;
+        
+        }
+      }
+    }
+  }
+  
+ /* Make animation faster so the  Customization Menu button hidden quicker */
+  .personalize-button.personalize-animate-exit-active {
+    display: none !important;
+  }
+
+  /* ================== Shortcut pin icon behaviour ==================================== */
+  .top-site-button .icon.icon-pin-small {
+    opacity: 0 !important;
+    transition: opacity 200ms ease 0ms;
+  }
+
+  .top-site-button:has(.title.has-icon.pinned:hover) .icon.icon-pin-small {
+    opacity: 0.6 !important;
+    transition: opacity 200ms ease 300ms;
+  }
+
+  /* ================== Dark and Light wallpaper modifications ========================= */
+   :root:has(.activity-stream.darkWallpaper) {
     @media (prefers-color-scheme: dark) {
-      --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.6) !important;
-      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.5) !important;
+      --firefoxcss-item-bg-color: hsla(0, 0%, 8%, 0.5) !important;
+      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 16%, 0.5) !important;
+      --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 30%, 0.6) !important;
     }
 
     @media (prefers-color-scheme: light) {
-      --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.25) !important;
-      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 98%, 0.28) !important;
+      --firefoxcss-item-bg-color: hsla(200, 10%, 85%, 0.15) !important;
+      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 95%, 0.2) !important;
       --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.1) !important;
       --firefoxcss-search-text-fill: rgba(255, 255, 255, 0.6) !important;
       --firefoxcss-search-bar-text-color: rgba(255, 255, 255, 0.9) !important;
       --firefoxcss-search-bar-fill-icon-hover: rgba(255, 255, 255, 0.8) !important;
       --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.15) !important;
-      --firefoxcss-settings-wheel-color: hsla(200, 20%, 90%, 0.6) !important;
-      --firefoxcss-settings-wheel-color-hover: hsla(200, 20%, 90%, 0.9) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
+      --firefoxcss-weather-widget: hsla(200, 10%, 80%, 0.15)  !important;
+      --firefoxcss-weather-widget-hover: hsla(200, 10%, 30%, 0.20)  !important;
+      --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 90%, 0.3) !important;
 
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
@@ -774,23 +924,27 @@ url("about:newtab") {
       backdrop-filter: blur(20px);
     }
   }
+  
 
-  .activity-stream.lightWallpaper {
+  :root:has(.activity-stream.lightWallpaper) {
     @media (prefers-color-scheme: dark) {
-      --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.8) !important;
-      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.7) !important;
-      --firefoxcss-settings-wheel-color: hsla(0, 0%, 12%, 0.75) !important;
-      --firefoxcss-settings-wheel-color-hover: hsla(0, 0%, 12%, 0.55) !important;
+      --firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important;
+      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 20%, 0.8) !important;
+      --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;
+      --firefoxcss-customize-menu: hsla(210, 10%, 10%, 0.6)  !important;
+      --firefoxcss-weather-widget: hsla(220, 2%, 10%, 0.8)  !important;
+      --firefoxcss-weather-widget-hover: hsla(220, 2%, 18%, 0.8)  !important;
 
       .top-site-outer:hover:not(.active) .title,
-      .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
-        color: hsl(250, 13%, 9%) !important;
-      }
+      .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {--firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important; --firefoxcss-item-hover-bg-color: hsla(0, 0%, 0%, 0.50) !important; --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;}
     }
 
     @media (prefers-color-scheme: light) {
-      --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.75) !important;
-      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 98%, 0.85) !important;
+      --firefoxcss-item-bg-color: hsla(200, 10%, 95%, 0.75) !important;
+      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.9) !important;
+      --firefoxcss-weather-widget: hsla(200, 10%, 98%, 0.75)  !important;
+      --firefoxcss-weather-widget-hover: hsla(200, 10%, 92%, 0.75)  !important;
+      --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 100%, 0.9) !important;
     }
 
     & .collapsible-section .card-outer {
@@ -812,51 +966,6 @@ url("about:newtab") {
     }
   }
 
-  /* Pocket extra modification by request */
-  @media -moz-pref("firefoxcss.pocket.oneline.enable") {
-    /* Pocket new tab - Learn More text disable  */
-    .collapsible-section .section-title-container .learn-more-link-wrapper {
-      display: none !important;
-    }
-
-    @media -moz-pref("firefoxcss.pocket.hide.populartopics.links") {
-      /* Pocket new tab - Popular Topics bottom links text disable  */
-      .discovery-stream.ds-layout .ds-navigation.ds-navigation-left-align {
-        display: none !important;
-      }
-    }
-
-    /* Pocket new tab - Privacy Notice text disable  */
-    .ds-navigation .ds-navigation-privacy {
-      display: none !important;
-    }
-
-    /* pocket new tab context menu  */
-    .context-menu {
-      background-image: var(--firefoxcss-customize-menu-bg-image) !important;
-      background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
-      backdrop-filter: blur(32px) !important;
-      border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border);
-      border-radius: 8px !important;
-    }
-
-    .discovery-stream.ds-layout .ds-card-grid {
-      grid-template-rows: 1fr !important;
-      grid-auto-rows: 0 !important;
-      padding-bottom: 0 !important;
-      row-gap: 0 !important;
-      overflow: hidden !important;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
-      @media -moz-pref("firefoxcss.pocket.4.cards.enable") {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
-        column-gap: 16px !important;
-      }
-      @media -moz-pref("firefoxcss.pocket.5.cards.enable") {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
-        column-gap: 12px !important;
-      }
-    }
-  }
 }
 
 @-moz-document url-prefix(about:firefoxview) {
@@ -888,6 +997,11 @@ url("about:newtab") {
     --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
     --in-content-table-background: var(--firefoxcss-item-bg-color) !important;
     --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
+    
+    --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
+    --background-color-box: var(--firefoxcss-item-bg-color) !important;
+    --promo-background-color:  var(--firefoxcss-item-bg-color) !important;
+    --background-color-box-info:  var(--firefoxcss-item-bg-color) !important;
   }
 }
 
