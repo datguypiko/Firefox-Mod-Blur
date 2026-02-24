@@ -1,11 +1,9 @@
 /* Spill style. Modifications for userContent file */
 @-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing") {
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root #root{
       --firefoxcss-item-bg-color: hsla(240, 2%, 45%, 0.4) !important;
       --firefoxcss-item-hover-bg-color: hsl(240, 2%, 55%, 0.4) !important;
-      --firefoxcss-settings-wheel-color: hsla(240, 20%, 80%, 0.6) !important;
-      --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 80%, 0.9) !important;
     }
   }
 }
@@ -26,28 +24,28 @@
     }
   }
 
-  #search-handoff-button {
+  button.search-handoff-button {
     background-color: hsla(290, 21%, 35%, 0.2) !important;
     border-top: 1px solid hsla(290, 21%, 50%, 0.2) !important;
     fill: hsl(290, 21%, 60%) !important;
     backdrop-filter: blur(24px) !important;
   }
 
-  #search-handoff-button:hover,
-  #search-handoff-button:focus,
-  #search-handoff-button:active {
+  button.search-handoff-button:hover,
+  button.search-handoff-button:focus,
+  button.search-handoff-button:active {
     background-color: hsla(290, 21%, 45%, 0.2) !important;
     border-top: 1px solid hsla(290, 21%, 55%, 0.2) !important;
     fill: hsl(290, 21%, 70%) !important;
   }
 
-  #search-handoff-button .fake-textbox {
+  button.search-handoff-button .fake-textbox {
     color: hsl(290, 21%, 60%) !important;
   }
 
-  #search-handoff-button:active > .fake-textbox,
-  #search-handoff-button:hover > .fake-textbox,
-  #search-handoff-button:focus > .fake-textbox {
+  button.search-handoff-button:active > .fake-textbox,
+  button.search-handoff-button:hover > .fake-textbox,
+  button.search-handoff-button:focus > .fake-textbox {
     color: hsl(290, 21%, 70%) !important;
   }
 }
