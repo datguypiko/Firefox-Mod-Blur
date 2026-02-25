@@ -1203,10 +1203,25 @@ panel {
 /*   #ctrlTab-panel used to fix Ctr+Tab */
   :not(#ContentSelectDropdown) > &:not(#ctrlTab-panel, #autoscroller) {
 /*     --panel-border-color: var(--arrowpanel-border-color) !important; */
-    --panel-padding: 1px 0px !important;
+/*     --panel-padding: 0px 0px !important; */
     --panel-border-radius: 8px !important;
 /*     --panel-padding-block: 4px !important; */
-    --panel-background: var(--firefoxcss-main-bg-color) !important;
+    
+    @media (-moz-platform: linux) { 
+       --panel-background: var(--firefoxcss-main-bg-color) !important;
+    }
+    
+    @media (-moz-platform: windows) { 
+      @media -moz-pref("widget.windows.mica.popups", 1) {
+        --panel-background: var(--firefoxcss-main-bg-color) !important;
+      }
+    }
+        
+    /*  Target windows 10 with no mica support */
+    @media not (-moz-windows-mica-popups) { 
+      --panel-background: var(--firefoxcss-main-bg-color) !important;
+    }
+    
   }
 }
 
