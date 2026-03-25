@@ -58,9 +58,6 @@
 <i>bookmarks_bar_same_color_as_toolbar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/a2sjphq.gif"></p>
 <i>transparent_bookmarks_bar.css</i><p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"></p></details>
 
-<details><summary>Search bar modifications :gear:</summary>
-<i>no_search_engines_in_url_bar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/CpZqhQX.gif"></p></details>
-
 <details><summary>Privacy mods :gear:</summary>
 <i>privacy_blur_email_in_main_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/gE2PVpr.gif"></p>
 <i>privacy_blur_email_in_sync_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/MJqZ9TW.gif"></p>
