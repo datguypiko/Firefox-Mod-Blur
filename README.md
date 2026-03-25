@@ -153,7 +153,7 @@ If it's configured using numbers select `number` else select `boolean` and press
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373265-a0cff784-95cc-4000-9567-06c8babf214b.png"></p></details>
 
 <details><summary>Acrylic MicaForEveryone :hammer:</summary>
-<p align="center"><i>acrylic_micaforeveryone.css</i></p>
+<p align="center"><i>Will be updated when Firefox fully releases blur</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"></p></details>
 
 ###### and [more](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/EXTRA%20MODS)..
