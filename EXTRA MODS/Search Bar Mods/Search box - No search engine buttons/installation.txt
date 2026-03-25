@@ -1,1 +1,0 @@
-Move file to chrome folder where userChrome and userContent sits.
