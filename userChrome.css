@@ -2658,3 +2658,195 @@ toolbar
     }
   }
 }
+
+
+
+@media -moz-pref("mod.main.window.frame.style-1") or -moz-pref("mod.main.window.frame.style-2") {
+  /*   #navigator-toolbox #PersonalToolbar {
+     background-color: var(--firefoxcss-item-bg-color) !important;
+  }  */
+
+  :root {
+    --firefoxcss-top-bar-border-bottom-size: 0px !important;
+  }
+
+  /* Remove the white line around the content window */
+  @media -moz-pref("sidebar.revamp") {
+    #tabbrowser-tabbox {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  @media -moz-pref("sidebar.revamp") {
+    #sidebar-main,
+    #sidebar-box {
+      :root[lwtheme] & {
+        background-color: var(--firefoxcss-item-bg-color) !important;
+        background-image: none !important;
+      }
+    }
+  }
+
+  /*   @media -moz-pref("sidebar.revamp") or -moz-pref("sidebar.verticalTabs") { */
+
+  /* Variables used for the rounded corners. */
+  #main-window:not([chromehidden~="toolbar"]) {
+    --uc-tweak-rounded-corners-padding: 8px;
+    --uc-tweak-rounded-corners-padding2: 1px;
+    --uc-tweak-rounded-corners-padding3: var(--uc-tweak-rounded-corners-padding);
+    --uc-tweak-rounded-corners-radius: 10px;
+    @media -moz-pref("sidebar.verticalTabs") {
+      --uc-tweak-rounded-corners-padding2: 0px;
+      --uc-tweak-rounded-corners-padding3: 0px;
+    }
+    --uc-tweak-rounded-corners-shadow:
+      0 -0.8px 0 0 rgb(0 0 0 / 0.02), 0 0.5px 1px 1px rgb(0 0 0 / 0.06), 0 1px 1px rgb(0 0 0 / 0.1);
+    /*     --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color)); */
+    --browser-frame-bgcolor: var(--firefoxcss-item-bg-color);
+
+    /* Different shadow for higher resolution displays. */
+    @media (resolution > 1.8dppx) {
+      --uc-tweak-rounded-corners-shadow: 0 0 0.5px 0.5px rgb(0 0 0 / 0.06), 0 0.5px 1.5px rgb(0 0 0 / 0.1);
+    }
+  }
+
+  /* Hide border below titlebar on macOS, as its titlebar already has a border. */
+  @media (-moz-platform: macos) {
+    :root[chromehidden~="toolbar"][chromehidden~="location"][chromehidden~="directories"] {
+      border-top: none !important;
+    }
+  }
+
+  /* Disable rounded corners in fullscreen, only if the toolbar is hidden. */
+  :root[inFullscreen] #navigator-toolbox[style*="margin-top"] + #browser,
+  :root[inDOMFullscreen] #browser {
+    --uc-tweak-rounded-corners-padding: 0;
+    --uc-tweak-rounded-corners-radius: 0;
+    --uc-tweak-rounded-corners-shadow: unset;
+  }
+
+  /* Apply rounded corners to the browser container. */
+  #tabbrowser-tabbox .browserContainer {
+    margin-inline: var(--uc-tweak-rounded-corners-padding) !important;
+    margin-block-end: var(--uc-tweak-rounded-corners-padding) !important;
+    margin-block-start: var(--uc-tweak-rounded-corners-padding2) !important;
+    margin-inline-start: var(--uc-tweak-rounded-corners-padding3) !important;
+
+    border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+    box-shadow: var(--uc-tweak-rounded-corners-shadow) !important;
+    background-color: var(--firefoxcss-main-bg-color) !important;
+    position: relative !important;
+    /*           box-shadow: inset 0px 1px 0 0px hsla(0, 0%, 100%, 0.03), 0px 2px 4px 0px rgba(0, 0, 0, 0.2) !important; */
+
+    /*     border-top:1px solid #0000 !important; */
+
+    /* Use pseudo element overlay to simulate rounded corners, similar to the
+       * tab corners, fixes bug with backdrop-filter. */
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      /* Draw toolbar background on the negative corner space, then draw the
+         * same shadow from the browser window on top. */
+      box-shadow:
+        var(--uc-tweak-rounded-corners-shadow, 0 0 transparent),
+        0 0 0 16px var(--browser-frame-bgcolor),
+        inset 0px 1px 0 0px hsla(0, 0%, 100%, 0.06) !important;
+      border: 1px solid hsla(0, 0%, 0%, 0.2) !important;
+
+      @media -moz-pref("mod.main.window.frame.style-2") {
+        box-shadow:
+          var(--uc-tweak-rounded-corners-shadow, 0 0 transparent),
+          0 0 0 16px var(--browser-frame-bgcolor) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      }
+
+      clip-path: inset(0);
+      pointer-events: none;
+
+      /*        border: 1px solid rgba(255, 255, 255, 0.1) !important; */
+
+      /*       background-color: var(--mod-main-bg-color) !important; */
+      /*! border-radius: 50px !important; */
+    }
+  }
+
+  /* Apply rounded corners to the browser content. */
+  #tabbrowser-tabbox .browserContainer browser {
+    /*         border-radius: var(--uc-tweak-rounded-corners-radius) !important; */
+  }
+
+  /* Prevent status panel corners and shadow from appearing outside the browser. */
+  #statuspanel {
+    overflow: hidden;
+  }
+
+  /* Apply rounded corners to sidebar. */
+  #sidebar-box {
+    margin-inline-start: var(--uc-tweak-rounded-corners-padding) !important;
+    margin-block-end: var(--uc-tweak-rounded-corners-padding) !important;
+    margin-block-start: var(--uc-tweak-rounded-corners-padding2) !important;
+    border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--uc-tweak-rounded-corners-shadow) !important;
+
+    &[positionend] {
+      margin-inline-start: 0 !important;
+      margin-inline-end: var(--uc-tweak-rounded-corners-padding) !important;
+    }
+  }
+
+  /* Devtools window when docked to the left or right. */
+  .devtools-toolbox-side-iframe {
+    margin-block-end: var(--uc-tweak-rounded-corners-padding) !important;
+    border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--uc-tweak-rounded-corners-shadow) !important;
+
+    /* Devtools window when docked to the left. */
+    &:first-child {
+      margin-inline-start: var(--uc-tweak-rounded-corners-padding) !important;
+    }
+
+    /* Devtools window when docked to the right. */
+    &:last-child {
+      margin-inline-end: var(--uc-tweak-rounded-corners-padding) !important;
+    }
+  }
+
+  /* Devtools window when docked to the bottom. */
+  .devtools-toolbox-bottom-iframe {
+    margin: var(--uc-tweak-rounded-corners-padding) !important;
+    margin-block-start: 0 !important;
+    border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--uc-tweak-rounded-corners-shadow) !important;
+  }
+
+  /* Hide devtools splitter. */
+  .devtools-side-splitter,
+  .devtools-horizontal-splitter {
+    background-color: transparent !important;
+  }
+
+  /* Remove sidebar border when not in full screen. */
+  :not(:root[inFullscreen] #navigator-toolbox[style*="margin-top"]) + #browser #sidebar-splitter {
+    border-inline-width: 0 !important;
+  }
+
+  /* Apply colour to the frame around the browser window. */
+  #browser {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+    /*     background-color:   var(--mod-main-bg-color) !important; */
+    /*! background-color: red !important; */
+  }
+
+  /* Change colour of page when loading */
+  #tabbrowser-tabpanels {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+    /*     background-color:  var(--mod-main-bg-color)!important; */
+  }
+}
+
