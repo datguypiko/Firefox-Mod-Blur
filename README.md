@@ -101,6 +101,36 @@ If it's configured using numbers select `number` else select `boolean` and press
 <i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
 <i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p></details>
 
+<details><summary>More compact Vertical Tabs :gear:</summary>
+<i>Enable <code>mod.compact.vertical.tabs</code> in <code>about:config</code> </i><p align="left"><img width="136" height="523" alt="image" src="https://github.com/user-attachments/assets/fbd97abb-6115-4861-888a-1c6aa4197f11" /></p></details>
+
+<details><summary>Centered Tabs :gear:</summary>
+<i>Enable <code>mod.centered.tabs</code> in <code>about:config</code> </i><p align="left"><img width="1848" height="104" alt="image" src="https://github.com/user-attachments/assets/2a74fd5a-ae63-4469-a502-d6482fadd62e" /></p></details>
+
+<details><summary>Hide Tab preview panel :gear:</summary>
+<i>Enable <code>firefoxcss.disable.tab.preview.panel.fully</code> in <code>about:config</code> </i><p align="left"><img width="299" height="281" alt="image" src="https://github.com/user-attachments/assets/dd684579-3142-4245-9e75-f0cd29e1d1e6" /></p></details>
+
+<details><summary>Hide scrollbar when Vertical tabs overflow :gear:</summary>
+<i>Enable <code>mod.disable.scrollbar.in.vertical.tabs</code> in <code>about:config</code> </i><p align="left"><img width="365" height="635" alt="image" src="https://github.com/user-attachments/assets/9d9bca08-67cc-4d91-babe-d56938f07095" /></p></details>
+
+<details><summary>Enable Search Box focus outline :gear:</summary>
+<i>Enable <code>mod.searchBox.focus.outline.enable</code> in <code>about:config</code> </i><p align="left"><img width="1481" height="45" alt="Screenshot 2026-03-25 044124" src="https://github.com/user-attachments/assets/52537d21-347b-4d3c-9ebf-d3b3e1ba3af9" /></p></details>
+
+<details><summary>Tabs on top :gear:</summary>
+<i>Enable <code>firefoxcss.tabs.on.top.enable</code> in <code>about:config</code>. Doesn't work with custom window control buttons for now (linux should work)</i><p align="left"><img width="1716" height="84" alt="image" src="https://github.com/user-attachments/assets/a3b86a6f-9627-4534-b493-04c06c7087ae" /></p></details>
+
+<details><summary>Window Frame border mods :gear:</summary>
+	
+<i> - Fully padded Window border: Enable <code>mod.main.window.frame.style-1</code> or <code>mod.main.window.frame.style-2</code> in <code>about:config</code> </i><p align="left"><img width="725" height="417" alt="Screenshot 2026-03-25 034441" src="https://github.com/user-attachments/assets/1ca0e1a7-8330-4f80-bf35-7caee051ac2e" /></p>
+
+<i> - Default Window border and shadow: Enable <code>mod.enable.browser.border-and-shadow</code> in <code>about:config</code> </i><p align="left"><img width="94" height="166" alt="Screenshot 2026-03-25 031116" src="https://github.com/user-attachments/assets/0370b503-f02d-4260-92dc-e09c9d948144" /></p>
+
+</details>
+
+<details><summary>Always show Search Bar buttons :gear:</summary>
+<i>Enable <code>mod.search.info.buttons.show.always</code> in <code>about:config</code> </i><p align="left"><img width="1408" height="42" alt="Screenshot 2026-03-25 041240" src="https://github.com/user-attachments/assets/147a8ee1-3cf7-40ac-9d21-3e123172ddd8" /></p></details>
+
+
 <details><summary>Active tab has static width :gear:</summary>
 <i>selected_tabs_static_width.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/4dc26c78-6714-43f8-bfb5-17a0dab3b920"></p></details>
 
