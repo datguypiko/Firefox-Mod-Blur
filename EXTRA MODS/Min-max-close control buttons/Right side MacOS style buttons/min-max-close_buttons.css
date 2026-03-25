@@ -274,6 +274,7 @@
   order: 1 !important;
 }
 
+@media not -moz-pref("sidebar.verticalTabs") {
 @media only screen and (max-width: 670px) {
   #main-window #navigator-toolbox:not([inFullscreen])
     #TabsToolbar
@@ -288,5 +289,6 @@
   
   #main-window #navigator-toolbox:not([inFullscreen]) #nav-bar {
     padding-right: initial !important;
+}
 }
 }

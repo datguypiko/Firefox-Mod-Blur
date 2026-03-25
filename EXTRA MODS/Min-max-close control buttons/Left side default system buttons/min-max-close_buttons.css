@@ -63,20 +63,22 @@ visibility: visible !important;
   padding-left: initial !important;
 }
 
-@media only screen and (max-width: 670px) {
-  #main-window #navigator-toolbox:not([inFullscreen])
-    #TabsToolbar
-    .titlebar-buttonbox-container {
-    visibility: visible !important;
-    display: flex !important;
-    position: relative !important;
-    order: -1 !important;
+@media not -moz-pref("sidebar.verticalTabs") {
+  @media only screen and (max-width: 670px) {
+    #main-window #navigator-toolbox:not([inFullscreen])
+      #TabsToolbar
+      .titlebar-buttonbox-container {
+      visibility: visible !important;
+      display: flex !important;
+      position: relative !important;
+      order: -1 !important;
+    }
+    #main-window #navigator-toolbox:not([inFullscreen]) #nav-bar {
+    padding-left: initial !important;
+    }
   }
-  #main-window #navigator-toolbox:not([inFullscreen]) #nav-bar {
-   padding-left: initial !important;
-   }
-}
 
-#navigator-toolbox #nav-bar {
-    padding-left: calc(var(--firefoxcss-control-buttons-margin) + 10px) !important;
+  #navigator-toolbox #nav-bar {
+      padding-left: calc(var(--firefoxcss-control-buttons-margin) + 10px) !important;
+  }
 }

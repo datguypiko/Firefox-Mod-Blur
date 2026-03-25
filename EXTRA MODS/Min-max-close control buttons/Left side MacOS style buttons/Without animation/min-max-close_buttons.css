@@ -277,6 +277,7 @@
     opacity: 0.65;
 }
 
+@media not -moz-pref("sidebar.verticalTabs") {
 @media only screen and (max-width: 670px) {
 	#main-window #navigator-toolbox:not([inFullscreen])
 	  #TabsToolbar
@@ -294,3 +295,4 @@
 	padding-left: initial !important;
   }
   }
+}
