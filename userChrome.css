@@ -301,6 +301,18 @@
   /* Menu items */
   --arrowpanel-menuitem-padding-block: 4px !important; /* Default: 8px */
   --arrowpanel-menuitem-padding-inline: 4px !important; /* Default: 8px */
+
+  /* Vertical tabs margin and height modification */
+   @media -moz-pref("sidebar.verticalTabs") {
+        --tab-min-height: max(32px, calc(var(--tab-label-line-height) * 1em)) !important;
+        --tab-block-margin: 1px !important;
+            @media -moz-pref("mod.compact.vertical.tabs") {
+              --tab-min-height: max(30px, calc(var(--tab-label-line-height) * 1em)) !important;
+              --tab-block-margin: 0px !important;
+     }
+   }
+
+	
 }
 
 /*=====================================================================
@@ -657,6 +669,38 @@ about:config -> svg.context-properties.content.enabled -> true*/
 ============================= T A B S =================================
 =====================================================================*/
 
+/* Fix tab close button in vertical mode */
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tab-close-button {
+      width: 14px !important;
+      height: 14px !important;
+      padding: 3px !important;
+    }
+  }
+}
+
+#vertical-pinned-tabs-splitter {
+  /*     margin-inline: var(--space-large) !important; */
+  border-top: 1px solid light-dark(#00000030, #ffffff2e) !important;
+  margin-inline: var(--space-large) !important;
+}
+
+#sidebar-tools-and-extensions-splitter {
+  margin-inline: var(--space-large) !important;
+  border-bottom: 1px solid light-dark(#00000030, #ffffff2e) !important;
+  border-top: none !important;
+  border-width: 2px 0px !important;
+}
+
+/*  Remove line when tabs overflow creating 2 lines - Bug? */
+#tabbrowser-tabs[orient="vertical"] {
+  &[overflow]::after {
+    border-bottom: none !important;
+    margin-inline: var(--space-large) !important;
+  }
+}
+
 /* Non active tabs have darker text */
 .tabbrowser-tab:not([selected]):not([multiselected]):not(:hover)
   .tab-label-container
@@ -895,9 +939,14 @@ button:hover > .button-background {
 
 @media -moz-pref("sidebar.verticalTabs") {
   /* More compact vertical tabs */
-  #tabbrowser-tabs[orient="vertical"] .tab-background {
-    margin-block: 0px !important;
-  }
+  #tabbrowser-tabs[orient="vertical"] {
+    .tabbrowser-tab:not([pinned]) {
+      padding-block: 2px 1px !important;
+      &:nth-child(1 of :not([hidden], [pinned])) {
+        padding-block-start: 4px !important;
+      }
+    }
+  } 
 
   .tabbrowser-tab .tab-icon-overlay:not([crashed]) {
     &:is([soundplaying], [muted], [activemedia-blocked]) {
