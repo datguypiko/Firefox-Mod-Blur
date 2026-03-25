@@ -16,6 +16,23 @@
     --browser-area-z-index-toolbox: 4;
   }
 
+@media -moz-pref("sidebar.revamp") {
+
+ @media not -moz-pref("mod.enable.browser.border-and-shadow") { 
+      .browserContainer {
+         outline: none !important; 
+         box-shadow: none !important; 
+    }
+  }
+
+
+ @media -moz-pref("mod.enable.browser.border-and-shadow") { 
+   .browserContainer {
+      margin-top: 1px !important;
+   }
+}
+}
+
   /* Fix navigator-toolbox absolute elements when in fullscreen. Like in fullscreen video.   */
 :root[inDOMFullscreen] #navigator-toolbox {
 	--browser-area-z-index-toolbox: initial;
