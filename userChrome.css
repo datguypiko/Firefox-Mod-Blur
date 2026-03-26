@@ -275,7 +275,7 @@
 :root {
   --firefoxcss-top-bar-border-bottom-size: 1px;
   --firefoxcss-border-radius: 10px;
-  --firefoxcss-control-buttons-margin: 100px;
+  --firefoxcss-control-buttons-margin: 75px;
   --firefoxcss-tab-min-width: 110px;
   --firefoxcss-tab-max-width: 150px;
 
@@ -1111,6 +1111,14 @@ tab-group[collapsed] > .tabbrowser-tab {
 	#nav-bar .titlebar-buttonbox-container {
       display: none !important;
 	}
+}
+
+/* Add more movable space for Web Apps */
+:root[taskbartab] #nav-bar {
+  & .titlebar-spacer[type="pre-tabs"] {
+    width: 20px !important;
+    display: initial !important;
+  }
 }
 
 @media (-moz-platform: windows) {
@@ -2343,7 +2351,7 @@ toolbar
   }
 }
 
-/*===================== VERTICAL =========================*/
+/*===================== V E R T I C A L =========================*/
 
 @media -moz-pref("sidebar.verticalTabs") and -moz-pref("sidebar.revamp") {
   :root {
@@ -2351,8 +2359,13 @@ toolbar
   }
 
   #nav-bar .titlebar-spacer[type="post-tabs"] {
-    width: 20px !important;
+    width: 5px !important;
     display: initial !important;
+  }
+  
+  #vertical-spacer{
+    width: 20px !important;
+    min-width: 20px !important;
   }
 
   #tabbrowser-arrowscrollbox {

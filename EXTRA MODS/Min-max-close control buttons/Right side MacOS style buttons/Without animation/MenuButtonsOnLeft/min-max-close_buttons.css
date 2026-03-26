@@ -45,6 +45,10 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
   margin-inline: -244px !important;
 }
 
+:root {
+	--firefoxcss-control-buttons-margin: 90px !important;
+}
+
 /* ----------------------------------------------------------------- */
 /* ---------- MacOS style close/min/max window buttons ------------- */
 /* ----------------------------------------------------------------- */

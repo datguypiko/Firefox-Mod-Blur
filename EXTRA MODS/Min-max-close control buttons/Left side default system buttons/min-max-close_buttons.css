@@ -21,6 +21,10 @@
 	  display: none !important;
 	}
 }
+
+:root {
+	  --firefoxcss-control-buttons-margin: 85px !important;
+}
  
  /* ----------------------------------------------------------------- */
  /* ---------- Default OS style close/min/max window buttons -------- */
