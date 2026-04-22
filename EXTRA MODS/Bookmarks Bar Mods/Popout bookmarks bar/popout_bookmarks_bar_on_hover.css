@@ -43,6 +43,14 @@
   background-color: var(--firefoxcss-bookmarks-bg-color) !important;
 }
 
+@media (prefers-color-scheme: dark) {
+:root[lwtheme], :root[lwtheme-image] {
+      & #navigator-toolbox #PersonalToolbar {
+        background-color: var(--lwt-accent-color) !important;
+    }
+  }
+}
+
   #PersonalToolbar:not([customizing]) {
     margin-bottom: calc(
       2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)
