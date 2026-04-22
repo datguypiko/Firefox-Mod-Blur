@@ -384,10 +384,59 @@ Order of Toolbars
   background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
-/* Fix some custom firefox themes that break */
-#navigator-toolbox {
-  :root[lwtheme-image] & {
-    background-image: var(--lwt-additional-images) !important;
+/* Trying to fix Custom Themes */
+:root[lwtheme] #navigator-toolbox,
+:root[lwtheme] #navigator-toolbox #nav-bar,
+:root[lwtheme-image] #navigator-toolbox,
+:root[lwtheme-image] #navigator-toolbox #nav-bar{
+/*    background-image: var(--lwt-additional-images) !important; */
+   background-color: transparent !important;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+:root[lwtheme], :root[lwtheme-image] {
+
+/*     --firefoxcss-tab-bg-color: hsla(0, 0%, 100%, 0.1); */
+    --firefoxcss-ltw-accent-mix: color-mix(in srgb, var(--lwt-accent-color) 94%, white); 
+    --firefoxcss-tab-bg-color: color-mix(in srgb, 
+      color-mix(in srgb, var(--lwt-accent-color) 95%, white) 
+      70%, transparent);
+
+    --firefoxcss-tab-hover-bg-color: color-mix(in srgb, var(--firefoxcss-tab-bg-color) 93%, white);
+    --firefoxcss-tab-active-bg-color: color-mix(in srgb, var(--firefoxcss-tab-bg-color) 91%, white); 
+ 
+
+    --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.8);
+  
+    
+    --firefoxcss-new-tab-button-active: color-mix(in srgb, 
+      color-mix(in srgb, var(--lwt-accent-color) 80%, white) 
+      50%, transparent);
+    --firefoxcss-new-tab-button-box-shadow-active: rgba(0, 0, 0, 0.2);
+
+    --firefoxcss-new-tab-button-hover:  color-mix(in srgb, 
+      color-mix(in srgb, var(--lwt-accent-color) 50%, white) 
+      30%, transparent);
+    --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0.2);
+  
+    --firefoxcss-url-bar-bg-color: color-mix(in srgb, var(--lwt-accent-color) 65%, black);
+      --firefoxcss-url-box-shadow-color:
+      0px 1px 0 0px hsla(0, 0%, 100%, 0.08), inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25) !important;
+
+    & #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
+    &:hover,
+    &:hover:active,
+    &[open] {
+      background-color:  color-mix(in srgb, 
+      color-mix(in srgb, var(--lwt-accent-color) 86%, white) 
+      70%, transparent) !important;
+    }
+  }
+
+   
+  & #PersonalToolbar { background-color: initial !important; }
+  
   }
 }
 
