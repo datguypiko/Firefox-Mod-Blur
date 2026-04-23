@@ -1,4 +1,4 @@
-<h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular</h2>
+<h2 align="center"><span><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" />Firefox Mod Blur - Modular</span></h2>
 
 <p align="center">
 <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v150.0-blue?style=flat&logo=firefox&logoColor=white"></a>
@@ -13,25 +13,25 @@
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> macOS style buttons
+## 🔹 macOS style buttons
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/cvBzN61.gif"> </p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Light and Dark theme support
+## 🔹 Light and Dark theme support
 <p align="center"> <img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/08099fbc-8b04-4f04-9f57-9b73911fd0c0"> </p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Updated context menu design
+## 🔹 Updated context menu design
 <p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/uG9BgQH.png"></p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Clean compact search with hidden buttons
+## 🔹 Clean compact search with hidden buttons
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/gu3HnMx.gif"></p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Show if pinned on hover
+## 🔹 Show if pinned on hover
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Asnafsk.gif"></p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> More compact and responsive homepage
+## 🔹 More compact and responsive homepage
 <p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/lhc2Muh.gif"></p>
 
-## <img src="https://user-images.githubusercontent.com/61329159/197364522-ffdb607c-f634-4ddd-a234-7ccc3833d8b6.png" width="20" height="20" /> Wallpaper style themes
+## 🔹Wallpaper style themes
 
 <p align="center"><i>Style 1 wallpaper-edition.css</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
@@ -40,7 +40,7 @@
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p>
 </br>
 
-<h2 align="left"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Select and add extra styles and functions</h2>
+<h2 align="left">Select and add extra styles and functions</h2>
 
 <details><summary>Min-max-close buttons style :gear:</summary>
 </br>
