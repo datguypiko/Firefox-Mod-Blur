@@ -1,5 +1,7 @@
+Hide tabs bar if needed.
 Add this code to userChrome.css file: 
 
-#titlebar {
+#TabsToolbar {
   visibility: collapse !important;
 }
+
