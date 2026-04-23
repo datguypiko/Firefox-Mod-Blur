@@ -1,25 +1,6 @@
 /* Remove border from search bar */
- #nav-bar #urlbar[breakout] {
-  &:not([breakout-extend]) .urlbar-background {
-    border-bottom: none !important;
-    border-top: none !important;
-    box-shadow: none !important;
-  }
-   &[breakout-extend][open] .urlbar-background{
-    border-bottom: none !important;
-    border-top: none !important;
-   } 
-   
-} 
-
-/* Moves both searchbars up. Uses 1px by default when border is set for better visual centering.  */
-:root {
-  --firefoxcss-searchbars-top-margin: 0px !important;
+#navigator-toolbox .urlbar-background,
+#navigator-toolbox #searchbar {
+  border: 0 !important;
+  box-shadow: none !important;
 }
-
- /* Secondary search bar */
-  #nav-bar #search-container #searchbar {
-    border-bottom: none !important;
-    border-top: none !important;
-    box-shadow: none !important;
-  }
