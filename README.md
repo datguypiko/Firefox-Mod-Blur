@@ -1,14 +1,14 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Modular</h2>
 
 <p align="center">
-<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v149.0-blue?style=flat&logo=firefox&logoColor=white"></a>
-<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-26/03/2026-blueviolet?style=flat"></a>
+<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v150.0-blue?style=flat&logo=firefox&logoColor=white"></a>
+<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-24/04/2026-blueviolet?style=flat"></a>
 <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat">
 	
 <p align="center">
 <a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> 
 <a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a>
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.41-important?style=for-the-badge"></a>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.45-important?style=for-the-badge"></a>
 </p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
@@ -118,7 +118,7 @@ If it's configured using numbers select `number` else select `boolean` and press
 	
 <i> - Fully padded Window border: Enable <code>mod.main.window.frame.style-1</code> or <code>mod.main.window.frame.style-2</code> in <code>about:config</code> </i><p align="left"><img width="725" height="417" alt="Screenshot 2026-03-25 034441" src="https://github.com/user-attachments/assets/1ca0e1a7-8330-4f80-bf35-7caee051ac2e" /></p>
 
-<i> - Default Window border and shadow: Enable <code>mod.enable.browser.border-and-shadow</code> in <code>about:config</code> </i><p align="left"><img width="94" height="166" alt="Screenshot 2026-03-25 031116" src="https://github.com/user-attachments/assets/0370b503-f02d-4260-92dc-e09c9d948144" /></p>
+<i> - Default Window border and shadow: Disable <code>mod.disable.browser.border-and-shadow</code> in <code>about:config</code> </i><p align="left"><img width="94" height="166" alt="Screenshot 2026-03-25 031116" src="https://github.com/user-attachments/assets/0370b503-f02d-4260-92dc-e09c9d948144" /></p>
 
 </details>
 
