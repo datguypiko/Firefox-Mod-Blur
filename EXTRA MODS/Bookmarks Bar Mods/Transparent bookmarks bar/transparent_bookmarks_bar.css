@@ -3,6 +3,7 @@
     --firefoxcss-bookmarks-bg-color: transparent !important;
 }
 
+
 #personal-bookmarks toolbarbutton.bookmark-item {
     background-color: hsl(0, 0%, 8%) !important;
 }
@@ -21,7 +22,7 @@
 
 #PersonalToolbar:not([customizing]) {
     max-width: fit-content;
-/*   For centering
+
     width:100vw;
-    align-self:center; */
-  }
+    align-self:center; 
+}
