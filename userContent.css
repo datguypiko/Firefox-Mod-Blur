@@ -11,143 +11,147 @@
 
 @-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing"),
                url-prefix("about:"), url("about:blank"), url-prefix(about:firefoxview) {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+      --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
+      --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
+      --firefoxcss-text-color: hsl(0, 0%, 100%);
+      --firefoxcss-other-color: hsl(290, 21%, 20%);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
-    --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
-    --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
-    --firefoxcss-text-color: hsl(0, 0%, 100%);
-    --firefoxcss-other-color: hsl(290, 21%, 20%);
+      /* ----- Private Page Colors ----- */
+      --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.3);
+      --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.3);
+      --firefoxcss-private-search-fill: hsl(275, 13%, 53%);
 
-    /* ----- Private Page Colors ----- */
-    --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.3);
-    --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.3);
-    --firefoxcss-private-search-fill: hsl(275, 13%, 53%);
+      --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.3);
+      --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.3);
+      --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
 
-    --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.3);
-    --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.3);
-    --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
+      --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
+      --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
+      --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
 
-    --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
-    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
-    --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
+      --firefoxcss-private-search-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095);
 
-    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075), 0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095);
+      /* ----- Normal Page Colors ----- */
+      --firefoxcss-search-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095);
 
-    /* ----- Normal Page Colors ----- */
-    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095);
+      --firefoxcss-search-color: rgb(251, 251, 254, 1);
+      --firefoxcss-search-border-top-color: #ffffff26;
+      --firefoxcss-search-text-fill: #ffffff5e;
+      --firefoxcss-search-bar-text-color: rgba(251, 251, 254, 1);
+      --firefoxcss-search-bar-fill-icon-hover: rgba(251, 251, 254, 0.8);
 
-    --firefoxcss-search-color: rgb(251, 251, 254, 1);
-    --firefoxcss-search-border-top-color: #ffffff26;
-    --firefoxcss-search-text-fill: #ffffff5e;
-    --firefoxcss-search-bar-text-color: rgba(251, 251, 254, 1);
-    --firefoxcss-search-bar-fill-icon-hover: rgba(251, 251, 254, 0.8);
+      --firefoxcss-shortcut-item-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+      --firefoxcss-shortcut-item-top-border: #ffffff26;
+      --firefoxcss-shortcut-item-top-border-hover: #97979791;
 
-    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-    --firefoxcss-shortcut-item-top-border: #ffffff26;
-    --firefoxcss-shortcut-item-top-border-hover: #97979791;
+      --firefoxcss-customize-menu: hsla(210, 10%, 20%, 0.3);
+      --firefoxcss-customize-menu-dropdown: #1e1e1e80;
+      --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.1);
+      --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
+      --firefoxcss-customize-menu-secondary-popup: hsla(210, 10%, 10%, 1);
+      --firefoxcss-input-focus: white;
+      /*  no changes */
+      --firefoxcss-shortcut-item-active: hsla(0, 0%, 10%, 0.7);
+      --firefoxcss-shortcut-item-context-menu: #13131380;
+      --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 70%, 0.145);
+      --firefoxcss-shortcut-item-context-menu-separator: #ffffff29;
+      --firefoxcss-extra-search-bar-when-scroll: #1e1e1e8c;
+      --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
+      --firefoxcss-settings-wheel-bg-color-hover: hsl(240, 2%, 30%);
+      --firefoxcss-shortcut-search-icon-color: #7ae3f463;
+      --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.2);
+      --firefoxcss-weather-widget-hover: hsla(240, 2%, 35%, 0.3);
 
-    --firefoxcss-customize-menu: hsla(210, 10%, 20%, 0.3);
-    --firefoxcss-customize-menu-dropdown: #1e1e1e80;
-    --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.1);
-    --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
-    --firefoxcss-customize-menu-secondary-popup: hsla(210, 10%, 10%, 1);
-    --firefoxcss-input-focus: white;
-    /*  no changes */
-    --firefoxcss-shortcut-item-active: hsla(0, 0%, 10%, 0.7);
-    --firefoxcss-shortcut-item-context-menu: #13131380;
-    --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 70%, 0.145);
-    --firefoxcss-shortcut-item-context-menu-separator: #ffffff29;
-    --firefoxcss-extra-search-bar-when-scroll: #1e1e1e8c;
-    --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
-    --firefoxcss-settings-wheel-bg-color-hover: hsl(240, 2%, 30%);
-    --firefoxcss-shortcut-search-icon-color: #7ae3f463;
-    --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.2);
-    --firefoxcss-weather-widget-hover: hsla(240, 2%, 35%, 0.3);
-
-    /* ----- Firefox View color changes ----- */
-    --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
-    --firefoxcss-firefoxview-sticky-color: hsla(240, 2%, 13%, 0.75) !important;
-    --firefoxcss-firefoxview-search-color: hsla(240, 2%, 35%, 0.5) !important;
+      /* ----- Firefox View color changes ----- */
+      --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
+      --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+      --firefoxcss-firefoxview-sticky-color: hsla(240, 2%, 13%, 0.75) !important;
+      --firefoxcss-firefoxview-search-color: hsla(240, 2%, 35%, 0.5) !important;
+    }
   }
-}
 
-/*=====================================================================
+  /*=====================================================================
 ================= L I G H T   T H E M E   C O L O R S =================
 =====================================================================*/
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --firefoxcss-main-bg-color: hsl(200, 5%, 90%);
-    --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
-    --firefoxcss-item-hover-bg-color: hsl(200, 0%, 100%);
-    --firefoxcss-text-color: hsl(0, 0%, 0%);
-    --firefoxcss-other-color: hsl(290, 21%, 20%);
+  @media (prefers-color-scheme: light) {
+    :root {
+      --firefoxcss-main-bg-color: hsl(200, 5%, 90%);
+      --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
+      --firefoxcss-item-hover-bg-color: hsl(200, 0%, 100%);
+      --firefoxcss-text-color: hsl(0, 0%, 0%);
+      --firefoxcss-other-color: hsl(290, 21%, 20%);
 
-    /* ----- Private Page Colors ----- */
-    --firefoxcss-private-search-bg-color: hsla(276, 20%, 88%, 0.55);
-    --firefoxcss-private-search-top-border: hsla(0, 0%, 100%, 0.45);
-    --firefoxcss-private-search-fill: hsl(275, 20%, 65%);
+      /* ----- Private Page Colors ----- */
+      --firefoxcss-private-search-bg-color: hsla(276, 20%, 88%, 0.55);
+      --firefoxcss-private-search-top-border: hsla(0, 0%, 100%, 0.45);
+      --firefoxcss-private-search-fill: hsl(275, 20%, 65%);
 
-    --firefoxcss-private-search-hover: hsla(276, 20%, 84%, 0.5);
-    --firefoxcss-private-search-border-hover: hsla(0, 0%, 100%, 0.55);
-    --firefoxcss-private-search-hover-fill: hsl(275, 20%, 55%);
+      --firefoxcss-private-search-hover: hsla(276, 20%, 84%, 0.5);
+      --firefoxcss-private-search-border-hover: hsla(0, 0%, 100%, 0.55);
+      --firefoxcss-private-search-hover-fill: hsl(275, 20%, 55%);
 
-    --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
-    --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
-    --firefoxcss-private-search-caret: hsl(276, 20%, 40%);
+      --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
+      --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
+      --firefoxcss-private-search-caret: hsl(276, 20%, 40%);
 
-    --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015),
-      0 4px 4px hsl(0deg 0% 0% / 0.015), 0 6px 6px hsl(0deg 0% 0% / 0.015), 0 12px 12px hsl(0deg 0% 0% / 0.035);
+      --firefoxcss-private-search-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
+        0 6px 6px hsl(0deg 0% 0% / 0.015), 0 12px 12px hsl(0deg 0% 0% / 0.035);
 
-    /* ----- Normal Page Colors ----- */
-    --firefoxcss-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015),
-      0 4px 4px hsl(0deg 0% 0% / 0.015), 0 8px 8px hsl(0deg 0% 0% / 0.015), 0 16px 16px hsl(0deg 0% 0% / 0.035);
+      /* ----- Normal Page Colors ----- */
+      --firefoxcss-search-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
+        0 8px 8px hsl(0deg 0% 0% / 0.015), 0 16px 16px hsl(0deg 0% 0% / 0.035);
 
-    --firefoxcss-search-color: rgb(87, 87, 87, 1);
-    --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.9);
-    --firefoxcss-search-text-fill: rgba(10, 10, 10, 0.25);
-    --firefoxcss-search-bar-text-color: rgba(10, 10, 10, 0.65);
-    --firefoxcss-search-bar-fill-icon-hover: rgba(0, 0, 0, 0.5);
+      --firefoxcss-search-color: rgb(87, 87, 87, 1);
+      --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.9);
+      --firefoxcss-search-text-fill: rgba(10, 10, 10, 0.25);
+      --firefoxcss-search-bar-text-color: rgba(10, 10, 10, 0.65);
+      --firefoxcss-search-bar-fill-icon-hover: rgba(0, 0, 0, 0.5);
 
-    --firefoxcss-shortcut-item-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.025), 0 2px 2px hsl(0deg 0% 0% / 0.025),
-      0 4px 4px hsl(0deg 0% 0% / 0.025), 0 8px 8px hsl(0deg 0% 0% / 0.025), 0 16px 16px hsl(0deg 0% 0% / 0.025);
-    --firefoxcss-shortcut-item-top-border: hsla(0, 0%, 100%, 0.9);
-    --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.6);
+      --firefoxcss-shortcut-item-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.025), 0 2px 2px hsl(0deg 0% 0% / 0.025), 0 4px 4px hsl(0deg 0% 0% / 0.025),
+        0 8px 8px hsl(0deg 0% 0% / 0.025), 0 16px 16px hsl(0deg 0% 0% / 0.025);
+      --firefoxcss-shortcut-item-top-border: hsla(0, 0%, 100%, 0.9);
+      --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.6);
 
-    --firefoxcss-customize-menu: hsla(200, 10%, 100%, 0.7);
-    --firefoxcss-customize-menu-bg-image: none;
-    --firefoxcss-customize-menu-dropdown: #fdfdfd80;
-    --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.2);
-    --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
-    --firefoxcss-customize-menu-secondary-popup: hsla(200, 10%, 100%, 1);
-    --firefoxcss-input-focus: black; /*  no changes */
-    --firefoxcss-shortcut-item-active: hsla(200, 15%, 85%, 0.4);
-    --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.4);
-    --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.5);
-    --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 50%, 0.2);
-    --firefoxcss-extra-search-bar-when-scroll: hsla(0, 0%, 10%, 0.3);
-    --firefoxcss-context-menu-three-dots: hsla(200, 10%, 50%, 0.6);
-    --firefoxcss-settings-wheel-bg-color-hover: hsl(0, 0%, 100%);
-    --firefoxcss-shortcut-search-icon-color: #2896a870;
+      --firefoxcss-customize-menu: hsla(200, 10%, 100%, 0.7);
+      --firefoxcss-customize-menu-bg-image: none;
+      --firefoxcss-customize-menu-dropdown: #fdfdfd80;
+      --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.2);
+      --newtab-background-color-secondary: var(--firefoxcss-customize-menu) !important;
+      --firefoxcss-customize-menu-secondary-popup: hsla(200, 10%, 100%, 1);
+      --firefoxcss-input-focus: black; /*  no changes */
+      --firefoxcss-shortcut-item-active: hsla(200, 15%, 85%, 0.4);
+      --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.4);
+      --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.5);
+      --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 50%, 0.2);
+      --firefoxcss-extra-search-bar-when-scroll: hsla(0, 0%, 10%, 0.3);
+      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 50%, 0.6);
+      --firefoxcss-settings-wheel-bg-color-hover: hsl(0, 0%, 100%);
+      --firefoxcss-shortcut-search-icon-color: #2896a870;
 
-    /* ----- Firefox View color changes ----- */
-    --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
-    --firefoxcss-firefoxview-sticky-color: hsla(200, 10%, 95%, 0.5) !important;
-    --firefoxcss-firefoxview-search-color: hsla(200, 5%, 100%, 0.95) !important;
+      /* ----- Firefox View color changes ----- */
+      --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
+      --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+      --firefoxcss-firefoxview-sticky-color: hsla(200, 10%, 95%, 0.5) !important;
+      --firefoxcss-firefoxview-search-color: hsla(200, 5%, 100%, 0.95) !important;
+    }
   }
-}
 
-body {
-  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
-}
-                 
+  body {
+    --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+  }
 }
 
 @-moz-document url("about:privatebrowsing") {
@@ -157,18 +161,18 @@ body {
     background-size: cover !important;
   }
 
-/* Fix purple background color when switching tabs in private 
+  /* Fix purple background color when switching tabs in private 
 window for this specific moz preference. */
-@media -moz-pref("browser.privatebrowsing.felt-privacy-v1") {
-  html.private {
-    --background-color-canvas:  var(--firefoxcss-main-bg-color) !important;
-    background: var(--firefoxcss-main-bg-color) !important;
+  @media -moz-pref("browser.privatebrowsing.felt-privacy-v1") {
+    html.private {
+      --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
+      background: var(--firefoxcss-main-bg-color) !important;
+    }
+
+    .info-border {
+      display: none !important;
+    }
   }
-    
-  .info-border {
-    display: none !important;
-  }
-}
 
   /* html.private {
 		background-color: #1e1e1e80 !important;
@@ -185,7 +189,10 @@ window for this specific moz preference. */
     border-radius: 10px 10px 10px 10px !important;
     fill: var(--firefoxcss-private-search-fill) !important;
     box-shadow: var(--firefoxcss-private-search-box-shadow) !important;
-    transition: background-color 100ms ease-in, border-color 100ms ease-in, fill 100ms ease-in !important;
+    transition:
+      background-color 100ms ease-in,
+      border-color 100ms ease-in,
+      fill 100ms ease-in !important;
     backdrop-filter: blur(24px) !important;
   }
 
@@ -200,7 +207,9 @@ window for this specific moz preference. */
   .search-handoff-button .fake-textbox {
     color: var(--firefoxcss-private-search-text) !important;
     opacity: 0.8 !important;
-    transition: color 100ms ease-in, opacity 100ms ease-in !important;
+    transition:
+      color 100ms ease-in,
+      opacity 100ms ease-in !important;
   }
 
   .search-handoff-button:active > .fake-textbox,
@@ -240,13 +249,12 @@ url("about:newtab") {
     background-size: cover !important;
   }
 
-/*   Disable phone button in new tab */
-  .mobileDownloadPromoWrapper  {
+  /*   Disable phone button in new tab */
+  .mobileDownloadPromoWrapper {
     display: none !important;
   }
 
-	  
-/*   Edit shortcut menu */
+  /*   Edit shortcut menu */
   .edit-topsites-wrapper .modal {
     backdrop-filter: blur(16px);
     filter: saturate(0.8) brightness(1.1);
@@ -261,7 +269,7 @@ url("about:newtab") {
   .search-handoff-button {
     appearance: none !important;
     background-color: var(--firefoxcss-item-bg-color) !important;
-   
+
     border: none !important;
     box-shadow: none !important;
     border-top: 1px solid var(--firefoxcss-search-border-top-color) !important;
@@ -269,27 +277,29 @@ url("about:newtab") {
     backdrop-filter: blur(24px) !important;
     box-shadow: var(--firefoxcss-search-box-shadow) !important;
     fill: var(--firefoxcss-search-text-fill) !important;
-    transition: background-color 200ms ease, border-color 200ms ease, fill 200ms ease !important;
+    transition:
+      background-color 200ms ease,
+      border-color 200ms ease,
+      fill 200ms ease !important;
     padding-inline-start: 48px !important;
   }
-  
+
   .activity-stream.darkWallpaper {
     @media (prefers-color-scheme: light) {
       .search-wrapper content-search-handoff-ui {
         --content-search-handoff-ui-color: white !important;
         --content-search-handoff-ui-caret-color: white !important;
       }
-
     }
   }
-
-
 
   .body-wrapper .tile {
     background-color: var(--firefoxcss-item-bg-color) !important;
     border-top: 1px solid var(--firefoxcss-shortcut-item-top-border) !important;
     box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
-    transition: background-color 150ms ease, border-color 150ms ease !important;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease !important;
     border-radius: 10px !important;
   }
 
@@ -312,7 +322,7 @@ url("about:newtab") {
     opacity: 0.7 !important;
   }
 
-  .personalizeButtonWrapper .customize-menu-animate-wrapper{
+  .personalizeButtonWrapper .customize-menu {
     border: var(--firefoxcss-customize-menu-border) !important;
     border-radius: 1rem !important;
     margin: 1rem !important;
@@ -320,25 +330,20 @@ url("about:newtab") {
     height: unset !important;
     backdrop-filter: blur(32px);
     filter: saturate(0.8) brightness(1.1);
+    min-height: auto !important;
   }
-  
+
   .activity-stream.lightWallpaper {
     @media (prefers-color-scheme: dark) {
-      
-          .customize-menu-animate-wrapper.customize-animate-enter-done,
-          .customize-menu-animate-wrapper.customize-animate-enter-active {
-              box-shadow: none !important;
-          }
-       }
-    
+      .customize-menu.customize-animate-enter-done,
+      .customize-menu.customize-animate-enter-active {
+        box-shadow: none !important;
+      }
+    }
   }
-  
-  
-  
-
 
   .customize-menu .category.wallpaper-list.category {
-/*     overflow: hidden !important;
+    /*     overflow: hidden !important;
     height: auto !important;
     background-color: var(--firefoxcss-customize-menu-secondary-popup) !important;
     backdrop-filter: blur(30px) !important;
@@ -348,47 +353,50 @@ url("about:newtab") {
     border: var(--firefoxcss-customize-menu-border) !important;
         background-color: rgba(0, 0, 0, 0.2) !important; */
   }
-  .customize-menu-animate-wrapper .customize-menu {
-       overflow-x: hidden !important;
-  }
-  
-  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .wallpapers-section ~ *,
-  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .wallpapers-section .category-header,
-  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .wallpapers-section .category-list,
-  .customize-menu-animate-wrapper:not(:has(.category.wallpaper-list)) .close-button-wrapper{
-    opacity: 1 !important;
-    visibility: visible !important;
-     transform: translateX(0) !important;
-     transition: opacity 0.4s ease, transform 0.2s ease;
-    
-  }
-  
-  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .wallpapers-section ~ *,
-  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .wallpapers-section .category-header,
-  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .wallpapers-section .category-list,
-  .customize-menu-animate-wrapper:has(.category.wallpaper-list) .close-button-wrapper {
-    opacity: 0  !important;
-    visibility: hidden !important;
-    transform: translateX(100px) !important;  /* Move to the right */
-    transition: opacity 0.2s ease,  transform 0.3s ease, visibility 2s 0.2s !important;
+  .personalizeButtonWrapper .customize-menu {
+    overflow-x: hidden !important;
   }
 
-  .customize-menu .category.wallpaper-list{
+  .customize-menu:not(:has(.category.wallpaper-list)) .wallpapers-section ~ *,
+  .customize-menu:not(:has(.category.wallpaper-list)) .wallpapers-section .category-header,
+  .customize-menu:not(:has(.category.wallpaper-list)) .wallpapers-section .category-list,
+  .customize-menu:not(:has(.category.wallpaper-list)) .close-button-wrapper {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    transition:
+      opacity 0.4s ease,
+      transform 0.2s ease;
+  }
+
+  .customize-menu:has(.category.wallpaper-list) .wallpapers-section ~ *,
+  .customize-menu:has(.category.wallpaper-list) .wallpapers-section .category-header,
+  .customize-menu:has(.category.wallpaper-list) .wallpapers-section .category-list,
+  .customize-menu:has(.category.wallpaper-list) .close-button-wrapper {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(100px) !important; /* Move to the right */
+    transition:
+      opacity 0.2s ease,
+      transform 0.3s ease,
+      visibility 2s 0.2s !important;
+  }
+
+  .customize-menu .category.wallpaper-list {
     background-color: transparent !important;
     backdrop-filter: none !important;
-    border:none !important;
+    border: none !important;
     box-shadow: none !important;
     margin-block-start: 0px !important;
     padding-top: var(--space-large) !important;
-
   }
-  
+
   .customize-menu:has(.category.wallpaper-list) {
-     overflow-x: hidden !important;
+    overflow-x: hidden !important;
   }
 
-  .home-section .section .selector {
-    background-color: var(--firefoxcss-customize-menu-dropdown) !important;
+  .customize-menu .customize-menu-content {
+    overflow-x: hidden !important;
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:hover:not(.active),
@@ -465,8 +473,6 @@ url("about:newtab") {
   .card-outer .context-menu > ul > li.separator {
     border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
   }
-
-
 
   .search-wrapper .logo-and-wordmark {
     opacity: 0.9 !important;
@@ -602,7 +608,7 @@ url("about:newtab") {
 
     .search-wrapper .search-inner-wrapper {
       width: 600px !important;
-      padding-left:10px !important;
+      padding-left: 10px !important;
     }
   }
 
@@ -635,18 +641,17 @@ url("about:newtab") {
     min-height: 60px !important;
     background-color: transparent !important;
     border-bottom: none !important;
-   padding-left: 20px !important;
+    padding-left: 20px !important;
     padding-right: 20px !important;
-
   }
-  
+
   .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
     top: 0 !important;
   }
 
-/*   Fixed search need fix  */
+  /*   Fixed search need fix  */
   button.search-handoff-button {
-/*     backdrop-filter: blur(22px) !important;
+    /*     backdrop-filter: blur(22px) !important;
     background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
     box-shadow: none !important;
     border: none !important;
@@ -719,54 +724,55 @@ url("about:newtab") {
   .customize-menu .close-button {
     backdrop-filter: blur(24px) !important;
   }
-  
- /* ================== Weather widget mods ============================================ */
+
+  /* ================== Weather widget mods ============================================ */
   .weatherButtonContextMenuWrapper .context-menu {
-    background-color: hsla(240, 2%, 20%, 1) !important; 
+    background-color: hsla(240, 2%, 20%, 1) !important;
   }
-  
+
   .activity-stream:not(.darkWallpaper, .lightWallpaper) {
-      .weatherInfoLink {
-        background-color: transparent !important;
-         &:hover {
-          background-color: var(--firefoxcss-weather-widget-hover) !important;
-        }
+    .weatherInfoLink {
+      background-color: transparent !important;
+      &:hover {
+        background-color: var(--firefoxcss-weather-widget-hover) !important;
       }
-      .weatherButtonContextMenuWrapper {
-        background-color: transparent !important;
-         &:hover {
-          background-color: var(--firefoxcss-weather-widget-hover) !important;
-        }
+    }
+    .weatherButtonContextMenuWrapper {
+      background-color: transparent !important;
+      &:hover {
+        background-color: var(--firefoxcss-weather-widget-hover) !important;
       }
-   }
-  
+    }
+  }
+
   .weatherCard .weatherButtonContextMenuWrapper {
     opacity: 0 !important;
     width: 0px !important;
     visibility: collapse !important;
-    transition: opacity 0.3s ease, width 0.3s ease, visibility 0.0s ease;
+    transition:
+      opacity 0.3s ease,
+      width 0.3s ease,
+      visibility 0s ease;
   }
-  
+
   .weatherCard:hover .weatherButtonContextMenuWrapper,
-  .weatherCard:has(.context-menu) .weatherButtonContextMenuWrapper{
+  .weatherCard:has(.context-menu) .weatherButtonContextMenuWrapper {
     opacity: 1 !important;
-     width: 50px !important;
+    width: 50px !important;
     visibility: visible !important;
   }
 
-  
   .weatherCard .weatherInfoLink {
     border-start-end-radius: var(--border-radius-medium) !important;
     border-end-end-radius: var(--border-radius-medium) !important;
   }
-  
+
   .weatherCard:hover .weatherInfoLink,
-  .weatherCard:has(.context-menu) .weatherInfoLink{
-    border-start-end-radius: 0!important;
+  .weatherCard:has(.context-menu) .weatherInfoLink {
+    border-start-end-radius: 0 !important;
     border-end-end-radius: 0 !important;
   }
 
-  
   .weather .weatherSponsorText {
     display: none !important;
   }
@@ -777,87 +783,84 @@ url("about:newtab") {
       background-color: var(--firefoxcss-weather-widget-hover) !important;
     }
   }
-  
+
   .weatherButtonContextMenuWrapper {
     background-color: var(--firefoxcss-weather-widget) !important;
     &:hover {
       background-color: var(--firefoxcss-weather-widget-hover) !important;
     }
   }
-  
+
   .activity-stream.darkWallpaper .weatherInfoLink,
-  .activity-stream.darkWallpaper .weatherButtonContextMenuWrapper{
+  .activity-stream.darkWallpaper .weatherButtonContextMenuWrapper {
     border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
   }
-  
+
   @media (prefers-color-scheme: light) {
     .activity-stream.darkWallpaper {
       .weatherCard {
-          color-scheme: dark !important;
+        color-scheme: dark !important;
       }
       .weatherButtonContextMenuWrapper .context-menu {
-        background-color: hsla(240, 2%, 95%, 1) !important; 
+        background-color: hsla(240, 2%, 95%, 1) !important;
       }
     }
-   
+
     .activity-stream.lightWallpaper {
       .weatherButtonContextMenuWrapper .context-menu {
-        background-color: hsla(240, 2%, 95%, 1) !important; 
+        background-color: hsla(240, 2%, 95%, 1) !important;
       }
     }
   }
-  
-  .weatherCard {
-   backdrop-filter: blur(6px) !important;
-  }
 
+  .weatherCard {
+    backdrop-filter: blur(6px) !important;
+  }
 
   .weatherButtonContextMenuWrapper::after {
     opacity: 0.1 !important;
     background-color: white !important;
   }
-  
+
   .weatherButtonContextMenuWrapper:hover::after {
     opacity: 0 !important;
   }
-  
+
   .weatherInfoLink:hover ~ .weatherButtonContextMenuWrapper::after {
     opacity: 0 !important;
   }
-  
+
   /* ================== Customization Menu button ===================================== */
-  .personalize-button  {
+  .personalize-button {
     background-color: var(--firefoxcss-item-bg-color) !important;
     border-radius: 16px !important;
     min-width: unset !important;
     width: auto !important;
     transition: all 0.2s ease !important;
-  
+
     & > div {
-        width: 14px !important;
-        height: 14px !important;
+      width: 14px !important;
+      height: 14px !important;
     }
     & > label {
-       display: none !important;
+      display: none !important;
     }
     &:hover {
       background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
     }
   }
-  
+
   :root:has(.activity-stream.darkWallpaper) {
     @media (prefers-color-scheme: light) {
       .personalize-button {
-      
         & > div > img {
-            color: white !important;
-        
+          color: white !important;
         }
       }
     }
   }
-  
- /* Make animation faster so the  Customization Menu button hidden quicker */
+
+  /* Make animation faster so the  Customization Menu button hidden quicker */
   .personalize-button.personalize-animate-exit-active {
     display: none !important;
   }
@@ -874,7 +877,7 @@ url("about:newtab") {
   }
 
   /* ================== Dark and Light wallpaper modifications ========================= */
-   :root:has(.activity-stream.darkWallpaper) {
+  :root:has(.activity-stream.darkWallpaper) {
     @media (prefers-color-scheme: dark) {
       --firefoxcss-item-bg-color: hsla(0, 0%, 8%, 0.5) !important;
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 16%, 0.5) !important;
@@ -890,8 +893,8 @@ url("about:newtab") {
       --firefoxcss-search-bar-fill-icon-hover: rgba(255, 255, 255, 0.8) !important;
       --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.15) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
-      --firefoxcss-weather-widget: hsla(200, 10%, 80%, 0.15)  !important;
-      --firefoxcss-weather-widget-hover: hsla(200, 10%, 30%, 0.20)  !important;
+      --firefoxcss-weather-widget: hsla(200, 10%, 80%, 0.15) !important;
+      --firefoxcss-weather-widget-hover: hsla(200, 10%, 30%, 0.2) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 90%, 0.3) !important;
 
       .top-site-outer:hover:not(.active) .title,
@@ -926,26 +929,29 @@ url("about:newtab") {
       backdrop-filter: blur(20px);
     }
   }
-  
 
   :root:has(.activity-stream.lightWallpaper) {
     @media (prefers-color-scheme: dark) {
       --firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important;
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 20%, 0.8) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;
-      --firefoxcss-customize-menu: hsla(210, 10%, 10%, 0.6)  !important;
-      --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.8)  !important;
-      --firefoxcss-weather-widget-hover: hsla(240, 2%, 18%, 0.8)  !important;
+      --firefoxcss-customize-menu: hsla(210, 10%, 10%, 0.6) !important;
+      --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.8) !important;
+      --firefoxcss-weather-widget-hover: hsla(240, 2%, 18%, 0.8) !important;
 
       .top-site-outer:hover:not(.active) .title,
-      .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {--firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important; --firefoxcss-item-hover-bg-color: hsla(0, 0%, 0%, 0.50) !important; --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;}
+      .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
+        --firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important;
+        --firefoxcss-item-hover-bg-color: hsla(0, 0%, 0%, 0.5) !important;
+        --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;
+      }
     }
 
     @media (prefers-color-scheme: light) {
       --firefoxcss-item-bg-color: hsla(200, 10%, 95%, 0.75) !important;
       --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.9) !important;
-      --firefoxcss-weather-widget: hsla(200, 10%, 98%, 0.75)  !important;
-      --firefoxcss-weather-widget-hover: hsla(200, 10%, 92%, 0.75)  !important;
+      --firefoxcss-weather-widget: hsla(200, 10%, 98%, 0.75) !important;
+      --firefoxcss-weather-widget-hover: hsla(200, 10%, 92%, 0.75) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 100%, 0.9) !important;
     }
 
@@ -967,7 +973,6 @@ url("about:newtab") {
       backdrop-filter: blur(20px);
     }
   }
-
 }
 
 @-moz-document url-prefix(about:firefoxview) {
@@ -1007,5 +1012,9 @@ url("about:newtab") {
   html:not(#ublock0-epicker) body, */
   #newtab-customize-overlay {
     background-color: var(--firefoxcss-main-bg-color) !important;
+  }
+
+  body {
+    background-color: var(--firefoxcss-main-bg-color);
   }
 }
