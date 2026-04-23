@@ -8,8 +8,8 @@
   height: 0px !important;
   opacity: 0 !important;
   transition-property: height, opacity, padding !important;
-  transition-duration: 300ms, 300ms, 0ms !important;
-  transition-delay: 200ms, 200ms, 500ms !important;
+  transition-duration: 100ms, 100ms, 0ms !important;
+  transition-delay: 100ms, 100ms, 200ms !important;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out !important;
 }
 
@@ -17,12 +17,12 @@
 #PersonalToolbar:has(.bookmark-item[open]),
 #navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]),
 #PersonalToolbar[customizing] {
-  padding: 1px 6px !important;
   height: calc(var(--uc-bm-height) + 2*var(--uc-bm-padding)) !important;
   opacity: 1 !important;
-  transition-property: height, opacity, padding !important;
-  transition-duration: 300ms, 300ms, 0ms !important;
-  transition-delay: 200ms, 200ms, 200ms !important;
+
+  transition-property: height, opacity !important;
+  transition-duration: 100ms, 100ms !important;
+  transition-delay: 100ms, 100ms, 200ms !important;
   transition-timing-function: ease-in-out, ease-in-out, linear !important;
 }
 
@@ -39,4 +39,3 @@
 :root[inDOMFullscreen] #navigator-toolbox {
 	--browser-area-z-index-toolbox: initial;
 }
-
