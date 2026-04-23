@@ -144,8 +144,19 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
   .titlebar-buttonbox-container:not(:hover)
   .titlebar-buttonbox
   .titlebar-button {
-  background-color: hsla(0, 0%, 65%, 1) !important;
-  transition: background-color 400ms ease 400ms !important;
+  background-color: light-dark(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 100%, 0.4)) !important;
+  background-color: var(--toolbar-color) !important;
+  transition: background-color 200ms ease !important;
+}
+
+#TabsToolbar
+  .titlebar-buttonbox-container:not(:hover)
+  .titlebar-buttonbox
+  .titlebar-button {
+    :root[lwtheme] & {
+        background-color: color-mix(in SRGB, var(--toolbar-color) 60%, transparent) !important;
+        transition: background-color 200ms ease !important;
+    }
 }
 
 #TabsToolbar
