@@ -144,8 +144,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
   .titlebar-buttonbox-container:not(:hover)
   .titlebar-buttonbox
   .titlebar-button {
-  background-color: light-dark(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 100%, 0.4)) !important;
-  background-color: var(--toolbar-color) !important;
+  background-color: light-dark(hsla(0, 0%, 0%, 0.26), hsla(0, 0%, 100%, 0.4)) !important;
   transition: background-color 200ms ease !important;
 }
 
