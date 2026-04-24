@@ -2741,9 +2741,11 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   /* Disable rounded corners in fullscreen, only if the toolbar is hidden. */
   :root[inFullscreen] #navigator-toolbox[style*="margin-top"] + #browser,
   :root[inDOMFullscreen] #browser {
-    --uc-tweak-rounded-corners-padding: 0;
-    --uc-tweak-rounded-corners-radius: 0;
+    --uc-tweak-rounded-corners-padding: 0px;
+    --uc-tweak-rounded-corners-radius: initial;
     --uc-tweak-rounded-corners-shadow: unset;
+    --uc-tweak-rounded-corners-padding2: 0px;
+    --uc-tweak-rounded-corners-padding3: 0px;
   }
 
   /* Apply rounded corners to the browser container. */
