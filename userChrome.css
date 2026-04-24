@@ -2993,3 +2993,38 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
   }
 }
+
+
+/* Transparent Bookmarks bar */
+@media -moz-pref("mod.transparent.bookmarks-bar") or -moz-pref("mod.transparent.bookmarks-bar.centered"){ 
+    /* Change bookmarks bar color to be the same as top toolbar */
+  :root {
+      --firefoxcss-bookmarks-bg-color: transparent !important;
+  }
+
+
+  #personal-bookmarks toolbarbutton.bookmark-item {
+      background-color: hsl(0, 0%, 8%) !important;
+  }
+
+  #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover{
+      background-color: #393939 !important;
+  }
+
+  #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"]):hover:active{
+      background-color: #555555 !important;
+  }
+
+  #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item[open="true"] {
+      background-color: #555555 !important;
+  }
+
+  #PersonalToolbar:not([customizing]) {
+      max-width: fit-content;
+    
+    @media -moz-pref("mod.transparent.bookmarks-bar.centered") {
+      width:100vw;
+      align-self:center; 
+    }
+  }
+}
