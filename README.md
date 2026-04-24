@@ -56,7 +56,7 @@
 <i>popout_bookmarks_bar_on_hover.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Hjy8kyU.gif"></p>
 <i>remove_folder_icons_from_bookmarks.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/xxpKEaP.gif"></p>
 <i>bookmarks_bar_same_color_as_toolbar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/a2sjphq.gif"></p>
-<i>transparent_bookmarks_bar.css</i><p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"></p></details>
+<i>Transparent Bookmarks bar. Enable <code>mod.transparent.bookmarks-bar</code> or <code>mod.transparent.bookmarks-bar.centered</code> in <code>about:config</code></i> <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"></p></details>
 
 <details><summary>Privacy mods :gear:</summary>
 <i>privacy_blur_email_in_main_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/gE2PVpr.gif"></p>
