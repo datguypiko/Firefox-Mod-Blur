@@ -10,7 +10,9 @@
 =====================================================================*/
 
 @-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing"),
-               url-prefix("about:"), url("about:blank"), url-prefix(about:firefoxview) {
+               url-prefix("about:preferences"), url-prefix("about:addons"), url-prefix("about:support"),
+               url("about:config"), url("about:profiles"), url("about:downloads"),
+               url-prefix(about:firefoxview) {
   @media (prefers-color-scheme: dark) {
     :root {
       --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
@@ -999,22 +1001,11 @@ url("about:newtab") {
   }
 }
 
-@-moz-document url-prefix("about:") {
-  :root {
+@-moz-document  url-prefix("about:preferences"), url-prefix("about:addons"), url-prefix("about:support"),
+  url("about:config"), url("about:profiles"), url("about:downloads"){
+   :root {
     --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
     --background-color-box: var(--firefoxcss-item-bg-color) !important;
     --background-color-box-info: var(--firefoxcss-item-bg-color) !important;
-  }
-}
-
-@-moz-document url("about:blank") {
-  /*   html:not(#ublock0-epicker),
-  html:not(#ublock0-epicker) body, */
-  #newtab-customize-overlay {
-    background-color: var(--firefoxcss-main-bg-color) !important;
-  }
-
-  body {
-    background-color: var(--firefoxcss-main-bg-color);
-  }
+  } 
 }
