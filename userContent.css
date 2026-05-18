@@ -943,6 +943,13 @@ url("about:newtab") {
     ) !important;
   }
 
+  .activity-stream.darkWallpaper .discovery-stream .ds-card-grid .sections-card-ui {
+    background-color: light-dark(
+      color-mix(in SRGB, var(--firefoxcss-item-bg-color), 60% white),
+      color-mix(in SRGB, var(--firefoxcss-item-bg-color), 10% transparent)
+    ) !important;
+  }
+
   /* Make animation faster so the  Customization Menu button hidden quicker */
   .personalize-button.personalize-animate-exit-active {
     display: none !important;
@@ -1021,7 +1028,7 @@ url("about:newtab") {
 
     /*  Pocket cards background blur - new tab */
     & .ds-card-grid .ds-card:not(.placeholder) {
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(12px);
     }
   }
 
