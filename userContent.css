@@ -44,7 +44,10 @@
         0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.095);
 
       --firefoxcss-search-color: rgb(251, 251, 254, 1);
-      --firefoxcss-search-border-top-color: #ffffff26;
+      --firefoxcss-search-border-top-color: 1px solid #ffffff26;
+      --firefoxcss-search-border-top-hover: 1px solid #97979791;
+      --firefoxcss-search-outline: transparent;
+      --firefoxcss-search-outline-hover: transparent;
       --firefoxcss-search-text-fill: #ffffff5e;
       --firefoxcss-search-bar-text-color: rgba(251, 251, 254, 1);
       --firefoxcss-search-bar-fill-icon-hover: rgba(251, 251, 254, 0.8);
@@ -116,7 +119,10 @@
         0 8px 8px hsl(0deg 0% 0% / 0.015), 0 16px 16px hsl(0deg 0% 0% / 0.035);
 
       --firefoxcss-search-color: rgb(87, 87, 87, 1);
-      --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.9);
+      --firefoxcss-search-border-top-color: 1px solid hsla(0, 0%, 100%, 0.9);
+      --firefoxcss-search-border-top-hover: 1px solid hsla(0, 0%, 100%, 0.6);
+      --firefoxcss-search-outline: transparent;
+      --firefoxcss-search-outline-hover: transparent;
       --firefoxcss-search-text-fill: rgba(10, 10, 10, 0.25);
       --firefoxcss-search-bar-text-color: rgba(10, 10, 10, 0.65);
       --firefoxcss-search-bar-fill-icon-hover: rgba(0, 0, 0, 0.5);
@@ -274,9 +280,11 @@ url("about:newtab") {
 
     border: none !important;
     box-shadow: none !important;
-    border-top: 1px solid var(--firefoxcss-search-border-top-color) !important;
+    border-top: var(--firefoxcss-search-border-top-color) !important;
     border-radius: 10px !important;
     backdrop-filter: blur(24px) !important;
+    outline: 1px solid var(--firefoxcss-search-outline);
+    outline-offset: 0px;
     box-shadow: var(--firefoxcss-search-box-shadow) !important;
     fill: var(--firefoxcss-search-text-fill) !important;
     transition:
@@ -433,7 +441,7 @@ url("about:newtab") {
   .top-site-outer .context-menu-button {
     fill: var(--firefoxcss-context-menu-three-dots) !important;
     inset-inline-end: 18px !important;
-    top: -2px !important;
+    top: -8px !important;
     background-color: transparent !important;
   }
 
@@ -463,7 +471,8 @@ url("about:newtab") {
   }
 
   .top-site-outer .context-menu,
-  .card-outer .context-menu {
+  .card-outer .context-menu,
+  .discovery-stream .context-menu {
     background-image: var(--firefoxcss-customize-menu-bg-image) !important;
     background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
     backdrop-filter: blur(32px) !important;
@@ -505,15 +514,15 @@ url("about:newtab") {
     justify-content: center !important;
     align-items: center !important;
     align-content: space-around !important;
-    gap: 20px 10px !important;
+    gap: 20px 16px !important;
   }
 
   .outer-wrapper .non-collapsible-section {
-    padding: 0 35px !important;
+    /*     padding: 0 35px !important; */
   }
 
   .body-wrapper .collapsible-section {
-    padding: 20px 0px !important;
+    padding-top: 20px !important;
   }
 
   .top-sites-list-wrapper .top-site-outer:not(.add-button) .tile .icon-wrapper {
@@ -526,30 +535,31 @@ url("about:newtab") {
     width: 80px !important;
   }
 
-  .top-sites-list-wrapper .top-site-outer {
-    /*     width: 120px !important; */
+  .top-site-outer .tile .default-icon {
+    /*     background-size: 48px !important;
+    height: 48px !important;
+    width: 48px !important; */
   }
 
   .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
-    /*     margin: 0 -12px !important; */
-    width: auto !important;
+    /*     width: auto !important; */
   }
 
   .top-sites-list-wrapper .top-sites-list {
-    display: flex !important;
+    /*     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center;
+    justify-content: center; */
   }
 
   .ds-outer-wrapper-breakpoint-override main .body-wrapper {
-    width: unset !important;
+    /*     width: unset !important; */
   }
 
   .top-sites-list-wrapper .top-sites-list {
     row-gap: unset !important;
   }
 
-  @media (min-width: 610px) {
+  /*   @media (min-width: 610px) {
     .ds-outer-wrapper-breakpoint-override main {
       width: unset !important;
     }
@@ -578,22 +588,22 @@ url("about:newtab") {
   }
   @media (min-width: 1698px) {
     .ds-outer-wrapper-breakpoint-override main {
-      width: unset !important;
+      width: auto !important;
     }
     .ds-outer-wrapper-breakpoint-override main .body-wrapper {
       width: unset !important;
     }
   }
-
-  .search-wrapper .search-inner-wrapper {
+ */
+  /*   .search-wrapper .search-inner-wrapper {
     width: 200px !important;
   }
 
   .ds-outer-wrapper-breakpoint-override main {
     width: 266px !important;
-  }
+  } */
 
-  @media (min-width: 610px) {
+  /*   @media (min-width: 610px) {
     .ds-outer-wrapper-breakpoint-override main {
       width: 510px !important;
     }
@@ -610,17 +620,74 @@ url("about:newtab") {
 
     .search-wrapper .search-inner-wrapper {
       width: 600px !important;
-      padding-left: 10px !important;
+      padding-left:10px !important;
     }
   }
 
   @media (min-width: 1122px) {
-    .ds-outer-wrapper-breakpoint-override main {
+     .ds-outer-wrapper-breakpoint-override main {
       width: 986px !important;
     }
 
     .search-wrapper .search-inner-wrapper {
       width: 720px !important;
+    } 
+  } */
+
+  /*   .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+     width: 1311px !important;
+  }
+ */
+
+  @media (max-width: 723px) {
+    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+      width: 346px !important;
+      padding-inline: 14px !important;
+    }
+  }
+
+  @media (min-width: 724px) {
+    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+      width: 680px !important;
+    }
+
+    .search-wrapper .logo-and-wordmark .logo {
+      margin-inline-start: 8px !important;
+    }
+  }
+
+  @media (min-width: 1122px) {
+    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+      width: 960px !important;
+      /*        Make it smaller when stories and weather is enabled */
+      @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+        @media -moz-pref("browser.newtabpage.activity-stream.showWeather") {
+          width: 780px !important;
+        }
+      }
+      padding-inline: 20px !important;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+      width: 960px !important;
+      padding-inline: 20px !important;
+    }
+  }
+
+  .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+    margin-inline: auto !important;
+    /*      padding-inline: 20px !important; */
+  }
+
+  @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+    .has-recommended-stories .wordmark {
+      display: block !important;
+    }
+
+    .has-recommended-stories .logo-and-wordmark {
+      position: initial !important;
     }
   }
 
@@ -674,7 +741,9 @@ url("about:newtab") {
 
   .search-handoff-button:hover {
     background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
+    border-top: var(--firefoxcss-search-border-top-hover) !important;
+    outline: 1px solid var(--firefoxcss-search-outline-hover) !important;
+    outline-offset: 0px;
     fill: var(--firefoxcss-search-bar-fill-icon-hover) !important;
   }
 
@@ -795,7 +864,7 @@ url("about:newtab") {
 
   .activity-stream.darkWallpaper .weatherInfoLink,
   .activity-stream.darkWallpaper .weatherButtonContextMenuWrapper {
-    border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
+    border: 1px solid hsla(0, 0%, 100%, 0.04) !important;
   }
 
   @media (prefers-color-scheme: light) {
@@ -862,6 +931,18 @@ url("about:newtab") {
     }
   }
 
+  /*   Top/Recommended stories background color */
+  .discovery-stream .ds-card-grid .sections-card-ui {
+    background-color: var(--firefoxcss-item-hover-bg-color) !important;
+  }
+
+  .activity-stream:not(.lightWallpaper) .discovery-stream .ds-card-grid .sections-card-ui {
+    background-color: light-dark(
+      color-mix(in SRGB, var(--firefoxcss-main-bg-color), 60% white),
+      color-mix(in SRGB, var(--firefoxcss-main-bg-color), 25% black)
+    ) !important;
+  }
+
   /* Make animation faster so the  Customization Menu button hidden quicker */
   .personalize-button.personalize-animate-exit-active {
     display: none !important;
@@ -884,20 +965,29 @@ url("about:newtab") {
       --firefoxcss-item-bg-color: hsla(0, 0%, 8%, 0.5) !important;
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 16%, 0.5) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 30%, 0.6) !important;
+
+      --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.08);
+      --firefoxcss-search-border-top-color: 0px solid transparent !important;
+      --firefoxcss-search-border-top-hover: 0px solid transparent !important;
+      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.2) !important;
     }
 
     @media (prefers-color-scheme: light) {
       --firefoxcss-item-bg-color: hsla(200, 10%, 85%, 0.15) !important;
       --firefoxcss-item-hover-bg-color: hsla(200, 10%, 95%, 0.2) !important;
-      --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.1) !important;
       --firefoxcss-search-text-fill: rgba(255, 255, 255, 0.6) !important;
       --firefoxcss-search-bar-text-color: rgba(255, 255, 255, 0.9) !important;
       --firefoxcss-search-bar-fill-icon-hover: rgba(255, 255, 255, 0.8) !important;
-      --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.15) !important;
+      --firefoxcss-shortcut-item-top-border-hover: 1px solid hsla(0, 0%, 100%, 0.15) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
       --firefoxcss-weather-widget: hsla(200, 10%, 80%, 0.15) !important;
       --firefoxcss-weather-widget-hover: hsla(200, 10%, 30%, 0.2) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 90%, 0.3) !important;
+
+      --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.18);
+      --firefoxcss-search-border-top-color: 0px solid transparent !important;
+      --firefoxcss-search-border-top-hover: 0px solid transparent !important;
+      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.3) !important;
 
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
@@ -918,12 +1008,15 @@ url("about:newtab") {
 
     & .body-wrapper .tile {
       backdrop-filter: blur(20px) !important;
-      border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
+      border: 0px solid hsla(0, 0%, 0%, 0.51) !important;
+      outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.08));
+      outline-offset: -0px;
     }
 
     & .body-wrapper .top-site-button:hover .tile {
       filter: brightness(115%);
-      border-top: 1px solid hsla(0, 0%, 58%, 0.3) !important;
+      border: 0px solid hsla(0, 0%, 58%, 0.2) !important;
+      outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0.2));
     }
 
     /*  Pocket cards background blur - new tab */
@@ -941,6 +1034,11 @@ url("about:newtab") {
       --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.8) !important;
       --firefoxcss-weather-widget-hover: hsla(240, 2%, 18%, 0.8) !important;
 
+      --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.18);
+      --firefoxcss-search-border-top-color: 0px solid transparent !important;
+      --firefoxcss-search-border-top-hover: 0px solid transparent !important;
+      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.3) !important;
+
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
         --firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important;
@@ -957,17 +1055,20 @@ url("about:newtab") {
       --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 100%, 0.9) !important;
     }
 
-    & .collapsible-section .card-outer {
+    .ds-card-grid .sections-card-ui & .collapsible-section .card-outer {
       backdrop-filter: blur(22px) !important;
     }
 
     & .body-wrapper .tile {
       backdrop-filter: blur(22px) !important;
+      border: 0px solid hsla(0, 0%, 0%, 0.51) !important;
+      outline: 1px solid hsla(0, 0%, 100%, 0.08);
+      outline-offset: 0px;
     }
 
     & .body-wrapper .top-site-button:hover .tile {
       filter: brightness(115%);
-      border-top: 1px solid hsla(0, 0%, 58%, 0.1) !important;
+      border-top: 0px solid hsla(0, 0%, 58%, 0.1) !important;
     }
 
     /*  Pocket cards background blur - new tab */
@@ -1001,11 +1102,11 @@ url("about:newtab") {
   }
 }
 
-@-moz-document  url-prefix("about:preferences"), url-prefix("about:addons"), url-prefix("about:support"),
-  url("about:config"), url("about:profiles"), url("about:downloads"){
-   :root {
+@-moz-document url-prefix("about:preferences"), url-prefix("about:addons"), url-prefix("about:support"),
+  url("about:config"), url("about:profiles"), url("about:downloads") {
+  :root {
     --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
     --background-color-box: var(--firefoxcss-item-bg-color) !important;
     --background-color-box-info: var(--firefoxcss-item-bg-color) !important;
-  } 
+  }
 }
