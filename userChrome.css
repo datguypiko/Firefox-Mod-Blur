@@ -251,13 +251,13 @@
 :root {
   --firefoxcss-top-bar-border-bottom-size: 1px;
   --firefoxcss-border-radius: 10px;
-  --firefoxcss-control-buttons-margin: 75px;
+  --firefoxcss-control-buttons-margin: 95px;
   --firefoxcss-tab-min-width: 110px;
   --firefoxcss-tab-max-width: 150px;
 
   --firefoxcss-searchbar-height: 30px;
   --firefoxcss-searchbar-container-height: 38px;
-  --urlbar-icon-border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important;
+  --urlbar-inner-border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important;
   @media not -moz-pref("sidebar.verticalTabs") {
     --tab-block-margin: 2px !important;
     /* Default: 4px */
