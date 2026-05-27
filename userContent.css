@@ -54,9 +54,17 @@
 
       --firefoxcss-shortcut-item-box-shadow:
         0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075),
+        inset 0px 1px 0px 0px rgba(255, 255, 255, 0.11), inset 0 0px 0px 1px rgba(255, 255, 255, 0.025);
+      --firefoxcss-shortcut-item-box-shadow-hover:
+        0 1px 1px hsl(0deg 0% 0% / 0.085), 0 2px 2px hsl(0deg 0% 0% / 0.085), 0 5px 5px hsl(0deg 0% 0% / 0.095),
+        0 10px 10px hsl(0deg 0% 0% / 0.095), 0 18px 18px hsl(0deg 0% 0% / 0.095),
+        inset 0 1px 0px 0px rgba(255, 255, 255, 0.14), inset 0 0px 0px 1px rgba(255, 255, 255, 0.1);
       --firefoxcss-shortcut-item-top-border: #ffffff26;
       --firefoxcss-shortcut-item-top-border-hover: #97979791;
+
+      /*       Overlay color when shortcut customization popup menu open */
+      --newtab-overlay-color: color-mix(in srgb, var(--firefoxcss-main-bg-color) 65%, transparent) !important;
 
       --firefoxcss-customize-menu: hsla(210, 10%, 20%, 0.3);
       --firefoxcss-customize-menu-dropdown: #1e1e1e80;
@@ -70,7 +78,8 @@
       --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 70%, 0.145);
       --firefoxcss-shortcut-item-context-menu-separator: #ffffff29;
       --firefoxcss-extra-search-bar-when-scroll: #1e1e1e8c;
-      --firefoxcss-context-menu-three-dots: hsla(240, 2%, 60%, 0.6);
+      --firefoxcss-context-menu-three-dots: hsla(240, 2%, 80%, 0.7);
+      --firefoxcss-context-menu-three-dots-hover: hsla(0, 0%, 80%, 0.1);
       --firefoxcss-settings-wheel-bg-color-hover: hsl(240, 2%, 30%);
       --firefoxcss-shortcut-search-icon-color: #7ae3f463;
       --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.2);
@@ -133,7 +142,9 @@
       --firefoxcss-shortcut-item-top-border: hsla(0, 0%, 100%, 0.9);
       --firefoxcss-shortcut-item-top-border-hover: hsla(0, 0%, 100%, 0.6);
 
-      --firefoxcss-customize-menu: hsla(200, 10%, 100%, 0.7);
+      --newtab-overlay-color: color-mix(in srgb, var(--firefoxcss-main-bg-color) 65%, transparent) !important;
+
+      --firefoxcss-customize-menu: hsla(0, 0%, 100%, 0.75);
       --firefoxcss-customize-menu-bg-image: none;
       --firefoxcss-customize-menu-dropdown: #fdfdfd80;
       --firefoxcss-customize-menu-border: 1px solid rgba(255, 255, 255, 0.2);
@@ -145,7 +156,8 @@
       --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.5);
       --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 50%, 0.2);
       --firefoxcss-extra-search-bar-when-scroll: hsla(0, 0%, 10%, 0.3);
-      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 50%, 0.6);
+      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 20%, 0.5);
+      --firefoxcss-context-menu-three-dots-hover: hsla(0, 0%, 10%, 0.1);
       --firefoxcss-settings-wheel-bg-color-hover: hsl(0, 0%, 100%);
       --firefoxcss-shortcut-search-icon-color: #2896a870;
 
@@ -155,6 +167,11 @@
       --firefoxcss-firefoxview-sticky-color: hsla(200, 10%, 95%, 0.5) !important;
       --firefoxcss-firefoxview-search-color: hsla(200, 5%, 100%, 0.95) !important;
     }
+  }
+
+  :root {
+    --firefoxcss-backdrop-filter: none !important;
+    --firefoxcss-search-outline-offset: 0px !important;
   }
 
   body {
@@ -257,15 +274,14 @@ url("about:newtab") {
     background-size: cover !important;
   }
 
-  /*   Disable phone button in new tab */
-  .mobileDownloadPromoWrapper {
+  /* HIDING ELEMENTS in NEW TAB */
+  /*  Disable phone button in new tab */
+  .mobileDownloadPromoWrapper.
+   /* Remove photo attribution when wallpaper for new tab is set */
+  .wallpaper-attribution,
+  /*  Hide privacy notice button below top stories section */
+  .discovery-stream .ds-navigation-privacy {
     display: none !important;
-  }
-
-  /*   Edit shortcut menu */
-  .edit-topsites-wrapper .modal {
-    backdrop-filter: blur(16px);
-    filter: saturate(0.8) brightness(1.1);
   }
 
   /* For background blur */
@@ -277,16 +293,16 @@ url("about:newtab") {
   .search-handoff-button {
     appearance: none !important;
     background-color: var(--firefoxcss-item-bg-color) !important;
-
     border: none !important;
     box-shadow: none !important;
     border-top: var(--firefoxcss-search-border-top-color) !important;
-    border-radius: 10px !important;
-    backdrop-filter: blur(24px) !important;
-    outline: 1px solid var(--firefoxcss-search-outline);
-    outline-offset: 0px;
+    border-radius: 12px !important;
+    outline: 1px solid var(--firefoxcss-search-outline) !important;
+    outline-offset: var(--firefoxcss-search-outline-offset) !important;
+    backdrop-filter: var(--firefoxcss-backdrop-filter);
     box-shadow: var(--firefoxcss-search-box-shadow) !important;
     fill: var(--firefoxcss-search-text-fill) !important;
+    color: var(--firefoxcss-search-bar-text-color) !important;
     transition:
       background-color 200ms ease,
       border-color 200ms ease,
@@ -294,52 +310,41 @@ url("about:newtab") {
     padding-inline-start: 48px !important;
   }
 
-  .activity-stream.darkWallpaper {
-    @media (prefers-color-scheme: light) {
-      .search-wrapper content-search-handoff-ui {
-        --content-search-handoff-ui-color: white !important;
-        --content-search-handoff-ui-caret-color: white !important;
-      }
+  /* ================== Customization Menu ========================================== */
+
+  @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    /* In customization menu, the go back arrow */
+    menu .customize-menu .arrow-button {
+      margin-top: 3px !important;
+      margin-left: 5px !important;
+      opacity: 0.7 !important;
+    }
+
+    /* Remove static color from close button wrapper in customization menu */
+    .customize-menu .close-button-wrapper {
+      background-color: transparent !important;
     }
   }
 
-  .body-wrapper .tile {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border) !important;
-    box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
-    transition:
-      background-color 150ms ease,
-      border-color 150ms ease !important;
-    border-radius: 10px !important;
-  }
-
-  .body-wrapper .top-site-button:hover .tile {
-    /*! background-color: rgba(230, 230, 230, 0.15) !important; */
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
-  }
-
-  .body-wrapper .top-site-button:focus-visible .tile {
-    /* background-color: rgba(230, 230, 230, 0.15) !important; */
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-top: 1px solid var(--firefoxcss-shortcut-item-top-border-hover) !important;
-    outline: 1px solid #e3b686a3 !important;
-  }
-
-  menu .customize-menu .arrow-button {
-    margin-top: 3px !important;
-    margin-left: 5px !important;
-    opacity: 0.7 !important;
+  /* Line Dividers in customization menu */
+  .home-section .divider {
+    --border-color: light-dark(hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 100%, 0.15)) !important;
+    margin: 0 0rem !important;
   }
 
   .personalizeButtonWrapper .customize-menu {
     border: var(--firefoxcss-customize-menu-border) !important;
     border-radius: 1rem !important;
     margin: 1rem !important;
-    /*! filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
+    /*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
     height: unset !important;
-    backdrop-filter: blur(32px);
-    filter: saturate(0.8) brightness(1.1);
+    backdrop-filter: blur(18px);
+    /*! outline: 1px solid #00000078 !important; */
+    /*! outline-offset: 1px; */
+    @media (prefers-color-scheme: dark) {
+      filter: saturate(0.9) brightness(1.1);
+      backdrop-filter: blur(32px);
+    }
     min-height: auto !important;
   }
 
@@ -352,46 +357,41 @@ url("about:newtab") {
     }
   }
 
-  .customize-menu .category.wallpaper-list.category {
-    /*     overflow: hidden !important;
-    height: auto !important;
-    background-color: var(--firefoxcss-customize-menu-secondary-popup) !important;
-    backdrop-filter: blur(30px) !important;
-    border-radius: 8px;
-    margin-top: 16px !important;
-    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2)) !important;
-    border: var(--firefoxcss-customize-menu-border) !important;
-        background-color: rgba(0, 0, 0, 0.2) !important; */
-  }
-  .personalizeButtonWrapper .customize-menu {
-    overflow-x: hidden !important;
+  /*   Hide and show elements for wallpaper selection slide*/
+  .wallpapers-section ~ *,
+  .wallpapers-section .category-header,
+  .wallpapers-section #wallpapers-toggle,
+  .wallpapers-section .category-list,
+  .close-button-wrapper {
+    .customize-menu:has(.category.wallpaper-list) & {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateX(100px) !important;
+      transition:
+        opacity 0.2s ease,
+        transform 0.3s ease,
+        visibility 1s 0.2s !important;
+    }
+
+    .customize-menu:not(:has(.customize-menu-content.subpanel-open)) & {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: initial !important;
+      transition:
+        opacity 0.4s ease,
+        transform 0.2s ease;
+    }
   }
 
-  .customize-menu:not(:has(.category.wallpaper-list)) .wallpapers-section ~ *,
-  .customize-menu:not(:has(.category.wallpaper-list)) .wallpapers-section .category-header,
-  .customize-menu:not(:has(.category.wallpaper-list)) .wallpapers-section .category-list,
-  .customize-menu:not(:has(.category.wallpaper-list)) .close-button-wrapper {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateX(0) !important;
-    transition:
-      opacity 0.4s ease,
-      transform 0.2s ease;
+  /* Customization Widget submenu (if enabled - studies) */
+  #widgets-management-panel .widgets-mgmt-panel,
+/*   When enabled browser.newtabpage.activity-stream.discoverystream.sections.enabled */
+  #pocket-section .sections-mgmt-panel {
+    background-color: light-dark(hsla(200, 5%, 90%, 0.96), hsla(240, 2%, 10%, 0.96)) !important;
+    height: 100% !important;
   }
 
-  .customize-menu:has(.category.wallpaper-list) .wallpapers-section ~ *,
-  .customize-menu:has(.category.wallpaper-list) .wallpapers-section .category-header,
-  .customize-menu:has(.category.wallpaper-list) .wallpapers-section .category-list,
-  .customize-menu:has(.category.wallpaper-list) .close-button-wrapper {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateX(100px) !important; /* Move to the right */
-    transition:
-      opacity 0.2s ease,
-      transform 0.3s ease,
-      visibility 2s 0.2s !important;
-  }
-
+  /* Wallpaper selection submenu */
   .customize-menu .category.wallpaper-list {
     background-color: transparent !important;
     backdrop-filter: none !important;
@@ -401,7 +401,18 @@ url("about:newtab") {
     padding-top: var(--space-large) !important;
   }
 
+  /* Disable background and gradient from customization menu footer */
+  .customize-menu-content .manage-settings-footer::before,
+  .manage-settings-footer {
+    background: none !important;
+  }
+
+  /* Try removing overflow scrollbar from showing */
   .customize-menu:has(.category.wallpaper-list) {
+    overflow-x: hidden !important;
+  }
+
+  .home-section {
     overflow-x: hidden !important;
   }
 
@@ -409,23 +420,445 @@ url("about:newtab") {
     overflow-x: hidden !important;
   }
 
-  .top-sites-list:not(.dnd-active) .top-site-outer:hover:not(.active),
-  .top-site-outer .top-site-icon {
-    background-color: transparent !important;
-    /*! backdrop-filter: blur(4px); */
+  /* ================== NEW TAB SHORTCUTS ========================================== */
+
+  /* Shortcuts */
+  .top-sites .top-site-outer .tile {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+    border: none !important;
+    box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease !important;
+    border-radius: 12px !important;
   }
+
+  .top-sites .top-site-outer .top-site-button:hover .tile {
+    background-color: var(--firefoxcss-item-hover-bg-color) !important;
+    box-shadow: var(--firefoxcss-shortcut-item-box-shadow-hover) !important;
+  }
+
+  /* For old non Nova theme */
+  @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    /* Removes bg from shortcut hover */
+    .top-sites-list:not(.dnd-active) .top-site-outer:hover:not(.active),
+    /* Removes bg from shortcut icon - maybe not used anymore */
+    .top-site-outer .top-site-icon {
+      background-color: transparent !important;
+    }
+
+    /* On shortcut focus/edit */
+    .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
+      background-color: transparent !important;
+    }
+
+    .search-wrapper .logo-and-wordmark {
+      opacity: 0.9 !important;
+      order: 1 !important;
+      margin-bottom: 0 !important;
+      flex: 1 !important;
+      flex-basis: 20% !important;
+    }
+
+    .search-wrapper .logo-and-wordmark .logo {
+      background-size: 60px !important;
+      height: 60px !important;
+      width: 60px !important;
+    }
+
+    .search-wrapper .logo-and-wordmark .wordmark {
+      background-size: 132px !important;
+      height: 42px !important;
+      margin-inline-start: 12px !important;
+      width: 144px !important;
+    }
+  }
+
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    /*   --------------------------------------------------------------   */
+    /*   --------------------------------------------------------------   */
+    /*   --------------------------------------------------------------   */
+    /*   --------------------------------------------------------------   */
+    /*   --------------------------------------------------------------   */
+    /*   --------------------------------------------------------------   */
+
+    /* ======= NOVA LAYOUT  ====================================================  */
+    .content > :is(.top-sites, .search-wrapper, .logo-and-wordmark-wrapper) {
+      --space-medium: 1rem !important;
+      --col-width: calc(340px / 4) !important;
+      --size-item-large: 36px !important;
+    }
+
+    .search-wrapper,
+    .content .logo-and-wordmark {
+      margin-block: var(--space-medium) !important;
+    }
+
+    /* add some margin beweetn top site rows */
+    .top-sites .top-site-outer {
+      margin-block-end: 0.4rem !important;
+    }
+
+    .logo-and-wordmark-wrapper {
+      margin-bottom: 0px !important;
+    }
+
+    /* Shortcut title label */
+    .top-site-outer .title .title-label {
+      width: 100px !important;
+      padding: 0 0.25rem !important;
+    }
+
+    /* Firefox logo size change     */
+    .logo-and-wordmark-wrapper .logo-and-wordmark .logo {
+      background-size: 50px !important;
+    }
+
+    /* Always show firefox logo text */
+    .logo-and-wordmark .wordmark {
+      display: inline-block !important;
+      margin-inline-start: 0.5rem !important;
+    }
+
+    /*  Disable shortcuts hover effect    */
+    .top-site-outer .tile {
+      height: calc(var(--size-item-large) * 2) !important;
+      width: calc(var(--size-item-large) * 2) !important;
+    }
+
+    /* Changes when logo is not in the corner which is used with top stories enabled     */
+    .container.logo-in-content {
+      /* Force the parent container height to fix vertical alignment */
+      height: calc(100vh - var(--space-xlarge)) !important;
+
+      /* Ensure the grid stretches fully and kill native push-down padding */
+      align-content: stretch !important;
+      padding-block: 0 !important;
+    }
+
+    /* ------------------------------------------------------------------
+     - BASE LAYOUT 
+     ------------------------------------------------------------------ */
+    .content > .logo-and-wordmark-wrapper,
+    .content > .search-wrapper {
+      /* Take up all available horizontal space */
+      grid-column: 1 / -1 !important;
+      justify-self: center !important;
+
+      /* Matches native Top Sites default width (6 cols) */
+      width: calc(6 * var(--col-width) + 5 * var(--space-medium)) !important;
+      max-width: none !important;
+
+      display: flex !important;
+      align-items: center !important;
+
+      /* Click-through safety wrapper as both sit on the same row 
+       on top of each other*/
+      pointer-events: none !important;
+    }
+
+    .content .logo-and-wordmark,
+    .content .search-inner-wrapper {
+      pointer-events: auto !important;
+      margin: 0 !important;
+    }
+
+    /* Logo Centering & Margin spacing */
+    .content .logo-and-wordmark-wrapper {
+      justify-content: center !important;
+    }
+
+    /* Search Bar Centering & Fluid Width */
+    .content > .search-wrapper {
+      justify-content: center !important;
+    }
+
+    .content .search-inner-wrapper {
+      width: 100% !important;
+    }
+
+    /* Shortcuts wrapper resets */
+    .content .top-sites-list-wrapper,
+    .content .edit-topsites-wrapper {
+      grid-column: 1 / -1 !important;
+    }
+
+    .container {
+      grid-template-rows: var(--row-height) var(--row-height) 1fr !important;
+    }
+
+    .content {
+      grid-row: 3 / -1 !important;
+      grid-column: 2 !important;
+      margin-block: 0 !important;
+    }
+
+    /* ======= WIDE SCREEN ======================================================  */
+    @media (min-width: 673px) {
+      /*  Set main searchbar and topsites content positioning when 
+    stories enabled. Helps keep it higher. */
+      .container:not(.logo-in-content) .content {
+        grid-row: 2 / span 2 !important;
+      }
+
+      /*   Move up by 2x row height when top stories not enabled */
+      .container.logo-in-content .content {
+        align-self: center !important;
+        transform: translateY(calc(var(--row-height) * -2)) !important;
+      }
+    }
+
+    /* ------------------------------------------------------------------
+     - MODIFICATION WHEN LOGO IS NOT IN CONTENT
+     ------------------------------------------------------------------ */
+    .container:not(.logo-in-content):has(.sidebar-inline-start .logo-and-wordmark-wrapper) {
+      /* Match Search Bar with the exact top sites width */
+      .content .search-inner-wrapper {
+        width: calc(8 * var(--col-width) + 7 * var(--space-medium)) !important;
+      }
+
+      @media not -moz-pref("mod.firefox-logo.centered.with.top-stories.enabled") {
+        @media (min-width: 673px) {
+          .content {
+            grid-row: 1 / span 2 !important;
+          }
+          .content .search-wrapper {
+            margin-block-start: 3.55rem !important;
+          }
+        }
+
+        .sidebar-inline-start {
+          grid-column: 1 / span 2 !important;
+        }
+
+        @container outer-grid (inline-size < calc(1000px + 6.75rem)) {
+          .sidebar-inline-start .logo-and-wordmark .wordmark {
+            display: none !important;
+          }
+        }
+      }
+
+      @media -moz-pref("mod.firefox-logo.centered.with.top-stories.enabled") {
+        @media (min-width: 673px) {
+          .sidebar-inline-start {
+            grid-row: 1 / span 1 !important;
+            grid-column: 2 !important;
+            justify-self: center !important;
+          }
+        }
+      }
+    }
+
+    /* ------------------------------------------------------------------
+   - TRANSITION TO SMALLER LAYOUT
+   ------------------------------------------------------------------ */
+    @container content-grid (inline-size < calc(300px + 5.25rem)) {
+      /* Snap Shortcuts to 3 Columns */
+      .content .top-sites-list {
+        grid-template-columns: repeat(3, var(--col-width)) !important;
+        gap: var(--space-medium) !important;
+        justify-content: center !important;
+      }
+
+      /* Shrink Search Bar & Logo to match the exact 3-column width */
+      .content > .logo-and-wordmark-wrapper,
+      .content > .search-wrapper {
+        /* Utilizing your perfect math: 3 columns + 2 gaps */
+        width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+      }
+    }
+
+    /* ------------------------------------------------------------------
+     - TRANSITION TO WIDER LAYOUT
+     ------------------------------------------------------------------ */
+
+    @container content-grid (inline-size >= calc(600px + 5.25rem)) {
+      /* Pin to Row 1 & match Firefox 8-column Top Sites width */
+      .content > .logo-and-wordmark-wrapper,
+      .content > .search-wrapper {
+        grid-row: 1 !important;
+        width: calc(8 * var(--col-width) + 7 * var(--space-medium)) !important;
+        max-width: none !important;
+      }
+
+      /* Align logo left */
+      .content > .logo-and-wordmark-wrapper {
+        justify-content: flex-start !important;
+      }
+      /* Align searchbar right */
+      .content > .search-wrapper {
+        justify-content: flex-end !important;
+      }
+
+      /* Shrink search bar to 6 columns so it fits nicely alongside the logo */
+      .content .search-inner-wrapper {
+        width: calc(6 * var(--col-width) + 5 * var(--space-medium)) !important;
+      }
+
+      /* Top sites sit directly underneath on Row 2 */
+      .content .top-sites-list-wrapper,
+      .content .edit-topsites-wrapper {
+        grid-row: 2 !important;
+      }
+    }
+
+    /*  Make searchbar smaller when top stories enabled to avoid weather widget    */
+    @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+      @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.enabled") {
+        @container content-grid (inline-size <= calc(600px + 5.25rem)) {
+          .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
+            .content .search-inner-wrapper {
+              width: calc(4 * var(--col-width) + 3 * var(--space-medium)) !important;
+            }
+            .content > .search-wrapper {
+              width: calc(4 * var(--col-width) + 3 * var(--space-medium)) !important;
+            }
+          }
+        }
+        @container content-grid (inline-size < calc(300px + 5.25rem)) {
+          .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
+            .content .search-inner-wrapper {
+              width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+            }
+            .content > .search-wrapper {
+              width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+            }
+          }
+        }
+      }
+    }
+
+    /* ------------------------------------------------------------------
+   - EXTRA-SMALL SCREENS 
+   ------------------------------------------------------------------ */
+    @media (max-width: 672px) {
+      /* Redefine the Parent Grid */
+      .container {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .content {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        align-self: center !important;
+      }
+
+      .container:not(.logo-in-content):has(.sidebar-inline-start .logo-and-wordmark-wrapper) {
+        .logo-and-wordmark-wrapper .logo-and-wordmark {
+          margin-block-end: 0px !important;
+        }
+      }
+
+      /* Top-Left: Logo */
+      .sidebar-inline-start {
+        grid-row: 1 / span 2 !important;
+        justify-self: center !important;
+        align-self: center !important;
+      }
+
+      /* Top-Right: Weather Widget (Spans 2 Rows) */
+      .sidebar-inline-end {
+        grid-row: 1 / span 2 !important;
+        grid-column: 2 !important;
+        justify-self: flex-end !important;
+      }
+
+      @media not -moz-pref("mod.firefox-logo.centered.with.top-stories.enabled") {
+        .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
+          /* Center firefox close to search bar */
+          .sidebar-inline-start {
+            align-self: end !important;
+          }
+        }
+      }
+
+      /* When weather widget is disabled */
+      .container:not(:has(.sidebar-inline-end .weather-widget)) {
+        /*       grid-template-columns: 
+        minmax(0, var(--side-col-width))
+        var(--content-col-width) 
+        minmax(0, var(--side-col-width)) !important; */
+
+        .content {
+          grid-row: 3 / -1 !important;
+        }
+
+        .sidebar-inline-end {
+          grid-row: 1 / span 1 !important;
+        }
+        .sidebar-inline-start {
+          grid-row: 1 / span 1 !important;
+          justify-self: start !important;
+          align-self: start !important;
+        }
+
+        &:not(.logo-in-content) .sidebar-inline-start {
+          justify-self: center !important;
+          align-self: center !important;
+          grid-column: 1 / span 2 !important;
+        }
+
+        &:not(.logo-in-content) .content {
+          grid-row: 2 / -1 !important;
+        }
+      }
+
+      /* Narrow Content Shifts based on Weather Widget availability */
+      @media not -moz-pref("browser.newtabpage.activity-stream.widgets.weather.enabled") {
+        .container.logo-in-content:not(:has(.sidebar-inline-end .weather-widget)) .content {
+          transform: translateY(calc(var(--row-height) * -2)) !important;
+        }
+      }
+
+      @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.enabled") and (min-height: 1051px) {
+        /* gnore when Recent activity section enabled */
+        @media not -moz-pref("browser.newtabpage.activity-stream.feeds.section.highlights") {
+          .container.logo-in-content:has(.sidebar-inline-end .weather-widget) .content {
+            transform: translateY(calc(var(--row-height) * -2)) !important;
+          }
+        }
+      }
+    }
+  }
+  /*   --------------------------------------------------------------   */
+  /*   --------------------------------------------------------------   */
+
+  @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    .outer-wrapper:not(.fixed-search) .search-wrapper {
+      padding: 0px !important;
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: center !important;
+      align-content: space-around !important;
+      gap: 20px 16px !important;
+    }
+
+    .body-wrapper .collapsible-section {
+      padding-top: 20px !important;
+    }
+
+    .top-sites-list-wrapper .top-site-outer:not(.add-button) .tile .icon-wrapper {
+      height: 48px !important;
+      width: 48px !important;
+    }
+
+    .top-sites-list-wrapper .top-site-outer .tile {
+      height: 80px !important;
+      width: 80px !important;
+    }
+  }
+
+  /* Icon over some default shortcuts */
   .top-site-outer .search-topsite {
     backdrop-filter: blur(8px) !important;
     background-color: var(--firefoxcss-shortcut-search-icon-color) !important;
   }
 
-  .search-wrapper input:focus {
-    color: var(--firefoxcss-input-focus) !important;
-  }
-
   .top-site-outer .top-site-button .title {
     opacity: 0.6 !important;
-    transition: opacity 0.4s !important;
+    transition: opacity 0.15s !important;
   }
 
   .top-site-outer .top-site-button:hover .title {
@@ -433,468 +866,749 @@ url("about:newtab") {
   }
 
   .top-site-outer .context-menu-button.icon:is(:active, :focus, :hover) {
-    fill: #f79743 !important;
-    background-color: transparent !important;
-    border: 0 !important;
+    /*     fill: #f79743 !important; */
+    background-color: var(--firefoxcss-context-menu-three-dots-hover) !important;
+    backdrop-filter: blur(2px);
   }
 
   .top-site-outer .context-menu-button {
     fill: var(--firefoxcss-context-menu-three-dots) !important;
     inset-inline-end: 18px !important;
     top: -8px !important;
-    background-color: transparent !important;
-  }
 
-  .card-outer .context-menu-button.icon:is(:active, :focus) {
-    fill: #f79743 !important;
-    background-color: var(--firefoxcss-item-bg-color) !important;
-    border: 0 !important;
-  }
-
-  .card-outer .context-menu-button.icon {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-    border: 0 !important;
-  }
-
-  .top-site-button .title.has-icon.pinned span .icon {
-    opacity: 0.6 !important;
-    display: none !important;
-    transition: all 800ms ease;
-  }
-
-  .top-site-button .title.has-icon.pinned span:hover .icon {
-    display: inline-block !important;
-  }
-
-  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
-    background-color: var(--firefoxcss-shortcut-item-active) !important;
-  }
-
-  .top-site-outer .context-menu,
-  .card-outer .context-menu,
-  .discovery-stream .context-menu {
-    background-image: var(--firefoxcss-customize-menu-bg-image) !important;
-    background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
-    backdrop-filter: blur(32px) !important;
-    border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border);
-    border-radius: 8px !important;
-  }
-
-  .top-site-outer .context-menu > ul > li.separator,
-  .card-outer .context-menu > ul > li.separator {
-    border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
-  }
-
-  .search-wrapper .logo-and-wordmark {
-    opacity: 0.9 !important;
-    order: 1 !important;
-    margin-bottom: 0 !important;
-    flex: 1 !important;
-    flex-basis: 20% !important;
-  }
-
-  .search-wrapper .logo-and-wordmark .logo {
-    background-size: 60px !important;
-    height: 60px !important;
-    width: 60px !important;
-  }
-
-  .search-wrapper .logo-and-wordmark .wordmark {
-    background-size: 132px !important;
-    height: 42px !important;
-    margin-inline-start: 12px !important;
-    width: 144px !important;
-  }
-
-  .outer-wrapper:not(.fixed-search) .search-wrapper {
-    padding: 0px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    align-content: space-around !important;
-    gap: 20px 16px !important;
-  }
-
-  .outer-wrapper .non-collapsible-section {
-    /*     padding: 0 35px !important; */
-  }
-
-  .body-wrapper .collapsible-section {
-    padding-top: 20px !important;
-  }
-
-  .top-sites-list-wrapper .top-site-outer:not(.add-button) .tile .icon-wrapper {
-    height: 48px !important;
-    width: 48px !important;
-  }
-
-  .top-sites-list-wrapper .top-site-outer .tile {
-    height: 80px !important;
-    width: 80px !important;
+    @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+      top: -10px !important;
+      inset-inline-end: 4px !important;
+    }
   }
 
   .top-sites-list-wrapper .top-sites-list {
     row-gap: unset !important;
   }
 
-  @media (max-width: 723px) {
-    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
-      width: 346px !important;
-      padding-inline: 14px !important;
-    }
+  .top-site-outer .tile .default-icon {
+    background-size: 48px !important;
+    height: 48px !important;
+    width: 48px !important;
   }
 
-  @media (min-width: 724px) {
-    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
-      width: 680px !important;
-    }
-
-    .search-wrapper .logo-and-wordmark .logo {
-      margin-inline-start: 8px !important;
-    }
+  .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
+    /*     width: auto !important; */
   }
 
-  @media (min-width: 1122px) {
-    .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
-      width: 960px !important;
-      /*        Make it smaller when stories and weather is enabled */
-      @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
-        @media -moz-pref("browser.newtabpage.activity-stream.showWeather") {
-          width: 780px !important;
-        }
+  .top-sites-list-wrapper .top-sites-list {
+    /*! display: flex !important; */ /*! flex-wrap: wrap !important; */ /*! justify-content: center; */
+  }
+
+  .ds-outer-wrapper-breakpoint-override main .body-wrapper {
+    /*! width: unset !important; */
+  }
+
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    @media (max-width: 723px) {
+      .search-wrapper {
+        /*       width: 346px !important;
+      padding-inline: 14px !important; */
       }
-      padding-inline: 20px !important;
+    }
+
+    @media (min-width: 724px) {
+      .search-wrapper {
+        /*       width: 680px !important; */
+      }
+
+      .search-wrapper .logo-and-wordmark .logo {
+        /*       margin-inline-start: 8px !important; */
+      }
+    }
+
+    @media (min-width: 1122px) {
+      .search-wrapper {
+        /*       width: 960px !important; */
+        /*        Make it smaller when stories and weather is enabled */
+        @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+          @media -moz-pref("browser.newtabpage.activity-stream.showWeather") {
+            /*           width: 780px !important; */
+          }
+        }
+        /*       padding-inline: 20px !important; */
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .search-wrapper {
+        /*       width: 960px !important;
+      padding-inline: 20px !important; */
+      }
+    }
+
+    .search-wrapper {
+      /*     margin-inline: auto !important;
+     */
+      /*      padding-inline: 20px !important; */
+    }
+
+    @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+      .has-recommended-stories .wordmark {
+        display: block !important;
+      }
+
+      .has-recommended-stories .logo-and-wordmark {
+        position: initial !important;
+      }
+    }
+
+    .search-handoff-button,
+    .search-wrapper input {
+      background-size: 20px !important;
+    }
+
+    .search-wrapper .search-inner-wrapper {
+      min-height: 42px !important;
+    }
+
+    .search-handoff-button:hover {
+      background-color: var(--firefoxcss-item-hover-bg-color) !important;
+      border-top: var(--firefoxcss-search-border-top-hover) !important;
+      outline: 1px solid var(--firefoxcss-search-outline-hover) !important;
+      fill: var(--firefoxcss-search-bar-fill-icon-hover) !important;
+    }
+
+    .collapsible-section .card-outer {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+    }
+
+    .collapsible-section .card-outer .card-preview-image-outer {
+      background-color: var(--firefoxcss-item-hover-bg-color) !important;
+    }
+
+    .compact-cards .card-outer .card-context {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+    }
+
+    @media only screen and (max-width: 609px) {
+      .ds-outer-wrapper-breakpoint-override main {
+        /*       width: 386px !important; */
+      }
+    }
+
+    @media only screen and (max-width: 385px) {
+      .search-handoff-button {
+        /*       padding-top: 4px !important;
+      padding-bottom: 6px !important; */
+      }
+
+      .ds-outer-wrapper-breakpoint-override main {
+        /*       width: 266px !important; */
+      }
     }
   }
 
-  @media (min-width: 1400px) {
+  @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    @media (max-width: 723px) {
+      .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+        width: 346px !important;
+        padding-inline: 14px !important;
+      }
+    }
+
+    @media (min-width: 724px) {
+      .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+        width: 680px !important;
+      }
+
+      .search-wrapper .logo-and-wordmark .logo {
+        margin-inline-start: 8px !important;
+      }
+    }
+
+    @media (min-width: 1122px) {
+      .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+        width: 960px !important;
+        /*        Make it smaller when stories and weather is enabled */
+        @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+          @media -moz-pref("browser.newtabpage.activity-stream.showWeather") {
+            width: 780px !important;
+          }
+        }
+        padding-inline: 20px !important;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
+        width: 960px !important;
+        padding-inline: 20px !important;
+      }
+    }
+
     .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
-      width: 960px !important;
-      padding-inline: 20px !important;
-    }
-  }
-
-  .outer-wrapper:not(.fixed-search) .newtab-main .search-wrapper {
-    margin-inline: auto !important;
-    /*      padding-inline: 20px !important; */
-  }
-
-  @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
-    .has-recommended-stories .wordmark {
-      display: block !important;
+      margin-inline: auto !important;
+      /*      padding-inline: 20px !important; */
     }
 
-    .has-recommended-stories .logo-and-wordmark {
-      position: initial !important;
+    @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+      .has-recommended-stories .wordmark {
+        display: block !important;
+      }
+
+      .has-recommended-stories .logo-and-wordmark {
+        position: initial !important;
+      }
     }
-  }
 
-  .search-handoff-button,
-  .search-wrapper input {
-    background-size: 20px !important;
-  }
+    .search-handoff-button,
+    .search-wrapper input {
+      background-size: 20px !important;
+    }
 
-  .search-wrapper .search-inner-wrapper {
-    min-height: 42px !important;
-    /* 52px default */
-    order: 2 !important;
-    flex: 3 !important;
-    flex-basis: 60% !important;
-    top: 4px !important;
-  }
+    .search-wrapper .search-inner-wrapper {
+      min-height: 42px !important;
+      /* 52px default */
+      order: 2 !important;
+      flex: 3 !important;
+      flex-basis: 60% !important;
+      top: 4px !important;
+    }
 
-  /* When there is overflow because of the height, search bar gets fixed position */
-  .outer-wrapper.fixed-search .search-wrapper {
-    min-height: 60px !important;
-    background-color: transparent !important;
-    border-bottom: none !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
+    /* When there is overflow because of the height, search bar gets fixed position */
+    .outer-wrapper.fixed-search .search-wrapper {
+      min-height: 60px !important;
+      background-color: transparent !important;
+      border-bottom: none !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
 
-  .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
-    top: 0 !important;
-  }
+    .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
+      top: 0 !important;
+    }
 
-  /*   Fixed search need fix  */
-  button.search-handoff-button {
-    /*     backdrop-filter: blur(22px) !important;
+    /*   Fixed search need fix  */
+    button.search-handoff-button {
+      /*     backdrop-filter: blur(22px) !important;
     background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
     box-shadow: none !important;
     border: none !important;
     margin: 0px 50px !important; */
-  }
-
-  .search-handoff-button .fake-textbox {
-    opacity: 0.5 !important;
-    color: var(--firefoxcss-search-bar-text-color) !important;
-    transition: opacity 0.4s !important;
-  }
-
-  .search-handoff-button:active > .fake-textbox,
-  .search-handoff-button:hover > .fake-textbox,
-  .search-handoff-button:focus > .fake-textbox {
-    opacity: 0.8 !important;
-  }
-
-  .search-handoff-button:hover {
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
-    border-top: var(--firefoxcss-search-border-top-hover) !important;
-    outline: 1px solid var(--firefoxcss-search-outline-hover) !important;
-    outline-offset: 0px;
-    fill: var(--firefoxcss-search-bar-fill-icon-hover) !important;
-  }
-
-  .collapsible-section .card-outer {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-  }
-
-  .collapsible-section .card-outer .card-preview-image-outer {
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
-  }
-
-  .compact-cards .card-outer .card-context {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-  }
-
-  @media only screen and (max-width: 609px) {
-    .ds-outer-wrapper-breakpoint-override main {
-      width: 386px !important;
-    }
-  }
-
-  @media only screen and (max-width: 385px) {
-    .search-handoff-button {
-      padding-top: 4px !important;
-      padding-bottom: 6px !important;
     }
 
-    .ds-outer-wrapper-breakpoint-override main {
-      width: 266px !important;
+    .search-handoff-button .fake-textbox {
+      opacity: 0.5 !important;
+      color: var(--firefoxcss-search-bar-text-color) !important;
+      transition: opacity 0.4s !important;
     }
-  }
 
-  /* Remove static color from close button wrapper in customization menu */
-  .customize-menu .close-button-wrapper {
-    background-color: transparent !important;
-  }
+    .search-handoff-button:active > .fake-textbox,
+    .search-handoff-button:hover > .fake-textbox,
+    .search-handoff-button:focus > .fake-textbox {
+      opacity: 0.8 !important;
+    }
 
-  /*.search-handoff-button {
-     background-image: url("ASSETS/icons/search-glass.svg") !important;
-     background-size: 16px !important;  
-  }*/
+    .search-handoff-button:hover {
+      background-color: var(--firefoxcss-item-hover-bg-color) !important;
+      border-top: var(--firefoxcss-search-border-top-hover) !important;
+      outline: 1px solid var(--firefoxcss-search-outline-hover) !important;
+      outline-offset: 0px;
+      fill: var(--firefoxcss-search-bar-fill-icon-hover) !important;
+    }
 
-  /* Remove photo attribution when wallpaper for new tab is set */
-  .wallpaper-attribution {
-    display: none !important;
-  }
+    .collapsible-section .card-outer {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+    }
 
-  /* Customization menu close button changes */
-  .customize-menu .close-button {
-    backdrop-filter: blur(24px) !important;
+    .collapsible-section .card-outer .card-preview-image-outer {
+      background-color: var(--firefoxcss-item-hover-bg-color) !important;
+    }
+
+    .compact-cards .card-outer .card-context {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+    }
+
+    @media only screen and (max-width: 609px) {
+      .ds-outer-wrapper-breakpoint-override main {
+        width: 386px !important;
+      }
+    }
+
+    @media only screen and (max-width: 385px) {
+      .search-handoff-button {
+        padding-top: 4px !important;
+        padding-bottom: 6px !important;
+      }
+
+      .ds-outer-wrapper-breakpoint-override main {
+        width: 266px !important;
+      }
+    }
   }
 
   /* ================== Weather widget mods ============================================ */
-  .weatherButtonContextMenuWrapper .context-menu {
-    background-color: hsla(240, 2%, 20%, 1) !important;
-  }
 
-  .activity-stream:not(.darkWallpaper, .lightWallpaper) {
-    .weatherInfoLink {
-      background-color: transparent !important;
-      &:hover {
-        background-color: var(--firefoxcss-weather-widget-hover) !important;
+  @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    .weatherButtonContextMenuWrapper .context-menu {
+      background-color: hsla(240, 2%, 20%, 1) !important;
+    }
+
+    .activity-stream:not(.darkWallpaper, .lightWallpaper) {
+      .weatherInfoLink {
+        background-color: transparent !important;
+        &:hover {
+          background-color: var(--firefoxcss-weather-widget-hover) !important;
+        }
       }
-    }
-    .weatherButtonContextMenuWrapper {
-      background-color: transparent !important;
-      &:hover {
-        background-color: var(--firefoxcss-weather-widget-hover) !important;
-      }
-    }
-  }
-
-  .weatherCard .weatherButtonContextMenuWrapper {
-    opacity: 0 !important;
-    width: 0px !important;
-    visibility: collapse !important;
-    transition:
-      opacity 0.3s ease,
-      width 0.3s ease,
-      visibility 0s ease;
-  }
-
-  .weatherCard:hover .weatherButtonContextMenuWrapper,
-  .weatherCard:has(.context-menu) .weatherButtonContextMenuWrapper {
-    opacity: 1 !important;
-    width: 50px !important;
-    visibility: visible !important;
-  }
-
-  .weatherCard .weatherInfoLink {
-    border-start-end-radius: var(--border-radius-medium) !important;
-    border-end-end-radius: var(--border-radius-medium) !important;
-  }
-
-  .weatherCard:hover .weatherInfoLink,
-  .weatherCard:has(.context-menu) .weatherInfoLink {
-    border-start-end-radius: 0 !important;
-    border-end-end-radius: 0 !important;
-  }
-
-  .weather .weatherSponsorText {
-    display: none !important;
-  }
-
-  .weatherInfoLink {
-    background-color: var(--firefoxcss-weather-widget) !important;
-    &:hover {
-      background-color: var(--firefoxcss-weather-widget-hover) !important;
-    }
-  }
-
-  .weatherButtonContextMenuWrapper {
-    background-color: var(--firefoxcss-weather-widget) !important;
-    &:hover {
-      background-color: var(--firefoxcss-weather-widget-hover) !important;
-    }
-  }
-
-  .activity-stream.darkWallpaper .weatherInfoLink,
-  .activity-stream.darkWallpaper .weatherButtonContextMenuWrapper {
-    border: 1px solid hsla(0, 0%, 100%, 0.04) !important;
-  }
-
-  @media (prefers-color-scheme: light) {
-    .activity-stream.darkWallpaper {
-      .weatherCard {
-        color-scheme: dark !important;
-      }
-      .weatherButtonContextMenuWrapper .context-menu {
-        background-color: hsla(240, 2%, 95%, 1) !important;
-      }
-    }
-
-    .activity-stream.lightWallpaper {
-      .weatherButtonContextMenuWrapper .context-menu {
-        background-color: hsla(240, 2%, 95%, 1) !important;
-      }
-    }
-  }
-
-  .weatherCard {
-    backdrop-filter: blur(6px) !important;
-  }
-
-  .weatherButtonContextMenuWrapper::after {
-    opacity: 0.1 !important;
-    background-color: white !important;
-  }
-
-  .weatherButtonContextMenuWrapper:hover::after {
-    opacity: 0 !important;
-  }
-
-  .weatherInfoLink:hover ~ .weatherButtonContextMenuWrapper::after {
-    opacity: 0 !important;
-  }
-
-  /* ================== Customization Menu button ===================================== */
-  .personalize-button {
-    background-color: var(--firefoxcss-item-bg-color) !important;
-    border-radius: 16px !important;
-    min-width: unset !important;
-    width: auto !important;
-    transition: all 0.2s ease !important;
-
-    & > div {
-      width: 14px !important;
-      height: 14px !important;
-    }
-    & > label {
-      display: none !important;
-    }
-    &:hover {
-      background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
-    }
-  }
-
-  :root:has(.activity-stream.darkWallpaper) {
-    @media (prefers-color-scheme: light) {
-      .personalize-button {
-        & > div > img {
-          color: white !important;
+      .weatherButtonContextMenuWrapper {
+        background-color: transparent !important;
+        &:hover {
+          background-color: var(--firefoxcss-weather-widget-hover) !important;
         }
       }
     }
+
+    .weatherCard .weatherButtonContextMenuWrapper {
+      opacity: 0 !important;
+      width: 0px !important;
+      visibility: collapse !important;
+      transition:
+        opacity 0.3s ease,
+        width 0.3s ease,
+        visibility 0s ease;
+    }
+
+    .weatherCard:hover .weatherButtonContextMenuWrapper,
+    .weatherCard:has(.context-menu) .weatherButtonContextMenuWrapper {
+      opacity: 1 !important;
+      width: 50px !important;
+      visibility: visible !important;
+    }
+
+    .weatherCard .weatherInfoLink {
+      border-start-end-radius: var(--border-radius-medium) !important;
+      border-end-end-radius: var(--border-radius-medium) !important;
+    }
+
+    .weatherCard:hover .weatherInfoLink,
+    .weatherCard:has(.context-menu) .weatherInfoLink {
+      border-start-end-radius: 0 !important;
+      border-end-end-radius: 0 !important;
+    }
+
+    .weather .weatherSponsorText {
+      display: none !important;
+    }
+
+    .weatherInfoLink {
+      background-color: var(--firefoxcss-weather-widget) !important;
+      &:hover {
+        background-color: var(--firefoxcss-weather-widget-hover) !important;
+      }
+    }
+
+    .weatherButtonContextMenuWrapper {
+      background-color: var(--firefoxcss-weather-widget) !important;
+      &:hover {
+        background-color: var(--firefoxcss-weather-widget-hover) !important;
+      }
+    }
+
+    .activity-stream.darkWallpaper .weatherInfoLink,
+    .activity-stream.darkWallpaper .weatherButtonContextMenuWrapper {
+      border: 1px solid hsla(0, 0%, 100%, 0.04) !important;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .activity-stream.darkWallpaper {
+        .weatherCard {
+          color-scheme: dark !important;
+        }
+        .weatherButtonContextMenuWrapper .context-menu {
+          background-color: hsla(240, 2%, 95%, 1) !important;
+        }
+      }
+
+      .activity-stream.lightWallpaper {
+        .weatherButtonContextMenuWrapper .context-menu {
+          background-color: hsla(240, 2%, 95%, 1) !important;
+        }
+      }
+    }
+
+    .weatherCard {
+      backdrop-filter: blur(6px) !important;
+    }
+
+    .weatherButtonContextMenuWrapper::after {
+      opacity: 0.1 !important;
+      background-color: white !important;
+    }
+
+    .weatherButtonContextMenuWrapper:hover::after {
+      opacity: 0 !important;
+    }
+
+    .weatherInfoLink:hover ~ .weatherButtonContextMenuWrapper::after {
+      opacity: 0 !important;
+    }
   }
 
-  /*   Top/Recommended stories background color */
-  .discovery-stream .ds-card-grid .sections-card-ui {
-    background-color: var(--firefoxcss-item-hover-bg-color) !important;
+  /*   NOVA WEATHER WIDGET FIXES */
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    .activity-stream {
+      --firefoxcss-weather-widget-bg: var(--firefoxcss-item-bg-color);
+      --firefoxcss-weather-widget-hover-bg: var(--firefoxcss-item-bg-color);
+
+      &.darkWallpaper {
+        --firefoxcss-weather-widget-bg: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
+        --firefoxcss-weather-widget-hover-bg: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
+      }
+
+      &.lightWallpaper {
+        --firefoxcss-weather-widget-bg: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+        --firefoxcss-weather-widget-hover-bg: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+      }
+
+      & .weather-widget {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin-left: -20px !important;
+
+        & .weather-container {
+          background-color: var(--firefoxcss-weather-widget-bg) !important;
+          box-shadow:
+            0 1px 1px hsl(0deg 0% 0% / 0.06),
+            0 8px 8px hsl(0deg 0% 0% / 0.075),
+            inset 0px 1px 0px 0px rgba(255, 255, 255, 0.11),
+            inset 0 0px 0px 1px rgba(255, 255, 255, 0.025);
+          padding-inline: 8px;
+          padding-block: 8px;
+          border-radius: 12px !important;
+        }
+
+        &:hover,
+        &:focus-within {
+          background-color: var(--firefoxcss-weather-widget-hover-bg) !important;
+          outline: 1px solid light-dark(hsla(0, 0%, 0%, 0.06), hsla(0, 0%, 100%, 0.2)) !important;
+          transition: background-color 0.2s ease !important;
+
+          & .weather-container {
+            background-color: transparent !important;
+            backdrop-filter: none !important;
+            box-shadow: none !important;
+            transition:
+              box-shadow 0.2s ease,
+              background-color 0.2s ease !important;
+          }
+
+          & .widget-title,
+          & .weather-context-menu-wrapper {
+            opacity: 1 !important;
+            transition: opacity 0.2s ease !important;
+          }
+        }
+
+        & .widget-title-bar {
+          margin-block-end: 10px !important;
+        }
+
+        & .sponsored-text {
+          display: none !important;
+        }
+
+        /* Hide city text and menu button */
+        & .widget-title,
+        & .weather-context-menu-wrapper {
+          opacity: 0 !important;
+        }
+      }
+
+      &:not(.darkWallpaper, .lightWallpaper) {
+        & .weather-widget {
+          box-shadow: none !important;
+        }
+      }
+
+      &.lightWallpaper {
+        .weather-widget .weather-container {
+          box-shadow: none !important;
+        }
+      }
+
+      &:is(.darkWallpaper, .lightWallpaper) {
+        & .weather-widget {
+          &:hover,
+          &:focus-within {
+            backdrop-filter: blur(12px);
+          }
+
+          .weather-container {
+            backdrop-filter: blur(12px);
+          }
+        }
+      }
+    }
+
+    .nova-enabled.container {
+      /*! grid-auto-rows: min-content !important; */
+    }
   }
 
-  .activity-stream:not(.lightWallpaper) .discovery-stream .ds-card-grid .sections-card-ui {
-    background-color: light-dark(
+  /* ================== Customization Menu button ===================================== */
+  @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    .personalize-button {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+      border-radius: 16px !important;
+      min-width: unset !important;
+      width: auto !important;
+      transition: all 0.2s ease !important;
+
+      & > div {
+        width: 14px !important;
+        height: 14px !important;
+      }
+      & > label {
+        display: none !important;
+      }
+      &:hover {
+        background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
+      }
+    }
+
+    :root:has(.activity-stream.darkWallpaper) {
+      @media (prefers-color-scheme: light) {
+        .personalize-button {
+          & > div > img {
+            color: white !important;
+          }
+        }
+      }
+    }
+
+    /* Make animation faster so the  Customization Menu button hidden quicker */
+    .personalize-button.personalize-animate-exit-active {
+      display: none !important;
+    }
+  }
+
+  /*   NOVA  */
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    :root {
+      --firefoxcss-newtab-customize-button: light-dark(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 0%, 0.3));
+      --firefoxcss-newtab-customize-button-border: light-dark(hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 100%, 0.1));
+    }
+
+    .button-background.labelled:has(img[src="chrome://global/skin/icons/edit-outline.svg"]):not([type~="ghost"]) {
+      #main-button[aria-haspopup="dialog"] > & {
+        backdrop-filter: blur(8px);
+        background-color: var(--firefoxcss-newtab-customize-button) !important;
+
+        @media (prefers-color-scheme: dark) {
+          color-scheme: dark !important;
+        }
+
+        border: none !important;
+        outline: 1px solid var(--firefoxcss-newtab-customize-button-border) !important;
+        outline-offset: 0px;
+
+        & > img {
+          opacity: 0.8;
+        }
+      }
+
+      #main-button[aria-haspopup="dialog"]:hover > & {
+        /* Make default purple on hover */
+        outline: 1px solid var(--button-border-color-hover) !important;
+      }
+    }
+  }
+
+  /* ================== NEW TAB CARDS  ================================================= */
+
+  :root {
+    --firefoxcss-newtab-cards-bg-color: light-dark(hsla(200, 5%, 96%, 1), hsla(240, 2%, 22%, 0.3));
+    --firefoxcss-newtab-cards-bg-hover-color: light-dark(hsla(200, 5%, 100%, 1), hsla(240, 2%, 25%, 0.4));
+    --firefoxcss-newtab-cards-outline-color: light-dark(hsla(200, 5%, 100%, 0.9), hsla(0, 0%, 100%, 0.08));
+    --firefoxcss-newtab-cards-outline-hover-color: light-dark(hsla(200, 5%, 100%, 1), hsla(0, 0%, 100%, 0.12));
+  }
+
+  /* Top/Recommended stories cards*/
+  .ds-card-grid .sections-card-ui,
+   /* Widget Cards */
+  .widgets-container > .widget-wrapper .widget,
+   /* Recent activity cards */
+   .compact-cards .card-outer {
+    background-color: var(--firefoxcss-newtab-cards-bg-color) !important;
+    outline: 1px solid var(--firefoxcss-newtab-cards-outline-color) !important;
+    /*      box-shadow: inset 0 0 0 0.5px hsla(0, 0%, 0%, 0.2) !important;
+     outline-offset: -2px; */
+    /*      outline-offset: -1px; */
+    .activity-stream.darkWallpaper & {
+      backdrop-filter: blur(16px) saturate(120%) !important;
+      @media (prefers-color-scheme: light) {
+        outline-offset: -1px;
+      }
+    }
+    .activity-stream.lightWallpaper & {
+      backdrop-filter: blur(16px) saturate(180%) !important;
+      @media (prefers-color-scheme: light) {
+        outline-offset: -1px;
+      }
+    }
+
+    &:hover {
+      background-color: var(--firefoxcss-newtab-cards-bg-hover-color) !important;
+      outline: 1px solid var(--firefoxcss-newtab-cards-outline-hover-color) !important;
+    }
+  }
+
+  .activity-stream.lightWallpaper {
+    :root & {
+      --firefoxcss-newtab-cards-bg-color: light-dark(hsla(200, 10%, 95%, 0.75), hsla(240, 2%, 4%, 0.75));
+      --firefoxcss-newtab-cards-bg-hover-color: light-dark(hsla(200, 10%, 100%, 0.85), hsla(240, 2%, 8%, 0.72));
+      --firefoxcss-newtab-cards-outline-color: light-dark(hsla(200, 10%, 100%, 0.7), hsla(0, 0%, 100%, 0.2));
+      --firefoxcss-newtab-cards-outline-hover-color: light-dark(hsla(200, 10%, 100%, 1), hsla(0, 0%, 100%, 0.25));
+    }
+    /*     background-color: light-dark(
       color-mix(in SRGB, var(--firefoxcss-main-bg-color), 60% white),
       color-mix(in SRGB, var(--firefoxcss-main-bg-color), 25% black)
-    ) !important;
+    ) !important; */
   }
 
-  .activity-stream.darkWallpaper .discovery-stream .ds-card-grid .sections-card-ui {
-    background-color: light-dark(
+  .activity-stream.darkWallpaper {
+    :root & {
+      --firefoxcss-newtab-cards-bg-color: light-dark(hsla(200, 5%, 100%, 0.8), hsla(240, 2%, 18%, 0.6));
+      --firefoxcss-newtab-cards-bg-hover-color: light-dark(hsla(200, 5%, 100%, 0.9), hsla(240, 2%, 22%, 0.6));
+      --firefoxcss-newtab-cards-outline-color: light-dark(hsla(200, 5%, 100%, 0.7), hsla(0, 0%, 90%, 0.14));
+      --firefoxcss-newtab-cards-outline-hover-color: light-dark(hsla(200, 5%, 100%, 1), hsla(0, 0%, 94%, 0.18));
+    }
+    /*     background-color: light-dark(
       color-mix(in SRGB, var(--firefoxcss-item-bg-color), 60% white),
       color-mix(in SRGB, var(--firefoxcss-item-bg-color), 10% transparent)
-    ) !important;
+    ) !important; */
   }
 
-  /* Make animation faster so the  Customization Menu button hidden quicker */
-  .personalize-button.personalize-animate-exit-active {
-    display: none !important;
+  /* ================== Context Menu Global  ================================================= */
+  /*   Try combine all context menus from new tab into one place */
+  /*   New tab weather context menu */
+  #weather-widget-context-menu,
+/*   Target multiple widget cards context menu */
+   .widgets-section-container .widget panel-list[role="menu"],
+/*  Widgets context menu */
+   #widgets-header-context-panel,
+/*   Shortcuts  */
+   .top-site-outer .context-menu,
+/*   Recent activity/Highlights context menu */
+   .card-outer .context-menu,
+/*   Top/Recommended stories  */
+  .discovery-stream .context-menu {
+    background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
+    backdrop-filter: blur(22px) !important;
+    border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border) !important;
+    border-radius: 8px !important;
   }
 
+  /*   Context menu separators line */
+  .top-site-outer .context-menu > ul > li.separator,
+  .card-outer .context-menu > ul > li.separator {
+    border-bottom: 1px solid var(--firefoxcss-shortcut-item-context-menu-separator) !important;
+  }
+
+  /*   Shortcuts customization popup menu bg color */
+  .edit-topsites .modalOverlayOuter {
+    backdrop-filter: blur(32px);
+    background-color: light-dark(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 0%, 0.2)) !important;
+    outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.14)) !important;
+    outline-offset: -0px;
+
+    & .actions {
+      border-block-start: 0px solid white !important;
+    }
+  }
   /* ================== Shortcut pin icon behaviour ==================================== */
   .top-site-button .icon.icon-pin-small {
     opacity: 0 !important;
-    transition: opacity 200ms ease 0ms;
+    transition: opacity 200ms ease 0ms !important;
+
+    /* Nova position fix */
+    @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+      inset-block-start: 0px !important;
+      inset-inline-start: 2px !important;
+    }
   }
 
   .top-site-button:has(.title.has-icon.pinned:hover) .icon.icon-pin-small {
     opacity: 0.6 !important;
-    transition: opacity 200ms ease 300ms;
+    transition: opacity 200ms ease 300ms !important;
   }
 
   /* ================== Dark and Light wallpaper modifications ========================= */
+
   :root:has(.activity-stream.darkWallpaper) {
+    --firefoxcss-backdrop-filter: blur(20px) !important;
+
+    & .top-sites .tile {
+      backdrop-filter: blur(20px) !important;
+      border: 0px solid hsla(0, 0%, 0%, 0.51) !important;
+      outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.08));
+      outline-offset: 0px;
+    }
+
+    & .top-sites .top-site-button:hover .tile {
+      filter: brightness(105%);
+      border: 0px solid hsla(0, 0%, 58%, 0.2) !important;
+      outline: 1px solid light-dark(hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0.14));
+    }
+
     @media (prefers-color-scheme: dark) {
-      --firefoxcss-item-bg-color: hsla(0, 0%, 8%, 0.5) !important;
-      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 16%, 0.5) !important;
+      --firefoxcss-item-bg-color: hsla(240, 2%, 10%, 0.4) !important;
+      --firefoxcss-item-hover-bg-color: hsla(240, 2%, 16%, 0.4) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 30%, 0.6) !important;
+
+      --firefoxcss-shortcut-item-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+      --firefoxcss-shortcut-item-box-shadow-hover:
+        0 1px 1px hsl(0deg 0% 0% / 0.085), 0 2px 2px hsl(0deg 0% 0% / 0.085), 0 5px 5px hsl(0deg 0% 0% / 0.095),
+        0 10px 10px hsl(0deg 0% 0% / 0.095), 0 18px 18px hsl(0deg 0% 0% / 0.095);
+
+      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 100%, 0.6);
+      --firefoxcss-context-menu-three-dots-hover: hsla(0, 0%, 80%, 0.2);
 
       --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.08);
       --firefoxcss-search-border-top-color: 0px solid transparent !important;
       --firefoxcss-search-border-top-hover: 0px solid transparent !important;
-      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.2) !important;
+      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.14) !important;
+
+      & .top-sites .tile {
+        outline-offset: -0px;
+      }
+
+      & .top-sites .top-site-button:hover .tile {
+        filter: brightness(115%);
+      }
     }
 
     @media (prefers-color-scheme: light) {
-      --firefoxcss-item-bg-color: hsla(200, 10%, 85%, 0.15) !important;
-      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 95%, 0.2) !important;
-      --firefoxcss-search-text-fill: rgba(255, 255, 255, 0.6) !important;
-      --firefoxcss-search-bar-text-color: rgba(255, 255, 255, 0.9) !important;
-      --firefoxcss-search-bar-fill-icon-hover: rgba(255, 255, 255, 0.8) !important;
+      --firefoxcss-backdrop-filter: blur(20px) !important;
+      --firefoxcss-search-outline-offset: -1px !important;
+      --firefoxcss-item-bg-color: hsla(200, 10%, 100%, 0.8) !important;
+      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.9) !important;
+      --firefoxcss-search-text-fill: rgba(0, 0, 0, 0.5) !important;
+      --firefoxcss-search-bar-text-color: rgba(0, 0, 0, 0.9) !important;
+      --firefoxcss-search-bar-fill-icon-hover: rgba(0, 0, 0, 0.6) !important;
       --firefoxcss-shortcut-item-top-border-hover: 1px solid hsla(0, 0%, 100%, 0.15) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
       --firefoxcss-weather-widget: hsla(200, 10%, 80%, 0.15) !important;
       --firefoxcss-weather-widget-hover: hsla(200, 10%, 30%, 0.2) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 90%, 0.3) !important;
 
-      --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.18);
+      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 100%, 0.8);
+      --firefoxcss-context-menu-three-dots-hover: hsla(0, 0%, 80%, 0.2);
+
+      --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.7);
       --firefoxcss-search-border-top-color: 0px solid transparent !important;
       --firefoxcss-search-border-top-hover: 0px solid transparent !important;
-      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.3) !important;
+      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 1) !important;
 
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
@@ -907,44 +1621,51 @@ url("about:newtab") {
         --firefoxcss-shortcut-item-context-menu-border: hsla(0, 0%, 100%, 0.1) !important;
         --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 0%, 0.1) !important;
       }
-    }
 
-    & .collapsible-section .card-outer {
-      backdrop-filter: blur(20px) !important;
-    }
-
-    & .body-wrapper .tile {
-      backdrop-filter: blur(20px) !important;
-      border: 0px solid hsla(0, 0%, 0%, 0.51) !important;
-      outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.08));
-      outline-offset: -0px;
-    }
-
-    & .body-wrapper .top-site-button:hover .tile {
-      filter: brightness(115%);
-      border: 0px solid hsla(0, 0%, 58%, 0.2) !important;
-      outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0.2));
-    }
-
-    /*  Pocket cards background blur - new tab */
-    & .ds-card-grid .ds-card:not(.placeholder) {
-      backdrop-filter: blur(12px);
+      & .top-sites .tile {
+        outline-offset: -1px;
+        backdrop-filter: blur(20px) !important;
+      }
     }
   }
 
   :root:has(.activity-stream.lightWallpaper) {
+    --firefoxcss-backdrop-filter: blur(20px) !important;
+
+    & .top-sites .tile {
+      backdrop-filter: blur(20px) !important;
+      border: 0px solid hsla(0, 0%, 0%, 0.51) !important;
+      outline: 1px solid light-dark(hsla(200, 10%, 100%, 0.7), hsla(0, 0%, 100%, 0.2)) !important;
+      outline-offset: 0px;
+    }
+
+    & .top-sites .top-site-button:hover .tile {
+      outline: 1px solid light-dark(hsla(200, 10%, 100%, 1), hsla(0, 0%, 100%, 0.25)) !important;
+      border-top: 0px solid hsla(0, 0%, 58%, 0.1) !important;
+    }
+
     @media (prefers-color-scheme: dark) {
-      --firefoxcss-item-bg-color: hsla(0, 0%, 10%, 0.8) !important;
-      --firefoxcss-item-hover-bg-color: hsla(0, 0%, 20%, 0.8) !important;
+      --firefoxcss-item-bg-color: hsla(240, 2%, 4%, 0.75) !important;
+      --firefoxcss-item-hover-bg-color: hsla(240, 2%, 8%, 0.72) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;
       --firefoxcss-customize-menu: hsla(210, 10%, 10%, 0.6) !important;
       --firefoxcss-weather-widget: hsla(240, 2%, 10%, 0.8) !important;
       --firefoxcss-weather-widget-hover: hsla(240, 2%, 18%, 0.8) !important;
 
+      --firefoxcss-shortcut-item-box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+      --firefoxcss-shortcut-item-box-shadow-hover:
+        0 1px 1px hsl(0deg 0% 0% / 0.085), 0 2px 2px hsl(0deg 0% 0% / 0.085), 0 5px 5px hsl(0deg 0% 0% / 0.095),
+        0 10px 10px hsl(0deg 0% 0% / 0.095), 0 18px 18px hsl(0deg 0% 0% / 0.095);
+
       --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.18);
       --firefoxcss-search-border-top-color: 0px solid transparent !important;
       --firefoxcss-search-border-top-hover: 0px solid transparent !important;
       --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.3) !important;
+
+      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 0%, 0.5);
+      --firefoxcss-context-menu-three-dots-hover: hsla(0, 0%, 10%, 0.1);
 
       .top-site-outer:hover:not(.active) .title,
       .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
@@ -952,35 +1673,32 @@ url("about:newtab") {
         --firefoxcss-item-hover-bg-color: hsla(0, 0%, 0%, 0.5) !important;
         --firefoxcss-settings-wheel-bg-color-hover: hsla(0, 0%, 16%, 0.6) !important;
       }
+
+      & .top-sites .top-site-button:hover .tile {
+        filter: brightness(115%);
+      }
     }
 
     @media (prefers-color-scheme: light) {
+      --firefoxcss-search-outline-offset: -1px !important;
       --firefoxcss-item-bg-color: hsla(200, 10%, 95%, 0.75) !important;
-      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.9) !important;
+      --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.85) !important;
       --firefoxcss-weather-widget: hsla(200, 10%, 98%, 0.75) !important;
       --firefoxcss-weather-widget-hover: hsla(200, 10%, 92%, 0.75) !important;
       --firefoxcss-settings-wheel-bg-color-hover: hsla(200, 10%, 100%, 0.9) !important;
-    }
 
-    .ds-card-grid .sections-card-ui & .collapsible-section .card-outer {
-      backdrop-filter: blur(22px) !important;
-    }
+      --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.7);
+      --firefoxcss-search-border-top-color: 0px solid transparent !important;
+      --firefoxcss-search-border-top-hover: 0px solid transparent !important;
+      --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 1) !important;
 
-    & .body-wrapper .tile {
-      backdrop-filter: blur(22px) !important;
-      border: 0px solid hsla(0, 0%, 0%, 0.51) !important;
-      outline: 1px solid hsla(0, 0%, 100%, 0.08);
-      outline-offset: 0px;
-    }
+      --firefoxcss-context-menu-three-dots: hsla(200, 10%, 0%, 0.5);
+      --firefoxcss-context-menu-three-dots-hover: hsla(0, 0%, 10%, 0.1);
 
-    & .body-wrapper .top-site-button:hover .tile {
-      filter: brightness(115%);
-      border-top: 0px solid hsla(0, 0%, 58%, 0.1) !important;
-    }
-
-    /*  Pocket cards background blur - new tab */
-    & .ds-card-grid .ds-card:not(.placeholder) {
-      backdrop-filter: blur(20px);
+      & .top-sites .tile {
+        outline-offset: -1px !important;
+        backdrop-filter: blur(20px) !important;
+      }
     }
   }
 }
