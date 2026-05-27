@@ -64,7 +64,9 @@
     --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.65);
 
-    --firefoxcss-normal-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
+    --firefoxcss-normal-tabs-box-shadow:
+      1px 1px 1px -1px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0),
+      inset 1px 0px 0px 0px hsla(0, 0%, 100%, 0);
     --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1);
 
     /* Tab playing audio speaker icon colors */
@@ -121,31 +123,38 @@
     --firefoxcss-customize-view-overflow-menu: hsl(240, 2%, 10%);
 
     /* ============== Firefox Global colors change ==================== */
-    
+
     &:not([lwtheme]) {
       --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
     }
 
     /* Hamburger menu button hover color */
     --panel-item-hover-bgcolor: hsla(0, 0%, 60%, 0.25) !important;
-    --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
+    --panel-background: var(--firefoxcss-main-bg-color) !important;
     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35) !important;
+    --urlbar-box-background-color-hover: var(--toolbarbutton-hover-background) !important;
+
+    /*      Searchbar results row colors */
+    --urlbarview-background-color-selected: color-mix(in srgb, currentColor 10%, transparent) !important;
+    --urlbarview-background-color-hover: var(--urlbarView-hover-background) !important;
+    --urlbarView-hover-background: color-mix(in srgb, currentColor 6%, transparent) !important;
+    --urlbarView-highlight-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+
     --toolbarbutton-active-background: hsla(0, 0%, 80%, 0.35) !important;
     --button-hover-bgcolor: hsla(0, 0%, 60%, 0.35) !important;
     --button-active-bgcolor: hsla(0, 0%, 45%, 0.35) !important;
     --button-bgcolor: hsla(0, 0%, 45%, 0.9) !important;
-    --arrowpanel-border-color: hsla(0, 0%, 50%, 0.25) !important;
+    --panel-border-color: hsla(0, 0%, 50%, 0.25) !important;
     --dark-menu-background-color: #222121 !important;
     --dark-menu-border-color: rgb(55, 55, 55) !important;
     --dark-menu-background-color: #222121 !important;
     --dark-menu-border-color: rgb(55, 55, 55) !important;
     --dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
-    --panel-separator-color: var(--arrowpanel-border-color) !important;
+    --panel-separator-color: var(--panel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
-    --urlbarView-highlight-background: hsl(240, 2%, 20%) !important;
-    --urlbarView-hover-background: color-mix(in srgb, currentColor 8%, transparent) !important;
+
     /* Color for add bookmarks menu when adding through tabs */
-    --in-content-page-background: var(--arrowpanel-background) !important;
+    --in-content-page-background: var(--panel-background) !important;
     --firefoxcss-context-menu-item-bg-color: hsla(0, 0%, 60%, 0.3);
     --firefoxcss-context-menu-item-bg-color-inactive: hsla(0, 0%, 60%, 0.15);
   }
@@ -164,9 +173,9 @@
     --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
 
     /* Tab colors hsl(240, 15%, 90%) */
-    --firefoxcss-tab-bg-color: hsl(200, 5%, 92%);
-    --firefoxcss-tab-hover-bg-color: hsl(200, 5%, 86%);
-    --firefoxcss-tab-active-bg-color: hsl(200, 5%, 85%);
+    --firefoxcss-tab-bg-color: hsl(200, 5%, 93%);
+    --firefoxcss-tab-hover-bg-color: hsl(200, 5%, 88%);
+    --firefoxcss-tab-active-bg-color: hsl(200, 5%, 86%);
     --firefoxcss-non-active-tabs: hsl(0, 0%, 25%);
 
     --firefoxcss-normal-tabs-box-shadow: none;
@@ -220,6 +229,12 @@
     --firefoxcss-customize-view-flex-space: hsl(34, 50%, 70%);
     --firefoxcss-customize-view-overflow-menu: hsl(200, 5%, 100%);
 
+    /*      Searchbar results row colors */
+    --urlbarview-background-color-selected: color-mix(in srgb, currentColor 12%, transparent) !important;
+    --urlbarview-background-color-hover: var(--urlbarView-hover-background) !important;
+    --urlbarView-hover-background: color-mix(in srgb, currentColor 6%, transparent) !important;
+    --urlbarView-highlight-background: color-mix(in srgb, currentColor 12%, transparent) !important;
+
     /* ============== Firefox Global colors change ==================== */
     &:not([lwtheme]) {
       --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
@@ -228,17 +243,16 @@
     --panel-item-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
     --toolbarbutton-hover-background: hsla(200, 5%, 70%, 0.35) !important;
     --toolbarbutton-active-background: hsla(200, 5%, 50%, 0.35) !important;
-    --arrowpanel-background: hsl(200, 10%, 96%) !important;
+    --panel-background: hsl(200, 10%, 96%) !important;
     --button-hover-bgcolor: hsla(200, 5%, 70%, 0.35) !important;
     --button-active-bgcolor: hsla(200, 5%, 50%, 0.35) !important;
     --button-bgcolor: hsla(0, 0%, 45%, 0.1) !important;
     /* Search Bar */
-    --arrowpanel-border-color: hsla(0, 0%, 100%, 0.5) !important;
+    --panel-border-color: hsla(0, 0%, 100%, 0.5) !important;
     --panel-separator-color: hsla(0, 0%, 20%, 0.15) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
-    --urlbarView-hover-background: color-mix(in srgb, currentColor 8%, transparent) !important;
     /* Color for add bookmarks menu when adding through tabs */
-    --in-content-page-background: var(--arrowpanel-background) !important;
+    --in-content-page-background: var(--panel-background) !important;
     --firefoxcss-context-menu-item-bg-color: hsla(240, 2%, 70%, 0.35);
     --firefoxcss-context-menu-item-bg-color-inactive: hsla(240, 2%, 70%, 0.15);
   }
@@ -265,7 +279,7 @@
     --tab-min-height: 28px !important;
     /* Default: 36px */
 
-    --tabstrip-min-height:30px !important;
+    --tabstrip-min-height: 30px !important;
   }
 
   /* Toolbar Buttons */
@@ -273,8 +287,26 @@
   --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
 
   /* Menu items */
-  --arrowpanel-menuitem-padding-block: 4px !important; /* Default: 8px */
-  --arrowpanel-menuitem-padding-inline: 4px !important; /* Default: 8px */
+  --panel-menuitem-padding-block: 6px 6px !important;
+
+  /*   Affects searchmode switcher panel and some others */
+  /*   --panel-menuitem-padding-inline: 8px !important; */
+
+  /* Bookmarks and hamburger menu top padding */
+  --panel-subview-body-padding-block: 4px !important;
+
+  /* Harburger menu padding */
+  --panel-separator-padding-vertical: 1px !important;
+
+  /*    Bookmarks dropdown */
+  --panel-menuitem-padding: 4px 6px !important;
+  --panel-menuitem-margin: 2px 6px !important;
+
+  /* Toolbar right click panel */
+  --panel-padding-block: 3px 1px !important;
+
+  /*   Bookmarks and hamburger menu */
+  /*      --panel-subview-body-padding: 4px 0px !important; */
 
   /* Vertical tabs margin and height modification */
   @media -moz-pref("sidebar.verticalTabs") {
@@ -414,16 +446,22 @@ Order of Toolbars
     ) !important;
   }
 
-  & #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
-    &:hover,
-    &:hover:active,
-    &[open] {
-      background-color: color-mix(
+  & #urlbar:not([searchmode]) .searchmode-switcher {
+    --button-background-color-active: background-color: color-mix(
         in srgb,
         color-mix(in srgb, var(--lwt-accent-color) 86%, white) 70%,
         transparent
       ) !important;
-    }
+    --button-background-color-hover: background-color: color-mix(
+        in srgb,
+        color-mix(in srgb, var(--lwt-accent-color) 86%, white) 70%,
+        transparent
+      ) !important;
+    --button-background-color-selected: background-color: color-mix(
+        in srgb,
+        color-mix(in srgb, var(--lwt-accent-color) 86%, white) 70%,
+        transparent
+      ) !important;
   }
 }
 
@@ -592,6 +630,18 @@ about:config -> svg.context-properties.content.enabled -> true*/
   font-size: 1.1rem !important;
 }
 
+/* Pull the Go Button out of the layout flow */
+.urlbar-go-button {
+  position: absolute !important;
+  right: 4px !important;
+  /* Vertically center it so it doesn't float to the top */
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: light-dark(hsla(200, 5%, 96%, 0.9), hsla(0, 0%, 20%, 0.9)) !important;
+  /* Ensure it sits safely on top of the text if you type a long URL */
+  z-index: 2 !important;
+}
+
 /* Styling Search Containers 
     .urlbar-background - main search container
     #searchbar - secondary/extra search container */
@@ -609,6 +659,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   /*   color-mix(in oklab,var(--gray-a6),var(--gray-6) 30%) */
   /*   box-shadow: inset var(--shadow-4); */
   /*   --shadow-4: 0 0 0 1px color-mix(in oklab,black,white 30%),0 8px 40px var(--black-a3),0 12px 32px -16px var(--black-a5); */
+  /*! background-color: transparent !important; */
 }
 
 /* Search box border radius  */
@@ -779,6 +830,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     transition: background-color 100ms ease !important;
     box-shadow: var(--firefoxcss-normal-tabs-box-shadow) !important;
     /*! box-shadow: none !important; */
+    /*! border-bottom: 1px solid #0006 !important; */
   }
 }
 
@@ -983,7 +1035,7 @@ button:hover > .button-background {
 @media -moz-pref("sidebar.verticalTabs") {
   /* More compact vertical tabs */
 
-  /* #tabbrowser-tabs[orient="vertical"] {
+  /*   #tabbrowser-tabs[orient="vertical"] {
     .tabbrowser-tab:not([pinned]) {
       padding-block: 2px 1px !important;
       &:nth-child(1 of :not([hidden], [pinned])) {
@@ -1277,10 +1329,9 @@ tab-group[collapsed] > .tabbrowser-tab {
 ====================== C O N T E X T   M E N U ========================
 =====================================================================*/
 
-/*  affects normal stuff FIX IT */
-menupopup :-moz-any(menu, menuitem) {
-  /*   padding-top: 4px !important;
-  padding-bottom: 4px !important; */
+:is(menupopup, panel):where([type="arrow"]) {
+  --panel-menuitem-margin: 1px 6px !important;
+  --panel-menuitem-padding: 5px 6px !important;
 }
 
 /*  Context menu padding */
@@ -1288,9 +1339,10 @@ menupopup :-moz-any(menu, menuitem) {
   @media (-moz-platform: windows) {
     & > menu,
     & > menuitem {
-      padding-block: 0.3em !important;
-      margin-inline: 4px !important;
-      margin-block: 2px !important;
+      --menuitem-padding: 0.35em 0.5em !important;
+      --menuitem-margin: 2px 4px !important;
+      /*       --menuitem-padding: 4px 6px !important;
+  */
     }
   }
 }
@@ -1302,13 +1354,12 @@ menupopup :-moz-any(menu, menuitem) {
 
 /* ----- Menu Separator #context-sep-selectall ----- */
 menuseparator {
-  border-color: var(--arrowpanel-border-color) !important;
-  /* border-top: 1px solid ThreeDShadow; */
+  border-color: var(--panel-border-color) !important;
   padding-block: 1px !important;
 }
 
 menuseparator#context-sep-navigation {
-  border-color: var(--arrowpanel-border-color) !important;
+  border-color: var(--panel-border-color) !important;
 }
 
 /* ----- Menu Colors ----- */
@@ -1317,10 +1368,11 @@ panel {
   /*   #ContentSelectDropdown used to remove websites native dropdown modifications */
   /*   #ctrlTab-panel used to fix Ctr+Tab */
   :not(#ContentSelectDropdown) > &:not(#ctrlTab-panel, #autoscroller) {
-    /*     --panel-border-color: var(--arrowpanel-border-color) !important; */
-    /*     --panel-padding: 0px 0px !important; */
+    /*     --panel-border-color: var(--panel-border-color) !important; */
+    /*      --panel-padding: 2px 0px !important; */
     --panel-border-radius: 8px !important;
-    /*     --panel-padding-block: 4px !important; */
+    /*         --panel-padding-block: 4px 0px !important; */
+    --menuitem-border-radius: 4px !important;
 
     @media (-moz-platform: linux) {
       --panel-background: var(--firefoxcss-main-bg-color) !important;
@@ -1349,15 +1401,15 @@ panel {
   margin-right: 0px !important;
 }
 
-/* Top of context menu  */
+/* Most website right click menus */
 menupopup#contentAreaContextMenu {
-  --panel-padding: unset !important;
-  --panel-padding: 0 0 2px !important;
+  --panel-padding: 3px 0 3px !important;
 }
 
-/* Menu when right clicking links  */
-menupopup menuitem:is(#context-openlinkintab, #context-undo, #context-viewimage) {
-  margin-top: 3px !important;
+/* Top of specific rightclick context menu to fix design choice */
+menupopup#contentAreaContextMenu:has(#context-navigation:not([hidden])) {
+  --panel-padding: unset !important;
+  --panel-padding: 0 0 2px !important;
 }
 
 #context-sep-navigation {
@@ -1551,11 +1603,14 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   @media -moz-pref("browser.urlbar.trustPanel.featureGate") {
     .urlbar-page-action,
     .urlbar-revert-button,
-    .urlbar-go-button,
     .search-go-button {
       &:not([disabled]):hover {
         background-color: var(--toolbarbutton-hover-background) !important;
       }
+    }
+
+    .urlbar-go-button:not([disabled]):hover {
+      background-color: light-dark(hsla(200, 5%, 100%, 1), hsla(0, 0%, 34%, 0.8)) !important;
     }
 
     .identity-box-button,
@@ -1777,7 +1832,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     /*   This helps fixing start of "www" being cut off after hover when text overflowing */
     #urlbar .urlbar-input {
       will-change: transform;
-      /*   transform: translateZ(0); */
+      /*! transform: translateZ(0); */
     }
 
     #trust-icon-container:hover ~ .urlbar-input-box > #urlbar-input,
@@ -1939,11 +1994,14 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
     .urlbar-page-action,
     .urlbar-revert-button,
-    .urlbar-go-button,
     .search-go-button {
       &:not([disabled]):hover {
         background-color: var(--toolbarbutton-hover-background) !important;
       }
+    }
+
+    .urlbar-go-button:not([disabled]):hover {
+      background-color: light-dark(hsla(200, 5%, 100%, 1), hsla(0, 0%, 34%, 0.8)) !important;
     }
 
     .identity-box-button,
@@ -2630,44 +2688,38 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 ----------------- S E A R C H   M O D E   S W I T C H E R -------------
 =====================================================================*/
 @media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
-  /* Disable searchmode switcher arrow */
-  #urlbar[searchmode] #urlbar-searchmode-switcher,
-  #urlbar[searchmode] .searchmode-switcher-chicklet {
-    background-color: var(--firefoxcss-item-bg-color) !important;
+  #urlbar[searchmode] .searchmode-switcher {
+    --button-background-color-active: var(--button-background-color);
+    --button-background-color-hover: var(--button-background-color);
+    --button-background-color-selected: var(--button-background-color);
+    --button-background-color: var(--firefoxcss-item-bg-color) !important;
   }
 
-  #urlbar[searchmode] .searchmode-switcher-chicklet {
-    border-end-end-radius: var(--urlbar-icon-border-radius) !important;
-    border-start-end-radius: var(--urlbar-icon-border-radius) !important;
+  #urlbar:not([searchmode]) .searchmode-switcher {
+    --button-background-color: transparent !important;
   }
 
-  #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
-    background-color: transparent !important;
+  #urlbar:not([searchmode]) .searchmode-switcher {
+    --button-background-color-active: var(--firefoxcss-item-bg-color) !important;
+    --button-background-color-hover: var(--firefoxcss-item-bg-color) !important;
+    --button-background-color-selected: var(--firefoxcss-item-bg-color) !important;
   }
 
-  #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
-    &:hover,
-    &:hover:active,
-    &[open] {
-      background-color: var(--firefoxcss-item-bg-color) !important;
-    }
-  }
-
-  #searchmode-switcher-dropmarker {
+  .searchmode-switcher .searchmode-switcher-dropmarker {
     fill: color-mix(in srgb, currentColor 60%, transparent) !important;
   }
 
-  #searchmode-switcher-dropmarker {
-    #urlbar-searchmode-switcher[open] & {
+  .searchmode-switcher .searchmode-switcher-dropmarker {
+    #urlbar .searchmode-switcher[open] & {
       transform: rotate(180deg);
       transition: transform 150ms ease;
     }
 
-    #urlbar-searchmode-switcher & {
+    #urlbar .searchmode-switcher & {
       transition: transform 150ms ease;
     }
 
-    #urlbar-searchmode-switcher:hover & {
+    #urlbar .searchmode-switcher:hover & {
       fill: color-mix(in srgb, currentColor 90%, transparent) !important;
     }
   }
@@ -2994,37 +3046,134 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   }
 }
 
-
-/* Transparent Bookmarks bar */
-@media -moz-pref("mod.transparent.bookmarks-bar") or -moz-pref("mod.transparent.bookmarks-bar.centered"){ 
-    /* Change bookmarks bar color to be the same as top toolbar */
+@media -moz-pref("mod.transparent.bookmarks-bar") or -moz-pref("mod.transparent.bookmarks-bar.centered") {
+  /* Change bookmarks bar color to be the same as top toolbar */
   :root {
-      --firefoxcss-bookmarks-bg-color: transparent !important;
+    --firefoxcss-bookmarks-bg-color: transparent !important;
   }
-
 
   #personal-bookmarks toolbarbutton.bookmark-item {
-      background-color: hsl(0, 0%, 8%) !important;
+    background-color: hsl(0, 0%, 8%) !important;
   }
 
-  #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover{
-      background-color: #393939 !important;
+  #personal-bookmarks
+    #PlacesToolbarItems
+    > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover {
+    background-color: #393939 !important;
   }
 
-  #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"]):hover:active{
-      background-color: #555555 !important;
+  #personal-bookmarks
+    #PlacesToolbarItems
+    > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"]):hover:active {
+    background-color: #555555 !important;
   }
 
   #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item[open="true"] {
-      background-color: #555555 !important;
+    background-color: #555555 !important;
   }
 
   #PersonalToolbar:not([customizing]) {
-      max-width: fit-content;
-    
+    max-width: fit-content;
+
     @media -moz-pref("mod.transparent.bookmarks-bar.centered") {
-      width:100vw;
-      align-self:center; 
+      width: 100vw;
+      align-self: center;
     }
+  }
+}
+
+@media not -moz-pref("mod.popout.searchbar") {
+  @keyframes mod-urlbarFlyIn {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -15%) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0%) scale(1);
+    }
+  }
+
+  @keyframes mod-urlbarFlyIn2 {
+    0% {
+      opacity: 0;
+      transform: translateY(-15%) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  #browser {
+    backdrop-filter: blur(0) !important;
+  }
+
+  /*   #urlbar:is([breakout][breakout-extend], [breakout][focused]) */
+  #urlbar:is([breakout][breakout-extend]) {
+    & > .urlbar-input-container {
+      height: 40px !important;
+      padding-block: 6px !important;
+      padding-inline: 6px !important;
+    }
+    position: fixed !important;
+
+    width: clamp(800px, 60vw, 1200px) !important;
+    max-width: 1200px !important;
+    min-width: 800px !important;
+
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
+    inset-block-start: 25% !important;
+    margin: 0 auto !important;
+    @media (max-width: 800px) {
+      min-width: 85vw !important;
+    }
+    @media (min-width: 1800px) {
+      /*       width: 45vw !important; */
+    }
+    @media (min-width: 2800px) {
+      /*       width: 35vw !important; */
+    }
+
+    max-width: 90vw !important;
+    z-index: 9999 !important;
+
+    border-radius: var(--firefoxcss-border-radius) !important;
+    animation: mod-urlbarFlyIn2 150ms ease-out forwards !important;
+    transition:
+      transform 0.1s ease,
+      opacity 0.1s ease !important;
+  }
+
+  #navigator-toolbox #urlbar:is([breakout][breakout-extend]) .urlbar-background {
+    background-color: hsla(240, 5%, 8%, 0.85) !important;
+    /*       background-color: rgba(10, 14, 24, 0.6) !important; */
+    backdrop-filter: blur(12px) !important;
+    /*       filter: saturate(0.9) !important; */
+    border-radius: var(--firefoxcss-border-radius) !important;
+    border: 1px solid hsla(0, 0%, 70%, 0.145) !important;
+    outline: 1px solid hsla(0, 0%, 0%, 0.4) !important;
+    box-shadow:
+      0 5px 10px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Create a visual placeholder in the original spot */
+  #urlbar-container:has(#urlbar:is([breakout][breakout-extend]))::before {
+    display: flex !important;
+    content: "..." !important;
+    align-items: center !important; /* Vertical centering */
+    justify-content: center !important; /* Horizontal centering */
+    width: 100% !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+    letter-spacing: 0.15em !important;
+    box-shadow:
+      0px 1px 0 0px hsla(0, 0%, 100%, 0.05),
+      inset 1px 1px 2px 1px rgba(0, 0, 0, 0.1) !important;
+    min-height: var(--firefoxcss-searchbar-height);
+    border: 0 !important;
+    border-radius: var(--firefoxcss-border-radius) !important;
+    background-color: hsla(0, 0%, 0%, 0.2) !important;
   }
 }
