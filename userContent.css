@@ -1531,14 +1531,28 @@ url("about:newtab") {
 
     /* Nova position fix */
     @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
-      inset-block-start: 0px !important;
-      inset-inline-start: 2px !important;
+      inset-block-start: 2px !important;
+      inset-inline-start: -5px !important;
     }
   }
 
   .top-site-button:has(.title.has-icon.pinned:hover) .icon.icon-pin-small {
     opacity: 0.6 !important;
     transition: opacity 200ms ease 300ms !important;
+  }
+  
+
+  .top-site-button .icon.icon-pin-small {
+    @media (prefers-color-scheme: dark) {
+      .activity-stream.lightWallpaper & {
+        fill: black !important;
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      .activity-stream.darkWallpaper & {
+        fill: white !important;
+      }
+    }
   }
 
   /* ================== Dark and Light wallpaper modifications ========================= */
