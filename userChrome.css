@@ -3082,7 +3082,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   }
 }
 
-@media not -moz-pref("mod.popout.searchbar") {
+@media -moz-pref("mod.popout.searchbar") {
   @keyframes mod-urlbarFlyIn {
     0% {
       opacity: 0;
