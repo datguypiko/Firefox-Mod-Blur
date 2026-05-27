@@ -474,15 +474,11 @@ url("about:newtab") {
     }
   }
 
-  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
-    /*   --------------------------------------------------------------   */
-    /*   --------------------------------------------------------------   */
-    /*   --------------------------------------------------------------   */
-    /*   --------------------------------------------------------------   */
-    /*   --------------------------------------------------------------   */
-    /*   --------------------------------------------------------------   */
-
-    /* ======= NOVA LAYOUT  ====================================================  */
+/*   ---------------------------------------------------------------------------  */
+/*   ---------------------------------------------------------------------------  */
+/*   ======= NOVA LAYOUT  ======================================================  */
+/*   ---------------------------------------------------------------------------  */
+@media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
     .content > :is(.top-sites, .search-wrapper, .logo-and-wordmark-wrapper) {
       --space-medium: 1rem !important;
       --col-width: calc(340px / 4) !important;
@@ -494,7 +490,7 @@ url("about:newtab") {
       margin-block: var(--space-medium) !important;
     }
 
-    /* add some margin beweetn top site rows */
+    /* add some margin between top site rows */
     .top-sites .top-site-outer {
       margin-block-end: 0.4rem !important;
     }
@@ -502,6 +498,11 @@ url("about:newtab") {
     .logo-and-wordmark-wrapper {
       margin-bottom: 0px !important;
     }
+
+	/* Make searchbar more aligned with top sites */
+	.search-wrapper .search-inner-wrapper {
+      padding-inline: 6px !important;
+	}  
 
     /* Shortcut title label */
     .top-site-outer .title .title-label {
