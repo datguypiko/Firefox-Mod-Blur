@@ -3083,91 +3083,79 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 }
 
 @media -moz-pref("mod.popout.searchbar") {
-  @keyframes mod-urlbarFlyIn {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -15%) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, 0%) scale(1);
-    }
-  }
+  
 
-  @keyframes mod-urlbarFlyIn2 {
-    0% {
-      transform: translateY(-15%) scale(0.9);
-    }
-    100% {
-      transform: translateY(0) scale(1);
-    }
+@keyframes mod-urlbarFlyIn2 {
+  0% {
+    transform: translateY(-15%) scale(0.9);
   }
-
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+  
   #browser {
     backdrop-filter: blur(0) !important;
-  }
+}
 
-  /*   #urlbar:is([breakout][breakout-extend], [breakout][focused]) */
-  #urlbar:is([breakout][breakout-extend]) {
+/*   #urlbar:is([breakout][breakout-extend], [breakout][focused]) */
+  #urlbar:is([breakout][breakout-extend]){
+    
     & > .urlbar-input-container {
-      height: 40px !important;
-      padding-block: 6px !important;
-      padding-inline: 6px !important;
+     height: 40px !important;
+     padding-block: 6px !important;
+     padding-inline: 6px !important;
     }
-    position: fixed !important;
-
-    width: clamp(800px, 60vw, 1200px) !important;
-    max-width: 1200px !important;
-    min-width: 800px !important;
-
-    inset-inline-start: 0 !important;
-    inset-inline-end: 0 !important;
-    inset-block-start: 25% !important;
-    margin: 0 auto !important;
+  position: fixed !important;
+    
+  width: clamp(800px, 60vw, 1200px) !important;
+  max-width: 1200px !important;
+  min-width: 800px !important;
+    
+  inset-inline-start: 0 !important;
+  inset-inline-end: 0 !important;
+  inset-block-start: 25% !important;
+  margin: 0 auto !important; 
     @media (max-width: 800px) {
       min-width: 85vw !important;
     }
     @media (min-width: 1800px) {
-      /*       width: 45vw !important; */
+/*       width: 45vw !important; */
     }
-    @media (min-width: 2800px) {
-      /*       width: 35vw !important; */
+     @media (min-width: 2800px) {
+/*       width: 35vw !important; */
     }
-
+    
     max-width: 90vw !important;
     z-index: 9999 !important;
 
     border-radius: var(--firefoxcss-border-radius) !important;
-    animation: mod-urlbarFlyIn2 150ms ease-out forwards !important;
-    transition:
-      transform 0.1s ease,
-      opacity 0.1s ease !important;
+    @media not -moz-pref("mod.popout.searchbar.no-animation") {
+      animation: mod-urlbarFlyIn2 100ms ease-out forwards !important;
+    }
   }
 
-  #navigator-toolbox #urlbar:is([breakout][breakout-extend]) .urlbar-background {
-    background-color: hsla(240, 2%, 8%, 0.85) !important;
-    /*       background-color: rgba(10, 14, 24, 0.6) !important; */
-    backdrop-filter: blur(12px) !important;
-    border-radius: var(--firefoxcss-border-radius) !important;
-    border: 1px solid hsla(0, 0%, 70%, 0.145) !important;
-    outline: 1px solid hsla(0, 0%, 0%, 0.4) !important;
-    box-shadow:
-      0 5px 10px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(0, 0, 0, 0.2) !important;
+    #navigator-toolbox #urlbar:is([breakout][breakout-extend]) .urlbar-background {
+      background-color: hsla(240, 2%, 8%, 0.85) !important;
+/*       background-color: rgba(10, 14, 24, 0.6) !important; */
+      backdrop-filter: blur(12px) !important;
+      border-radius: var(--firefoxcss-border-radius) !important;
+      border: 1px solid  hsla(0, 0%, 70%, 0.145) !important;
+      outline: 1px solid hsla(0, 0%, 0%, 0.4) !important;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.2) !important;
   }
 
+  
   /* Create a visual placeholder in the original spot */
   #urlbar-container:has(#urlbar:is([breakout][breakout-extend]))::before {
     display: flex !important;
-    content: "..." !important;
+    content: '...' !important;
     align-items: center !important; /* Vertical centering */
     justify-content: center !important; /* Horizontal centering */
     width: 100% !important;
     color: rgba(255, 255, 255, 0.2) !important;
     letter-spacing: 0.15em !important;
-    box-shadow:
-      0px 1px 0 0px hsla(0, 0%, 100%, 0.05),
-      inset 1px 1px 2px 1px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 1px 0 0px hsla(0, 0%, 100%, 0.05), inset 1px 1px 2px 1px rgba(0, 0, 0, 0.1) !important;
     min-height: var(--firefoxcss-searchbar-height);
     border: 0 !important;
     border-radius: var(--firefoxcss-border-radius) !important;
