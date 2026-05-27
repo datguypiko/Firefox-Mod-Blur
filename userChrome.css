@@ -3096,11 +3096,9 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
   @keyframes mod-urlbarFlyIn2 {
     0% {
-      opacity: 0;
       transform: translateY(-15%) scale(0.9);
     }
     100% {
-      opacity: 1;
       transform: translateY(0) scale(1);
     }
   }
@@ -3147,10 +3145,9 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   }
 
   #navigator-toolbox #urlbar:is([breakout][breakout-extend]) .urlbar-background {
-    background-color: hsla(240, 5%, 8%, 0.85) !important;
+    background-color: hsla(240, 2%, 8%, 0.85) !important;
     /*       background-color: rgba(10, 14, 24, 0.6) !important; */
     backdrop-filter: blur(12px) !important;
-    /*       filter: saturate(0.9) !important; */
     border-radius: var(--firefoxcss-border-radius) !important;
     border: 1px solid hsla(0, 0%, 70%, 0.145) !important;
     outline: 1px solid hsla(0, 0%, 0%, 0.4) !important;
