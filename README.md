@@ -125,7 +125,6 @@ If it's configured using numbers select `number` else select `boolean` and press
 <details><summary>Always show Search Bar buttons :gear:</summary>
 <i>Enable <code>mod.search.info.buttons.show.always</code> in <code>about:config</code> </i><p align="left"><img width="1408" height="42" alt="Screenshot 2026-03-25 041240" src="https://github.com/user-attachments/assets/147a8ee1-3cf7-40ac-9d21-3e123172ddd8" /></p></details>
 
-
 <details><summary>Active tab has static width :gear:</summary>
 <i>selected_tabs_static_width.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/4dc26c78-6714-43f8-bfb5-17a0dab3b920"></p></details>
 
@@ -143,6 +142,9 @@ If it's configured using numbers select `number` else select `boolean` and press
 <p align="center"><i>remove_homepage_shortcut_title_text.css</i></p>
 <p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"></p></details>
 
+<details><summary>Experimental: Popout Searchbar with Blur :gear:</summary>
+<i>Enable <code>mod.popout.searchbar</code> or <code>mod.popout.searchbar.no-animation</code> in <code>about:config</code> </i><p align="left"><img width="1137" height="843" alt="preview7" src="https://github.com/user-attachments/assets/6f104b17-4708-4ead-b62a-8fc8e718f459" /></p></details>
+
 <details><summary>Circular homepage shortcuts :gear:</summary>
 <p align="center"><i>circular_homepage_shortcuts.css</i></p>
 <p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"></p></details>
@@ -152,11 +154,10 @@ If it's configured using numbers select `number` else select `boolean` and press
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373252-a9cc81cb-1307-4899-a019-3c70c1e26b5c.png"></p>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373265-a0cff784-95cc-4000-9567-06c8babf214b.png"></p></details>
 
-<details><summary>Acrylic MicaForEveryone :hammer:</summary>
+<details><summary>On Pause - Acrylic MicaForEveryone :hammer:</summary>
 <p align="center"><i>Will be updated when Firefox fully releases blur</i></p>
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/NJVXlAl.png"></p></details>
 
-###### and [more](https://github.com/datguypiko/Firefox-Mod-Blur/tree/master/EXTRA%20MODS)..
 
 <h2>:wrench: Installation</h2>
 
