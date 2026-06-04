@@ -506,8 +506,8 @@ url("about:newtab") {
 
     /* Shortcut title label */
     .top-site-outer .title .title-label {
-      width: 100px !important;
-      padding: 0 0.25rem !important;
+      /* width: 100px !important;
+       padding: 0 0.25rem !important; */
     }
 
     /* Firefox logo size change     */
@@ -1444,6 +1444,7 @@ url("about:newtab") {
       border-block-start: 0px solid white !important;
     }
   }
+
   /* ================== Shortcut pin icon behaviour ==================================== */
   .top-site-button .icon.icon-pin-small {
     opacity: 0 !important;
@@ -1470,6 +1471,50 @@ url("about:newtab") {
     @media (prefers-color-scheme: light) {
       .activity-stream.darkWallpaper & {
         fill: white !important;
+      }
+    }
+  }
+
+  /* ================== NEW TAB BACKGROUND BLUR MOD ========================= */
+  @media -moz-pref("mod.new-tab.background.blur") {
+    body.activity-stream:after {
+      position: absolute !important;
+      z-index: -1 !important;
+      background-color: light-dark(hsla(0, 0%, 80%, 0.08), hsla(0, 0%, 10%, 0.3)) !important;
+      backdrop-filter: blur(20px) !important;
+      content: "";
+      inset: 0;
+
+      @media -moz-pref("mod.new-tab.background.blur", 1) {
+        backdrop-filter: blur(4px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 2) {
+        backdrop-filter: blur(8px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 3) {
+        backdrop-filter: blur(12px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 4) {
+        backdrop-filter: blur(16px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 5) {
+        backdrop-filter: blur(20px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 6) {
+        backdrop-filter: blur(24px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 7) {
+        backdrop-filter: blur(32px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 8) {
+        backdrop-filter: blur(50px) !important;
       }
     }
   }
@@ -1666,5 +1711,338 @@ url("about:newtab") {
     --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
     --background-color-box: var(--firefoxcss-item-bg-color) !important;
     --background-color-box-info: var(--firefoxcss-item-bg-color) !important;
+  }
+}
+
+
+
+@media -moz-pref("mod.card-theme.style.1") or -moz-pref("mod.card-theme.style.2") {
+  @-moz-document url("about:home"), url("about:newtab") {
+    :root {
+      --firefoxcss-wallpaper-tile-bottom-border: 1px solid light-dark(hsla(0, 0%, 0%, 0), hsla(0, 0%, 100%, 0.12));
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --firefoxcss-shortcut-item-box-shadow:
+          0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+          0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075),
+          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03), inset 0 0px 0px 1px rgba(255, 255, 255, 0.06);
+        --firefoxcss-shortcut-item-box-shadow-hover:
+          0 1px 1px hsl(0deg 0% 0% / 0.085), 0 2px 2px hsl(0deg 0% 0% / 0.085), 0 5px 5px hsl(0deg 0% 0% / 0.095),
+          0 10px 10px hsl(0deg 0% 0% / 0.095), 0 18px 18px hsl(0deg 0% 0% / 0.095),
+          inset 0 1px 0px 0px rgba(255, 255, 255, 0.08), inset 0 0px 0px 1px rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    :root:has(.activity-stream.darkWallpaper) {
+      .top-sites .top-site-inner .top-site-button {
+        outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.08)) !important;
+        outline-offset: 0px;
+      }
+
+      .top-sites .top-site-inner .top-site-button:hover {
+        outline: 1px solid light-dark(hsla(0, 0%, 100%, 0.88), hsla(0, 0%, 100%, 0.14)) !important;
+      }
+
+      @media (prefers-color-scheme: light) {
+        .top-sites .top-sites-list .top-site-outer {
+          color-scheme: light !important;
+        }
+
+        .top-sites .top-site-inner .top-site-button {
+          outline-offset: -1px !important;
+        }
+
+        .top-site-outer .title,
+        .top-site-outer .top-site-button .icon.icon-pin-small {
+          fill: black !important;
+          color: black !important;
+        }
+
+        .top-site-outer:hover:not(.active) .title,
+        .top-site-outer:hover:not(.active) .title .icon.icon-pin-small {
+          color: black !important;
+        }
+
+        --firefoxcss-context-menu-three-dots: black !important;
+        --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.7) !important;
+        --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.8) !important;
+
+        --firefoxcss-wallpaper-tile-bottom-border: 1px solid hsla(0, 0%, 100%, 0.14);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        @media -moz-pref("mod.card-theme.style.2") {
+          --firefoxcss-wallpaper-tile-bottom-border: 1px solid hsla(0, 0%, 100%, 0.08);
+
+          .top-site-outer {
+            --firefoxcss-item-bg-color: hsla(240, 2%, 13%, 0.5) !important;
+            --firefoxcss-item-hover-bg-color: hsla(240, 2%, 13%, 0.5) !important;
+          }
+        }
+      }
+    }
+
+    :root:has(.activity-stream.lightWallpaper) {
+      .top-sites .top-site-inner .top-site-button {
+        outline: 1px solid light-dark(hsla(200, 10%, 100%, 0.5), hsla(0, 0%, 100%, 0.2)) !important;
+        outline-offset: -1px;
+      }
+
+      .top-sites .top-site-inner .top-site-button:hover {
+        outline: 1px solid light-dark(hsla(200, 10%, 100%, 0.7), hsla(0, 0%, 100%, 0.32)) !important;
+      }
+
+      @media (prefers-color-scheme: light) {
+        --firefoxcss-item-bg-color: hsla(200, 10%, 100%, 0.4) !important;
+        --firefoxcss-item-hover-bg-color: hsla(200, 10%, 100%, 0.7) !important;
+        --firefoxcss-search-text-fill: hsla(0, 0%, 0%, 0.5) !important;
+        --firefoxcss-search-bar-text-color: hsla(0, 0%, 0%, 0.8) !important;
+        --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.4) !important;
+        /*           --firefoxcss-search-outline-offset: 0px !important; */
+        --firefoxcss-wallpaper-tile-bottom-border: 1px solid hsla(0, 0%, 100%, 0.2);
+        @media -moz-pref("mod.card-theme.style.2") {
+          --firefoxcss-item-bg-color: hsla(200, 10%, 92%, 0.3) !important;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .top-sites .top-sites-list .top-site-outer {
+          color-scheme: dark !important;
+        }
+
+        .top-site-outer .title,
+        .top-site-outer .top-site-button .icon.icon-pin-small {
+          fill: white !important;
+          color: white !important;
+        }
+        .top-sites .top-site-inner .top-site-button {
+          outline-offset: -0px !important;
+        }
+
+        --firefoxcss-item-bg-color: hsla(240, 2%, 4%, 0.6) !important;
+        --firefoxcss-item-hover-bg-color: hsla(240, 2%, 8%, 0.7) !important;
+        --firefoxcss-context-menu-three-dots: white !important;
+        --firefoxcss-search-outline: hsla(0, 0%, 100%, 0.2) !important;
+        --firefoxcss-search-outline-hover: hsla(0, 0%, 100%, 0.32) !important;
+        --firefoxcss-search-outline-offset: -0px !important;
+
+        --firefoxcss-wallpaper-tile-bottom-border: 1px solid hsla(0, 0%, 0%, 0.1);
+
+        @media -moz-pref("mod.card-theme.style.2") {
+          .top-site-outer {
+            --firefoxcss-item-bg-color: hsla(240, 2%, 4%, 0.5) !important;
+            --firefoxcss-item-hover-bg-color: hsla(240, 2%, 4%, 0.5) !important;
+          }
+        }
+      }
+    }
+
+    #root .top-sites .top-sites-list .tile {
+      backdrop-filter: none !important;
+      border-top: 0px solid hsla(0, 0%, 100%, 0) !important;
+      border-bottom: 0px solid hsla(0, 0%, 100%, 0) !important;
+      background-color: transparent !important;
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+      border: 0px !important;
+      box-shadow: none !important;
+      margin: 0 auto;
+      width: 100% !important;
+      outline: none !important;
+      /*! padding-inline: 10px !important; */
+    }
+
+    #root .top-site-inner .top-site-button {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+      border-radius: 12px !important;
+      box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
+      transition: background-color 200ms ease !important;
+      backdrop-filter: blur(18px) !important;
+    }
+
+    #root .top-site-inner .top-site-button:hover {
+      @media not -moz-pref("mod.card-theme.style.2") {
+        background-color: var(--firefoxcss-item-hover-bg-color) !important;
+      }
+    }
+
+    @media -moz-pref("mod.card-theme.style.2") {
+      #root .top-sites .top-sites-list .tile {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+        background-color: light-dark(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 0%, 0.3)) !important;
+        transition: background-color 200ms ease !important;
+        border-bottom: var(--firefoxcss-wallpaper-tile-bottom-border) !important;
+        .activity-stream:not(.darkWallpaper, .lightWallpaper) & {
+          background-color: light-dark(hsla(0, 0%, 100%, 1), hsla(0, 0%, 0%, 0.22)) !important;
+        }
+      }
+
+      #root .top-sites .top-sites-list .top-site-button:hover .tile {
+        background-color: transparent !important;
+        @media -moz-pref("mod.card-theme.style.2") {
+          background-color: light-dark(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 0%, 0.4)) !important;
+          .activity-stream:not(.darkWallpaper, .lightWallpaper) & {
+            background-color: light-dark(hsla(0, 0%, 94%, 1), hsla(0, 0%, 0%, 0.3)) !important;
+          }
+        }
+      }
+    }
+
+    .top-sites .top-sites-list .top-site-outer .top-site-button .title {
+      opacity: 0.7 !important;
+    }
+
+    /* Different approach  */
+    .top-sites .top-sites-list .top-site-outer .top-site-inner {
+      /*     background-color: var(--firefoxcss-item-bg-color) !important;
+    border-radius: 12px !important;
+    box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
+    transition: background-color 250ms ease; */
+    }
+
+    /* This is to fix the context menu being behind other element when blur used on top sites inner */
+    .top-sites .top-sites-list .top-site-outer .top-site-inner:before {
+      /*     content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(20px) !important;
+    z-index: -1;
+    border-radius: 12px !important; */
+    }
+
+    .search-wrapper .search-inner-wrapper {
+      height: 44px !important;
+    }
+
+    @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+      .top-sites .top-sites-list .top-site-outer {
+        padding-inline: 12px !important;
+      }
+
+      .top-site-outer .title {
+        padding-block-end: 0.25rem !important;
+        padding-block-start: 0.4rem !important;
+      }
+
+      .top-sites .top-site-outer .top-site-inner .top-site-button {
+        padding: 10px 16px 0px !important;
+      }
+
+      @media -moz-pref("mod.card-theme.style.2") {
+        .top-sites .top-site-outer .top-site-inner .top-site-button {
+          padding: 0px 0px !important;
+        }
+
+        .top-sites .top-site-outer .tile {
+          height: 100px !important;
+        }
+
+        .top-site-outer .title {
+          padding-block-end: 0.3rem !important;
+          padding-block-start: 0.3rem !important;
+        }
+
+        .title-label {
+          align-content: center !important;
+        }
+      }
+
+      .top-sites .top-sites-list .top-site-outer {
+        margin-block-end: 2rem !important;
+      }
+    }
+
+    @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+      .top-site-outer .title {
+        padding-block-end: 0.4rem !important;
+        padding-block-start: 0.1rem !important;
+      }
+
+      .top-sites .top-sites-list .top-site-outer {
+        margin-block-end: 2rem !important;
+      }
+
+      .search-wrapper .search-inner-wrapper {
+        padding-inline: 1px !important;
+      }
+
+      .logo-and-wordmark-wrapper .logo-and-wordmark .logo {
+        background-size: 52px !important;
+        height: 60px !important;
+        width: 60px !important;
+      }
+
+      .logo-and-wordmark .wordmark {
+        background-size: 120px !important;
+        height: 44px !important;
+        margin-inline-start: 0.2rem !important;
+        width: 140px !important;
+      }
+
+      @media -moz-pref("mod.card-theme.style.2") {
+        .top-sites-list .top-site-outer .top-site-button {
+          align-items: start !important;
+        }
+
+        .top-site-outer .title {
+          padding-block-end: 0.6rem !important;
+          padding-block-start: 0.4rem !important;
+        }
+
+        .title-label {
+          align-content: center !important;
+        }
+      }
+
+      @container content-grid (inline-size >= calc(600px + 5.25rem)) {
+        .container.logo-in-content {
+          .logo {
+            margin-inline-start: 0.6rem !important;
+          }
+        }
+      }
+
+      .content .logo-and-wordmark {
+        align-items: center !important;
+      }
+
+      #root .content > :is(.top-sites, .search-wrapper, .logo-and-wordmark-wrapper) {
+        --space-medium: 1.8rem !important;
+        --col-width: calc(380px / 4) !important;
+        --size-item-large: 48px !important;
+      }
+
+      .top-sites-list-wrapper .top-site-outer:not(.add-button) .tile .icon-wrapper {
+        height: 48px !important;
+        width: 48px !important;
+      }
+
+      .content .top-sites .top-sites-list-wrapper {
+        margin-block-start: 4px !important;
+      }
+
+      .top-site-button .icon.icon-pin-small {
+        inset-block-start: 5px !important;
+        inset-inline-start: 5px !important;
+      }
+    }
+
+    .top-sites .top-site-outer .context-menu-button {
+      inset-inline-end: 6px !important;
+      top: 1px !important;
+    }
+
+    button.search-handoff-button .fake-textbox {
+      opacity: 0.6 !important;
+    }
+
+    .top-sites .top-site-outer .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
+      z-index: 8;
+      position: relative;
+      background-color: transparent !important;
+    }
   }
 }
