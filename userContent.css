@@ -474,11 +474,11 @@ url("about:newtab") {
     }
   }
 
-/*   ---------------------------------------------------------------------------  */
-/*   ---------------------------------------------------------------------------  */
-/*   ======= NOVA LAYOUT  ======================================================  */
-/*   ---------------------------------------------------------------------------  */
-@media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+  /*   ---------------------------------------------------------------------------  */
+  /*   ---------------------------------------------------------------------------  */
+  /*   ======= NOVA LAYOUT  ======================================================  */
+  /*   ---------------------------------------------------------------------------  */
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
     .content > :is(.top-sites, .search-wrapper, .logo-and-wordmark-wrapper) {
       --space-medium: 1rem !important;
       --col-width: calc(340px / 4) !important;
@@ -499,10 +499,10 @@ url("about:newtab") {
       margin-bottom: 0px !important;
     }
 
-	/* Make searchbar more aligned with top sites */
-	.search-wrapper .search-inner-wrapper {
+    /* Make searchbar more aligned with top sites */
+    .search-wrapper .search-inner-wrapper {
       padding-inline: 6px !important;
-	}  
+    }
 
     /* Shortcut title label */
     .top-site-outer .title .title-label {
@@ -893,62 +893,7 @@ url("about:newtab") {
     width: 48px !important;
   }
 
-  .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
-    /*     width: auto !important; */
-  }
-
-  .top-sites-list-wrapper .top-sites-list {
-    /*! display: flex !important; */ /*! flex-wrap: wrap !important; */ /*! justify-content: center; */
-  }
-
-  .ds-outer-wrapper-breakpoint-override main .body-wrapper {
-    /*! width: unset !important; */
-  }
-
   @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
-    @media (max-width: 723px) {
-      .search-wrapper {
-        /*       width: 346px !important;
-      padding-inline: 14px !important; */
-      }
-    }
-
-    @media (min-width: 724px) {
-      .search-wrapper {
-        /*       width: 680px !important; */
-      }
-
-      .search-wrapper .logo-and-wordmark .logo {
-        /*       margin-inline-start: 8px !important; */
-      }
-    }
-
-    @media (min-width: 1122px) {
-      .search-wrapper {
-        /*       width: 960px !important; */
-        /*        Make it smaller when stories and weather is enabled */
-        @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
-          @media -moz-pref("browser.newtabpage.activity-stream.showWeather") {
-            /*           width: 780px !important; */
-          }
-        }
-        /*       padding-inline: 20px !important; */
-      }
-    }
-
-    @media (min-width: 1400px) {
-      .search-wrapper {
-        /*       width: 960px !important;
-      padding-inline: 20px !important; */
-      }
-    }
-
-    .search-wrapper {
-      /*     margin-inline: auto !important;
-     */
-      /*      padding-inline: 20px !important; */
-    }
-
     @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
       .has-recommended-stories .wordmark {
         display: block !important;
@@ -965,7 +910,7 @@ url("about:newtab") {
     }
 
     .search-wrapper .search-inner-wrapper {
-      min-height: 42px !important;
+      height: 42px !important;
     }
 
     .search-handoff-button:hover {
@@ -985,23 +930,6 @@ url("about:newtab") {
 
     .compact-cards .card-outer .card-context {
       background-color: var(--firefoxcss-item-bg-color) !important;
-    }
-
-    @media only screen and (max-width: 609px) {
-      .ds-outer-wrapper-breakpoint-override main {
-        /*       width: 386px !important; */
-      }
-    }
-
-    @media only screen and (max-width: 385px) {
-      .search-handoff-button {
-        /*       padding-top: 4px !important;
-      padding-bottom: 6px !important; */
-      }
-
-      .ds-outer-wrapper-breakpoint-override main {
-        /*       width: 266px !important; */
-      }
     }
   }
 
@@ -1064,7 +992,7 @@ url("about:newtab") {
     }
 
     .search-wrapper .search-inner-wrapper {
-      min-height: 42px !important;
+      height: 42px !important;
       /* 52px default */
       order: 2 !important;
       flex: 3 !important;
@@ -1083,15 +1011,6 @@ url("about:newtab") {
 
     .outer-wrapper.fixed-search .search-wrapper .search-inner-wrapper {
       top: 0 !important;
-    }
-
-    /*   Fixed search need fix  */
-    button.search-handoff-button {
-      /*     backdrop-filter: blur(22px) !important;
-    background-color: var(--firefoxcss-extra-search-bar-when-scroll) !important;
-    box-shadow: none !important;
-    border: none !important;
-    margin: 0px 50px !important; */
     }
 
     .search-handoff-button .fake-textbox {
@@ -1541,7 +1460,6 @@ url("about:newtab") {
     opacity: 0.6 !important;
     transition: opacity 200ms ease 300ms !important;
   }
-  
 
   .top-site-button .icon.icon-pin-small {
     @media (prefers-color-scheme: dark) {
