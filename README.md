@@ -1,14 +1,14 @@
 <h2 align="center"><span><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" />Firefox Mod Blur - Modular</span></h2>
 
 <p align="center">
-<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v151.0-blue?style=flat&logo=firefox&logoColor=white"></a>
-<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-27/05/2026-blueviolet?style=flat"></a>
+<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v151.0.3-blue?style=flat&logo=firefox&logoColor=white"></a>
+<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-04/06/2026-blueviolet?style=flat"></a>
 <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat">
 	
 <p align="center">
 <a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> 
-<a href="#-select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a>
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.50-important?style=for-the-badge"></a>
+<a href="#select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.55-important?style=for-the-badge"></a>
 </p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
@@ -25,19 +25,9 @@
 ## 🔹 Clean compact search with hidden buttons
 <p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/gu3HnMx.gif"></p>
 
-## 🔹 Show if pinned on hover
-<p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Asnafsk.gif"></p>
-
 ## 🔹 More compact and responsive homepage
 <p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/lhc2Muh.gif"></p>
 
-## 🔹Wallpaper style themes
-
-<p align="center"><i>Style 1 wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526429-d1f37832-a98b-4c35-840c-7ccb5e96e9f3.png" width="85%" height="85%" ></p>
-
-<p align="center"><i>Style 2 wallpaper-edition.css</i></p>
-<p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/204526435-c3431cce-5970-4b88-af73-820d808c6a1a.png" width="85%" height="85%" ></p>
 </br>
 
 <h2 align="left">Select and add extra styles and functions</h2>
@@ -53,18 +43,21 @@
 <i>Theme default</i><p align="center"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/cddf0baf-0f9e-4467-a47f-77036361999f"></p></details>
 
 <details><summary>Bookmarks bar modifications :gear:</summary>
+</br>
 <i>popout_bookmarks_bar_on_hover.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/Hjy8kyU.gif"></p>
 <i>remove_folder_icons_from_bookmarks.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/xxpKEaP.gif"></p>
 <i>bookmarks_bar_same_color_as_toolbar.css</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/a2sjphq.gif"></p>
 <i>Transparent Bookmarks bar. Enable <code>mod.transparent.bookmarks-bar</code> or <code>mod.transparent.bookmarks-bar.centered</code> in <code>about:config</code></i> <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/209413186-8fbb75ec-f058-4a74-87bc-61141fe7efea.jpg"></p></details>
 
 <details><summary>Privacy mods :gear:</summary>
+</br>
 <i>privacy_blur_email_in_main_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/gE2PVpr.gif"></p>
 <i>privacy_blur_email_in_sync_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/MJqZ9TW.gif"></p>
 <i>privacy_blur_tabs_content.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/8RPR1It.gif"></p>
 <i>privacy_change_email_text.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/uuq06p5.png"></p></details>
 
 <details><summary>Extension menu changes :gear:</summary>
+</br>
 <i>Style 1 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%201/preview.gif?raw=true" width="325" height="398"></p>
 <i>Style 2 - cleaner_extensions_menu.css</i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/blob/master/EXTRA%20MODS/Compact%20extensions%20menu/Style%202/preview.png?raw=true"></p>
 
@@ -92,30 +85,39 @@ If it's configured using numbers select `number` else select `boolean` and press
 </details>
 
 <details><summary>Icon changes :gear:</summary>
+</br>
 <i>firefox_view_icon_change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/wuA50MP.png"></p>
 <i>white_github_icon_in_bookmarks.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/XDBkkxj.jpg"></p>
 <i>ublock-icon-change.css</i><p align="left"><img alt="FirefoxCss" src="https://i.imgur.com/jkCufVD.jpg"></p></details>
 
 <details><summary>More compact Vertical Tabs :gear:</summary>
+</br>
 <i>Enable <code>mod.compact.vertical.tabs</code> in <code>about:config</code> </i><p align="left"><img width="136" height="523" alt="image" src="https://github.com/user-attachments/assets/fbd97abb-6115-4861-888a-1c6aa4197f11" /></p></details>
 
 <details><summary>Centered Tabs :gear:</summary>
+</br>
 <i>Enable <code>mod.centered.tabs</code> in <code>about:config</code> </i><p align="left"><img width="1848" height="104" alt="image" src="https://github.com/user-attachments/assets/2a74fd5a-ae63-4469-a502-d6482fadd62e" /></p></details>
 
 <details><summary>Hide Tab preview panel :gear:</summary>
+</br>
 <i>Enable <code>firefoxcss.disable.tab.preview.panel.fully</code> in <code>about:config</code> </i><p align="left"><img width="299" height="281" alt="image" src="https://github.com/user-attachments/assets/dd684579-3142-4245-9e75-f0cd29e1d1e6" /></p></details>
 
 <details><summary>Hide scrollbar when Vertical tabs overflow :gear:</summary>
+</br>
 <i>Enable <code>mod.disable.scrollbar.in.vertical.tabs</code> in <code>about:config</code> </i><p align="left"><img width="365" height="635" alt="image" src="https://github.com/user-attachments/assets/9d9bca08-67cc-4d91-babe-d56938f07095" /></p></details>
 
 <details><summary>Enable Search Box focus outline :gear:</summary>
+</br>
 <i>Enable <code>mod.searchBox.focus.outline.enable</code> in <code>about:config</code> </i><p align="left"><img width="1481" height="45" alt="Screenshot 2026-03-25 044124" src="https://github.com/user-attachments/assets/52537d21-347b-4d3c-9ebf-d3b3e1ba3af9" /></p></details>
 
 <details><summary>Tabs on top :gear:</summary>
+</br>
 <i>Enable <code>firefoxcss.tabs.on.top.enable</code> in <code>about:config</code>. Doesn't work with custom window control buttons for now (linux should work)</i><p align="left"><img width="1716" height="84" alt="image" src="https://github.com/user-attachments/assets/a3b86a6f-9627-4534-b493-04c06c7087ae" /></p></details>
 
 <details><summary>Window Frame border mods :gear:</summary>
 	
+</br>
+
 <i> - Fully padded Window border: Enable <code>mod.main.window.frame.style-1</code> or <code>mod.main.window.frame.style-2</code> in <code>about:config</code> </i><p align="left"><img width="725" height="417" alt="Screenshot 2026-03-25 034441" src="https://github.com/user-attachments/assets/1ca0e1a7-8330-4f80-bf35-7caee051ac2e" /></p>
 
 <i> - Default Window border and shadow: Disable <code>mod.disable.browser.border-and-shadow</code> in <code>about:config</code> </i><p align="left"><img width="94" height="166" alt="Screenshot 2026-03-25 031116" src="https://github.com/user-attachments/assets/0370b503-f02d-4260-92dc-e09c9d948144" /></p>
@@ -123,36 +125,58 @@ If it's configured using numbers select `number` else select `boolean` and press
 </details>
 
 <details><summary>Always show Search Bar buttons :gear:</summary>
+</br>
 <i>Enable <code>mod.search.info.buttons.show.always</code> in <code>about:config</code> </i><p align="left"><img width="1408" height="42" alt="Screenshot 2026-03-25 041240" src="https://github.com/user-attachments/assets/147a8ee1-3cf7-40ac-9d21-3e123172ddd8" /></p></details>
 
 <details><summary>Active tab has static width :gear:</summary>
+</br>
 <i>selected_tabs_static_width.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/4dc26c78-6714-43f8-bfb5-17a0dab3b920"></p></details>
 
 <details><summary>Colored sound playing tab :gear:</summary>
+</br>
 <i>colored_soundplaying_tab.css </i><p align="left"><img alt="FirefoxCss" src="https://github.com/datguypiko/Firefox-Mod-Blur/assets/61329159/8963e4fb-491f-440f-84c1-ec1629da4074"></p></details>
 
 <details><summary>Hide List all tabs button :gear:</summary>
+</br>
 <i>hide_list-all-tabs_button.css [Shows when tabs overflow]</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p></details>
 
 <details><summary>Restore icons in main menu :gear:</summary>
+</br>
 <i>icons_in_main_menu.css (<a href="https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css">source</a>)</i>
 <p align="left"><img alt="FirefoxCss" width="196" height="439" src="https://i.imgur.com/s9eV36k.png"></p></details>
 
 <details><summary>Remove title text from homepage shortcuts :gear:</summary>
+</br>
 <p align="center"><i>remove_homepage_shortcut_title_text.css</i></p>
 <p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"></p></details>
 
 <details><summary>Experimental: Popout Searchbar with Blur :gear:</summary>
+</br>
 <i>Enable <code>mod.popout.searchbar</code> or <code>mod.popout.searchbar.no-animation</code> in <code>about:config</code> </i><p align="left"><img width="1137" height="843" alt="preview7" src="https://github.com/user-attachments/assets/6f104b17-4708-4ead-b62a-8fc8e718f459" /></p></details>
 
 <details><summary>Circular homepage shortcuts :gear:</summary>
+</br>
 <p align="center"><i>circular_homepage_shortcuts.css</i></p>
 <p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245889-17439603-1239-4853-b7a8-7e6fd234f90e.png"></p></details>
 
+<details><summary>Wallpaper Blur in New tab page :hammer:</summary>
+</br>
+<i>Enable <code>mod.new-tab.background.blur</code> using <code>Number</code> field in <code>about:config</code> </i>
+</br>
+<i>Type intensity number [1 to 10] - Default [4] is used when selecting Boolean field instead of Number </i>
+<p align="center"><img width="2154" height="1120" alt="Screenshot 2026-06-04 233259" src="https://github.com/user-attachments/assets/085d0e5a-59b9-4be7-ae2b-74684b067402" /></p>
+<p align="center"><img width="1212" height="557" alt="Preview" src="https://github.com/user-attachments/assets/c7d8329b-9238-404f-881d-0d83e7b47c9a" />
+</p></details> 
+
 <details><summary>Spill style theme :hammer:</summary>
-<p align="center"><i>spill-style-part1-file.css and spill-style-part2-file.css</i></p>
+</br>
+<i>Enable <code>mod.spill-theme</code> in <code>about:config</code> </i>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373252-a9cc81cb-1307-4899-a019-3c70c1e26b5c.png"></p>
 <p align="center"><img alt="FirefoxCss" src="https://user-images.githubusercontent.com/61329159/219373265-a0cff784-95cc-4000-9567-06c8babf214b.png"></p></details>
+
+<details><summary>Card Style theme :hammer:</summary>
+</br>
+<i>Enable <code>mod.card-theme.style.1</code> or <code>mod.card-theme.style.2</code> in <code>about:config</code> </i><p align="left"><img width="1043" height="296" alt="Preview_Style2_Dark" src="https://github.com/user-attachments/assets/1b41d335-0bbe-42c7-8aaa-51dadfbf0a7a" /><img width="1022" height="281" alt="Preview_Style1_Dark" src="https://github.com/user-attachments/assets/4ac5adc5-439f-4a44-8185-16a5cdfa8bb8" /><img width="1011" height="295" alt="Preview_Style2_Light" src="https://github.com/user-attachments/assets/d2775317-a621-409f-bfa4-3ddb0b138b80" /><img width="1022" height="293" alt="Preview_Style1_Light" src="https://github.com/user-attachments/assets/1363bdfb-f924-4f73-93e7-662ba028a48e" /></p></details>
 
 <details><summary>On Pause - Acrylic MicaForEveryone :hammer:</summary>
 <p align="center"><i>Will be updated when Firefox fully releases blur</i></p>
