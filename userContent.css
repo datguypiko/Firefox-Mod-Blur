@@ -2148,8 +2148,7 @@ url("about:newtab") {
   "   • mod.compact.vertical.tabs\A"
   "   • mod.disable.tab.preview.panel.fully\A"
   "   • mod.centered.tabs\A"
-  "   • mod.disable.scrollbar.in.vertical.tabs\A"
-      
+  "   • mod.disable.scrollbar.in.vertical.tabs\A" 
   " \A "
   "- Window Frame:\A"
   "   • mod.disable.browser.border-and-shadow\A"
@@ -2165,8 +2164,8 @@ url("about:newtab") {
   "- New Tab and Themes:\A"
   "   • mod.spill-theme\A"
   "   • mod.card-theme.style.1 • mod.card-theme.style.2\A"
-  "   • mod.firefox-logo.centered.with.top-stories.enabled\A"
   "   • [number] mod.new-tab.background.blur [1 to 10 intensity] - Default [5]\A"
+  "   • mod.firefox-logo.centered.with.top-stories.enabled\A"
   " \A "
   "- Other:\A"
   "   • mod.disable.scrollbar.in.vertical.tabs\A"
@@ -2208,5 +2207,6 @@ url("about:newtab") {
   body.table-shown #show-all {
     display: none !important;
   }
+  
 
 }
