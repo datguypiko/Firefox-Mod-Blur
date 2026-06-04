@@ -1,7 +1,5 @@
 /* ----- Included functions ----- */
-@import url("spill-style-part2-file.css");
 @import url("thin_scrollbar_windows10.css");
-@import url("wallpaper-edition.css");
 @import url("remove_homepage_shortcut_title_text.css");
 @import url("circular_homepage_shortcuts.css");
 
@@ -1477,7 +1475,7 @@ url("about:newtab") {
 
   /* ================== NEW TAB BACKGROUND BLUR MOD ========================= */
   @media -moz-pref("mod.new-tab.background.blur") {
-     body.activity-stream:is(.darkWallpaper, .lightWallpaper):after {
+    body.activity-stream:is(.darkWallpaper, .lightWallpaper):after {
       position: absolute !important;
       z-index: -1 !important;
       background-color: light-dark(hsla(0, 0%, 80%, 0.08), hsla(0, 0%, 10%, 0.3)) !important;
@@ -1520,7 +1518,7 @@ url("about:newtab") {
       @media -moz-pref("mod.new-tab.background.blur", 9) {
         backdrop-filter: blur(80px) !important;
       }
-      
+
       @media -moz-pref("mod.new-tab.background.blur", 10) {
         backdrop-filter: blur(140px) !important;
       }
@@ -1721,8 +1719,6 @@ url("about:newtab") {
     --background-color-box-info: var(--firefoxcss-item-bg-color) !important;
   }
 }
-
-
 
 @media -moz-pref("mod.card-theme.style.1") or -moz-pref("mod.card-theme.style.2") {
   @-moz-document url("about:home"), url("about:newtab") {
@@ -2051,6 +2047,85 @@ url("about:newtab") {
       z-index: 8;
       position: relative;
       background-color: transparent !important;
+    }
+  }
+}
+
+@-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing") {
+  @media -moz-pref("mod.spill-theme") {
+    /* Spill style. Modifications for userContent file */
+    @media (prefers-color-scheme: dark) {
+      :root #root {
+        --firefoxcss-item-bg-color: hsla(240, 2%, 45%, 0.4) !important;
+        --firefoxcss-item-hover-bg-color: hsl(240, 2%, 55%, 0.4) !important;
+      }
+    }
+
+    @-moz-document url("about:privatebrowsing") {
+      @media (prefers-color-scheme: dark) {
+        html:not(#ublock0-epicker),
+        html:not(#ublock0-epicker) body,
+        #newtab-customize-overlay {
+          background-image: url("ASSETS/other/spill.svg") !important;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        html:not(#ublock0-epicker),
+        html:not(#ublock0-epicker) body,
+        #newtab-customize-overlay {
+          background-image: url("ASSETS/other/spill-light.svg") !important;
+        }
+      }
+
+      button.search-handoff-button {
+        background-color: hsla(290, 21%, 35%, 0.2) !important;
+        fill: hsl(290, 21%, 60%) !important;
+        backdrop-filter: blur(14px) !important;
+      }
+
+      button.search-handoff-button:hover,
+      button.search-handoff-button:focus,
+      button.search-handoff-button:active {
+        background-color: hsla(290, 21%, 45%, 0.2) !important;
+        border-top: 1px solid hsla(290, 21%, 55%, 0.2) !important;
+        fill: hsl(290, 21%, 70%) !important;
+      }
+
+      button.search-handoff-button .fake-textbox {
+        color: hsl(290, 21%, 60%) !important;
+      }
+
+      button.search-handoff-button:active > .fake-textbox,
+      button.search-handoff-button:hover > .fake-textbox,
+      button.search-handoff-button:focus > .fake-textbox {
+        color: hsl(290, 21%, 70%) !important;
+      }
+    }
+
+    @-moz-document url("about:home"),
+  url("about:newtab") {
+      @media (prefers-color-scheme: dark) {
+        html:not(#ublock0-epicker),
+        html:not(#ublock0-epicker) body,
+        #newtab-customize-overlay {
+          background-image: url("ASSETS/other/spill-main.svg") !important;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        html:not(#ublock0-epicker),
+        html:not(#ublock0-epicker) body,
+        #newtab-customize-overlay {
+          background-image: url("ASSETS/other/spill-main-light.svg") !important;
+        }
+      }
+
+      :root {
+        --firefoxcss-backdrop-filter: blur(14px) !important;
+      }
+
+      .top-sites .top-site-outer .tile {
+        backdrop-filter: blur(14px) !important;
+      }
     }
   }
 }
