@@ -2141,6 +2141,7 @@ url("about:newtab") {
   "- Searchbar\A"
   "   • mod.search.info.buttons.show.always\A"
   "   • mod.searchbox.focus.outline.enable\A"
+  "   • Experimental: mod.popout.searchbar • mod.popout.searchbar.no-animation\A"
   " \A "
   "- Tabs\A"
   "   • mod.tabs.on.top.enable\A"
@@ -2172,7 +2173,7 @@ url("about:newtab") {
   " \A "
   " \A "
   "❔ Type 'mod.' to see all your enabled modifications.\A"
-  "❔ Read github readme for full instructions.\A"
+  "❔ Read github readme for full mod list and instructions.\A"
   " \A "
   "🔧 Firefox ModBlur v2.55 • 04/06/2026 (June)";
     white-space: pre-wrap;
