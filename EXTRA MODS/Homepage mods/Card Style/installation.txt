@@ -1,0 +1,5 @@
+Enable preference in about:config  (Type about:config in searchbar to access it)
+
+---> mod.card-theme.style.1 
+or 
+---> mod.card-theme.style.2
