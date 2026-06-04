@@ -1477,7 +1477,7 @@ url("about:newtab") {
 
   /* ================== NEW TAB BACKGROUND BLUR MOD ========================= */
   @media -moz-pref("mod.new-tab.background.blur") {
-    body.activity-stream:after {
+     body.activity-stream:is(.darkWallpaper, .lightWallpaper):after {
       position: absolute !important;
       z-index: -1 !important;
       background-color: light-dark(hsla(0, 0%, 80%, 0.08), hsla(0, 0%, 10%, 0.3)) !important;
@@ -1515,6 +1515,14 @@ url("about:newtab") {
 
       @media -moz-pref("mod.new-tab.background.blur", 8) {
         backdrop-filter: blur(50px) !important;
+      }
+
+      @media -moz-pref("mod.new-tab.background.blur", 9) {
+        backdrop-filter: blur(80px) !important;
+      }
+      
+      @media -moz-pref("mod.new-tab.background.blur", 10) {
+        backdrop-filter: blur(140px) !important;
       }
     }
   }
