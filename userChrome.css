@@ -666,7 +666,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 }
 
 /* Search outline disabled by default  */
-@media not -moz-pref("mod.searchBox.focus.outline.enable") {
+@media not -moz-pref("mod.searchbox.focus.outline.enable") {
   /* Disable Focus outline */
   #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background,
   #searchbar:focus-within {
@@ -1256,7 +1256,7 @@ tab-group[collapsed] > .tabbrowser-tab {
     margin-right: 0px !important;
   }
 
-  @media not -moz-pref("firefoxcss.tabs.on.top.enable") {
+  @media not -moz-pref("mod.tabs.on.top.enable") {
     #toolbar-menubar .titlebar-button {
       padding-block: 0px !important;
     }
@@ -2366,7 +2366,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 /*=====================================================================
 ============================= O T H E R ===============================
 =====================================================================*/
-@media -moz-pref("firefoxcss.disable.tab.preview.panel.fully") {
+@media -moz-pref("mod.disable.tab.preview.panel.fully") {
   #tab-preview-panel,
   #tabbrowser-tab-tooltip {
     display: none !important;
@@ -2482,7 +2482,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 /*===================== TABS TOP =========================*/
 
 /* Tabs On Top */
-@media -moz-pref("firefoxcss.tabs.on.top.enable") {
+@media -moz-pref("mod.tabs.on.top.enable") {
   @media not -moz-pref("sidebar.verticalTabs") {
     /* SEARCH BAR TOOLBAR */
     #nav-bar {
@@ -2573,13 +2573,13 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
   /* Enable Window control buttons */
   @media not -moz-pref("sidebar.verticalTabs") {
-    @media not -moz-pref("firefoxcss.tabs.on.top.enable") {
+    @media not -moz-pref("mod.tabs.on.top.enable") {
       #nav-bar > .titlebar-buttonbox-container {
         display: flex !important;
       }
     }
 
-    @media -moz-pref("firefoxcss.tabs.on.top.enable") {
+    @media -moz-pref("mod.tabs.on.top.enable") {
       #TabsToolbar > .titlebar-buttonbox-container {
         display: flex !important;
       }
@@ -2656,7 +2656,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   /* When screen is small and cant fit window 
      control buttons in nav-bar move them down to tab-bar */
   @media not -moz-pref("sidebar.verticalTabs") {
-    @media not -moz-pref("firefoxcss.tabs.on.top.enable") {
+    @media not -moz-pref("mod.tabs.on.top.enable") {
       @media (max-width: 600px) {
         #navigator-toolbox #nav-bar > .titlebar-buttonbox-container {
           display: none !important;

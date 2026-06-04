@@ -1,0 +1,3 @@
+Enable preference in about:config  (Type about:config in searchbar to access it)
+
+--->  mod.spill-theme
