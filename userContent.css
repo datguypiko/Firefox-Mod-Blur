@@ -2132,7 +2132,7 @@ url("about:newtab") {
 
 @-moz-document url("about:config") {
   
-  body:not(.table-shown) .config-background-wrapper .config-background::after{
+  body .config-background-wrapper .config-background::after{
     content:
   "⚙️ Extra Modifications: \A"
   "- Bookmarks bar\A" 
@@ -2177,19 +2177,36 @@ url("about:newtab") {
   " \A "
   "🔧 Firefox ModBlur v2.55 • 04/06/2026 (June)";
     white-space: pre-wrap;
-    color: hsla(290, 21%, 94%, 0.9) !important;
+    color:light-dark(hsla(290, 21%, 0%, 0.9),hsla(290, 21%, 94%, 0.9)) !important;
     font-size: 14px !important;
     font-family: Inter, Segoe UI, system-ui !important;
-    
+   user-select: text !important;
   }
   
-  body:not(.table-shown) .config-background-wrapper .config-background {
+  body .config-background-wrapper .config-background {
     background: none !important;
-    width: auto !important;
-    margin-inline: 10px !important;
+    width: clamp(340px, 70vw, 900px) !important;
+    height: auto !important;
+    margin-inline: 28px auto !important;
+    padding-block: 30px !important;
+    padding-inline: 35px !important;
+    border-radius: 32px !important;
+    user-select: text !important;
+/*     background-color: light-dark(hsla(290, 21%, 0%, 0.06),hsla(290, 21%, 0%, 0.3)) !important;
+    box-shadow: 
+      1px 3px 20px 10px light-dark(hsla(0, 0%, 0%, 0.1),hsla(0, 0%, 0%, 0.2)),
+      0px 0px 0px 2px  light-dark(hsla(0, 0%, 0%, 0.02),hsla(0, 0%, 0%, 0.4)),
+      inset 0px 0px 10px 4px light-dark(hsla(0, 0%, 100%, 0.4),hsla(0, 0%, 100%, 0.0)) !important; */
   }
-  body:not(.table-shown) .config-background-wrapper .config-help-text {
+  body .config-background-wrapper .config-help-text {
     display: none !important;
   }
+  body.table-shown .config-background-wrapper {
+     display: initial !important;
+  }
   
+  body.table-shown #show-all {
+    display: none !important;
+  }
+
 }
