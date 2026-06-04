@@ -26,9 +26,8 @@
 
   button.search-handoff-button {
     background-color: hsla(290, 21%, 35%, 0.2) !important;
-    border-top: 1px solid hsla(290, 21%, 50%, 0.2) !important;
     fill: hsl(290, 21%, 60%) !important;
-    backdrop-filter: blur(24px) !important;
+    backdrop-filter: blur(14px) !important;
   }
 
   button.search-handoff-button:hover,
@@ -66,8 +65,12 @@ url("about:newtab") {
       background-image: url("ASSETS/other/spill-main-light.svg") !important;
     }
   }
+  
+  :root {
+    --firefoxcss-backdrop-filter: blur(14px) !important;
+  }
 
-  .body-wrapper .tile {
-    backdrop-filter: blur(24px) !important;
+  .top-sites .top-site-outer .tile {
+    backdrop-filter: blur(14px) !important;
   }
 }
