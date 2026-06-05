@@ -186,16 +186,14 @@
 
   /* Fix purple background color when switching tabs in private 
 window for this specific moz preference. */
-  @media -moz-pref("browser.privatebrowsing.felt-privacy-v1") {
-    html.private {
-      --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
-      background: var(--firefoxcss-main-bg-color) !important;
-    }
+   html.private {
+	  --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
+	  background: var(--firefoxcss-main-bg-color) !important;
+   }
 
-    .info-border {
-      display: none !important;
-    }
-  }
+   .info-border {
+	  display: none !important;
+   }
 
   /* html.private {
 		background-color: #1e1e1e80 !important;
