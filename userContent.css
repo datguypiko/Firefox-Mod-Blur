@@ -488,6 +488,13 @@ url("about:newtab") {
       margin-block: var(--space-medium) !important;
     }
 
+ 	/* Fix margins for searchbar in newtab, broken in v151.0.4 */
+	@media (height > 700px) {
+      .nova-enabled .search-wrapper {
+        padding-block: 0px !important;
+      }
+    }
+
     /* add some margin between top site rows */
     .top-sites .top-site-outer {
       margin-block-end: 0.4rem !important;
