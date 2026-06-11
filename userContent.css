@@ -1359,7 +1359,7 @@ url("about:newtab") {
   /* Top/Recommended stories cards*/
   .ds-card-grid .sections-card-ui,
    /* Widget Cards */
-  .widgets-container > .widget-wrapper .widget,
+   #widgets-container > .widget-wrapper > article,
    /* Recent activity cards */
    .compact-cards .card-outer {
     background-color: var(--firefoxcss-newtab-cards-bg-color) !important;
