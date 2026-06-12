@@ -3086,6 +3086,23 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
 
 @media -moz-pref("mod.popout.searchbar") or -moz-pref("mod.popout.searchbar.no-animation") {
+
+/* Opacity causes Blur to stop working. This is only used when vertical tabs enabled */
+.browser-titlebar {
+   :root[customtitlebar] & .urlbar:popover-open {
+    &:-moz-window-inactive {
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* Opacity causes Blur to stop working. This is only used when vertical tabs enabled */
+.browser-titlebar {
+   :root[customtitlebar] & .urlbar:popover-open {
+    will-change: auto !important;
+    transition:  none !important;
+  }
+}
   
 
 @keyframes mod-urlbarFlyIn2 {
