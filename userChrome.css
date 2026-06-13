@@ -3330,39 +3330,3 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
   }
 }
-
-/* :root[lwtheme] .urlbar-background,
-:root[lwtheme] #searchbar {
-  background-color: var(--toolbar-field-background-color) !important;
-}
-
-:root[lwtheme] {
-  --panel-background: var(--lwt-accent-color) !important;
-  --panel-item-hover-bgcolor: color-mix(in srgb, var(--lwt-accent-color) 80%, var(--lwt-text-color) 20%) !important;
-  --dark-menu-background-color: var(--lwt-accent-color) !important;
-  --dark-menu-border-color: color-mix(in srgb, var(--lwt-text-color) 20%, transparent) !important;
-  --firefoxcss-context-menu-item-bg-color: color-mix(in srgb, var(--lwt-text-color) 15%, transparent) !important;
-  --firefoxcss-context-menu-item-bg-color-inactive: color-mix(in srgb, var(--lwt-text-color) 8%, transparent) !important;
-}
-
-:root[lwtheme] #navigator-toolbox #urlbar[breakout][breakout-extend][open] .urlbar-background {
-  background-color: var(--toolbar-field-focus-background-color) !important;
-}
-
-:root[lwtheme] .tab-audio-button {
-  #tabbrowser-tabs:is([orient="vertical"][expanded], [orient="horizontal"]) &:not([pinned]):not([crashed]) {
-    &:is([soundplaying], [muted], [activemedia-blocked]) {
-      color: var(--lwt-text-color) !important;
-      --button-text-color-ghost: var(--lwt-text-color) !important;
-      &:hover {
-        color: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
-        --button-text-color-ghost-hover: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
-      }
-      &:hover:active {
-        color: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
-        --button-text-color-ghost-active: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
-      }
-    }
-  }
-}
- */
