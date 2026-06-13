@@ -3101,7 +3101,11 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
   }
 
-  #tabbrowser-tabbox {
+  .browserContainer .browserStack {
+    /* Fix the white rounded corners. This is not needed if we put backdrop-filter inside this element*/
+    /* clip-path: inset(0 round 10px 0 0 0) ; */
+
+    /* Help to make backdrop filter blur work on some elements  */
     backdrop-filter: blur(0) !important;
   }
 
@@ -3212,14 +3216,12 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
 /* Blur for search bar, vertical tabs on expand and other menu panels */
 @media -moz-pref("mod.panel-menu.blur") or -moz-pref("mod.searchbar.blur") or -moz-pref("mod.vertical-tabs.expand.blur") or -moz-pref("mod.combined.extra.blur") {
-  /* Help to make backdrop filter blur work on some elements  */
-  #tabbrowser-tabbox {
-    backdrop-filter: blur(0) !important;
-  }
+  .browserContainer .browserStack {
+    /* Fix the white rounded corners. This is not needed if we put backdrop-filter inside this element*/
+    /* clip-path: inset(0 round 10px 0 0 0) ; */
 
-  /* Fix the white rounded corners in vertical tabs mode on website content because of the blur */
-  browser {
-    clip-path: inset(0 round 12px) !important;
+    /* Help to make backdrop filter blur work on some elements  */
+    backdrop-filter: blur(0) !important;
   }
 
   @media -moz-pref("mod.searchbar.blur") or -moz-pref("mod.combined.extra.blur") {
@@ -3274,6 +3276,17 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
   }
 
+  /*   Tab group preview blur for multiple preferences */
+  @media -moz-pref("mod.panel-menu.blur") or -moz-pref("mod.combined.extra.blur") or -moz-pref("mod.vertical-tabs.expand.blur") {
+    panel#tabgroup-preview-panel {
+      appearance: menupopup !important;
+      --panel-background: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)) !important;
+      background-color: transparent !important;
+      /* Disables gray area around the menu */
+      --panel-shadow-margin: 0px !important;
+    }
+  }
+
   @media -moz-pref("mod.vertical-tabs.expand.blur") or -moz-pref("mod.combined.extra.blur") {
     /* Make tab text in vertical tabs a bit brighter */
     @media (prefers-color-scheme: dark) {
@@ -3317,3 +3330,39 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
   }
 }
+
+/* :root[lwtheme] .urlbar-background,
+:root[lwtheme] #searchbar {
+  background-color: var(--toolbar-field-background-color) !important;
+}
+
+:root[lwtheme] {
+  --panel-background: var(--lwt-accent-color) !important;
+  --panel-item-hover-bgcolor: color-mix(in srgb, var(--lwt-accent-color) 80%, var(--lwt-text-color) 20%) !important;
+  --dark-menu-background-color: var(--lwt-accent-color) !important;
+  --dark-menu-border-color: color-mix(in srgb, var(--lwt-text-color) 20%, transparent) !important;
+  --firefoxcss-context-menu-item-bg-color: color-mix(in srgb, var(--lwt-text-color) 15%, transparent) !important;
+  --firefoxcss-context-menu-item-bg-color-inactive: color-mix(in srgb, var(--lwt-text-color) 8%, transparent) !important;
+}
+
+:root[lwtheme] #navigator-toolbox #urlbar[breakout][breakout-extend][open] .urlbar-background {
+  background-color: var(--toolbar-field-focus-background-color) !important;
+}
+
+:root[lwtheme] .tab-audio-button {
+  #tabbrowser-tabs:is([orient="vertical"][expanded], [orient="horizontal"]) &:not([pinned]):not([crashed]) {
+    &:is([soundplaying], [muted], [activemedia-blocked]) {
+      color: var(--lwt-text-color) !important;
+      --button-text-color-ghost: var(--lwt-text-color) !important;
+      &:hover {
+        color: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
+        --button-text-color-ghost-hover: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
+      }
+      &:hover:active {
+        color: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
+        --button-text-color-ghost-active: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 100%)) !important;
+      }
+    }
+  }
+}
+ */
