@@ -3259,9 +3259,11 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     panel#full-page-translations-panel,
     panel#permission-popup,
     panel#tab-preview-panel,
-    menupopup#BMB_bookmarksPopup,
-    .bookmark-item .toolbar-menupopup,
-    .bookmark-item .toolbar-menupopup menupopup{
+    menupopup#BMB_bookmarksPopup
+/*     Disable as not always triggers blur */
+/*  .bookmark-item .toolbar-menupopup,
+    .bookmark-item .toolbar-menupopup menupopup  */
+    {
       appearance: menupopup !important;
       --panel-background: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)) !important;
       background-color: transparent !important;
