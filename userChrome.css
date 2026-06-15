@@ -498,6 +498,12 @@ window for this specific moz preference. */
   background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
+/* Add-bookmarks and add-bookmarks-folder popup panels */
+#bookmarkproperties {
+  --background-color-canvas: var(--firefoxcss-item-bg-color) !important;
+  --background-color-box:color-mix(in srgb, var(--firefoxcss-item-bg-color) 80%, black) !important;
+}
+
 /*=====================================================================
 ========================= H I D E   E L E M E N T S ===================
 =====================================================================*/
@@ -3270,6 +3276,23 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
       /* Disables gray area around the menu */
       --panel-shadow-margin: 0px !important;
     }
+
+    /* ------------------------------------------------------------*/
+    /* Add-bookmarks and add-bookmarks-folder popup panels */
+    #bookmarkproperties {
+      --background-color-canvas: light-dark(hsla(0, 0%, 100%, 0.8), hsla(240, 2%, 13%, 0.2)) !important;
+      --background-color-box:color-mix(in srgb, var(--firefoxcss-item-bg-color) 40%, transparent) !important;
+    }
+    
+    #bookmarkpropertiesdialog {
+       backdrop-filter: blur(18px);
+    }
+    
+    /* Fix some shitty forced background color on bookmark icon */
+    #titleContainer .titleIcon {
+       background-color: transparent !important;
+    }
+    /* ------------------------------------------------------------*/
 
     /* Disable animation so you avoid seeing gray background transition color 
    being drawn because of "menupopup" usage  */
