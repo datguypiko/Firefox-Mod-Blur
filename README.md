@@ -154,6 +154,29 @@ If it's configured using numbers select `number` else select `boolean` and press
 </br>
 <i>Enable <code>mod.popout.searchbar</code> or <code>mod.popout.searchbar.no-animation</code> in <code>about:config</code> </i><p align="left"><img width="1137" height="843" alt="preview7" src="https://github.com/user-attachments/assets/6f104b17-4708-4ead-b62a-8fc8e718f459" /></p></details>
 
+
+<details><summary>Experimental: Extra Blur mods :gear:</summary>
+	
+</br>
+
+<i> - Combined extra Blur <code>mod.combined.extra.blur</code>, combines: "mod.panel-menu.blur", "mod.searchbar.blur" and "mod.vertical-tabs.expand.blur". Enable in <code>about:config</code> </i>
+
+<i> - Searchbar Blur: Enable <code>mod.searchbar.blur</code> in <code>about:config</code> </i><p align="left"><img width="351" height="118" alt="image" src="https://github.com/user-attachments/assets/45b337cf-9170-4b14-9efa-e904709910cf" /><img width="349" height="119" alt="image" src="https://github.com/user-attachments/assets/b855216e-6fa8-4b1f-9f5b-3f39a5f59566" /></p>
+
+
+<i> - Panel menu Blur: Enable <code>mod.panel-menu.blur</code> in <code>about:config</code> </i>
+<p align="left">
+	<img width="416" height="182" alt="image" src="https://github.com/user-attachments/assets/20692d20-1e7a-4f6a-aa91-5515a00621cd" />
+</p>
+
+<i> - Vertical Tabs expand Blur: Enable <code>mod.vertical-tabs.expand.blur</code> in <code>about:config</code> </i>
+<p align="left">
+	<img width="89" height="328" alt="607544747-cb47553b-bb5c-413a-b23c-c76060b68b95" src="https://github.com/user-attachments/assets/e8f3279c-6445-413b-a9f0-de1433f39a09" />
+</p>
+</details>
+
+
+
 <details><summary>Circular homepage shortcuts :gear:</summary>
 </br>
 <p align="center"><i>circular_homepage_shortcuts.css</i></p>
