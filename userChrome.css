@@ -128,7 +128,7 @@
 
     /* Hamburger menu button hover color */
     --panel-item-hover-bgcolor: hsla(0, 0%, 60%, 0.25) !important;
-    --panel-background: var(--firefoxcss-main-bg-color) !important;
+    --panel-background-color: var(--firefoxcss-main-bg-color) !important;
     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35) !important;
     --urlbar-box-background-color-hover: var(--toolbarbutton-hover-background) !important;
 
@@ -145,14 +145,12 @@
     --panel-border-color: hsla(0, 0%, 50%, 0.25) !important;
     --dark-menu-background-color: #222121 !important;
     --dark-menu-border-color: rgb(55, 55, 55) !important;
-    --dark-menu-background-color: #222121 !important;
-    --dark-menu-border-color: rgb(55, 55, 55) !important;
     --dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
     --panel-separator-color: var(--panel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
 
     /* Color for add bookmarks menu when adding through tabs */
-    --in-content-page-background: var(--panel-background) !important;
+    --in-content-page-background: var(--panel-background-color) !important;
     --firefoxcss-context-menu-item-bg-color: hsla(0, 0%, 60%, 0.3);
     --firefoxcss-context-menu-item-bg-color-inactive: hsla(0, 0%, 60%, 0.15);
   }
@@ -241,7 +239,7 @@
     --panel-item-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
     --toolbarbutton-hover-background: hsla(200, 5%, 70%, 0.35) !important;
     --toolbarbutton-active-background: hsla(200, 5%, 50%, 0.35) !important;
-    --panel-background: hsl(200, 10%, 96%) !important;
+    --panel-background-color: hsl(200, 10%, 96%) !important;
     --button-hover-bgcolor: hsla(200, 5%, 70%, 0.35) !important;
     --button-active-bgcolor: hsla(200, 5%, 50%, 0.35) !important;
     --button-bgcolor: hsla(0, 0%, 45%, 0.1) !important;
@@ -250,7 +248,7 @@
     --panel-separator-color: hsla(0, 0%, 20%, 0.15) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
     /* Color for add bookmarks menu when adding through tabs */
-    --in-content-page-background: var(--panel-background) !important;
+    --in-content-page-background: var(--panel-background-color) !important;
     --firefoxcss-context-menu-item-bg-color: hsla(240, 2%, 70%, 0.35);
     --firefoxcss-context-menu-item-bg-color-inactive: hsla(240, 2%, 70%, 0.15);
   }
@@ -501,7 +499,7 @@ window for this specific moz preference. */
 /* Add-bookmarks and add-bookmarks-folder popup panels */
 #bookmarkproperties {
   --background-color-canvas: var(--firefoxcss-item-bg-color) !important;
-  --background-color-box:color-mix(in srgb, var(--firefoxcss-item-bg-color) 80%, black) !important;
+  --background-color-box: color-mix(in srgb, var(--firefoxcss-item-bg-color) 80%, black) !important;
 }
 
 /*=====================================================================
@@ -715,7 +713,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 /* Secondary search box drowndow colors */
 #PopupSearchAutoComplete {
-  --panel-background: var(--firefoxcss-url-breakout-bar-bg-color) !important;
+  --panel-background-color: var(--firefoxcss-url-breakout-bar-bg-color) !important;
 }
 
 /* Disable weird animation */
@@ -1379,18 +1377,18 @@ panel {
     --menuitem-border-radius: 4px !important;
 
     @media (-moz-platform: linux) {
-      --panel-background: var(--firefoxcss-main-bg-color) !important;
+      --panel-background-color: var(--firefoxcss-main-bg-color) !important;
     }
 
     @media (-moz-platform: windows) {
       @media -moz-pref("widget.windows.mica.popups", 1) {
-        --panel-background: var(--firefoxcss-main-bg-color) !important;
+        --panel-background-color: var(--firefoxcss-main-bg-color) !important;
       }
     }
 
     /*  Target windows 10 with no mica support */
     @media not (-moz-windows-mica-popups) {
-      --panel-background: var(--firefoxcss-main-bg-color) !important;
+      --panel-background-color: var(--firefoxcss-main-bg-color) !important;
     }
   }
 }
@@ -3268,29 +3266,29 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     menupopup#BMB_bookmarksPopup
 /*     Disable as not always triggers blur */
 /*  .bookmark-item .toolbar-menupopup,
-    .bookmark-item .toolbar-menupopup menupopup  */
-    {
+    .bookmark-item .toolbar-menupopup menupopup  */ {
       appearance: menupopup !important;
-      --panel-background: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)) !important;
       background-color: transparent !important;
+      --panel-background-color: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)) !important;
+
       /* Disables gray area around the menu */
-      --panel-shadow-margin: 0px !important;
+      --panel-box-shadow-margin: 0px !important;
     }
 
     /* ------------------------------------------------------------*/
     /* Add-bookmarks and add-bookmarks-folder popup panels */
     #bookmarkproperties {
-      --background-color-canvas: light-dark(hsla(0, 0%, 100%, 0.8), hsla(240, 2%, 13%, 0.2)) !important;
-      --background-color-box:color-mix(in srgb, var(--firefoxcss-item-bg-color) 40%, transparent) !important;
+      --background-color-canvas: light-dark(hsla(0, 0%, 100%, 0.8), hsla(240, 2%, 13%, 0.6)) !important;
+      --background-color-box: color-mix(in srgb, var(--firefoxcss-item-bg-color) 40%, transparent) !important;
     }
-    
+
     #bookmarkpropertiesdialog {
-       backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
     }
-    
+
     /* Fix some shitty forced background color on bookmark icon */
     #titleContainer .titleIcon {
-       background-color: transparent !important;
+      background-color: transparent !important;
     }
     /* ------------------------------------------------------------*/
 
@@ -3307,10 +3305,10 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   @media -moz-pref("mod.panel-menu.blur") or -moz-pref("mod.combined.extra.blur") or -moz-pref("mod.vertical-tabs.expand.blur") {
     panel#tabgroup-preview-panel {
       appearance: menupopup !important;
-      --panel-background: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)) !important;
+      --panel-background-color: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)) !important;
       background-color: transparent !important;
       /* Disables gray area around the menu */
-      --panel-shadow-margin: 0px !important;
+      --panel-box-shadow-margin: 0px !important;
     }
   }
 
