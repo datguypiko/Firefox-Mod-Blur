@@ -279,8 +279,8 @@
   }
 
   /* Toolbar Buttons */
-  --toolbarbutton-outer-padding: 2px !important; /* Default: 2px */
-  --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
+  --toolbarbutton-padding-outer: 2px !important; /* Default: 2px */
+  --toolbarbutton-padding-inner: 6px !important; /* Default: 8px */
 
   /* Menu items */
   --panel-menuitem-padding-block: 6px 6px !important;
@@ -1479,12 +1479,18 @@ menuitem {
   border-radius: var(--toolbarbutton-border-radius) !important;
 }
 
-#back-button > .toolbarbutton-icon {
+#back-button > .toolbarbutton-icon{
   border: none !important;
   background: none !important;
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  padding: var(--toolbarbutton-inner-padding) !important;
+  width: calc(2 * var(--toolbarbutton-padding-inner) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-padding-inner) + 16px) !important;
+  padding: var(--toolbarbutton-padding-inner) !important;
+}
+
+#forward-button > .toolbarbutton-icon {
+   width: calc(2 * var(--toolbarbutton-padding-inner) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-padding-inner) + 16px) !important;
+  padding: var(--toolbarbutton-padding-inner) !important;
 }
 
 /* Main Menu Button */
@@ -1511,8 +1517,8 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 @media not -moz-pref("sidebar.verticalTabs") {
   #tabs-newtab-button .toolbarbutton-icon,
   #new-tab-button .toolbarbutton-icon {
-    width: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
-    height: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
+    width: calc(2 * var(--toolbarbutton-padding-inner) + 12px) !important;
+    height: calc(2 * var(--toolbarbutton-padding-inner) + 12px) !important;
   }
 }
 
@@ -2391,7 +2397,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 /* Make forward and back buttons smaller  */
 #back-button .toolbarbutton-icon,
 #forward-button .toolbarbutton-icon {
-  padding: calc(var(--toolbarbutton-inner-padding) + 1px) !important;
+  padding: calc(var(--toolbarbutton-padding-inner) + 1px) !important;
 }
 
 /* Container extension code */
