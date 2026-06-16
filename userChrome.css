@@ -502,6 +502,13 @@ window for this specific moz preference. */
   --background-color-box: color-mix(in srgb, var(--firefoxcss-item-bg-color) 80%, black) !important;
 }
 
+/* Fixes split view background color */
+@media (not -moz-pref("sidebar.verticalTabs")) and (not -moz-pref("browser.nova.enabled")) {
+  #browser {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+  }
+}
+
 /*=====================================================================
 ========================= H I D E   E L E M E N T S ===================
 =====================================================================*/
@@ -2982,6 +2989,10 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     &:hover .tab-background {
       border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important;
     }
+    & .tab-background[selected] {
+      border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important;
+    }
+    
   }
 
   :root:not([lwtheme]) &[hasactivetab] {
@@ -3013,7 +3024,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   }
 }
 
-/* Split tab changes in horitontal tab mode */
+/* Split tab changes in vertical tab mode */
 #vertical-tabs #tabbrowser-tabs[orient="vertical"] tab-split-view-wrapper {
   border-radius: var(--firefoxcss-border-radius) !important;
 
