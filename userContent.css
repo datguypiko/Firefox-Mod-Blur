@@ -626,10 +626,26 @@ url("about:newtab") {
       @media not -moz-pref("mod.firefox-logo.centered.with.top-stories.enabled") {
         @media (min-width: 673px) {
           .content {
-            grid-row: 1 / span 2 !important;
+            grid-row: 2 / span 2 !important;
           }
+
           .content .search-wrapper {
-            margin-block-start: 3.55rem !important;
+            margin-block-start: 0.55rem !important;
+          }
+
+          @media (height > 740px) {
+            .content .search-wrapper {
+              margin-block-start: 2.55rem !important;
+            }
+          }
+
+          @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") or -moz-pref("browser.newtabpage.activity-stream.feeds.section.highlights") {
+            .content {
+              grid-row: 1 / span 2 !important;
+            }
+            .content .search-wrapper {
+              margin-block-start: 3.55rem !important;
+            }
           }
         }
 
@@ -1524,6 +1540,41 @@ url("about:newtab") {
     }
   }
 
+  /* ================== NEW TAB WIDGET CENTERING ========================= */
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    @media not -moz-pref("mod.center.widgets") {
+      
+       @media not -moz-pref("mod.center.widgets.keep.title-text") {
+        .widgets-section-container .widgets-title-container {
+          display: none !important;
+        }
+
+        .widgets-section-container {
+          margin-block-start: 3rem !important;
+        }
+      }
+         
+      @media -moz-pref("mod.center.widgets.keep.title-text") {
+        .widgets-section-container .widgets-title-container {
+          justify-content: center !important;
+          
+          .widgets-title-container-text{
+            margin-inline-end: 0px !important;
+          }
+        } 
+      }
+
+      #widgets-container {
+        grid-template-columns: repeat(auto-fit, var(--col-width)) !important;
+        justify-content: center !important;
+
+        .widgets-add-button {
+          display: none !important;
+        }
+      }
+    }
+  }
+
   /* ================== NEW TAB BACKGROUND BLUR MOD ========================= */
   @media -moz-pref("mod.new-tab.background.blur") {
     body.activity-stream:is(.darkWallpaper, .lightWallpaper):after {
@@ -2197,7 +2248,7 @@ url("about:newtab") {
   "   • mod.tabs.on.top.enable\A"
   "   • mod.compact.vertical.tabs\A"
   "   • mod.disable.tab.preview.panel.fully\A"
-  "   • mod.centered.tabs\A"
+  "   • mod.centered.tabs  •  mod.center.widgets.keep.title-text\A"
   "   • mod.disable.scrollbar.in.vertical.tabs\A" 
   " \A "
   "- Window Frame:\A"
@@ -2221,6 +2272,7 @@ url("about:newtab") {
   "   • mod.spill-theme\A"
   "   • mod.card-theme.style.1 • mod.card-theme.style.2\A"
   "   • [number] mod.new-tab.background.blur [1 to 10 intensity] - Default [5]\A"
+  "   • mod.center.widgets\A"
   "   • mod.firefox-logo.centered.with.top-stories.enabled\A"
   " \A "
   "- Other:\A"
@@ -2230,7 +2282,7 @@ url("about:newtab") {
   "❔ Type 'mod.' to see all your enabled modifications.\A"
   "❔ Read github readme for full mod list and instructions.\A"
   " \A "
-  "🔧 Firefox ModBlur v2.62 • 16/06/2026 (June)";
+  "🔧 Firefox ModBlur v2.63 • 16/06/2026 (June)";
     white-space: pre-wrap;
     color: light-dark(hsla(290, 21%, 0%, 0.9), hsla(290, 21%, 94%, 0.9)) !important;
     font-size: 14px !important;
