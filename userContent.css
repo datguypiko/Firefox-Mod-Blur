@@ -488,7 +488,7 @@ url("about:newtab") {
       margin-block: var(--space-medium) !important;
     }
 
-/* Fix margins for searchbar in newtab, broken in v151.0.4 */
+    /* Fix margins for searchbar in newtab, broken in v151.0.4 */
     @media (height > 700px) {
       .nova-enabled .search-wrapper {
         padding-block: 0px !important;
@@ -715,35 +715,37 @@ url("about:newtab") {
     }
 
     /*  Make searchbar smaller when top stories enabled to avoid weather widget    */
-    @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") {
+    @media -moz-pref("browser.newtabpage.activity-stream.feeds.section.topstories") or -moz-pref("browser.newtabpage.activity-stream.widgets.enabled") {
       @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.enabled") {
-        @container content-grid (inline-size <= calc(720px + 5.25rem)) {
-          .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
-            .content .search-inner-wrapper {
-              width: calc(7 * var(--col-width) + 6 * var(--space-medium)) !important;
-            }
-            .content > .search-wrapper {
-              width: calc(7 * var(--col-width) + 6 * var(--space-medium)) !important;
-            }
-          }
-        }
-        @container content-grid (inline-size <= calc(600px + 5.25rem)) {
-          .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
-            .content .search-inner-wrapper {
-              width: calc(4 * var(--col-width) + 3 * var(--space-medium)) !important;
-            }
-            .content > .search-wrapper {
-              width: calc(4 * var(--col-width) + 3 * var(--space-medium)) !important;
+        @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.size", "small") {
+          @container content-grid (inline-size <= calc(720px + 5.25rem)) {
+            .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
+              .content .search-inner-wrapper {
+                width: calc(7 * var(--col-width) + 6 * var(--space-medium)) !important;
+              }
+              .content > .search-wrapper {
+                width: calc(7 * var(--col-width) + 6 * var(--space-medium)) !important;
+              }
             }
           }
-        }
-        @container content-grid (inline-size < calc(300px + 5.25rem)) {
-          .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
-            .content .search-inner-wrapper {
-              width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+          @container content-grid (inline-size <= calc(600px + 5.25rem)) {
+            .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
+              .content .search-inner-wrapper {
+                width: calc(4 * var(--col-width) + 3 * var(--space-medium)) !important;
+              }
+              .content > .search-wrapper {
+                width: calc(4 * var(--col-width) + 3 * var(--space-medium)) !important;
+              }
             }
-            .content > .search-wrapper {
-              width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+          }
+          @container content-grid (inline-size < calc(300px + 5.25rem)) {
+            .container:not(.logo-in-content):has(.sidebar-inline-end .weather-widget) {
+              .content .search-inner-wrapper {
+                width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+              }
+              .content > .search-wrapper {
+                width: calc(3 * var(--col-width) + 2 * var(--space-medium)) !important;
+              }
             }
           }
         }
@@ -830,11 +832,13 @@ url("about:newtab") {
         transform: translateY(calc(var(--row-height) * -2)) !important;
       }
 
-      @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.enabled") and (min-height: 1051px) {
-        /* ignore when Recent activity section enabled */
-        @media not -moz-pref("browser.newtabpage.activity-stream.feeds.section.highlights") {
-          .container.logo-in-content:has(.sidebar-inline-end .weather-widget) .content {
-            transform: translateY(calc(var(--row-height) * -2)) !important;
+      @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.size", "small") {
+        @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.enabled") and (min-height: 1051px) {
+          /* ignore when Recent activity section enabled */
+          @media not -moz-pref("browser.newtabpage.activity-stream.feeds.section.highlights") {
+            .container.logo-in-content:has(.sidebar-inline-end .weather-widget) .content {
+              transform: translateY(calc(var(--row-height) * -2)) !important;
+            }
           }
         }
       }
@@ -1192,103 +1196,116 @@ url("about:newtab") {
 
   /*   NOVA WEATHER WIDGET FIXES */
   @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
-    .activity-stream {
-      --firefoxcss-weather-widget-bg: var(--firefoxcss-item-bg-color);
-      --firefoxcss-weather-widget-hover-bg: var(--firefoxcss-item-bg-color);
-
-      &.darkWallpaper {
-        --firefoxcss-weather-widget-bg: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
-        --firefoxcss-weather-widget-hover-bg: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
+    
+    @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.size", "large") {
+      .weather-widget.large-widget .forecast-footer {
+        display: none !important;
       }
-
-      &.lightWallpaper {
-        --firefoxcss-weather-widget-bg: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
-        --firefoxcss-weather-widget-hover-bg: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
-      }
-
-      & .weather-widget {
-        background-color: transparent !important;
-        box-shadow: none !important;
-        border: none !important;
-        margin-left: -20px !important;
-
-        & .weather-container {
-          background-color: var(--firefoxcss-weather-widget-bg) !important;
-          box-shadow:
-            0 1px 1px hsl(0deg 0% 0% / 0.06),
-            0 8px 8px hsl(0deg 0% 0% / 0.075),
-            inset 0px 1px 0px 0px rgba(255, 255, 255, 0.11),
-            inset 0 0px 0px 1px rgba(255, 255, 255, 0.025);
-          padding-inline: 8px;
-          padding-block: 8px;
-          border-radius: 12px !important;
-        }
-
-        &:hover,
-        &:focus-within {
-          background-color: var(--firefoxcss-weather-widget-hover-bg) !important;
-          outline: 1px solid light-dark(hsla(0, 0%, 0%, 0.06), hsla(0, 0%, 100%, 0.2)) !important;
-          transition: background-color 0.2s ease !important;
-
-          & .weather-container {
-            background-color: transparent !important;
-            backdrop-filter: none !important;
-            box-shadow: none !important;
-            transition:
-              box-shadow 0.2s ease,
-              background-color 0.2s ease !important;
-          }
-
-          & .widget-title,
-          & .weather-context-menu-wrapper {
-            opacity: 1 !important;
-            transition: opacity 0.2s ease !important;
-          }
-        }
-
-        & .widget-title-bar {
-          margin-block-end: 10px !important;
-        }
-
-        & .sponsored-text {
-          display: none !important;
-        }
-
-        /* Hide city text and menu button */
-        & .widget-title,
-        & .weather-context-menu-wrapper {
-          opacity: 0 !important;
-        }
-      }
-
-      &:not(.darkWallpaper, .lightWallpaper) {
-        & .weather-widget {
-          box-shadow: none !important;
-        }
-      }
-
-      &.lightWallpaper {
-        .weather-widget .weather-container {
-          box-shadow: none !important;
-        }
-      }
-
-      &:is(.darkWallpaper, .lightWallpaper) {
-        & .weather-widget {
-          &:hover,
-          &:focus-within {
-            backdrop-filter: blur(12px);
-          }
-
-          .weather-container {
-            backdrop-filter: blur(12px);
-          }
-        }
+      
+      .weather-widget.large-widget .weather-container .forecast-row {
+        padding-block-end: 2px !important;
       }
     }
+    
+    @media -moz-pref("browser.newtabpage.activity-stream.widgets.weather.size", "small") {
+      .activity-stream {
+        --firefoxcss-weather-widget-bg: var(--firefoxcss-item-bg-color);
+        --firefoxcss-weather-widget-hover-bg: var(--firefoxcss-item-bg-color);
 
-    .nova-enabled.container {
-      /*! grid-auto-rows: min-content !important; */
+        &.darkWallpaper {
+          --firefoxcss-weather-widget-bg: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
+          --firefoxcss-weather-widget-hover-bg: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
+        }
+
+        &.lightWallpaper {
+          --firefoxcss-weather-widget-bg: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+          --firefoxcss-weather-widget-hover-bg: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+        }
+
+        & .weather-widget {
+          background-color: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
+          margin-left: -20px !important;
+
+          & .weather-container {
+            background-color: var(--firefoxcss-weather-widget-bg) !important;
+            box-shadow:
+              0 1px 1px hsl(0deg 0% 0% / 0.06),
+              0 8px 8px hsl(0deg 0% 0% / 0.075),
+              inset 0px 1px 0px 0px rgba(255, 255, 255, 0.11),
+              inset 0 0px 0px 1px rgba(255, 255, 255, 0.025);
+            padding-inline: 8px;
+            padding-block: 8px;
+            border-radius: 12px !important;
+          }
+
+          &:hover,
+          &:focus-within {
+            background-color: var(--firefoxcss-weather-widget-hover-bg) !important;
+            outline: 1px solid light-dark(hsla(0, 0%, 0%, 0.06), hsla(0, 0%, 100%, 0.2)) !important;
+            transition: background-color 0.2s ease !important;
+
+            & .weather-container {
+              background-color: transparent !important;
+              backdrop-filter: none !important;
+              box-shadow: none !important;
+              transition:
+                box-shadow 0.2s ease,
+                background-color 0.2s ease !important;
+            }
+
+            & .widget-title,
+            & .weather-context-menu-wrapper {
+              opacity: 1 !important;
+              transition: opacity 0.2s ease !important;
+            }
+          }
+
+          & .widget-title-bar {
+            margin-block-end: 10px !important;
+          }
+
+          & .sponsored-text {
+            display: none !important;
+          }
+
+          /* Hide city text and menu button */
+          & .widget-title,
+          & .weather-context-menu-wrapper {
+            opacity: 0 !important;
+          }
+        }
+
+        &:not(.darkWallpaper, .lightWallpaper) {
+          & .weather-widget {
+            box-shadow: none !important;
+          }
+        }
+
+        &.lightWallpaper {
+          .weather-widget .weather-container {
+            box-shadow: none !important;
+          }
+        }
+
+        &:is(.darkWallpaper, .lightWallpaper) {
+          & .weather-widget {
+            &:hover,
+            &:focus-within {
+              backdrop-filter: blur(12px);
+            }
+
+            .weather-container {
+              backdrop-filter: blur(12px);
+            }
+          }
+        }
+      }
+
+      .nova-enabled.container {
+        /*! grid-auto-rows: min-content !important; */
+      }
     }
   }
 
@@ -1431,7 +1448,7 @@ url("about:newtab") {
   /*   New tab weather context menu */
   #weather-widget-context-menu,
 /*   Target multiple widget cards context menu */
-   .widgets-section-container .widget panel-list[role="menu"],
+   .widgets-section-container panel-list[role="menu"],
 /*  Widgets context menu */
    #widgets-header-context-panel,
 /*   Shortcuts  */
@@ -1441,9 +1458,19 @@ url("about:newtab") {
 /*   Top/Recommended stories  */
   .discovery-stream .context-menu {
     background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
-    backdrop-filter: blur(22px) !important;
+    backdrop-filter: blur(18px) !important;
     border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border) !important;
     border-radius: 8px !important;
+  }
+
+  .widgets-section-container {
+    --panel-list-background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
+  }
+
+  /*   Fix context menu submenu color and border. Blur doesnt work */
+  .widget-wrapper panel-list[id*="context-menu"] {
+    --background-color-box: hsla(240, 2%, 10%, 0.95) !important;
+    --border-radius-small: 8px !important;
   }
 
   /*   Context menu separators line */
@@ -2200,7 +2227,7 @@ url("about:newtab") {
   "❔ Type 'mod.' to see all your enabled modifications.\A"
   "❔ Read github readme for full mod list and instructions.\A"
   " \A "
-  "🔧 Firefox ModBlur v2.60 • 14/06/2026 (June)";
+  "🔧 Firefox ModBlur v2.62 • 16/06/2026 (June)";
     white-space: pre-wrap;
     color: light-dark(hsla(290, 21%, 0%, 0.9), hsla(290, 21%, 94%, 0.9)) !important;
     font-size: 14px !important;
