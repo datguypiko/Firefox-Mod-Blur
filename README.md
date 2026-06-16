@@ -150,6 +150,19 @@ If it's configured using numbers select `number` else select `boolean` and press
 <p align="center"><i>remove_homepage_shortcut_title_text.css</i></p>
 <p align="center"><img alt="FirefoxCss" width="85%" height="85%" src="https://user-images.githubusercontent.com/61329159/206245239-47c63da4-3945-4d82-9c2e-10dda01957da.png"></p></details>
 
+<details><summary>Center Widgets in New Tab :gear:</summary>
+</br>
+<i>Enable <code>mod.center.widgets</code> or <code>mod.center.widgets.keep.title-text</code> in <code>about:config</code></i>
+<p align="left">
+
+</br>
+	
+mod.center.widgets
+<img width="1575" height="430" alt="image" src="https://github.com/user-attachments/assets/f34c71a1-4243-4178-85d8-efc2bb52f693" />
+	
+mod.center.widgets.keep.title-text
+<img width="1479" height="385" alt="image" src="https://github.com/user-attachments/assets/a9dbd9e9-a808-426b-b086-c93c9ec589a3" /></p></details>
+
 <details><summary>Experimental: Popout Searchbar with Blur :gear:</summary>
 </br>
 <i>Enable <code>mod.popout.searchbar</code> or <code>mod.popout.searchbar.no-animation</code> in <code>about:config</code> </i><p align="left"><img width="1137" height="843" alt="preview7" src="https://github.com/user-attachments/assets/6f104b17-4708-4ead-b62a-8fc8e718f459" /></p></details>
