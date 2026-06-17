@@ -50,7 +50,14 @@
 
 /* Bookmarks bar background color */
 :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
-  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
+
+}
+
+@media -moz-pref("sidebar.verticalTabs") { 
+    :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+    }
 }
 
 :root[lwtheme],
