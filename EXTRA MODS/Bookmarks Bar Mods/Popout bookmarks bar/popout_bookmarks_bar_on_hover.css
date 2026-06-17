@@ -1,6 +1,6 @@
 #PersonalToolbar:not([customizing]) {
   --uc-bm-height: 24px;
-  --uc-bm-padding: 6px;
+  --uc-bm-padding: 5px;
   padding: 1px 6px !important;
 }
 
