@@ -2,3 +2,7 @@
 :root {
     --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color) !important;
 }
+
+:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+      background-color: var(--firefoxcss-item-bg-color) !important;
+}
