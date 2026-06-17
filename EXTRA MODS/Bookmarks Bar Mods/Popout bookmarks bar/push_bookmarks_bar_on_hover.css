@@ -1,9 +1,13 @@
 :root {
   --uc-bm-height: 24px;
-  --uc-bm-padding: 6px;
+  --uc-bm-padding: 5px;
 }
 
-#PersonalToolbar {
+#navigator-toolbox #PersonalToolbar .bookmark-item{
+  margin-block-end: 4px !important;
+}
+
+#navigator-toolbox #PersonalToolbar {
   padding: 0px !important;
   height: 0px !important;
   opacity: 0 !important;
@@ -26,7 +30,7 @@
   transition-timing-function: ease-in-out, ease-in-out, linear !important;
 }
 
-:root[uidensity="touch"] #PersonalToolbar {
+:root[uidensity="touch"] #navigator-toolbox #PersonalToolbar {
   --uc-bm-padding: 6px;
 }
 
