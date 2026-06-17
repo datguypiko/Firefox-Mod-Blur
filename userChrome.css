@@ -55,7 +55,7 @@
 
     /* Main lighter color, toolbar background */
     --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
-
+    
     /* Tab colors */
     --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
     --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 32%);
@@ -76,7 +76,7 @@
     /* Context menu colors */
     --firefoxcss-context-menu-top-color: #131313cf;
     /* Bookmarks bar colors */
-    --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 13%);
+    --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color);
 
     /* Change background color when loading a page */
     --firefoxcss-bright-flash-color: var(--firefoxcss-main-bg-color);
@@ -394,6 +394,11 @@ Order of Toolbars
       border-bottom: none !important;
     }
   }
+}
+
+/* Bookmarks bar background color */
+:root:not([lwtheme]) #PersonalToolbar {
+  background-color: var(--firefoxcss-bookmarks-bg-color) !important;
 }
 
 /* Set navigation toolbar to transparent */
@@ -1472,9 +1477,13 @@ menuitem {
 
 /* Set bookmarks bar items padding */
 #PlacesToolbarItems > .bookmark-item {
-  padding-block: 6px !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
+  padding-block: 5px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+#PersonalToolbar {
+  padding-block-end: 2px !important;
 }
 
 /*=====================================================================
@@ -1589,13 +1598,14 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   box-shadow: none !important;
 }
 
-/* Remove line on the right side of the Firefox view button and fix margins */
-:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs,
-:root[privatebrowsingmode]:not([firefoxviewhidden])
-  :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button))
-  + #tabbrowser-tabs {
-  border-inline-start: 0 !important;
-  margin-inline-start: 0px !important;
+/* Remove line after firefox view button when put at the beginning of tabs strip */
+:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem), 
+:root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) {
+  & ~ #tabbrowser-tabs[orient="horizontal"]::before {
+    border-inline-start: none !important;
+    padding-inline-start: 0px !important;
+    margin-inline-start: 0px !important;
+  }
 }
 
 #firefox-view-button {
@@ -3070,6 +3080,10 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   :root {
     --firefoxcss-bookmarks-bg-color: transparent !important;
   }
+  
+    :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+      background-color: transparent !important;
+  }
 
   #personal-bookmarks toolbarbutton.bookmark-item {
     background-color: hsl(0, 0%, 8%) !important;
@@ -3216,6 +3230,12 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
       --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color) !important;
     }
   }
+  
+  /* Bookmarks bar background color */
+  :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+
+  }
 
   /* Main BAR */
   #main-window #navigator-toolbox {
@@ -3236,7 +3256,8 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 }
 
 /* Blur for search bar, vertical tabs on expand and other menu panels */
-@media -moz-pref("mod.panel-menu.blur") or -moz-pref("mod.searchbar.blur") or -moz-pref("mod.vertical-tabs.expand.blur") or -moz-pref("mod.combined.extra.blur") {
+@media -moz-pref("mod.panel-menu.blur") or -moz-pref("mod.searchbar.blur") or -moz-pref("mod.vertical-tabs.expand.blur")
+  or -moz-pref("mod.combined.extra.blur") {
   .browserContainer .browserStack {
     /* Fix the white rounded corners. This is not needed if we put backdrop-filter inside this element*/
     /* clip-path: inset(0 round 10px 0 0 0) ; */
@@ -3245,6 +3266,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     backdrop-filter: blur(0) !important;
   }
 
+  
   @media -moz-pref("mod.searchbar.blur") or -moz-pref("mod.combined.extra.blur") {
     /* Opacity causes Blur to stop working. This is only used when vertical tabs enabled */
     .browser-titlebar {
