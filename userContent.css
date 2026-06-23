@@ -1510,6 +1510,22 @@ url("about:newtab") {
     }
   }
 
+/* ================== STICKY SEARCHBAR ========================= */
+  
+/*   Remove sticky searchbar */
+  @media (height > 700px) {
+  .nova-outer-wrapper.stuck-search::before {
+    display: none !important;
+    }
+   
+  }
+  
+  .nova-outer-wrapper {
+    .search-wrapper {
+      position: relative !important;
+    }
+  }
+
   /* ================== Shortcut pin icon behaviour ==================================== */
   .top-site-button .icon.icon-pin-small {
     opacity: 0 !important;
