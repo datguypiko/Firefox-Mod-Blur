@@ -1,136 +1,108 @@
 /* Tab hide based on https://mrotherguy.github.io/firefox-csshacks/?file=autohide_tabstoolbar.css */
-:root{
+:root {
   --uc-tabs-hide-animation-duration: 40ms;
   --uc-tabs-hide-animation-delay: 200ms;
 }
 
-@media -moz-pref("sidebar.verticalTabs"){
-  #sidebar-main:has(>[expanded]){
-    overflow: visible !important;
-    max-width: var(--tab-collapsed-width);
-    z-index: var(--browser-area-z-index-toolbox-while-animating);
-    transition: z-index 0s linear var(--uc-tabs-hide-duration);
-  }
-  #sidebar-main >[expanded]{
-    --tab-pinned-horizontal-count: 5; /* This needs to match whatever is used in sidebar-main.css - currently 5 */
-    background: inherit;
-    overflow: hidden;
-    min-width: var(--tab-collapsed-width);
-    transition: min-width var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay);
-    border-inline: 0.01px solid var(--chrome-content-separator-color);
-    border-inline-width: 0 0.01px;
-    &[positionend]{
-      transition-property: min-width, transform;
-      border-inline-width: 0.01px 0;
-    }
-  }
-  #sidebar-main >[expanded]:hover{
-    min-width: calc(var(--tab-pinned-horizontal-count) * var(--tab-pinned-min-width-expanded) + 2 * var(--tab-pinned-container-margin-inline-expanded) + 1px);
-    transition-delay: 0ms !important;
-    &[positionend]{
-      transform: translateX(calc(var(--tab-collapsed-width) - 100%));
-    }
-  }
-}
-@media not -moz-pref("sidebar.verticalTabs"){
-  :root:not([customizing],[chromehidden~="menubar"]) #navigator-toolbox:hover,
-  :root:not([customizing],[chromehidden~="menubar"]) #TabsToolbar{
+@media not -moz-pref("sidebar.verticalTabs") {
+  :root:not([customizing], [chromehidden~="menubar"]) #navigator-toolbox:hover,
+  :root:not([customizing], [chromehidden~="menubar"]) #TabsToolbar {
     margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
   }
-  #navigator-toolbox{
+  #navigator-toolbox {
     transition: margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
     --browser-area-z-index-toolbox: 3;
   }
-  #TabsToolbar:not([customizing]){
+  #TabsToolbar:not([customizing]) {
     visibility: hidden;
-    transition: visibility 0ms linear var(--uc-tabs-hide-animation-delay),
-                margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
+    transition:
+      visibility 0ms linear var(--uc-tabs-hide-animation-delay),
+      margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
   }
-  #navigator-toolbox:hover{
+  #navigator-toolbox:hover {
     transition-delay: 0s !important;
-    > #TabsToolbar{
+    > #TabsToolbar {
       visibility: visible;
       margin-bottom: 0px;
       transition-delay: 18ms, 0ms !important;
     }
   }
-  @media -moz-pref("userchrome.autohidetabs.show-while-inactive.enabled"){
-    #navigator-toolbox:-moz-window-inactive{
+  @media -moz-pref("userchrome.autohidetabs.show-while-inactive.enabled") {
+    #navigator-toolbox:-moz-window-inactive {
       margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
-      > #TabsToolbar{
+      > #TabsToolbar {
         visibility: visible;
         margin-bottom: 0px;
       }
     }
   }
   /* These rules make sure that height of tabs toolbar doesn't exceed tab-min-height */
-  #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
+  #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
     max-height: var(--tab-min-height);
   }
-  .tab-label{ line-height: 20px !important; }
-  :root[uidensity="compact"] .tab-label{ line-height: 18px !important; }
+  .tab-label {
+    line-height: 20px !important;
+  }
+  :root[uidensity="compact"] .tab-label {
+    line-height: 18px !important;
+  }
+
+  #navigator-toolbox #TabsToolbar {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
 }
 
-
-  /* Bookmarks hide */
+/* Bookmarks hide */
 #PersonalToolbar {
-    --uc-bm-height: 24px;
-    /* Might need to adjust if the toolbar has other buttons */
-    --uc-bm-padding: 6px;
-    /* Vertical padding to be applied to bookmarks */
-    padding: 1px 6px !important;
-    position: relative !important;
-  }
-  
-  :root[uidensity="touch"] #PersonalToolbar {
-    --uc-bm-padding: 6px;
-  }
-  
-  #PersonalToolbar:not([customizing]) {
-    margin-bottom: calc(
-      2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)
-    ) !important;
-    transform: rotateX(90deg) !important;
-    transform-origin: top !important;
-    transition: transform 140ms linear 200ms !important;
-    z-index: 2 !important;
-  }
-  
-  #PlacesToolbarItems > .bookmark-item {
-    padding-block: var(--uc-bm-padding) !important;
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-  }
-  
-  #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
-    transition: opacity 200ms linear 200ms !important;
-    opacity: 0 !important;
-  }
-  
-  /* Show when cursor is over the toolbar area */
-  #navigator-toolbox:hover > #PersonalToolbar {
-    transition-delay: 40ms !important;
-    transform: rotateX(0) !important;
-  }
-  
-  #navigator-toolbox:hover
-    #PlacesToolbarItems
-    > .bookmark-item
-    .toolbarbutton-icon {
-    transition-delay: 40ms !important;
-    opacity: 1 !important;
-  }
-  
-  #PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
-    transition: opacity 200ms linear 300ms !important;
-    opacity: 0 !important;
-  }
-  
-  #navigator-toolbox:hover
-    #PlacesToolbarItems
-    > .bookmark-item
-    .toolbarbutton-text {
-    transition-delay: 40ms !important;
-    opacity: 1 !important;
-  }
+  --uc-bm-height: 24px;
+  /* Might need to adjust if the toolbar has other buttons */
+  --uc-bm-padding: 5px;
+  /* Vertical padding to be applied to bookmarks */
+  padding: 1px 6px !important;
+  position: relative !important;
+}
 
+:root[uidensity="touch"] #PersonalToolbar {
+  --uc-bm-padding: 6px;
+}
+
+#PersonalToolbar:not([customizing]) {
+  margin-bottom: calc(1px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)) !important;
+  transform: rotateX(90deg) !important;
+  transform-origin: top !important;
+  transition: transform 140ms linear 200ms !important;
+  z-index: 2 !important;
+}
+
+#PlacesToolbarItems > .bookmark-item {
+  padding-block: var(--uc-bm-padding) !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+#PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
+  transition: opacity 200ms linear 200ms !important;
+  opacity: 0 !important;
+}
+
+/* Show when cursor is over the toolbar area */
+#navigator-toolbox:hover > #PersonalToolbar {
+  transition-delay: 40ms !important;
+  transform: rotateX(0) !important;
+}
+
+#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
+  transition-delay: 40ms !important;
+  opacity: 1 !important;
+}
+
+#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+  transition: opacity 140ms linear 200ms !important;
+  opacity: 0 !important;
+}
+
+#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+  transition-delay: 40ms !important;
+  opacity: 1 !important;
+}
