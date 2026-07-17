@@ -478,12 +478,15 @@ Order of Toolbars
 
 /* Fix purple background color when switching tabs in private 
 window for this specific moz preference. */
-:root {
-  &[privatebrowsingmode="temporary"] {
-    @media -moz-pref("browser.privatebrowsing.felt-privacy-v1") {
-      --tabpanel-background-color: var(--firefoxcss-main-bg-color) !important;
-    }
-  }
+/* Prevent the purple flash on opening/switching private tabs */
+:root[privatebrowsingmode="temporary"] {
+  --tabpanel-background-color: var(--firefoxcss-main-bg-color) !important;
+}
+
+#tabbrowser-tabpanels,
+browser[type="content"],
+.browserStack {
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 /* Website Loading Background color fix */
