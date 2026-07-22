@@ -168,7 +168,7 @@ mod.center.widgets.keep.title-text
 <i>Enable <code>mod.popout.searchbar</code> or <code>mod.popout.searchbar.no-animation</code> in <code>about:config</code> </i><p align="left"><img width="1137" height="843" alt="preview7" src="https://github.com/user-attachments/assets/6f104b17-4708-4ead-b62a-8fc8e718f459" /></p></details>
 
 
-<details><summary>Experimental: Extra Blur mods :gear:</summary>
+<details><summary>Experimental: Extra Blur mods (HDR not working with this enabled for now!) :gear:</summary>
 	
 </br>
 
