@@ -2271,7 +2271,7 @@ url("about:newtab") {
   "   • mod.disable.browser.border-and-shadow\A"
   "   • mod.main.window.frame.style-1  •  mod.main.window.frame.style-2\A"
   " \A "
-  "- Extra Blur mods:\A"
+  "- Extra Blur mods (HDR doesnt work with this enabled since v153):\A"
   "   • mod.panel-menu.blur\A"
   "   • mod.searchbar.blur\A"
   "   • mod.vertical-tabs.expand.blur\A"
