@@ -2258,7 +2258,7 @@ url("about:newtab") {
   "- Searchbar\A"
   "   • mod.search.info.buttons.show.always\A"
   "   • mod.searchbox.focus.outline.enable\A"
-  "   • Experimental: mod.popout.searchbar • mod.popout.searchbar.no-animation\A"
+  "   • Experimental: mod.popout.searchbar • mod.popout.searchbar.no-animation\A (if HDR used, it may turn off while searchbar is open)"
   " \A "
   "- Tabs\A"
   "   • mod.tabs.on.top.enable\A"
