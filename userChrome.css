@@ -3141,12 +3141,18 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     /* clip-path: inset(0 round 10px 0 0 0) ; */
 
     /* Help to make backdrop filter blur work on some elements  */
+    /* backdrop-filter: blur(0) !important; */
+  }
+
+  /* Fix when HDR is used. Only trigger on seachbar open. HDR will stop working when searchbar opens */
+  #navigator-toolbox:has(#urlbar:is([breakout][breakout-extend])) + #browser .browserContainer .browserStack {
     backdrop-filter: blur(0) !important;
   }
 
   /* Fix the white rounded corners in vertical tabs mode on website content because of the blur */
   browser {
-    clip-path: inset(0 round 12px) !important;
+/*     clip-path: inset(0 round 12px) !important; */
+/*      clip-path: inset(0 round 10px 0 0 0); */
   }
 
   /*   #urlbar:is([breakout][breakout-extend], [breakout][focused]) */
