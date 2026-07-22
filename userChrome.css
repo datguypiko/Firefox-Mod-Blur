@@ -230,6 +230,7 @@
     --urlbarview-background-color-hover: var(--urlbarView-hover-background) !important;
     --urlbarView-hover-background: color-mix(in srgb, currentColor 6%, transparent) !important;
     --urlbarView-highlight-background: color-mix(in srgb, currentColor 12%, transparent) !important;
+    --urlbarview-text-color-selected: black !important;
 
     /* ============== Firefox Global colors change ==================== */
     &:not([lwtheme]) {
