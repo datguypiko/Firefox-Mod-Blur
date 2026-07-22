@@ -185,17 +185,16 @@
   }
 
   /* Fix purple background color when switching tabs in private 
-window for this specific moz preference. */
-  @media -moz-pref("browser.privatebrowsing.felt-privacy-v1") {
-    html.private {
+  window for this specific moz preference. */
+  html.private {
       --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
       background: var(--firefoxcss-main-bg-color) !important;
-    }
+   }
 
-    .info-border {
+  /*   Removes new tab page "leave no traces.." info container */
+    .showPrivate.showSearch.container .info-border {
       display: none !important;
-    }
-  }
+  } 
 
   /* html.private {
 		background-color: #1e1e1e80 !important;
@@ -248,10 +247,6 @@ window for this specific moz preference. */
   .logo-and-wordmark .wordmark {
     fill: #8f25d1 !important;
     opacity: 0.9 !important;
-  }
-
-  .showPrivate.showSearch.container .info {
-    display: none !important;
   }
 
   .private .search-inner-wrapper {
