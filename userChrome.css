@@ -357,19 +357,19 @@ Order of Toolbars
 }
 
 @media -moz-pref("sidebar.revamp") {
-  :root:not([lwtheme]) #sidebar-main {
+  :root:not([lwtheme]) #sidebar-container {
     background-color: var(--firefoxcss-item-bg-color) !important;
     background-image: none !important;
   }
 }
 
-/*  :root[sidebar-expand-on-hover] #sidebar-main {
+/*  :root[sidebar-expand-on-hover] #sidebar-container {
     background-color: transparent !important;
     background-image: none !important;
 }
 
-:root[sidebar-expand-on-hover]   #sidebar-main[sidebar-launcher-expanded],
-:root[sidebar-expand-on-hover]   #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) {
+:root[sidebar-expand-on-hover]   #sidebar-container[sidebar-launcher-expanded],
+:root[sidebar-expand-on-hover]   #sidebar-container[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) {
       background-color: color-mix(in srgb, var(--lwt-accent-color) 97%, transparent) !important;
   
  } */
@@ -3384,8 +3384,8 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
 
     /* Sidebar color on expand */
-    :root[sidebar-expand-on-hover] #sidebar-main[sidebar-launcher-expanded],
-    :root[sidebar-expand-on-hover] #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) {
+    :root[sidebar-expand-on-hover] #sidebar-container[sidebar-launcher-expanded],
+    :root[sidebar-expand-on-hover] #sidebar-container[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) {
       background-color: light-dark(
         hsla(200, 5%, 96%, 0.8),
         color-mix(in srgb, var(--firefoxcss-item-bg-color) 78%, transparent)
