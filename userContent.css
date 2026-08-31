@@ -1375,7 +1375,7 @@ url("about:newtab") {
         @media (prefers-color-scheme: dark) {
           color-scheme: dark !important;
         }
-
+		color: light-dark(var(--color-gray-70),var(--color-white)) !important;
         border: none !important;
         outline: 1px solid var(--firefoxcss-newtab-customize-button-border) !important;
         outline-offset: 0px;
