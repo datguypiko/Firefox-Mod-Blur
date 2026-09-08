@@ -269,7 +269,7 @@
   --firefoxcss-searchbar-container-height: 38px;
   --urlbar-inner-border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important;
   @media not -moz-pref("sidebar.verticalTabs") {
-    --tab-block-margin: 2px !important;
+    --tab-margin-block: 2px !important;
     /* Default: 4px */
 
     --tab-min-height: 28px !important;
@@ -307,10 +307,10 @@
   /* Vertical tabs margin and height modification */
   @media -moz-pref("sidebar.verticalTabs") {
     --tab-min-height: max(32px, calc(var(--tab-label-line-height) * 1em)) !important;
-    --tab-block-margin: 1px !important;
+    --tab-margin-block: 1px !important;
     @media -moz-pref("mod.compact.vertical.tabs") {
       --tab-min-height: max(30px, calc(var(--tab-label-line-height) * 1em)) !important;
-      --tab-block-margin: 0px !important;
+      --tab-margin-block: 0px !important;
     }
   }
 }
