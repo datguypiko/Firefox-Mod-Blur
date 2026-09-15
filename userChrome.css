@@ -2715,10 +2715,12 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     --button-background-color-hover: var(--button-background-color);
     --button-background-color-selected: var(--button-background-color);
     --button-background-color: var(--firefoxcss-item-bg-color) !important;
+    --button-background-color-muted: var(--firefoxcss-item-bg-color) !important;
   }
 
   #urlbar:not([searchmode]) .searchmode-switcher {
     --button-background-color: transparent !important;
+    --button-background-color-muted: transparent !important;
   }
 
   #urlbar:not([searchmode]) .searchmode-switcher {
