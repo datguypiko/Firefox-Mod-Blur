@@ -644,11 +644,11 @@ about:config -> svg.context-properties.content.enabled -> true*/
 /* Pull the Go Button out of the layout flow */
 .urlbar-go-button {
   position: absolute !important;
-  right: 4px !important;
+  right: 0px !important;
   /* Vertically center it so it doesn't float to the top */
   top: 50% !important;
   transform: translateY(-50%) !important;
-  background-color: light-dark(hsla(200, 5%, 96%, 0.9), hsla(0, 0%, 20%, 0.9)) !important;
+  background-color: light-dark(hsla(200, 5%, 96%, 0.6), hsla(0, 0%, 20%, 0.6)) !important;
   /* Ensure it sits safely on top of the text if you type a long URL */
   z-index: 2 !important;
 }
