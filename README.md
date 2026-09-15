@@ -1,14 +1,14 @@
 <h2 align="center"><span><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" />Firefox Mod Blur - Modular</span></h2>
 
 <p align="center">
-<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v152.0.0-blue?style=flat&logo=firefox&logoColor=white"></a>
-<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-17/06/2026-blueviolet?style=flat"></a>
+<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v156.0.0-blue?style=flat&logo=firefox&logoColor=white"></a>
+<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-15/09/2026-blueviolet?style=flat"></a>
 <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat">
 	
 <p align="center">
 <a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> 
 <a href="#select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a>
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.64-important?style=for-the-badge"></a>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.70-important?style=for-the-badge"></a>
 </p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
@@ -152,16 +152,16 @@ If it's configured using numbers select `number` else select `boolean` and press
 
 <details><summary>Center Widgets in New Tab :gear:</summary>
 </br>
-<i>Enable <code>mod.center.widgets</code> or <code>mod.center.widgets.keep.title-text</code> in <code>about:config</code></i>
+<i>Enable <code>mod.center.widgets</code> or <code>mod.centered.widgets.hide.title-text</code> in <code>about:config</code></i>
 <p align="left">
 
 </br>
 	
 mod.center.widgets
-<img width="1575" height="430" alt="image" src="https://github.com/user-attachments/assets/f34c71a1-4243-4178-85d8-efc2bb52f693" />
+<img width="1575" height="430" alt="image" src="https://github.com/user-attachments/assets/a9dbd9e9-a808-426b-b086-c93c9ec589a3" />
 	
-mod.center.widgets.keep.title-text
-<img width="1479" height="385" alt="image" src="https://github.com/user-attachments/assets/a9dbd9e9-a808-426b-b086-c93c9ec589a3" /></p></details>
+mod.centered.widgets.hide.title-text
+<img width="1479" height="385" alt="image" src="https://github.com/user-attachments/assets/f34c71a1-4243-4178-85d8-efc2bb52f693" /></p></details>
 
 <details><summary>Experimental: Popout Searchbar with Blur :gear:</summary>
 </br>
