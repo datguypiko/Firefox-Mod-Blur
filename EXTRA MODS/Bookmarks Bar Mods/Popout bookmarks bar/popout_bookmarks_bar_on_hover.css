@@ -1,103 +1,100 @@
-#PersonalToolbar:not([customizing]) {
-  --uc-bm-height: 24px;
+:root {
+  /* Moves the popout without moving the content area. */
+  --uc-bm-popout-offset: 0px;
+  
   --uc-bm-padding: 5px;
-  padding: 1px 6px !important;
+  --uc-bm-padding-inline: 6px;
+
+  --uc-bm-show-delay: 80ms;
+  --uc-bm-hide-delay: 400ms;
 }
 
-/* Bookmarks bar background color */
-:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
-  background-image: var(--firefoxcss-bookmarks-bg-color) !important;
+/* Apply it to nova themes */
+:root[lwtheme][theme-effective-id^="nova-"][theme-effective-id$="@mozilla.org"] {
+  --uc-bm-popout-offset: 1px;
 }
 
-:root[uidensity="touch"] #PersonalToolbar {
+:root[uidensity="touch"] {
   --uc-bm-padding: 6px;
 }
 
-/* Firefox v133 fix  */
-:root:not([inDOMFullscreen]) #navigator-toolbox {
-  --browser-area-z-index-toolbox: 4;
+/* Draw a full-width separator in the 1px gap above the popout. */
+:root:not([inDOMFullscreen])[lwtheme][theme-effective-id^="nova-"][theme-effective-id$="@mozilla.org"]
+#navigator-toolbox > #PersonalToolbar:not([collapsed], [customizing]) {
+  box-shadow:
+    0 -1px 0 0 var(--chrome-content-separator-color) !important;
 }
 
-#PersonalToolbar:not([customizing]) {
-  position: relative;
-  margin-bottom: calc(1px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+/* Raise the toolbox when the popout is available.
+   Toolbar spacing is handled by the main stylesheet. */
+:root:not([inDOMFullscreen], [customizing])
+#navigator-toolbox:has( > #PersonalToolbar:not([collapsed], [customizing])) {
+  position: relative !important;
+  --browser-area-z-index-toolbox: 4 !important;
+  overflow: visible !important;
+}
+
+/* Popout height does not affect page layout. */
+:root:not([inDOMFullscreen])
+#navigator-toolbox > #PersonalToolbar:not([collapsed], [customizing]) {
+  position: absolute !important;
+  inset-block-start: calc(100% + var(--uc-bm-popout-offset)) !important;
+  inset-inline: 0 !important;
+
+  margin: 0 !important;
+  padding: 1px 6px !important;
+  box-sizing: border-box !important;
+
   transform: rotateX(90deg);
   transform-origin: top;
-  transition: transform 100ms linear 400ms !important;
+  opacity: 0 !important;
   z-index: 1 !important;
+
+  transition:
+    transform 100ms linear var(--uc-bm-hide-delay),
+    opacity 100ms linear var(--uc-bm-hide-delay) !important;
 }
 
-/* Fixing border around the browser container */
-@media -moz-pref("sidebar.revamp") {
-  #navigator-toolbox {
-    margin-bottom: 2px !important;
-  }
+/* Reveal on hover, bookmark keyboard focus, an open menu,
+   or the existing drag state. */
+:root:not([inDOMFullscreen])
+#navigator-toolbox:hover
+> #PersonalToolbar:not([collapsed], [customizing]),
 
-  @media -moz-pref("mod.disable.browser.border-and-shadow") {
-    #PersonalToolbar:not([customizing]) {
-      padding: 0px 6px !important;
-      margin-top: 1px;
-      margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
-    }
-  }
-
-  @media not -moz-pref("sidebar.verticalTabs") {
-    #navigator-toolbox #TabsToolbar {
-      padding-bottom: 2px !important;
-    }
-  }
-}
-
-/* Bookmarks bar background color */
-:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
-  background-color: var(--firefoxcss-main-bg-color) !important;
-
-}
-
-@media -moz-pref("sidebar.verticalTabs") { 
-    :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
-      background-color: var(--firefoxcss-item-bg-color) !important;
-    }
-}
-
-:root[lwtheme],
-:root[lwtheme-image] {
-  & #navigator-toolbox #PersonalToolbar {
-    background-color: var(--lwt-accent-color) !important;
-  }
-}
-
-/* Show when cursor is over the toolbar area */
-#navigator-toolbox:hover > #PersonalToolbar,
-#navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]) {
-  transition-delay: 100ms !important;
+:root:not([inDOMFullscreen])
+#navigator-toolbox
+> #PersonalToolbar:not([collapsed], [customizing]):is(
+  :focus-within,
+  :has(.bookmark-item[open="true"]),
+  :has(.toolbar-menupopup[dragstart])
+) {
   transform: rotateX(0) !important;
+  opacity: 1 !important;
+  transition-delay: var(--uc-bm-show-delay) !important;
 }
 
+
+/* Bookmark item spacing. */
+#PersonalToolbar:not([customizing])
 #PlacesToolbarItems > .bookmark-item {
   padding-block: var(--uc-bm-padding) !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
+  padding-inline: var(--uc-bm-padding-inline) !important;
 }
 
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
-  transition: opacity 100ms linear 400ms !important;
-  opacity: 0 !important;
+
+/* Backgrounds. */
+:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+  background-image: var(--firefoxcss-bookmarks-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
-  transition: opacity 100ms linear 400ms !important;
-  opacity: 0 !important;
+@media -moz-pref("sidebar.verticalTabs") {
+  :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+  }
 }
 
-#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon,
-#navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) > .bookmark-item .toolbarbutton-icon {
-  transition-delay: 100ms !important;
-  opacity: 1 !important;
-}
-
-#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-text,
-#navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) > .bookmark-item .toolbarbutton-text {
-  transition-delay: 100ms !important;
-  opacity: 1 !important;
+:root:is([lwtheme], [lwtheme-image])
+#navigator-toolbox #PersonalToolbar {
+  background-color: var(--lwt-accent-color) !important;
 }

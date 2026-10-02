@@ -184,6 +184,18 @@
     background-size: cover !important;
   }
 
+  /*   Disable random text in private tab */
+  .showPrivate.showSearch {
+    > .nova-tagline,
+    > .nova-subheader {
+      display: none !important;
+    }
+  }
+
+  .search-inner-wrapper {
+    margin-block-start: 3rem !important;
+  }
+
   /* Fix purple background color when switching tabs in private 
   window for this specific moz preference. */
   html.private {
@@ -262,10 +274,19 @@
 
 @-moz-document url("about:home"),
 url("about:newtab") {
-  body {
-    --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
-    background-size: cover !important;
+  /*   Adjust new tab background so it works with different picked color theme */
+  :root:not([style*="--newtab-background-color"]) {
+    body {
+      --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
+      background-size: cover !important;
+    }
   }
+
+  /*   :root[style*="--newtab-background-color: rgb(30, 17, 27)"] {
+        --my-background: #...;
+        --my-text: #...;
+    }
+   */
 
   /* HIDING ELEMENTS in NEW TAB */
   /*  Disable phone button in new tab */
@@ -303,6 +324,27 @@ url("about:newtab") {
     padding-inline-start: 48px !important;
   }
 
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    .urlbar .urlbar-background {
+      appearance: none !important;
+      background-color: var(--firefoxcss-item-bg-color) !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-top: var(--firefoxcss-search-border-top-color) !important;
+      border-radius: 14px !important;
+      outline: 1px solid var(--firefoxcss-search-outline) !important;
+      outline-offset: var(--firefoxcss-search-outline-offset) !important;
+      backdrop-filter: var(--firefoxcss-backdrop-filter);
+      box-shadow: var(--firefoxcss-search-box-shadow) !important;
+      fill: var(--firefoxcss-search-text-fill) !important;
+      color: var(--firefoxcss-search-bar-text-color) !important;
+      transition:
+        background-color 200ms ease,
+        border-color 200ms ease,
+        fill 200ms ease !important;
+    }
+  }
+
   /* ================== Customization Menu ========================================== */
 
   @media not -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
@@ -318,6 +360,19 @@ url("about:newtab") {
       background-color: transparent !important;
     }
   }
+  
+  @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+    
+/*     Theme picker menu modification */
+    #themes-management-panel > .themes-mgmt-panel theme-picker {
+      --button-border-radius: 12px !important;
+    }
+    
+    moz-segmented-control[data-l10n-id="theme-picker-mode"] {
+       --segmented-control-border-radius: 12px !important;
+    }
+}
+  
 
   /* Line Dividers in customization menu */
   .home-section .divider {
@@ -355,8 +410,13 @@ url("about:newtab") {
   .wallpapers-section .category-header,
   .wallpapers-section #wallpapers-toggle,
   .wallpapers-section .category-list,
+  .appearance-section.section > h2,
+  .appearance-section.section > theme-picker,
+  .appearance-section.section > #themes-management-panel > moz-box-button,
+  .manage-settings-footer,
   .close-button-wrapper {
-    .customize-menu:has(.category.wallpaper-list) & {
+    .customize-menu:has(.category.wallpaper-list) &,
+    .customize-menu:has(#themes-management-panel .themes-mgmt-panel) & {
       opacity: 0 !important;
       visibility: hidden !important;
       transform: translateX(100px) !important;
@@ -897,13 +957,113 @@ url("about:newtab") {
       }
     }
 
-    .search-handoff-button,
-    .search-wrapper input {
-      background-size: 20px !important;
+    /*  Adjust new tab searchbar height */
+    .search-wrapper .search-inner-wrapper {
+      --urlbar-height: 42px !important;
+      height: var(--urlbar-height) !important;
     }
 
-    .search-wrapper .search-inner-wrapper {
-      height: 42px !important;
+    .urlbar-input-box {
+      font-size: 14px !important;
+    }
+
+    .search-wrapper .search-inner-wrapper .urlbar {
+      --urlbar-height: 42px !important;
+      /*       min-height: 42px !important; */
+    }
+
+    .urlbar-background {
+      .urlbar[in-page]:not([popover-open]) > & {
+        background-clip: border-box !important;
+      }
+    }
+
+    /*  Searchmode switcher padding */
+    .urlbar[in-page] {
+      --urlbar-input-container-padding: 6px !important;
+    }
+
+    /*  New tab searchmode switcher config   */
+    .urlbar .searchmode-switcher {
+      --button-background-color-muted-hover: light-dark(
+        color-mix(in srgb, black 5%, transparent),
+        color-mix(in srgb, white 15%, transparent)
+      ) !important;
+      --button-background-color-muted-active: light-dark(
+        color-mix(in srgb, black 8%, transparent),
+        color-mix(in srgb, white 25%, transparent)
+      ) !important;
+      --button-background-color-muted-selected: light-dark(
+        color-mix(in srgb, black 5%, transparent),
+        color-mix(in srgb, white 15%, transparent)
+      ) !important;
+      --button-background-color-muted-disabled: light-dark(
+        color-mix(in srgb, black 2%, transparent),
+        color-mix(in srgb, black 10%, transparent)
+      ) !important;
+      --button-background-color-muted: transparent !important;
+    }
+
+    /*   Remove purple outline when searchbar active    */
+    .urlbar[popover-open][focused] > .urlbar-input-container {
+      outline: none !important;
+    }
+
+    .urlbar[popover-open] > .urlbar-background {
+      border: var(--urlbar-background-border-open);
+      box-shadow: var(--urlbar-background-box-shadow-open);
+      inset-inline: 0px !important;
+      inset-block: 0px !important;
+      /*    --urlbar-background-overhang-open: 2px !important;
+   --urlbar-input-growth-open-inline: 0px !important;
+   --urlbar-input-growth-open-block: 0px !important; */
+      border-start-start-radius: var(--urlbar-background-border-top-radius-open);
+      border-start-end-radius: var(--urlbar-background-border-top-radius-open);
+      clip-path: none !important;
+    }
+
+    /*  inset-inline: calc(-1 * (var(--urlbar-background-overhang-open) + var(--urlbar-input-growth-open-inline)));
+    inset-block: calc(-1 * (var(--urlbar-background-overhang-open) + var(--urlbar-input-growth-open-block))); */
+
+    /*     Fixing searchbar dropdown */
+    .urlbar .urlbarView-background {
+      background-color: color-mix(in srgb, var(--firefoxcss-item-bg-color) 30%, transparent) !important;
+      backdrop-filter: blur(22px);
+      .activity-stream.lightWallpaper &,
+      .activity-stream.darkWallpaper & {
+        background-color: var(--firefoxcss-item-bg-color) !important;
+        backdrop-filter: var(--firefoxcss-backdrop-filter);
+      }
+      box-shadow: none !important;
+      border: none !important;
+      border-top: 1px solid var(--firefoxcss-private-search-top-border) !important;
+      border-radius: 12px !important;
+      outline: 1px solid var(--firefoxcss-search-outline) !important;
+      outline-offset: var(--firefoxcss-search-outline-offset) !important;
+      box-shadow: var(--firefoxcss-search-box-shadow) !important;
+      inset-block: 0px !important;
+      inset-inline: -4px !important;
+      clip-path: none !important;
+    }
+
+    :where(.urlbar:not([noresults])) > .urlbarView {
+      padding-block: 6px !important;
+      padding-inline: 2px !important;
+    }
+
+    .urlbarView {
+      margin: 8px 4px !important;
+      --urlbarView-row-border-radius: 12px !important;
+    }
+
+    /*  Border radius for searchmode switcher     */
+    button#main-button:has(img, label) .button-background {
+      border-radius: 10px !important;
+    }
+
+    /*    Drop arrow config */
+    .searchmode-switcher .searchmode-switcher-dropmarker {
+      fill: color-mix(in srgb, currentColor 60%, transparent) !important;
     }
 
     .search-handoff-button:hover {
@@ -1349,8 +1509,10 @@ url("about:newtab") {
         outline: 1px solid var(--firefoxcss-newtab-customize-button-border) !important;
         outline-offset: 0px;
 
-        & > img {
-          opacity: 0.8;
+        & > img {color: light-dark(var(--color-gray-70), var(--color-white)) !important;
+/*           border: medium !important; 
+          outline: 1px solid var(--firefoxcss-newtab-customize-button-border) !important;
+          outline-offset: 0px; */
         }
       }
 
@@ -1451,13 +1613,19 @@ url("about:newtab") {
     border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border) !important;
     border-radius: 8px !important;
   } */
-
   panel-list[role="menu"][popover="auto"],
   panel-list[id$="submenu"][role="menu"][slot="submenu"] {
     --panel-list-background-color: var(--firefoxcss-shortcut-item-context-menu) !important;
     backdrop-filter: blur(18px) !important;
     border: 1px solid var(--firefoxcss-shortcut-item-context-menu-border) !important;
     --panel-list-border-radius: 8px !important;
+  }
+
+  /*   Fix panel menu padding and item border radius */
+  panel-list[role="menu"] panel-item {
+    --panel-item-button-border-radius: 6px !important;
+    --panel-item-button-margin: 0 4px !important;
+    --panel-item-button-padding: 5px 5px !important;
   }
 
   /*   Context menu separators line */
@@ -1510,7 +1678,7 @@ url("about:newtab") {
     }
   }
 
-  /* ================== STICKY SEARCHBAR ========================= */
+  /* ================== STICKY SEARCHBAR ================================ */
 
   /*   Remove sticky searchbar */
   @media (height > 700px) {
@@ -1521,6 +1689,20 @@ url("about:newtab") {
     .stuck-search > .container > .search-wrapper {
       position: relative !important;
     }
+  }
+
+  /* ================== THEME COLOR PICKER =============================== */
+  moz-visual-picker moz-visual-picker-item[value="default-theme@mozilla.org"] {
+    .theme-preview {
+      background-image: linear-gradient(96deg, hsl(240, 2%, 20%) 39.84%, hsl(240, 2%, 23%) 101.72%) !important;
+    }
+  }
+
+  /* ================== CONFIRMATION DIALOG =============================== */
+  .confirmation-dialog {
+    backdrop-filter: blur(12px);
+    background: none !important;
+    background-color: light-dark(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 0%, 0.2)) !important;
   }
 
   /* ================== NEW TAB WIDGET CENTERING ========================= */
@@ -2271,7 +2453,7 @@ url("about:newtab") {
   "❔ Type 'mod.' to see all your enabled modifications.\A"
   "❔ Read github readme for full mod list and instructions.\A"
   " \A "
-  "🔧 Firefox ModBlur v2.70 • 15/09/2026 (September)";
+  "🔧 Firefox ModBlur v2.80 • 03/10/2026 (October)";
     white-space: pre-wrap;
     color: light-dark(hsla(290, 21%, 0%, 0.9), hsla(290, 21%, 94%, 0.9)) !important;
     font-size: 14px !important;
