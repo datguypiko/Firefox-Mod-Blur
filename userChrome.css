@@ -112,7 +112,6 @@
     /* Other colors */
     --firefoxcss-urlbar-zoom-button: hsla(0, 0%, 60%, 0.35);
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 6%, 0.2);
-    --firefoxcss-private-browsing-menu-color: hsl(277, 70%, 64%);
     --firefoxcss-private-browsing-drop-shadow: drop-shadow(0px 0px 1px #000000d5);
     --firefoxcss-statuspanel-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-contextmenu-hover-text: white;
@@ -220,7 +219,6 @@
     /* Other colors */
     --firefoxcss-urlbar-zoom-button: hsla(200, 5%, 60%, 0.35);
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 0%, 0.1);
-    --firefoxcss-private-browsing-menu-color: hsl(277, 80%, 55%);
     --firefoxcss-private-browsing-drop-shadow: none;
     --firefoxcss-statuspanel-bg-color: hsl(200, 10%, 98%);
     --firefoxcss-contextmenu-hover-text: black;
@@ -1783,14 +1781,6 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
 #firefox-view-button {
   padding-right: 0px !important;
-}
-
-:root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
-  fill: var(--firefoxcss-private-browsing-menu-color) !important;
-}
-
-:root[privatebrowsingmode="temporary"] #PanelUI-menu-button .toolbarbutton-badge-stack .toolbarbutton-icon {
-  filter: var(--firefoxcss-private-browsing-drop-shadow) !important;
 }
 
 /*=====================================================================
@@ -3719,15 +3709,14 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
   
 /*   Remove private window buttons */
   :root#main-window[privatebrowsingmode] {
-   #TabsToolbar .private-browsing-indicator-button {
+   .private-browsing-indicator-button.toolbarbutton-1 {
       display: none !important;
     }
   }
   
-  
-/*   Private Window searchbar fix */
+/*   Private Window content window border fix */
   :root#main-window[privatebrowsingmode][theme-effective-id="firefox-privatewindow@mozilla.org"] {
-    
+    --chrome-content-separator-color:  color-mix(in srgb, white 12%, transparent) !important;
   }
   
 /* ================================================================================================ */  
@@ -3776,6 +3765,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 /*      --chrome-content-separator-color: color-mix(in srgb, currentColor 6%, transparent) !important; */
   }
 
+  
   
   
    @media not -moz-pref("sidebar.verticalTabs") {
@@ -3970,3 +3960,6 @@ panel-item.searchmode-switcher-installed {
   &[label="Brave"] {      --icon-url: var(--firefoxcss-brave-icon) !important;}
   
 }
+
+
+
