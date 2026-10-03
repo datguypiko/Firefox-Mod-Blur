@@ -9,8 +9,8 @@
   --uc-bm-hide-delay: 400ms;
 }
 
-/* Apply it to nova themes */
 :root[lwtheme][theme-effective-id^="nova-"][theme-effective-id$="@mozilla.org"] {
+   /* Apply it to nova themes */
   --uc-bm-popout-offset: 1px;
 }
 
@@ -25,7 +25,7 @@
     0 -1px 0 0 var(--chrome-content-separator-color) !important;
 }
 
-/* Raise the toolbox when the popout is available.
+/* Anchor and raise the toolbox when the popout is available.
    Toolbar spacing is handled by the main stylesheet. */
 :root:not([inDOMFullscreen], [customizing])
 #navigator-toolbox:has( > #PersonalToolbar:not([collapsed], [customizing])) {
@@ -34,7 +34,7 @@
   overflow: visible !important;
 }
 
-/* Popout height does not affect page layout. */
+/* Popout geometry: its height does not affect page layout. */
 :root:not([inDOMFullscreen])
 #navigator-toolbox > #PersonalToolbar:not([collapsed], [customizing]) {
   position: absolute !important;
@@ -83,18 +83,20 @@
 
 
 /* Backgrounds. */
-:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar,
+:root[privatebrowsingmode]  #navigator-toolbox #PersonalToolbar{
   background-image: var(--firefoxcss-bookmarks-bg-color) !important;
   background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 @media -moz-pref("sidebar.verticalTabs") {
-  :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+  :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar,
+  :root[privatebrowsingmode]  #navigator-toolbox #PersonalToolbar{
     background-color: var(--firefoxcss-item-bg-color) !important;
   }
 }
 
-:root:is([lwtheme], [lwtheme-image])
+:root:is([lwtheme], [lwtheme-image]):not([privatebrowsingmode])
 #navigator-toolbox #PersonalToolbar {
   background-color: var(--lwt-accent-color) !important;
 }
