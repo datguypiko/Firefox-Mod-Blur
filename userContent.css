@@ -14,18 +14,19 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+      --firefoxcss-main-bg-colorNova: hsl(240, 2%, 10%);
       --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
       --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
       --firefoxcss-text-color: hsl(0, 0%, 100%);
       --firefoxcss-other-color: hsl(290, 21%, 20%);
 
       /* ----- Private Page Colors ----- */
-      --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.3);
-      --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.3);
+      --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.5);
+      --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.6);
       --firefoxcss-private-search-fill: hsl(275, 13%, 53%);
 
-      --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.3);
-      --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.3);
+      --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.5);
+      --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.7);
       --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
 
       --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
@@ -98,27 +99,28 @@
   @media (prefers-color-scheme: light) {
     :root {
       --firefoxcss-main-bg-color: hsl(200, 5%, 90%);
+      --firefoxcss-main-bg-colorNova: hsl(240, 2%, 10%);
       --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
       --firefoxcss-item-hover-bg-color: hsl(200, 0%, 100%);
       --firefoxcss-text-color: hsl(0, 0%, 0%);
       --firefoxcss-other-color: hsl(290, 21%, 20%);
 
       /* ----- Private Page Colors ----- */
-      --firefoxcss-private-search-bg-color: hsla(276, 20%, 88%, 0.55);
-      --firefoxcss-private-search-top-border: hsla(0, 0%, 100%, 0.45);
-      --firefoxcss-private-search-fill: hsl(275, 20%, 65%);
+      --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.5);
+      --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.6);
+      --firefoxcss-private-search-fill: hsl(275, 13%, 53%);
 
-      --firefoxcss-private-search-hover: hsla(276, 20%, 84%, 0.5);
-      --firefoxcss-private-search-border-hover: hsla(0, 0%, 100%, 0.55);
-      --firefoxcss-private-search-hover-fill: hsl(275, 20%, 55%);
+      --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.5);
+      --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.7);
+      --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
 
       --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
       --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
-      --firefoxcss-private-search-caret: hsl(276, 20%, 40%);
+      --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
 
       --firefoxcss-private-search-box-shadow:
-        0 1px 1px hsl(0deg 0% 0% / 0.015), 0 2px 2px hsl(0deg 0% 0% / 0.015), 0 4px 4px hsl(0deg 0% 0% / 0.015),
-        0 6px 6px hsl(0deg 0% 0% / 0.015), 0 12px 12px hsl(0deg 0% 0% / 0.035);
+        0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 6px 6px hsl(0deg 0% 0% / 0.075), 0 12px 12px hsl(0deg 0% 0% / 0.095);
 
       /* ----- Normal Page Colors ----- */
       --firefoxcss-search-box-shadow:
@@ -178,11 +180,27 @@
 }
 
 @-moz-document url("about:privatebrowsing") {
-  body {
-    background-color: var(--firefoxcss-main-bg-color) !important;
-    background-size: auto;
-    background-size: cover !important;
+  
+  @media not -moz-pref("browser.nova.enabled") {
+      body {
+        background-color: var(--firefoxcss-main-bg-color) !important;
+        background-size: auto;
+        background-size: cover !important; 
+      }
+    
+      html.private {
+        --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
+        background: var(--firefoxcss-main-bg-color) !important;
+      }
   }
+  
+  @media -moz-pref("browser.nova.enabled") {
+    html.private {
+    background: var(--firefoxcss-main-bg-colorNova) !important;
+    }
+  }
+  
+ 
 
   /*   Disable random text in private tab */
   .showPrivate.showSearch {
@@ -194,13 +212,6 @@
 
   .search-inner-wrapper {
     margin-block-start: 3rem !important;
-  }
-
-  /* Fix purple background color when switching tabs in private 
-  window for this specific moz preference. */
-  html.private {
-    --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
-    background: var(--firefoxcss-main-bg-color) !important;
   }
 
   /*   Removes new tab page "leave no traces.." info container */
@@ -217,10 +228,9 @@
   .search-handoff-button {
     appearance: none !important;
     background-color: var(--firefoxcss-private-search-bg-color) !important;
-    border: none !important;
     box-shadow: none !important;
-    border-top: 1px solid var(--firefoxcss-private-search-top-border) !important;
-    border-radius: 10px 10px 10px 10px !important;
+    border: 1px solid var(--firefoxcss-private-search-top-border) !important;
+    border-radius: 14px !important;
     fill: var(--firefoxcss-private-search-fill) !important;
     box-shadow: var(--firefoxcss-private-search-box-shadow) !important;
     transition:
