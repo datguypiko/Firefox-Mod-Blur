@@ -627,6 +627,12 @@ url("about:newtab") {
       pointer-events: none !important;
     }
 
+	/* Fixes searchbar invisible height */
+	.nova-enabled.container > .search-wrapper {
+      grid-row: 2/span 1 !important;
+      pointer-events: none !important;
+    }
+
     .container .search-wrapper {
       display: flex !important;
       justify-self: center !important;
