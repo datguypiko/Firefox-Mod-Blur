@@ -826,11 +826,6 @@ background-color: var(--firefoxcss-item-bg-color) !important;
 
  /* Dropdown search box colors */
  #urlbar[popover-open][open] .urlbar-background {
-    border-top: var(--firefoxcss-url-breakout-border-top-color) !important;
-    box-shadow: none !important;
- }
-
- #urlbar[popover-open][open] .urlbar-background {
   :root#main-window:not([theme-effective-id="ATBC@EasonWong"]) & {
      box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
   }
