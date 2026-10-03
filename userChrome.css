@@ -792,11 +792,6 @@ background-color: var(--firefoxcss-item-bg-color) !important;
   --panel-background-color: var(--firefoxcss-url-breakout-bar-bg-color) !important;
 }
 
-/* HEIGHT FIXES */
-:root {
- 
-}
-
 /* @media not -moz-pref("browser.nova.enabled") { */
   #urlbar {
       --urlbar-height: var(--firefoxcss-searchbar-height) !important;
@@ -814,6 +809,7 @@ background-color: var(--firefoxcss-item-bg-color) !important;
     background-color:  var(--firefoxcss-url-bar-bg-color) !important;
     --urlbar-background-box-shadow-open: var(--firefoxcss-url-breakout-box-shadow) !important;
     border: 0px !important;
+    
   }
   
   .urlbar[popover-open] > .urlbar-background {
@@ -828,20 +824,21 @@ background-color: var(--firefoxcss-item-bg-color) !important;
   
 }
 
-
  /* Dropdown search box colors */
  #urlbar[popover-open][open] .urlbar-background {
     border-top: var(--firefoxcss-url-breakout-border-top-color) !important;
-    box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
+    box-shadow: none !important;
  }
+
+ #urlbar[popover-open][open] .urlbar-background {
+  :root#main-window:not([theme-effective-id="ATBC@EasonWong"]) & {
+     box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
+  }
+}
 
 
 @media -moz-pref("browser.nova.enabled") {
 
- #urlbar-container {
-/*     height: 38px !important; */
- }
-  
 .urlbar[popover-open] > .urlbar-background {
   border-end-start-radius: 0 !important;
   border-end-end-radius: 0 !important;
@@ -3970,5 +3967,3 @@ panel-item.searchmode-switcher-installed {
   &[label="Brave"] {      --icon-url: var(--firefoxcss-brave-icon) !important;}
   
 }
-
-
