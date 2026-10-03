@@ -132,7 +132,11 @@
   .titlebar-buttonbox
   .titlebar-button {
     :root[lwtheme] & {
-        background-color: color-mix(in SRGB, var(--toolbar-color) 60%, transparent) !important;
+        background-color: color-mix(in srgb, white 50%, transparent) !important;
+          @media (prefers-color-scheme: light) {
+             background-color: color-mix(in srgb, var(--toolbarbutton-icon-fill) 60%, transparent) !important;
+      
+          }
         transition: background-color 200ms ease !important;
     }
 }
