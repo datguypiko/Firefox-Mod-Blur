@@ -126,6 +126,7 @@
       --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
       --toolbarbutton-background-color-hover: var(--button-hover-bgcolor) !important;
       --toolbarbutton-background-color-active: var(--button-active-bgcolor) !important;
+      --urlbarview-background-color-selected: color-mix(in srgb, currentColor 10%, transparent) !important;
     }
     &#main-window:not([theme-effective-id="ATBC@EasonWong"]) {
     /* Hamburger menu button hover color */
@@ -134,7 +135,7 @@
     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35) !important;
     --urlbar-box-background-color-hover: var(--toolbarbutton-hover-background) !important;
     /*      Searchbar results row colors */
-    --urlbarview-background-color-selected: color-mix(in srgb, currentColor 10%, transparent) !important;
+    
     --urlbarview-background-color-hover: var(--urlbarView-hover-background) !important;
     --urlbarView-hover-background: color-mix(in srgb, currentColor 6%, transparent) !important;
     --urlbarView-highlight-background: color-mix(in srgb, currentColor 10%, transparent) !important;
@@ -230,12 +231,13 @@
     /* ============== Firefox Global colors change ==================== */
     /*      Searchbar results row colors */
     &#main-window:not([lwtheme]) {
-       --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
+    --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
     --toolbarbutton-background-color-hover: var(--button-hover-bgcolor) !important;
-    --toolbarbutton-background-color-active: var(--button-active-bgcolor) !important;       
+    --toolbarbutton-background-color-active: var(--button-active-bgcolor) !important; 
+    --urlbarview-background-color-selected: color-mix(in srgb, currentColor 12%, transparent) !important;
     }
     &#main-window:not([theme-effective-id="ATBC@EasonWong"]) {
-        --urlbarview-background-color-selected: color-mix(in srgb, currentColor 12%, transparent) !important;
+        
         --urlbarview-background-color-hover: var(--urlbarView-hover-background) !important;
         --urlbarView-hover-background: color-mix(in srgb, currentColor 6%, transparent) !important;
         --urlbarView-highlight-background: color-mix(in srgb, currentColor 12%, transparent) !important;
@@ -460,8 +462,8 @@ background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
 /* Remove background color from toolbars with some themes enabled */
-:root[lwtheme],
-:root[lwtheme-image] {
+:root[lwtheme]:not([privatebrowsingmode]),
+:root[lwtheme-image]:not([privatebrowsingmode]) {
   #navigator-toolbox .browser-toolbar {
   &:not(.browser-titlebar) {
     background-color: transparent !important;
@@ -471,8 +473,8 @@ background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
 
-:root[lwtheme],
-:root[lwtheme-image] {
+:root[lwtheme]:not([privatebrowsingmode]),
+:root[lwtheme-image]:not([privatebrowsingmode]) {
   
   --firefoxcss-lwtheme-fix-url-color: color-mix(in srgb, black 45%, transparent);
   
@@ -826,6 +828,11 @@ background-color: var(--firefoxcss-item-bg-color) !important;
 
  /* Dropdown search box colors */
  #urlbar[popover-open][open] .urlbar-background {
+    border-top: var(--firefoxcss-url-breakout-border-top-color) !important;
+    box-shadow: none !important;
+ }
+
+ #urlbar[popover-open][open] .urlbar-background {
   :root#main-window:not([theme-effective-id="ATBC@EasonWong"]) & {
      box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
   }
@@ -947,8 +954,8 @@ background-color: var(--firefoxcss-item-bg-color) !important;
 /* Normal tabs design */
   & .tabbrowser-tab .tab-background:not([selected]) {
     border: 0 !important;
-    :root:not([lwtheme]) & {
     border-radius: var(--firefoxcss-border-radius) !important;
+    :root:not([lwtheme]) & {
     background-image: none !important;
     background-color: var(--firefoxcss-tab-bg-color) !important;
     transition: background-color 100ms ease !important;
@@ -957,6 +964,7 @@ background-color: var(--firefoxcss-item-bg-color) !important;
     /*! border-bottom: 1px solid #0006 !important; */
   }
 }
+/*   :root#main-window[privatebrowsingmode][theme-effective-id="firefox-privatewindow@mozilla.org"] > body{ */
 
 @media -moz-pref("sidebar.verticalTabs") {
   :root:not([lwtheme]) .tabbrowser-tab:not([pinned]) .tab-background:not([selected]) {
@@ -3757,7 +3765,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     }
     
 /*     Make every toolbar same bg color  */
-    #navigator-toolbox .browser-toolbar:not(.browser-titlebar) {
+    #navigator-toolbox .browser-toolbar:not(.browser-titlebar):not(#PersonalToolbar) {
       --toolbar-background-color: transparent !important;
     }
     
