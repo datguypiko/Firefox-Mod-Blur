@@ -1790,20 +1790,92 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 @media not -moz-pref("mod.search.info.buttons.show.always") {
   @media -moz-pref("browser.urlbar.trustPanel.featureGate") {
     
-/*    Remove gap that affects auto hiding positioning */
-   @media -moz-pref("browser.nova.enabled") {
-      #identity-box{
-/*         column-gap: 0px !important; */
+ 
+        /* Hide the long text and animate the compact tracker count. */
+/* @media -moz-pref("browser.urlbar.trustPanel.featureGate") {
+  #trust-icon-container.has-blocked-trackers:not(.breached, .insecure) {
+    --firefoxcss-tracker-count-delay: 400ms;
+    --firefoxcss-tracker-count-duration: 230ms;
+
+    #trust-icon-tracker-count-longform-wrapper {
+      display: none !important;
+    }
+
+    #trust-icon-tracker-count-shortform-wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      opacity: 1;
+      padding: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: none !important;
+    }
+
+    #trust-icon-tracker-count-shortform {
+      min-width: 0;
+      margin: 0 !important;
+      margin-inline-start: var(--space-xxsmall) !important;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      #trust-icon-tracker-count-shortform-wrapper {
+        animation:
+          show-shortform-tracker-count
+          var(--firefoxcss-tracker-count-duration)
+          cubic-bezier(0.2, 0, 0, 1)
+          var(--firefoxcss-tracker-count-delay)
+          both !important;
+      }
+
+      #urlbar:focus-within & {
+        #trust-icon-tracker-count-shortform-wrapper {
+          animation-play-state: paused !important;
+        }
       }
     }
+  }
+} */
     
-    .urlbar-page-action,
+ /*   When location permission granted show permission box */
+    /*   @media not -moz-pref("mod.hide.location.permissions.icon") {
+    #urlbar #identity-permission-box:has(image.sharing-icon[sharing]) {
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+      margin-inline-end: initial !important;
+      transition: margin-inline-end 100ms ease, opacity 100ms ease;
+      transition-delay: 100ms;
+    }
+  }  */
+    
+    
+ .urlbar-page-action,
     .urlbar-revert-button,
     .search-go-button {
       &:not([disabled]):hover {
-        background-color: var(var(--toolbarbutton-hover-background), initial)  !important;
+        background-color: var(--toolbarbutton-hover-background, initial)  !important;
       }
     }
+    
+    
+/* Hide tracker count text */
+    @media -moz-pref("browser.urlbar.trustPanel.featureGate") {
+  #trust-icon-container {
+    &.has-blocked-trackers:not(.breached, .insecure) {
+          & #trust-icon-tracker-count-longform-wrapper {
+                display: none !important;
+          }
+      }
+    }
+      
+    #trust-icon-container.has-blocked-trackers:not(.breached, .insecure) {
+      &:not(:hover, :active, [open="true"]) {
+/*         background-color: transparent !important; */
+      }
+    }
+  }
+    
+ 
+
 
     .urlbar-go-button:not([disabled]):hover {
       background-color: light-dark(hsla(200, 5%, 100%, 1), hsla(0, 0%, 34%, 0.8)) !important;
@@ -1812,7 +1884,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     .identity-box-button,
     #tracking-protection-icon-container {
       &:hover:not([open="true"]) {
-        background-color: var(var(--toolbarbutton-hover-background), initial)  !important;
+        background-color: var(--toolbarbutton-hover-background, initial)  !important;
       }
     }
 
@@ -1880,49 +1952,51 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     #urlbar #identity-box > #notification-popup-box{
       margin-inline-start: 0 !important;
     }
+    
 
-    /* Hide buttons until hovered or opened. */
-    #trust-icon-container,
-    #identity-permission-box {
-      #urlbar & {
-        opacity: 0 !important;
-        transform: translateX(-14px) !important;
-        margin-inline-end: calc(
-          -16px
-          - 2 * var(--urlbar-icon-padding)
-          - var(--firefoxcss-hidden-icon-gap, 0px)
-        ) !important;
+  /* Default hidden state and shared transitions. */
+  #urlbar :is(#trust-icon-container, #identity-permission-box) {
+    opacity: 0 !important;
+    transform: translateX(-14px) !important;
+    margin-inline-end: calc( -16px - 2 * var(--urlbar-icon-padding) - var(--firefoxcss-hidden-icon-gap, 0px)
+    ) !important;
 
-        transition:
-          transform 100ms ease,
-          margin-inline-end 100ms ease,
-          opacity 100ms ease;
-        transition-delay: 80ms !important;
-      }
+/*     transition: transform 100ms ease, margin-inline-end 100ms ease, opacity 100ms ease !important;
+    transition-delay: 80ms !important; */
+  }
+    
+ #urlbar :is(#trust-icon-container, #identity-permission-box) {
+  transition:
+    transform 150ms cubic-bezier(0.2, 0, 0, 1),
+    margin-inline-end 150ms cubic-bezier(0.2, 0, 0, 1),
+    padding-inline-end 150ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 120ms ease !important;
+  transition-delay: 0ms !important;
+}
+    
+/* Pause before revealing both buttons on hover. */
+#urlbar:has(#identity-box:hover, #trust-icon-container:hover)
+  :is(#trust-icon-container, #identity-permission-box) {
+  transition-delay: 30ms !important;
+}
 
-      /* Prevent overlap when the search mode switcher is present. */
-      #urlbar:has(.searchmode-switcher:not([aria-hidden="true"])) &{
-        transform: none !important;
-      }
+  /* Prevent overlap with the search mode switcher. */
+  #urlbar:has(.searchmode-switcher:not([aria-hidden="true"])) :is(#trust-icon-container, #identity-permission-box) {
+    transform: none !important;
+  }
 
-     #urlbar:has(#identity-box:hover) &,
-     #urlbar:has(#trust-icon-container:hover) & {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-        margin-inline-end: 0px !important;
-        transition:
-          transform 100ms ease,
-          margin-inline-end 100ms ease,
-          opacity 100ms ease;
-      }
-
-      #urlbar &:hover:active,
-      #urlbar &[open="true"] {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-        margin-inline-end: 0px !important;
-      }
-    }
+  /* Reveal on hover or while a button is pressed/open. */
+  #urlbar:has(#identity-box:hover, #trust-icon-container:hover) :is(#trust-icon-container, #identity-permission-box),
+  #urlbar :is(#trust-icon-container, #identity-permission-box):is(:hover:active,[open="true"]),
+  /* Always show counts and security states at their natural width. */
+  #urlbar #trust-icon-container:is(.has-blocked-trackers,.insecure,.breached,.warning),
+  /* Always show Firefox UI and extension identity buttons. */
+  #urlbar #identity-box[pageproxystate="valid"]:is(.chromeUI, .extensionPage) > #identity-icon-box {
+    opacity: 1 !important;
+    transform: none !important;
+    margin-inline-end: 0px !important;
+  }
+    
     
     
     /* Hide the additional sharing icons. */
@@ -1931,16 +2005,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
       visibility: collapse !important;
     }
 
-    /*   When location permission granted show permission box */
-    /*   @media not -moz-pref("mod.hide.location.permissions.icon") {
-    #urlbar #identity-permission-box:has(image.sharing-icon[sharing]) {
-      opacity: 1 !important;
-      transform: translateX(0) !important;
-      margin-inline-end: initial !important;
-      transition: margin-inline-end 100ms ease, opacity 100ms ease;
-      transition-delay: 100ms;
-    }
-  }  */
+
 
     
  :root {
@@ -1955,9 +2020,6 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
    }
 
     #urlbar #trust-icon-container.insecure {
-      margin-inline-end: 0px !important;
-      transform: translateX(0) !important;
-      opacity: 1 !important;
       background-color: var(--firefoxcss-item-bg-color) !important;
 
       &:hover:not([open]) {
@@ -2002,24 +2064,6 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
       }
     }
 
-    #urlbar #identity-box[pageproxystate="valid"]:is(.chromeUI, .extensionPage) > #identity-icon-box {
-      margin-inline-end: 0px !important;
-      opacity: 1 !important;
-      transform: translateX(0) !important;
-    }
-
-    /* #identity-box.chromeUI::after,
-  #identity-box.chromeUI:hover::after {
-    opacity: 0 !important;
-  } */
-
-    /*   Hide translation button when translation is active 
-  
-  
-  #page-action-buttons:not(:hover)
-    #translations-button[translationsactive="true"]:not([open]) {
-    visibility: collapse !important;
-  } */
 
     /*   This helps fixing start of "www" being cut off after hover when text overflowing */
     #urlbar .urlbar-input {
@@ -2094,7 +2138,8 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
       #page-action-buttons::before {
       position: relative;
       content: "•••";
-      content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg fill="context-fill" width="13px" height="12px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 16c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 27c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 5c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25z"></path></svg>');
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 32 32' fill='context-fill'%3E%3Ccircle cx='16' cy='5' r='4.25'/%3E%3Ccircle cx='16' cy='16' r='4.25'/%3E%3Ccircle cx='16' cy='27' r='4.25'/%3E%3C/svg%3E");
+ 
       pointer-events: none;
       -moz-context-properties: fill, fill-opacity;
       fill: var(--toolbarbutton-icon-fill) !important;
@@ -2146,7 +2191,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     @media (-moz-platform: linux) {
       #identity-box::after,
       #page-action-buttons::before {
-        content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg fill="%23FFFFFF" width="11px" height="11px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 16c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 27c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25zM20.25 5c0 2.347-1.903 4.25-4.25 4.25s-4.25-1.903-4.25-4.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25z"></path></svg>') !important;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 32 32' fill='%23FFFFFF'%3E%3Ccircle cx='16' cy='5' r='4.25'/%3E%3Ccircle cx='16' cy='16' r='4.25'/%3E%3Ccircle cx='16' cy='27' r='4.25'/%3E%3C/svg%3E");
         transform: none !important;
         font-size: unset !important;
       }
@@ -2159,8 +2204,47 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
         left: 2px;
       }
     }
+    
+    
+    
+    
+    
+   @media -moz-pref("browser.urlbar.trustPanel.featureGate") {
+
+  /* Remove the left dots when neither auto-hidden button
+     is available to reveal. */
+  #urlbar:not(:has(
+    .urlbar-input-container[pageproxystate="valid"]
+      > #trust-icon-container:not(
+        .has-blocked-trackers,
+        .insecure,
+        .breached,
+        .warning,
+        .chickletShown,
+        [hidden],
+        [collapsed]
+      ),
+
+    #identity-box[pageproxystate="valid"]:not([hidden], [collapsed])
+      > #identity-permission-box:is(
+        [hasPermissions],
+        [hasSharingIcon]
+      ):not([hidden], [collapsed])
+  )) #identity-box::after {
+    content: none !important;
   }
 
+
+} 
+    
+  
+    
+    
+  }
+
+  
+
+  
   @media not -moz-pref("browser.urlbar.trustPanel.featureGate") {
     
     @media -moz-pref("browser.nova.enabled") {
@@ -3960,6 +4044,4 @@ panel-item.searchmode-switcher-installed {
   &[label="Brave"] {      --icon-url: var(--firefoxcss-brave-icon) !important;}
   
 }
-
-
 
