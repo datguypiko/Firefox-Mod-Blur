@@ -639,7 +639,7 @@ url("about:newtab") {
     }
 
     .container .logo-and-wordmark,
-    .content .search-inner-wrapper {
+    .container .search-inner-wrapper {
       pointer-events: auto !important;
       margin: 0 !important;
     }
