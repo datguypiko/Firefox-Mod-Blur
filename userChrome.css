@@ -274,17 +274,22 @@
   --panel-menuitem-border-radius: 8px !important; */
 
   --firefoxcss-top-bar-border-bottom-size: 1px;
-  --firefoxcss-border-radius: 10px;
   --firefoxcss-control-buttons-margin: 95px;
   --firefoxcss-tab-min-width: 110px;
   --firefoxcss-tab-max-width: 150px;
 
-  /* --toolbarbutton-border-radius: 8px !important; */
-  /* --button-border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important; */
+/*   Overal border radius. Affects searchbar, inner urlbar buttons, tabs */
+  --firefoxcss-border-radius: 10px;
+  
+/*   Button border radius */
+  --toolbarbutton-border-radius: 10px !important;
+  --button-border-radius: calc(var(--firefoxcss-border-radius) - 2px) !important;
+  
+   --firefoxcss-context-menu-item-radius: 6px;
   
   
-  --firefoxcss-popupmenus-border-radius: 14px;
-  --firefoxcss-popupmenus-item-border-radius: 8px;
+  --firefoxcss-popupmenus-border-radius: 12px;
+  --firefoxcss-popupmenus-item-border-radius: 10px;
   
 /*   Padding between searchbar: Default 4 */
 /*   --urlbar-container-padding-block: 2px !important; */
@@ -544,23 +549,23 @@ background-color: var(--firefoxcss-item-bg-color) !important;
     ) !important;
   }
 
-  & #urlbar:not([searchmode]) .searchmode-switcher {
-    --button-background-color-active: background-color: color-mix(
+/*   & #urlbar:not([searchmode]) .searchmode-switcher {
+    --button-background-color-active: color-mix(
         in srgb,
         color-mix(in srgb, var(--lwt-accent-color) 86%, white) 70%,
         transparent
       ) !important;
-    --button-background-color-hover: background-color: color-mix(
+    --button-background-color-hover: color-mix(
         in srgb,
         color-mix(in srgb, var(--lwt-accent-color) 86%, white) 70%,
         transparent
       ) !important;
-    --button-background-color-selected: background-color: color-mix(
+    --button-background-color-selected: color-mix(
         in srgb,
         color-mix(in srgb, var(--lwt-accent-color) 86%, white) 70%,
         transparent
       ) !important;
-  }
+  } */
 }
 
 @media not -moz-pref("browser.nova.enabled") {
@@ -1002,7 +1007,7 @@ background-color: var(--firefoxcss-item-bg-color) !important;
 /* Multiselect tabs */
   & #tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected] {
     border-radius: var(--firefoxcss-border-radius) !important;
-    :root:not([lwtheme]) {
+    :root:not([lwtheme]) &{
       border: 0 !important;
       background-image: none !important;
       outline: none !important;
@@ -1513,6 +1518,7 @@ tab-group[collapsed] > .tabbrowser-tab {
   }
 }
 
+
 /* Some website and menu dropdown colors  */
 #ContentSelectDropdownPopup {
   --content-select-background-image: none !important;
@@ -1539,7 +1545,7 @@ panel {
 
 /*     --panel-border-radius: 50px !important; */
     /*! --panel-padding-block: 4px 0px !important; */
-    --menuitem-border-radius: 4px !important;
+    --menuitem-border-radius: var(--firefoxcss-context-menu-item-radius) !important;
     
 
     @media (-moz-platform: linux) {
@@ -1564,6 +1570,7 @@ panel {
     }
   }
 }
+
 
 /* Can only change context menu corner radius
    when mica popup is disabled.
@@ -1614,7 +1621,7 @@ menuitem {
 
   &:where([_moz-menuactive]:not([disabled="true"])) {
     color: -moz-menuhovertext;
-    background-color: var(var(--firefoxcss-context-menu-item-bg-color), initial) !important;
+    background-color: var(--firefoxcss-context-menu-item-bg-color), initial) !important;
   }
 
   &:where([_moz-menuactive="true"][disabled="true"]) {
@@ -2714,7 +2721,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 /*===================== A L T  M E N U  BAR =========================*/
 #toolbar-menubar {
   &[autohide="true"] {
-    :root[tabsintitlebar] #navigator-toolbox:not([tabs-hidden]) > & {
+    :root[customtitlebar] #navigator-toolbox:not([tabs-hidden]) > & {
       min-height: 0 !important;
     }
   }
@@ -2722,7 +2729,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 
 #toolbar-menubar {
   &[autohide="true"] {
-    :root[tabsintitlebar] #navigator-toolbox[tabs-hidden] > & {
+    :root[customtitlebar] #navigator-toolbox[tabs-hidden] > & {
       min-height: 0 !important;
     }
   }
@@ -3397,38 +3404,73 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
     --firefoxcss-bookmarks-bg-color: transparent !important;
   }
   
-    :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
+   #navigator-toolbox#navigator-toolbox #PersonalToolbar {
       background-color: transparent !important;
   }
 
-  #personal-bookmarks toolbarbutton.bookmark-item {
-    background-color: hsl(0, 0%, 8%) !important;
+  #PersonalToolbar #personal-bookmarks toolbarbutton.bookmark-item {
+    background-color: var(--firefoxcss-main-bg-color) !important;
+  }
+  
+/* Choose the background once. */
+#PersonalToolbar {
+  --firefoxcss-bookmark-bg: var(--firefoxcss-main-bg-color);
+}
+
+:root:is([lwtheme], [lwtheme-image]):not([privatebrowsingmode])
+  #PersonalToolbar {
+  --firefoxcss-bookmark-bg:
+    var(--lwt-accent-color, var(--firefoxcss-main-bg-color));
+}
+
+/* Normal state. */
+#PersonalToolbar #personal-bookmarks toolbarbutton.bookmark-item {
+  background-color: var(--firefoxcss-bookmark-bg) !important;
+}
+
+/* Derive interaction colors from the selected background. */
+#PersonalToolbar #PlacesToolbarItems
+  > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"]) {
+
+  &:hover:not([open="true"]) {
+    background-color: color-mix(
+      in srgb,
+      var(--firefoxcss-bookmark-bg) 86%,
+      light-dark(black, white)
+    ) !important;
   }
 
-  #personal-bookmarks
-    #PlacesToolbarItems
-    > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover {
-    background-color: #393939 !important;
+  &:is(:hover:active, [open="true"]) {
+    background-color: color-mix(
+      in srgb,
+      var(--firefoxcss-bookmark-bg) 80%,
+      light-dark(black, white)
+    ) !important;
   }
-
-  #personal-bookmarks
-    #PlacesToolbarItems
-    > toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"]):hover:active {
-    background-color: #555555 !important;
-  }
-
-  #personal-bookmarks #PlacesToolbarItems > toolbarbutton.bookmark-item[open="true"] {
-    background-color: #555555 !important;
-  }
+}
 
   #PersonalToolbar:not([customizing]) {
     max-width: fit-content;
+    
+  }
 
-    @media -moz-pref("mod.transparent.bookmarks-bar.centered") {
-      width: 100vw;
-      align-self: center;
+  @media -moz-pref("mod.transparent.bookmarks-bar.centered") {
+    :root:not([inDOMFullscreen]):not([customizing])
+      #navigator-toolbox
+      > #PersonalToolbar:not([collapsed]):not([customizing]) {
+      width: fit-content !important;
+      max-width: 100% !important;
+      align-self: center !important;
+
+      /* Center the absolute popout between its side insets. */
+      inset-inline: 0 !important;
+      margin-inline: auto !important;
     }
   }
+  
+  
+  
+  
 }
 
 @media -moz-pref("mod.popout.searchbar") or -moz-pref("mod.popout.searchbar.no-animation") {
@@ -4044,4 +4086,5 @@ panel-item.searchmode-switcher-installed {
   &[label="Brave"] {      --icon-url: var(--firefoxcss-brave-icon) !important;}
   
 }
+
 
