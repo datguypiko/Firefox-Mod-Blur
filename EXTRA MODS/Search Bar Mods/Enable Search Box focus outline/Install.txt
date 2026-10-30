@@ -1,4 +1,4 @@
 
-Enable "mod.searchBox.focus.outline.enable" in about:config
+Enable "mod.searchbox.focus.outline.enable" in about:config
 
 Type about:config in search bar to access.

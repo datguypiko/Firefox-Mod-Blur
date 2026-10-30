@@ -100,7 +100,7 @@ If it's configured using numbers select `number` else select `boolean` and press
 
 <details><summary>Hide Tab preview panel :gear:</summary>
 </br>
-<i>Enable <code>firefoxcss.disable.tab.preview.panel.fully</code> in <code>about:config</code> </i><p align="left"><img width="299" height="281" alt="image" src="https://github.com/user-attachments/assets/dd684579-3142-4245-9e75-f0cd29e1d1e6" /></p></details>
+<i>Enable <code>mod.disable.tab.preview.panel.fully</code> in <code>about:config</code> </i><p align="left"><img width="299" height="281" alt="image" src="https://github.com/user-attachments/assets/dd684579-3142-4245-9e75-f0cd29e1d1e6" /></p></details>
 
 <details><summary>Hide scrollbar when Vertical tabs overflow :gear:</summary>
 </br>
@@ -108,11 +108,11 @@ If it's configured using numbers select `number` else select `boolean` and press
 
 <details><summary>Enable Search Box focus outline :gear:</summary>
 </br>
-<i>Enable <code>mod.searchBox.focus.outline.enable</code> in <code>about:config</code> </i><p align="left"><img width="1481" height="45" alt="Screenshot 2026-03-25 044124" src="https://github.com/user-attachments/assets/52537d21-347b-4d3c-9ebf-d3b3e1ba3af9" /></p></details>
+<i>Enable <code>mod.searchbox.focus.outline.enable</code> in <code>about:config</code> </i><p align="left"><img width="1481" height="45" alt="Screenshot 2026-03-25 044124" src="https://github.com/user-attachments/assets/52537d21-347b-4d3c-9ebf-d3b3e1ba3af9" /></p></details>
 
 <details><summary>Tabs on top :gear:</summary>
 </br>
-<i>Enable <code>firefoxcss.tabs.on.top.enable</code> in <code>about:config</code>. Doesn't work with custom window control buttons for now (linux should work)</i><p align="left"><img width="1716" height="84" alt="image" src="https://github.com/user-attachments/assets/a3b86a6f-9627-4534-b493-04c06c7087ae" /></p></details>
+<i>Enable <code>mod.tabs.on.top.enable</code> in <code>about:config</code>. Doesn't work with custom window control buttons for now (linux should work)</i><p align="left"><img width="1716" height="84" alt="image" src="https://github.com/user-attachments/assets/a3b86a6f-9627-4534-b493-04c06c7087ae" /></p></details>
 
 <details><summary>Window Frame border mods :gear:</summary>
 	
@@ -138,7 +138,7 @@ If it's configured using numbers select `number` else select `boolean` and press
 
 <details><summary>Hide List all tabs button :gear:</summary>
 </br>
-<i>hide_list-all-tabs_button.css [Shows when tabs overflow]</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p></details>
+<i>only_show_list-all-tabs_when_tabs_overflowing.css [Shows when tabs overflow]</i><p align="center"><img alt="FirefoxCss" src="https://i.imgur.com/M669iGJ.gif"></p></details>
 
 <details><summary>Restore icons in main menu :gear:</summary>
 </br>
@@ -152,7 +152,7 @@ If it's configured using numbers select `number` else select `boolean` and press
 
 <details><summary>Center Widgets in New Tab :gear:</summary>
 </br>
-<i>Enable <code>mod.center.widgets</code> or <code>mod.centered.widgets.hide.title-text</code> in <code>about:config</code></i>
+<i>Enable <code>mod.center.widgets</code> and optionally <code>mod.centered.widgets.hide.title-text</code> in <code>about:config</code></i>
 <p align="left">
 
 </br>
@@ -199,7 +199,7 @@ mod.centered.widgets.hide.title-text
 </br>
 <i>Enable <code>mod.new-tab.background.blur</code> using <code>Number</code> field in <code>about:config</code> </i>
 </br>
-<i>Type intensity number [1 to 10] - Default [4] is used when selecting Boolean field instead of Number </i>
+<i>Type intensity number [1 to 10] - Default [5] is used when selecting Boolean field instead of Number </i>
 <p align="center"><img width="2154" height="1120" alt="Screenshot 2026-06-04 233259" src="https://github.com/user-attachments/assets/085d0e5a-59b9-4be7-ae2b-74684b067402" /></p>
 <p align="center"><img width="1212" height="557" alt="Preview" src="https://github.com/user-attachments/assets/c7d8329b-9238-404f-881d-0d83e7b47c9a" />
 </p></details> 
