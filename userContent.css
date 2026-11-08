@@ -180,27 +180,24 @@
 }
 
 @-moz-document url("about:privatebrowsing") {
-  
   @media not -moz-pref("browser.nova.enabled") {
-      body {
-        background-color: var(--firefoxcss-main-bg-color) !important;
-        background-size: auto;
-        background-size: cover !important; 
-      }
-    
-      html.private {
-        --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
-        background: var(--firefoxcss-main-bg-color) !important;
-      }
-  }
-  
-  @media -moz-pref("browser.nova.enabled") {
+    body {
+      background-color: var(--firefoxcss-main-bg-color) !important;
+      background-size: auto;
+      background-size: cover !important;
+    }
+
     html.private {
-    background: var(--firefoxcss-main-bg-colorNova) !important;
+      --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
+      background: var(--firefoxcss-main-bg-color) !important;
     }
   }
-  
- 
+
+  @media -moz-pref("browser.nova.enabled") {
+    html.private {
+      background: var(--firefoxcss-main-bg-colorNova) !important;
+    }
+  }
 
   /*   Disable random text in private tab */
   .showPrivate.showSearch {
@@ -370,19 +367,17 @@ url("about:newtab") {
       background-color: transparent !important;
     }
   }
-  
+
   @media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
-    
-/*     Theme picker menu modification */
+    /*     Theme picker menu modification */
     #themes-management-panel > .themes-mgmt-panel theme-picker {
       --button-border-radius: 12px !important;
     }
-    
+
     moz-segmented-control[data-l10n-id="theme-picker-mode"] {
-       --segmented-control-border-radius: 12px !important;
+      --segmented-control-border-radius: 12px !important;
     }
-}
-  
+  }
 
   /* Line Dividers in customization menu */
   .home-section .divider {
@@ -627,9 +622,8 @@ url("about:newtab") {
       pointer-events: none !important;
     }
 
-	/* Fixes searchbar invisible height */
-	.nova-enabled.container > .search-wrapper {
-      grid-row: 2/span 1 !important;
+    .nova-enabled.container > .search-wrapper {
+      grid-row: 2 / span 1 !important;
       pointer-events: none !important;
     }
 
@@ -1525,8 +1519,9 @@ url("about:newtab") {
         outline: 1px solid var(--firefoxcss-newtab-customize-button-border) !important;
         outline-offset: 0px;
 
-        & > img {color: light-dark(var(--color-gray-70), var(--color-white)) !important;
-/*           border: medium !important; 
+        & > img {
+          color: light-dark(var(--color-gray-70), var(--color-white)) !important;
+          /*           border: medium !important; 
           outline: 1px solid var(--firefoxcss-newtab-customize-button-border) !important;
           outline-offset: 0px; */
         }
@@ -2352,17 +2347,30 @@ url("about:newtab") {
     }
 
     @-moz-document url("about:privatebrowsing") {
+      /* Use one scaled image on the page root; keep the body transparent. */
+      html:not(#ublock0-epicker) {
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: cover !important;
+      }
+
+      html.private body::before {
+        background: none !important;
+      }
+
+      html:not(#ublock0-epicker) body {
+        background-image: none !important;
+        background-color: transparent !important;
+      }
+
       @media (prefers-color-scheme: dark) {
-        html:not(#ublock0-epicker),
-        html:not(#ublock0-epicker) body,
-        #newtab-customize-overlay {
+        html:not(#ublock0-epicker) {
           background-image: url("ASSETS/other/spill.svg") !important;
         }
       }
+
       @media (prefers-color-scheme: light) {
-        html:not(#ublock0-epicker),
-        html:not(#ublock0-epicker) body,
-        #newtab-customize-overlay {
+        html:not(#ublock0-epicker) {
           background-image: url("ASSETS/other/spill-light.svg") !important;
         }
       }
@@ -2469,7 +2477,7 @@ url("about:newtab") {
   "❔ Type 'mod.' to see all your enabled modifications.\A"
   "❔ Read github readme for full mod list and instructions.\A"
   " \A "
-  "🔧 Firefox ModBlur v2.80.5 • 27/10/2026 (October)";
+  "🔧 Firefox ModBlur v2.80.7 • 09/11/2026 (November)";
     white-space: pre-wrap;
     color: light-dark(hsla(290, 21%, 0%, 0.9), hsla(290, 21%, 94%, 0.9)) !important;
     font-size: 14px !important;
