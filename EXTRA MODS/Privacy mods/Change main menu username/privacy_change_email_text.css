@@ -1,14 +1,37 @@
-/* ----- Replace email address in hamburger menu */
-/* ----- to any text you want */
-#appMenu-fxa-label2 #appMenu-header-description {display: none !important;}
+/* Replace "account" with your own name. */
+:root {
+    --mod-account-label: "Account";
+  }
 
-#appMenu-popup #appMenu-fxa-label2::before {
-	content: 'Firefox account' !important; /* Write any text you want */
-}
+  #appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="login-failed"]) {
+    #appMenu-fxa-label2 :is(#appMenu-header-description, .toolbarbutton-text) {
+      display: none !important;
+    }
 
-/* Fix when icons in main menu */
-#appMenu-fxa-status2[fxastatus] > toolbarbutton::before{ background-image: none !important;}
+    #appMenu-fxa-label2 > vbox::after {
+      content: var(--mod-account-label) !important;
+    }
+  }
 
-#appMenu-fxa-status2[fxastatus] > toolbarbutton::before{
-  width: initial !important;
-}
+  /* Firefox 159 renders unverified email in the signed-out row instead. */
+  #appMenu-fxa-status2[fxastatus="unverified"] {
+    #appMenu-fxa-signed-out-title {
+      display: none !important;
+    }
+
+    #appMenu-fxa-signed-out-row > .fxa-menu-signed-out-text::before {
+      content: var(--mod-account-label) !important;
+    }
+  }
+
+  /* Hide the real label element, not a presumed ::before implementation.
+     Only account-bearing states get replacement; generic sign-in copy stays native. */
+  :root:has(#appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="login-failed"], [fxastatus="unverified"])) #PanelUI-fxa {
+    :is(#PanelUI-fxa-menu-manage-account-email, #PanelUI-fxa-menu-signed-out-email) {
+      display: none !important;
+    }
+
+    vbox:has(> :is(#PanelUI-fxa-menu-manage-account-email, #PanelUI-fxa-menu-signed-out-email))::before {
+      content: var(--mod-account-label) !important;
+    }
+  }
