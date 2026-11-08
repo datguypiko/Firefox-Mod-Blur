@@ -1,8 +1,28 @@
 /* Change bookmarks bar color to be the same as top toolbar */
 :root {
-    --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color) !important;
+  --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color) !important;
 }
 
 :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar {
-      background-color: var(--firefoxcss-item-bg-color) !important;
+  background-color: var(--firefoxcss-item-bg-color) !important;
 }
+
+/* Private windows */
+:root#main-window[privatebrowsingmode] #navigator-toolbox #PersonalToolbar {
+  background-color: var(--toolbox-background-color, var(--lwt-accent-color)) !important;
+}
+
+/* Nova color themes */
+@media -moz-pref("browser.nova.enabled") {
+  :root#main-window[lwtheme][theme-effective-id^="nova-"][theme-effective-id$="@mozilla.org"]
+  #navigator-toolbox #PersonalToolbar {
+    background-color: var(--toolbox-background-color, var(--lwt-accent-color)) !important;
+  }
+
+  /* Your private-window rule gives this page the item background. */
+  :root#main-window[privatebrowsingmode][theme-effective-id="firefox-privatewindow@mozilla.org"]
+  #navigator-toolbox #PersonalToolbar {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+  }
+}
+ 
