@@ -1,9 +1,10 @@
 /* ----- Blur the email address in firefox account sync menu ----- */
-#customizationui-widget-panel #fxa-manage-account-button  #fxa-menu-header-description {
-	filter: blur(4px) !important;
-	transition: filter 350ms ease-out !important;
-	transition-delay: 250ms !important;
+#PanelUI-fxa :is(#PanelUI-fxa-menu-manage-account-email, #PanelUI-fxa-menu-signed-out-email) {
+    filter: blur(4px);
+    transition: filter 250ms ease-out 250ms;
 }
-#customizationui-widget-panel #fxa-manage-account-button:hover #fxa-menu-header-description {
-	filter: blur(0px) !important;
+
+#PanelUI-fxa #PanelUI-fxa-menu-manage-account-button:is(:hover, :focus-within) #PanelUI-fxa-menu-manage-account-email,
+#PanelUI-fxa #PanelUI-fxa-menu-signed-out-card:is(:hover, :focus-within) #PanelUI-fxa-menu-signed-out-email {
+	filter: none;
 }
