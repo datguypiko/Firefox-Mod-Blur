@@ -1,9 +1,11 @@
 /* ----- Blur the email address in hamburger menu ----- */
-#appMenu-popup #appMenu-header-description {
-	filter: blur(4px) !important;
-	transition: filter 350ms ease-out !important;
-	transition-delay: 250ms !important;
-}
-#appMenu-popup #appMenu-fxa-label2:hover #appMenu-header-description {
-	filter: blur(0px) !important;
-}
+  #appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="login-failed"]) #appMenu-fxa-label2 :is(#appMenu-header-description, .toolbarbutton-text),
+  #appMenu-fxa-status2[fxastatus="unverified"] #appMenu-fxa-signed-out-title {
+    filter: blur(4px);
+    transition: filter 250ms ease-out 250ms;
+  }
+
+  #appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="login-failed"]) #appMenu-fxa-label2:is(:hover, :focus-within) :is(#appMenu-header-description, .toolbarbutton-text),
+  #appMenu-fxa-status2[fxastatus="unverified"] #appMenu-fxa-signed-out-row:is(:hover, :focus-within) #appMenu-fxa-signed-out-title {
+    filter: none;
+  }
