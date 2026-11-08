@@ -7,6 +7,10 @@
   margin-block-end: 4px !important;
 }
 
+:root[uidensity="touch"] #navigator-toolbox #PersonalToolbar {
+  --uc-bm-padding: 6px;
+}
+
 #navigator-toolbox #PersonalToolbar {
   padding: 0px !important;
   height: 0px !important;
@@ -18,7 +22,8 @@
 }
 
 #navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
-#PersonalToolbar:has(.bookmark-item[open]),
+#PersonalToolbar:has(.bookmark-item[open], .bookmark-item menupopup[open]),
+#PersonalToolbar:focus-within,
 #navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]),
 #PersonalToolbar[customizing] {
   height: calc(var(--uc-bm-height) + 2*var(--uc-bm-padding)) !important;
@@ -28,10 +33,6 @@
   transition-duration: 100ms, 100ms !important;
   transition-delay: 100ms, 100ms, 200ms !important;
   transition-timing-function: ease-in-out, ease-in-out, linear !important;
-}
-
-:root[uidensity="touch"] #navigator-toolbox #PersonalToolbar {
-  --uc-bm-padding: 6px;
 }
 
 /* Firefox v133 fix */
