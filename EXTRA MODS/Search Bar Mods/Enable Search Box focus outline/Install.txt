@@ -2,3 +2,5 @@
 Enable "mod.searchbox.focus.outline.enable" in about:config
 
 Type about:config in search bar to access.
+
+Last tested on Firefox v159.0.1
