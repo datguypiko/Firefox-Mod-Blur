@@ -1,46 +1,81 @@
-/* Tab hide based on https://mrotherguy.github.io/firefox-csshacks/?file=autohide_tabstoolbar.css */
+/* ==========================================================
+   Tab hide based on
+   https://mrotherguy.github.io/firefox-csshacks/?file=autohide_tabstoolbar.css
+   + bookmarks popout, on one shared timeline
+   ========================================================== */
 :root {
-  --uc-tabs-hide-animation-duration: 40ms;
-  --uc-tabs-hide-animation-delay: 200ms;
+  /* ---- Shared timing: edit these to tune both bars at once ---- */
+  --uc-anim-duration: 80ms;  /* how long each slide/fade takes */
+  --uc-hide-delay: 250ms;    /* wait before BOTH bars hide after the mouse leaves */
+  --uc-show-delay: 0ms;      /* wait before the tabs bar shows on hover */
+
+  /* The bookmarks bar starts exactly when the tabs bar finishes sliding in */
+  --uc-bm-show-delay: calc(var(--uc-show-delay) + var(--uc-anim-duration));
+
+  /* ---- Bookmarks popout ---- */
+  /* Moves the popout without moving the content area. */
+  --uc-bm-popout-offset: 0px;
+  --uc-bm-padding: 5px;
+  --uc-bm-padding-inline: 6px;
+}
+
+:root[lwtheme][theme-effective-id^="nova-"][theme-effective-id$="@mozilla.org"] {
+  /* Apply it to nova themes */
+  --uc-bm-popout-offset: 1px;
+}
+
+:root[uidensity="touch"] {
+  --uc-bm-padding: 6px;
 }
 
 @media not -moz-pref("sidebar.verticalTabs") {
   :root:not([customizing], [chromehidden~="menubar"]) #navigator-toolbox:hover,
   :root:not([customizing], [chromehidden~="menubar"]) #navigator-toolbox[movingtab],
   :root:not([customizing], [chromehidden~="menubar"]) #TabsToolbar {
-    margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
+    margin-bottom: calc(
+      0px - 2 * var(--tab-margin-block, var(--tab-block-margin, 0px))
+      - var(--tab-min-height)
+    );
   }
+
+  /* Hide (mouse leaves): wait --uc-hide-delay, then collapse */
   #navigator-toolbox {
-    transition: margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
+    transition: margin-bottom var(--uc-anim-duration) ease-out var(--uc-hide-delay) !important;
     --browser-area-z-index-toolbox: 3;
   }
+
   #TabsToolbar:not([customizing]) {
     visibility: hidden;
     transition:
-      visibility 0ms linear var(--uc-tabs-hide-animation-delay),
-      margin-bottom var(--uc-tabs-hide-animation-duration) ease-out var(--uc-tabs-hide-animation-delay) !important;
+      visibility 0ms linear var(--uc-hide-delay),
+      margin-bottom var(--uc-anim-duration) ease-out var(--uc-hide-delay) !important;
   }
-  
+
+  /* Show (mouse enters): tabs slide in first */
   #mainPopupSet:has( > #tab-group-editor > [panelopen], > #tabgroup-preview-panel[panelopen]) ~ #navigator-toolbox,
   #navigator-toolbox:hover,
   #navigator-toolbox[movingtab] {
-    transition-delay: 0s !important;
+    transition-delay: var(--uc-show-delay) !important;
     > #TabsToolbar {
       visibility: visible;
       margin-bottom: 0px;
-      transition-delay: 18ms, 0ms !important;
+      transition-delay: var(--uc-show-delay), var(--uc-show-delay) !important;
     }
   }
-  
+
   @media -moz-pref("userchrome.autohidetabs.show-while-inactive.enabled") {
     #navigator-toolbox:-moz-window-inactive {
-      margin-bottom: calc(0px - 2 * var(--tab-block-margin) - var(--tab-min-height));
+      margin-bottom: calc(
+        0px - 2 * var(--tab-margin-block, var(--tab-block-margin, 0px))
+        - var(--tab-min-height)
+      );
       > #TabsToolbar {
         visibility: visible;
         margin-bottom: 0px;
       }
     }
   }
+
   /* These rules make sure that height of tabs toolbar doesn't exceed tab-min-height */
   #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
     max-height: var(--tab-min-height);
@@ -58,59 +93,86 @@
   }
 }
 
-/* Bookmarks hide */
-#PersonalToolbar {
-  --uc-bm-height: 24px;
-  /* Might need to adjust if the toolbar has other buttons */
-  --uc-bm-padding: 5px;
-  /* Vertical padding to be applied to bookmarks */
-  padding: 1px 6px !important;
+/* ==========================================================
+   Bookmarks popout
+   ========================================================== */
+
+/* Draw a full-width separator in the 1px gap above the popout. */
+:root:not([inDOMFullscreen])[lwtheme][theme-effective-id^="nova-"][theme-effective-id$="@mozilla.org"]
+#navigator-toolbox > #PersonalToolbar:not([collapsed], [customizing]) {
+  box-shadow: 0 -1px 0 0 var(--chrome-content-separator-color) !important;
+}
+
+/* Anchor and raise the toolbox when the popout is available. */
+:root:not([inDOMFullscreen], [customizing])
+#navigator-toolbox:has( > #PersonalToolbar:not([collapsed], [customizing])) {
   position: relative !important;
+  --browser-area-z-index-toolbox: 4 !important;
+  overflow: visible !important;
 }
 
-:root[uidensity="touch"] #PersonalToolbar {
-  --uc-bm-padding: 6px;
+/* Popout geometry: its height does not affect page layout.
+   Hide: same delay and duration as the tabs bar. */
+:root:not([inDOMFullscreen])
+#navigator-toolbox > #PersonalToolbar:not([collapsed], [customizing]) {
+  position: absolute !important;
+  inset-block-start: calc(100% + var(--uc-bm-popout-offset)) !important;
+  inset-inline: 0 !important;
+
+  margin: 0 !important;
+  padding: 1px 6px !important;
+  box-sizing: border-box !important;
+
+  transform: rotateX(90deg);
+  transform-origin: top;
+  opacity: 0 !important;
+  z-index: 1 !important;
+
+  transition:
+    transform var(--uc-anim-duration) ease-out var(--uc-hide-delay),
+    opacity var(--uc-anim-duration) ease-out var(--uc-hide-delay) !important;
 }
 
-#PersonalToolbar:not([customizing]) {
-  margin-bottom: calc(1px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)) !important;
-  transform: rotateX(90deg) !important;
-  transform-origin: top !important;
-  transition: transform 140ms linear 200ms !important;
-  z-index: 2 !important;
+/* Show: starts right after the tabs bar has slid in.
+   Also reveals on keyboard focus, an open menu, or drag state. */
+:root:not([inDOMFullscreen])
+#navigator-toolbox:is(:hover, [movingtab])
+> #PersonalToolbar:not([collapsed], [customizing]),
+
+:root:not([inDOMFullscreen])
+#navigator-toolbox
+> #PersonalToolbar:not([collapsed], [customizing]):is(
+  :focus-within,
+  :has(.bookmark-item[open="true"]),
+  :has(.toolbar-menupopup[dragstart])
+) {
+  transform: rotateX(0) !important;
+  opacity: 1 !important;
+  transition-delay: var(--uc-bm-show-delay) !important;
 }
 
+/* Bookmark item spacing. */
+#PersonalToolbar:not([customizing])
 #PlacesToolbarItems > .bookmark-item {
   padding-block: var(--uc-bm-padding) !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
+  padding-inline: var(--uc-bm-padding-inline) !important;
 }
 
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
-  transition: opacity 200ms linear 200ms !important;
-  opacity: 0 !important;
+/* Backgrounds. */
+:root:not([lwtheme]) #navigator-toolbox #PersonalToolbar,
+:root[privatebrowsingmode] #navigator-toolbox #PersonalToolbar {
+  background-image: var(--firefoxcss-bookmarks-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
-/* Show when cursor is over the toolbar area */
-#navigator-toolbox:hover > #PersonalToolbar,
-#navigator-toolbox:has(#tabbrowser-tabs[movingtab]) > #PersonalToolbar{
-  transition-delay: 40ms !important;
-  transform: rotateX(0) !important;
+@media -moz-pref("sidebar.verticalTabs") {
+  :root:not([lwtheme]) #navigator-toolbox #PersonalToolbar,
+  :root[privatebrowsingmode] #navigator-toolbox #PersonalToolbar {
+    background-color: var(--firefoxcss-item-bg-color) !important;
+  }
 }
 
-#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon,
-#navigator-toolbox:has(#tabbrowser-tabs[movingtab]) #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon{
-  transition-delay: 40ms !important;
-  opacity: 1 !important;
-}
-
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
-  transition: opacity 140ms linear 200ms !important;
-  opacity: 0 !important;
-}
-
-#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-text,
-#navigator-toolbox:has(#tabbrowser-tabs[movingtab]) #PlacesToolbarItems > .bookmark-item .toolbarbutton-text{
-  transition-delay: 40ms !important;
-  opacity: 1 !important;
+:root:is([lwtheme], [lwtheme-image]):not([privatebrowsingmode])
+#navigator-toolbox #PersonalToolbar {
+  background-color: var(--lwt-accent-color) !important;
 }
