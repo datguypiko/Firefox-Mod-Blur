@@ -3224,37 +3224,12 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 #tabbrowser-tabs tab-split-view-wrapper {
   &:not([hasactivetab]) {
     & .tabbrowser-tab {
-      &:last-child {
+      &:last-child > .tab-stack{
         border-inline-start: 0px solid transparent !important;
       }
     }
   }
 }
-
-    /*   Fix Split View tab height */
-/*   Wont be needed soon? */
-#tabbrowser-tabs[orient="horizontal"] tab-split-view-wrapper {
-  /* margin-block: 2px !important; */
-  
-/*   Delete later */
-/*   --split-view-tab-height: calc(var(--tab-min-height) - 
-    2 * 2px) !important;
-  padding: var(--split-view-padding-block) 0 !important; */
-  
-  
-}
-
-
-/* Delete later */
-  #tabbrowser-tabs[orient="horizontal"] tab-split-view-wrapper {
-  & .tabbrowser-tab {
-    & .tab-background {
-/*       min-height: var(--split-view-tab-height) !important; */
-    }
-  }
-}
-  
-
   
 /*   Fix Split view tab moving on focus */
   #tabbrowser-tabs tab-split-view-wrapper .tabbrowser-tab:last-child {
@@ -3262,13 +3237,11 @@ toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:act
 }
 
 #tabbrowser-tabs[orient="vertical"] tab-split-view-wrapper {
-  @container vertical-tabs-container (max-width: 210px) {
     &:not([hasactivetab]) .tabbrowser-tab {
-      &:first-child {
+      &:first-child > .tab-stack{
         border-block-end: 0px solid transparent !important;
       }
     }
-  }
 }
 
 /* Add separator between split tabs */
