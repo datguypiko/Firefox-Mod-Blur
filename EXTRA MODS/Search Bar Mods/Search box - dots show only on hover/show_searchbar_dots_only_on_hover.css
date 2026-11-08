@@ -2,10 +2,11 @@
 #urlbar #identity-box::after,
 #urlbar #page-action-buttons::before {
    opacity: 0;
+  transition: opacity 200ms ease 200ms !important;
 }
 
 #urlbar:hover #identity-box::after,
 #urlbar:hover #page-action-buttons::before {
   opacity: 0.2;
- transition: opacity 100ms ease;
+ transition: opacity 120ms ease 40ms !important;
 }
