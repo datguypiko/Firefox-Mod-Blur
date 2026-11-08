@@ -1,14 +1,14 @@
 <h2 align="center"><span><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" />Firefox Mod Blur - Modular</span></h2>
 
 <p align="center">
-<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v159.0.0-blue?style=flat&logo=firefox&logoColor=white"></a>
-<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-27/10/2026-blueviolet?style=flat"></a>
+<a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v159.0.1-blue?style=flat&logo=firefox&logoColor=white"></a>
+<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-08/11/2026-blueviolet?style=flat"></a>
 <img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat">
 	
 <p align="center">
 <a href="#wrench-installation"><img alt="Installation Guide" src="https://img.shields.io/badge/Installation%20Guide-informational?style=for-the-badge"></a> 
 <a href="#select-and-add-extra-styles-and-functions"><img alt="Extra mods" src="https://img.shields.io/badge/Extra%20Mods-blueviolet?style=for-the-badge"></a>
-<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.80.5-important?style=for-the-badge"></a>
+<a href="https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest"><img alt="Download Latest" src="https://img.shields.io/badge/Download%20v2.80.6-important?style=for-the-badge"></a>
 </p>
 
 <p align="center"> <img alt="FirefoxCss" src="https://i.imgur.com/ChlWHFp.png"> </p>
@@ -222,6 +222,7 @@ mod.centered.widgets.hide.title-text
 <h2>:wrench: Installation</h2>
 
 > [!IMPORTANT]
+> ##### 0. Make Sure you are using [Standard Window Density](https://github.com/datguypiko/.github/blob/main/images/firefox/other/WindowDensity.png?raw=true). Others may affect tabs layout negatively. 
 > ##### 1. In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" for your custom themes to work.
 > ##### 2. Download latest or your preferred firefox version [.zip file](https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest). 
 > ##### 3. You can find your profile folder by writing `about:support` in URL bar and using `Open folder` in `Profile folder` section.
