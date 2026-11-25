@@ -20,6 +20,7 @@ See the above repository for updates as well as full license text. */
 #appMenu-new-tab-button2{ list-style-image: url("chrome://browser/skin/new-tab.svg") }
 #appMenu-new-window-button2{ list-style-image: url("chrome://browser/skin/window.svg") }
 #appMenu-new-private-window-button2{ list-style-image: url("chrome://browser/skin/privateBrowsing.svg") }
+#appMenu-tab-groups-button{ list-style-image: url("chrome://browser/skin/tabs.svg") }
 #appMenu-bookmarks-button{ list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") }
 #appMenu-history-button{ list-style-image: url("chrome://browser/skin/history.svg") }
 #appMenu-downloads-button{ list-style-image: url("chrome://browser/skin/downloads/downloads.svg") }
